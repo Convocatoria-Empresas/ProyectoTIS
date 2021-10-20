@@ -32,3 +32,4 @@ class PlanDePagos extends Migration
         Schema::dropIfExists('Plan_de_Pagos');
     }
 }
+//Holaaaaaagit
