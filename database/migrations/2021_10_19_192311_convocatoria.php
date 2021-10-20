@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EmpresasRegistradas extends Migration
+class Convocatoria extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class EmpresasRegistradas extends Migration
      */
     public function up()
     {
-        Schema::create('empresas_registradas',function(Blueprint $table){
-            $table->string('Nombre_Largo')->unique();
-            $table->string('Nombre_Corto', 10);
-            $table->string('Tipo_de_Sociedad');
-            $table->string('Direccion');
+        Schema::create('convocatoria',function(Blueprint $table){
+            $table->string('Titulo');
+            $table->string('Codigo',6)->unique();
+            $table->date('Fecha');
+            $table->smallinteger('Semestre');
             $table->string('Correo_electronico');
-            $table->string('Socios');
             $table->string('Otro');
         });
     }
@@ -31,6 +30,6 @@ class EmpresasRegistradas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empresas_registradas');
+        Schema::dropIfExists('convocatoria');
     }
 }
