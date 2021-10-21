@@ -1,0 +1,1 @@
+formulario de datos en comun con create y edit
