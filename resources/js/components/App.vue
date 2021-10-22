@@ -12,14 +12,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <router-link exact-active-class="active" to="/" class="nav-link active" aria-current="page">Inicio</router-link>
+                        <router-link exact-active-class="active" to="/" class="nav-link active" aria-current="page">Convocatorias</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link exact-active-class="active" to="/blogs" class="nav-link">Blogs</router-link>
-                    </li>   
+                        <router-link exact-active-class="active" to="/blogs" class="nav-link">Nueva Convocatoria</router-link>
+                    </li>
                      <li class="nav-item">
-                        <router-link exact-active-class="active" to="/contacto" class="nav-link">Contacto</router-link>
-                    </li>            
+                        <router-link exact-active-class="active" to="/contacto" class="nav-link">Empresas</router-link>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -33,7 +33,7 @@
         </div>
     </main>
 </template>
- 
+
 <script>
     export default {}
 </script>

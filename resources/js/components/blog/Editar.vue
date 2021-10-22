@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header"><h4>Editar Blog</h4></div>
+                <div class="card-header"><h4>Editar Convocatoria</h4></div>
                 <div class="card-body">
                     <form @submit.prevent="actualizar">
                          <div class="row">
@@ -22,7 +22,7 @@
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
-                        </div>                          
+                        </div>
                     </form>
                 </div>
             </div>

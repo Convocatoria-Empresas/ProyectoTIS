@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header"><h4>Crear Blog</h4></div>
+                <div class="card-header"><h4>Crear Convocatoria</h4></div>
                 <div class="card-body">
                     <form @submit.prevent="crear">
                         <div class="row">
@@ -21,7 +21,7 @@
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
-                        </div>                        
+                        </div>
                     </form>
                 </div>
             </div>
@@ -36,7 +36,7 @@ export default {
         return {
             blog:{
                 titulo:"",
-                contenido:""
+                Descripcion:""
             }
         }
     },

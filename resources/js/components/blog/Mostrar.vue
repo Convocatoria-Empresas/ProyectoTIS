@@ -4,12 +4,12 @@
             <!-- llamamos al componente para Crear   -->
             <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-plus-circle"></i></router-link>
         </div>
-        <div class="col-12">             
+        <div class="col-12">
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead class="bg-primary text-white">
                                 <tr>
-                                    <th>ID</th>
+                                    <th>Gestión</th>
                                     <th>Título</th>
                                     <th>Contenido</th>
                                     <th>Acciones</th>
@@ -27,9 +27,9 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            
+
                         </table>
-                    </div>                          
+                    </div>
         </div>
     </div>
 </template>
