@@ -67,7 +67,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return {
       blog: {
         titulo: "",
-        contenido: ""
+        Descripcion: ""
       }
     };
   },
@@ -1046,7 +1046,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_vm._v("Crear Blog")])
+      _c("h4", [_vm._v("Crear Convocatoria")])
     ])
   },
   function() {

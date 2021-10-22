@@ -2,6 +2,7 @@ require('./bootstrap');
 import vue from 'vue'
 window.Vue = vue;
 
+//Componente importante 
 import App from './components/App.vue';
 
 //importamos Axios
@@ -11,15 +12,15 @@ import axios from 'axios';
 //Importamos y configuramos el Vue-router
 import VueRouter from 'vue-router';
 import {routes} from './routes';
- 
+
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
- 
+
 const router = new VueRouter({
     mode: 'history',
     routes: routes
 });
- 
+
 //finalmente, definimos nuestra app de Vue
 const app = new Vue({
     el: '#app',

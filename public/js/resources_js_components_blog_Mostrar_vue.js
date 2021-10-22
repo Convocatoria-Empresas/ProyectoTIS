@@ -1047,7 +1047,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", { staticClass: "bg-primary text-white" }, [
       _c("tr", [
-        _c("th", [_vm._v("ID")]),
+        _c("th", [_vm._v("Gestión")]),
         _vm._v(" "),
         _c("th", [_vm._v("Título")]),
         _vm._v(" "),

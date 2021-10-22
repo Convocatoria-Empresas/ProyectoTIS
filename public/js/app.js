@@ -2086,6 +2086,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2109,7 +2116,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
-window.Vue = vue__WEBPACK_IMPORTED_MODULE_0__["default"];
+window.Vue = vue__WEBPACK_IMPORTED_MODULE_0__["default"]; //Componente importante 
+
  //importamos Axios
 
 
@@ -2182,6 +2190,10 @@ var Home = function Home() {
 
 var Contacto = function Contacto() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Contacto_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Contacto.vue */ "./resources/js/components/Contacto.vue"));
+};
+
+var Seguimiento = function Seguimiento() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento.vue */ "./resources/js/components/Seguimiento.vue"));
 }; //importamos los componentes para el blog
 
 
@@ -2213,6 +2225,10 @@ var routes = [{
   name: 'editarBlog',
   path: '/editar/:id',
   component: Editar
+}, {
+  name: 'seguimiento',
+  path: '/sguimiento',
+  component: Seguimiento
 }, {
   name: 'contacto',
   path: '/contacto',
@@ -19741,6 +19757,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
+    _c("nav", { staticClass: "navbar bg-danger" }),
+    _vm._v(" "),
     _c(
       "nav",
       { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary" },
@@ -19788,7 +19806,7 @@ var render = function() {
                         staticClass: "nav-link",
                         attrs: { "exact-active-class": "active", to: "/blogs" }
                       },
-                      [_vm._v("Blogs")]
+                      [_vm._v("Convocatorias")]
                     )
                   ],
                   1
@@ -19807,7 +19825,26 @@ var render = function() {
                           to: "/contacto"
                         }
                       },
-                      [_vm._v("Contacto")]
+                      [_vm._v("Empresas")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/seguimiento"
+                        }
+                      },
+                      [_vm._v("Seguimiento")]
                     )
                   ],
                   1
@@ -19821,6 +19858,8 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
+    _c("nav", { staticClass: "navbar bg-danger" }),
+    _vm._v(" "),
     _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1)
   ])
 }
@@ -19832,7 +19871,8 @@ var staticRenderFns = [
     return _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
       _c("img", {
         attrs: {
-          src: "https://vuejs.org/images/logo.svg",
+          src:
+            "http://creadictivo.com/wp-content/uploads/2018/05/umss-san-simon.png",
           alt: "",
           width: "30",
           height: "24"
@@ -19873,7 +19913,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-outline-success", attrs: { type: "submit" } },
-        [_vm._v("Search")]
+        [_vm._v("Buscar")]
       )
     ])
   }
@@ -35318,7 +35358,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Contacto_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Contacto_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

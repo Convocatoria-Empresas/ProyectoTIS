@@ -79,8 +79,10 @@ var staticRenderFns = [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col text-center" }, [
           _c("h1", [
-            _vm._v("Componente "),
-            _c("span", { staticClass: "badge bg-secondary" }, [_vm._v("HOME")])
+            _vm._v("Aqui vendran todas las"),
+            _c("span", { staticClass: "badge bg-secondary" }, [
+              _vm._v("CONVOCATORIAS")
+            ])
           ])
         ])
       ])
