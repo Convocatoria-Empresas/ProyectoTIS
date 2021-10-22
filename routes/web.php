@@ -21,4 +21,9 @@ Auth::routes();
 
 Route::resource('/registro', 'App\Http\Controllers\cont_convo');
 
+Route::get('{any}', function(){
+    return view('app');
+});
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
