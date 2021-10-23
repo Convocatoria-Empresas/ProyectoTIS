@@ -11,7 +11,7 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="mb-2 navbar-nav me-auto mb-lg-0">
                     <li class="nav-item">
                         <router-link exact-active-class="active" to="/" class="nav-link active" aria-current="page">Inicio</router-link>
                     </li>
@@ -23,6 +23,10 @@
                     </li>
                     <li class="nav-item">
                         <router-link exact-active-class="active" to="/seguimiento" class="nav-link">Seguimiento</router-link>
+                    </li>
+
+                    <li class="nav-item">
+                        <router-link exact-active-class="active" to="/estudiante" class="nav-link">Estudiante</router-link>
                     </li>
                 </ul>
                 <form class="d-flex">

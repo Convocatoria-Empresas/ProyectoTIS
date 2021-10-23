@@ -14,7 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all(['id','titulo','contenido']);
+        $blogs = Blog::all(['gestion','titulo','contenido']);
         return response()->json($blogs);
     }
 
@@ -37,7 +37,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $blog = Blog::create($request->post());
-        return response()->json([           
+        return response()->json([
             'blog'=>$blog
         ]);
     }
@@ -74,7 +74,7 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $blog->fill($request->post())->save();
-        return response()->json([            
+        return response()->json([
             'blog'=>$blog
         ]);
     }
