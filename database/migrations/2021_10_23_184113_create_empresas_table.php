@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EmpresasRegistradas extends Migration
+class CreateEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,20 @@ class EmpresasRegistradas extends Migration
      */
     public function up()
     {
-        Schema::create('empresas_registradas',function(Blueprint $table){
+        Schema::create('empresas', function (Blueprint $table) {
+            $table->id();
             $table->string('Nombre_Largo')->unique();
             $table->string('Nombre_Corto', 10);
             $table->string('Tipo_de_Sociedad');
-            $table->string('Direccion');
+            $table->string('Direccion', 200);
+            $table->mediumInteger('Telefono');
             $table->string('Correo_electronico');
-            $table->string('Socios');
+            $table->string('Documento_1');
+            $table->string('Documento_2');
+            $table->string('Documento_3');
+            $table->string('Documento_4');
             $table->string('Otro');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +37,6 @@ class EmpresasRegistradas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empresas_registradas');
+        Schema::dropIfExists('empresas');
     }
 }

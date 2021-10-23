@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\EmpresaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,7 @@ Route::get('/', function () {
 //Route::get('/empleado/create',[EmpleadoController::class,'create']);
 
 Route::resource('empleado',EmpleadoController::class);
+Route::resource('empresa',EmpresaController::class);
 
 Auth::routes();
 
