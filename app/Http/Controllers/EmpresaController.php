@@ -14,7 +14,7 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        return view('empleado.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        return view('empresa.create');
+        return view("empresa.create");
     }
 
     /**
@@ -35,7 +35,10 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosEmpresa = request()->except('_token');
+        Empresa::insert($datosEmpresa);
+        
+        return response()->($datosEmpresa);
     }
 
     /**

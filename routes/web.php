@@ -21,7 +21,8 @@ Route::get('/', function () {
 //Route::get('/empleado/create',[EmpleadoController::class,'create']);
 
 Route::resource('empleado',EmpleadoController::class);
-Route::resource('empresa',EmpresaController::class);
+Route::resource('empresa', EmpresaController::class);
+
 
 Auth::routes();
 
