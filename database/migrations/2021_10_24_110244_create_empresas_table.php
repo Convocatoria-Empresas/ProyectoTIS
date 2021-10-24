@@ -19,7 +19,7 @@ class CreateEmpresasTable extends Migration
             $table->string('Nombre_Corto', 10);
             $table->string('Tipo_de_Sociedad');
             $table->string('Direccion', 200);
-            $table->mediumInteger('Telefono');
+            $table->Integer('Telefono');
             $table->string('Correo_electronico');
             $table->string('Documento_1');
             $table->string('Documento_2');

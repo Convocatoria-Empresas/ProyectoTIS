@@ -35,7 +35,24 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Solicitud de toda la información
+        $datosEmpresa= request()->except('_token');
+
+        if($request->hasFile('Documento_1')){
+            $datosEmpresa['Documento_1']=$request->file('Documento_1')->store('uploads', 'public');
+        }
+        if($request->hasFile('Documento_2')){
+            $datosEmpresa['Documento_2']=$request->file('Documento_2')->store('uploads', 'public');
+        }
+        if($request->hasFile('Documento_3')){
+            $datosEmpresa['Documento_3']=$request->file('Documento_3')->store('uploads', 'public');
+        }
+        if($request->hasFile('Documento_4')){
+            $datosEmpresa['Documento_4']=$request->file('Documento_4')->store('uploads', 'public');
+        }
+
+        Empresa::insert($datosEmpresa);
+        return response()->json($datosEmpresa);
     }
 
     /**
