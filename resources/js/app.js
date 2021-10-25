@@ -1,8 +1,9 @@
+
 require('./bootstrap');
 import vue from 'vue'
 window.Vue = vue;
 
-//Componente importante 
+//Componente importante
 import App from './components/App.vue';
 
 //importamos Axios
