@@ -2092,6 +2092,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2193,6 +2196,10 @@ var Contacto = function Contacto() {
 
 var Seguimiento = function Seguimiento() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento.vue */ "./resources/js/components/Seguimiento.vue"));
+};
+
+var RegistrarEmpresas = function RegistrarEmpresas() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_RegistrarEmpresas_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/RegistrarEmpresas.vue */ "./resources/js/components/RegistrarEmpresas.vue"));
 }; //importamos los componentes para el blog
 
 
@@ -2206,7 +2213,8 @@ var Crear = function Crear() {
 
 var Editar = function Editar() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_blog_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/blog/Editar.vue */ "./resources/js/components/blog/Editar.vue"));
-};
+}; //importar form empresa
+
 
 var routes = [{
   name: 'home',
@@ -2216,6 +2224,10 @@ var routes = [{
   name: 'mostrarBlogs',
   path: '/blogs',
   component: Mostrar
+}, {
+  name: 'mostrarEmpresas',
+  path: '/RegistrarEmpresas',
+  component: RegistrarEmpresas
 }, {
   name: 'crearBlog',
   path: '/crear',
@@ -19847,6 +19859,25 @@ var render = function() {
                     )
                   ],
                   1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/RegistrarEmpresas"
+                        }
+                      },
+                      [_vm._v("Registrar")]
+                    )
+                  ],
+                  1
                 )
               ]),
               _vm._v(" "),
@@ -35357,7 +35388,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Contacto_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Contacto_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_RegistrarEmpresas_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

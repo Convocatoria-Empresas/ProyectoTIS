@@ -12,8 +12,9 @@
                                     <th>Gestión</th>
                                     <th>Título</th>
                                     <th>Contenido</th>
-                                    <th>Acciones</th>
+                                    <th>Acciones </th>
                                 </tr>
+                                
                             </thead>
                             <tbody>
                                 <tr v-for="blog in blogs" :key="blog.id">
@@ -24,6 +25,8 @@
                                         <!-- llamamos al componente para Editar     -->
                                         <router-link :to='{name:"editarBlog",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
                                         <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                         
+                                        
                                     </td>
                                 </tr>
                             </tbody>

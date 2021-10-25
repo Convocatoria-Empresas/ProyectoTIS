@@ -24,6 +24,9 @@
                     <li class="nav-item">
                         <router-link exact-active-class="active" to="/seguimiento" class="nav-link">Seguimiento</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link exact-active-class="active" to="/RegistrarEmpresas" class="nav-link">Registrar</router-link>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
