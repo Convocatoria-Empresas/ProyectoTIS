@@ -69,6 +69,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -968,100 +973,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c(
-      "div",
-      { staticClass: "col-12 mb-2" },
-      [
-        _c(
-          "router-link",
-          {
-            staticClass: "btn btn-success",
-            attrs: { to: { name: "crearBlog" } }
-          },
-          [_c("i", { staticClass: "fas fa-plus-circle" })]
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-12" }, [
-      _c("div", { staticClass: "table-responsive" }, [
-        _c("table", { staticClass: "table table-bordered" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.blogs, function(blog) {
-              return _c("tr", { key: blog.id }, [
-                _c("td", [_vm._v(_vm._s(blog.id))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.titulo))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.contenido))]),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-info",
-                        attrs: {
-                          to: { name: "editarBlog", params: { id: blog.id } }
-                        }
-                      },
-                      [_c("i", { staticClass: "fas fa-edit" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn btn-danger",
-                        attrs: { type: "button" },
-                        on: {
-                          click: function($event) {
-                            return _vm.borrarBlog(blog.id)
-                          }
-                        }
-                      },
-                      [_c("i", { staticClass: "fas fa-trash" })]
-                    )
-                  ],
-                  1
-                )
-              ])
-            }),
-            0
-          )
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", { staticClass: "bg-primary text-white" }, [
-      _c("tr", [
-        _c("th", [_vm._v("Gestión")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Título")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Contenido")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Acciones ")])
-      ])
-    ])
-  }
-]
-render._withStripped = true
+var render = function () {}
+var staticRenderFns = []
 
 
 
