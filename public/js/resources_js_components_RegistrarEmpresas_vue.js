@@ -154,6 +154,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "crear-blog",
   data: function data() {
@@ -1088,7 +1091,7 @@ var staticRenderFns = [
         "div",
         { staticClass: "row  needs-validation", attrs: { novalidate: "" } },
         [
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-6 " }, [
             _c(
               "label",
               {
@@ -1111,7 +1114,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c(
               "label",
               {
@@ -1125,6 +1128,7 @@ var staticRenderFns = [
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Representante Legal",
                 name: "Socio1",
                 id: "Socio1",
                 required: ""
@@ -1157,7 +1161,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c("label", {
               staticClass: "form-label",
               attrs: { for: "validationCustom01" }
@@ -1167,6 +1171,7 @@ var staticRenderFns = [
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Integrante",
                 name: "Socio2",
                 id: "Socio2",
                 required: ""
@@ -1199,7 +1204,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c("label", {
               staticClass: "form-label",
               attrs: { for: "validationCustom01" }
@@ -1209,6 +1214,7 @@ var staticRenderFns = [
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Integrante",
                 name: "Socio3",
                 id: "Socio3",
                 required: ""
@@ -1218,7 +1224,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4" }, [
             _c(
               "label",
               {
@@ -1232,6 +1238,7 @@ var staticRenderFns = [
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Telefono Empresa",
                 name: "Telefono",
                 id: "Telefono",
                 required: ""
@@ -1241,7 +1248,8 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
+            _vm._v(">\n                            "),
             _c("label", {
               staticClass: "form-label",
               attrs: { for: "validationCustom01" }
@@ -1251,6 +1259,7 @@ var staticRenderFns = [
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Integrante",
                 name: "Socio4",
                 id: "Socio 4",
                 required: ""
@@ -1260,7 +1269,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4" }, [
             _c(
               "label",
               {
@@ -1272,13 +1281,19 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
-              attrs: { type: "text", name: "NIT", id: "NIT", required: "" }
+              attrs: {
+                type: "text",
+                placeholder: "NIT Empresa",
+                name: "NIT",
+                id: "NIT",
+                required: ""
+              }
             }),
             _vm._v(" "),
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
             _c("label", {
               staticClass: "form-label",
               attrs: { for: "validationCustom01" }
@@ -1288,6 +1303,7 @@ var staticRenderFns = [
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Integrante",
                 name: "Socio5",
                 id: "Socio5",
                 required: ""
@@ -1300,7 +1316,7 @@ var staticRenderFns = [
       ),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6" }, [
+        _c("div", { staticClass: "col-lg-4" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
@@ -1313,7 +1329,7 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
+        _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
@@ -1326,7 +1342,7 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
+        _c("div", { staticClass: "col-lg-4" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
@@ -1339,7 +1355,7 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
+        _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
@@ -1371,8 +1387,13 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-6" }, [
+          _c("label", {
+            staticClass: "form-label",
+            attrs: { for: "validationCustom01" }
+          }),
+          _vm._v(" "),
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "col-lg-6 offset-md-2" }, [
               _c(
                 "button",
                 { staticClass: "btn btn-primary", attrs: { type: "submit" } },
@@ -1380,7 +1401,7 @@ var staticRenderFns = [
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "col-lg-4" }, [
               _c(
                 "button",
                 { staticClass: "btn btn-primary", attrs: { type: "submit" } },
