@@ -75,13 +75,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-4" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col text-center" }, [
-          _c("h1", [
-            _vm._v("Aqui vendran todas las"),
-            _c("span", { staticClass: "badge bg-secondary" }, [
-              _vm._v("CONVOCATORIAS")
+    return _c("main", [
+      _c("div", { staticClass: "container mt-4" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "text-center col" }, [
+            _c("nav", { staticClass: "bg-white navbar" }, [
+              _c("div", [
+                _c("a", { attrs: { href: "navbar-brand" } }, [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
+                      alt: "",
+                      width: "100",
+                      height: "130"
+                    }
+                  })
+                ])
+              ])
             ])
           ])
         ])
