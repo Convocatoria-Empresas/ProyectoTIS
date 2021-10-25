@@ -6,74 +6,74 @@
                 <div class="card-body">
                     <form @submit.prevent="crear">
                         <div  class="row">
-                            <div  class="row  needs-validation" novalidate>
+                            <div  class="row needs-validation" novalidate>
 
                                 <div class="col-lg-6 ">
                                 <label for="validationCustom01" class="form-label">Nombre Largo</label>
-                                <input type="text" name="NombreLargo"class="form-control" id="NombreLargo"  required>
+                                <input type="text" name="NombreLargo" class="form-control" id="NombreLargo"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label">Socios (Codigo SIS)</label>
-                                <input type="text" placeholder="Representante Legal" name="Socio1"class="form-control" id="Socio1"  required>
+                                <input type="text" placeholder="Representante Legal" name="Socio1" class="form-control" id="Socio1"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                 <label for="validationCustom01" class="form-label">Nombre Corto</label>
-                                <input type="text" name="NombreCorto"class="form-control" id="NombreCorto"  required>
+                                <input type="text" name="NombreCorto" class="form-control" id="NombreCorto"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio2"class="form-control" id="Socio2"  required>
+                                <input type="text" placeholder="Integrante" name="Socio2" class="form-control" id="Socio2"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                  <label for="validationCustom01" class="form-label">Dirección/Ubicación</label>
-                                <input type="text" name="Dirección"class="form-control" id="Dirección"  required>
+                                <input type="text" name="Dirección" class="form-control" id="Dirección"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio3"class="form-control" id="Socio3"  required>
+                                <input type="text" placeholder="Integrante" name="Socio3" class="form-control" id="Socio3"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
-                                
+
                                 <div class="col-lg-4">
                                 <label for="validationCustom01" class="form-label">Telefono</label>
-                                <input type="text" placeholder="Telefono Empresa" name="Telefono"class="form-control" id="Telefono"  required>
+                                <input type="text" placeholder="Telefono Empresa" name="Telefono" class="form-control" id="Telefono"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-3">>
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio4"class="form-control" id="Socio 4"  required>
+                                <input type="text" placeholder="Integrante" name="Socio4" class="form-control" id="Socio 4"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4">
                                 <label for="validationCustom01" class="form-label">NIT</label>
-                                <input type="text" placeholder="NIT Empresa" name="NIT"class="form-control" id="NIT"  required>
+                                <input type="text" placeholder="NIT Empresa" name="NIT" class="form-control" id="NIT"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
-                                
+
                                 <div class="col-lg-4 offset-md-3">
                                  <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio5"class="form-control" id="Socio5"  required>
+                                <input type="text" placeholder="Integrante" name="Socio5" class="form-control" id="Socio5"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -111,12 +111,12 @@
                                      <button type="submit" class="btn btn-primary">Registrar</button>
                                      </div>
                                      </div>
-                                     
+
                                      </div>
                             </div>
-                            
-                            
-                            
+
+
+
                         </div>
                     </form>
                 </div>

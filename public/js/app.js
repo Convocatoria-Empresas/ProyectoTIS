@@ -2093,6 +2093,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -19784,95 +19794,108 @@ var render = function() {
           },
           [
             _c("ul", { staticClass: "mb-2 navbar-nav me-auto mb-lg-0" }, [
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link active",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/",
-                        "aria-current": "page"
-                      }
-                    },
-                    [_vm._v("Inicio")]
-                  )
-                ],
-                1
-              ),
+              _c("li", { staticClass: "nav-item" }, [
+                _c(
+                  "span",
+                  { staticClass: "mb-0 navbar-brand h1" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link active",
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/",
+                          "aria-current": "page"
+                        }
+                      },
+                      [_vm._v("Inicio")]
+                    )
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { "exact-active-class": "active", to: "/blogs" }
-                    },
-                    [_vm._v("Convocatorias")]
-                  )
-                ],
-                1
-              ),
+              _c("li", { staticClass: "nav-item" }, [
+                _c(
+                  "span",
+                  { staticClass: "mb-0 navbar-brand h1" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: { "exact-active-class": "active", to: "/blogs" }
+                      },
+                      [_vm._v("Convocatorias")]
+                    )
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { "exact-active-class": "active", to: "/contacto" }
-                    },
-                    [_vm._v("Empresas")]
-                  )
-                ],
-                1
-              ),
+              _c("li", { staticClass: "nav-item" }, [
+                _c(
+                  "span",
+                  { staticClass: "mb-0 navbar-brand h1" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/contacto"
+                        }
+                      },
+                      [_vm._v("Empresas")]
+                    )
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/seguimiento"
-                      }
-                    },
-                    [_vm._v("Seguimiento")]
-                  )
-                ],
-                1
-              ),
+              _c("li", { staticClass: "nav-item" }, [
+                _c(
+                  "span",
+                  { staticClass: "mb-0 navbar-brand h1" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/seguimiento"
+                        }
+                      },
+                      [_vm._v("Seguimiento")]
+                    )
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/RegistrarEmpresas"
-                      }
-                    },
-                    [_vm._v("Registrar")]
-                  )
-                ],
-                1
-              )
+              _c("li", { staticClass: "nav-item" }, [
+                _c(
+                  "span",
+                  { staticClass: "mb-0 navbar-brand h1" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/RegistrarEmpresas"
+                        }
+                      },
+                      [_vm._v("Registrar Empresa")]
+                    )
+                  ],
+                  1
+                )
+              ])
             ])
           ]
         )
@@ -19897,7 +19920,7 @@ var staticRenderFns = [
           src:
             "http://m.exam-10.com/pars_docs/refs/13/12262/12262_html_32a82c9a.png",
           alt: "",
-          width: "55",
+          width: "53",
           height: "68"
         }
       })

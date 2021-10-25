@@ -975,7 +975,7 @@ var render = function() {
   return _c("div", { staticClass: "row" }, [
     _c(
       "div",
-      { staticClass: "col-12 mb-2" },
+      { staticClass: "mb-2 col-12" },
       [
         _c(
           "router-link",
@@ -1048,7 +1048,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", { staticClass: "bg-primary text-white" }, [
+    return _c("thead", { staticClass: "text-white bg-dark" }, [
       _c("tr", [
         _c("th", [_vm._v("Gestión")]),
         _vm._v(" "),
