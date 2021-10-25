@@ -1079,7 +1079,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_vm._v("Registrar Empresas")])
+      _c("h4", [_c("strong", [_vm._v("Registrar Empresas")])])
     ])
   },
   function() {
@@ -1091,20 +1091,21 @@ var staticRenderFns = [
         "div",
         { staticClass: "row needs-validation", attrs: { novalidate: "" } },
         [
-          _c("div", { staticClass: "col-lg-6 " }, [
+          _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
             _c(
               "label",
               {
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_vm._v("Nombre Largo")]
+              [_c("strong", [_vm._v("Nombre Largo")])]
             ),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Nombre Lardo Empresa",
                 name: "NombreLargo",
                 id: "NombreLargo",
                 required: ""
@@ -1121,7 +1122,7 @@ var staticRenderFns = [
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_vm._v("Socios (Codigo SIS)")]
+              [_c("strong", [_vm._v("Socios (Codigo SIS)")])]
             ),
             _vm._v(" "),
             _c("input", {
@@ -1138,20 +1139,21 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
             _c(
               "label",
               {
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_vm._v("Nombre Corto")]
+              [_c("strong", [_vm._v("Nombre Corto")])]
             ),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Nombre Corto Empresa",
                 name: "NombreCorto",
                 id: "NombreCorto",
                 required: ""
@@ -1181,20 +1183,21 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
+          _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
             _c(
               "label",
               {
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_vm._v("Dirección/Ubicación")]
+              [_c("strong", [_vm._v("Dirección/Ubicación")])]
             ),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
               attrs: {
                 type: "text",
+                placeholder: "Dirección Empresa",
                 name: "Dirección",
                 id: "Dirección",
                 required: ""
@@ -1224,14 +1227,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c(
               "label",
               {
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_vm._v("Telefono")]
+              [_c("strong", [_vm._v("Telefono")])]
             ),
             _vm._v(" "),
             _c("input", {
@@ -1248,8 +1251,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
-            _vm._v(">\n                            "),
+          _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
             _c("label", {
               staticClass: "form-label",
               attrs: { for: "validationCustom01" }
@@ -1269,14 +1271,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c(
               "label",
               {
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_vm._v("NIT")]
+              [_c("strong", [_vm._v("NIT")])]
             ),
             _vm._v(" "),
             _c("input", {
@@ -1293,7 +1295,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
+          _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
             _c("label", {
               staticClass: "form-label",
               attrs: { for: "validationCustom01" }
@@ -1316,11 +1318,11 @@ var staticRenderFns = [
       ),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-4" }, [
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("Sobre A")]
+            [_c("strong", [_vm._v("Solvencia Tecnica")])]
           ),
           _vm._v(" "),
           _c("input", {
@@ -1329,11 +1331,11 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
+        _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("Plan de pago")]
+            [_c("strong", [_vm._v("Plan de Pago")])]
           ),
           _vm._v(" "),
           _c("input", {
@@ -1342,11 +1344,11 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4" }, [
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("Sobre B")]
+            [_c("strong", [_vm._v("Constitución de la Empresa")])]
           ),
           _vm._v(" "),
           _c("input", {
@@ -1355,11 +1357,11 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4 offset-md-3" }, [
+        _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("C.V")]
+            [_c("strong", [_vm._v("Carta de Presentación")])]
           ),
           _vm._v(" "),
           _c("input", {
@@ -1370,7 +1372,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6" }, [
+        _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
           _c("li", [
             _c(
               "a",
