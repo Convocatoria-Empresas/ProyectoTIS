@@ -2093,10 +2093,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -19877,9 +19873,7 @@ var render = function() {
                 ],
                 1
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(2)
+            ])
           ]
         )
       ])
@@ -19901,10 +19895,10 @@ var staticRenderFns = [
       _c("img", {
         attrs: {
           src:
-            "http://creadictivo.com/wp-content/uploads/2018/05/umss-san-simon.png",
+            "http://m.exam-10.com/pars_docs/refs/13/12262/12262_html_32a82c9a.png",
           alt: "",
-          width: "50",
-          height: "30"
+          width: "55",
+          height: "68"
         }
       })
     ])
@@ -19928,23 +19922,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("form", { staticClass: "d-flex" }, [
-      _c("input", {
-        staticClass: "form-control me-2",
-        attrs: { type: "search", placeholder: "Search", "aria-label": "Search" }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-success", attrs: { type: "submit" } },
-        [_vm._v("Buscar")]
-      )
-    ])
   }
 ]
 render._withStripped = true
