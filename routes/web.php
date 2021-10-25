@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\SocioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,8 +21,8 @@ Route::get('/', function () {
 
 //Route::get('/empleado/create',[EmpleadoController::class,'create']);
 
-Route::resource('empleado',EmpleadoController::class);
 Route::resource('empresa',EmpresaController::class);
+//Route::resource('empresa',SocioController::class);
 
 Auth::routes();
 

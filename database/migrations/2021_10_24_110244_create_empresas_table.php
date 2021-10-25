@@ -25,6 +25,11 @@ class CreateEmpresasTable extends Migration
             $table->string('Documento_2');
             $table->string('Documento_3');
             $table->string('Documento_4');
+            $table->string('Socio_1',9);
+            $table->string('Socio_2',9);
+            $table->string('Socio_3',9);
+            $table->string('Socio_4',9);
+            $table->string('Socio_5',9);
             $table->string('Otro');
             $table->timestamps();
         });

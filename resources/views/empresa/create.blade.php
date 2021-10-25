@@ -1,4 +1,4 @@
-<form action="{{ url('/empresa') }}" method="post" enctype="multipart/form-data">
+<form action="{{ url('/empresa/') }}" method="post" enctype="multipart/form-data">
     @csrf
        <label for="Nombre_Largo">Nombre Largo</label>
        <input type="text" name="Nombre_Largo" id="Nombre_Largo">
@@ -33,7 +33,25 @@
        <label for="Otro">Otro</label>
        <input type="text" name="Otro" id="Otro">
        <br>
+
+       <label for="Socio_1">Socio 1</label>
+       <input type="text" name="Socio_1" id="Socio_1">
+       <br>
+       <label for="Socio_2">Socio 2</label>
+       <input type="text" name="Socio_2" id="Socio_2">
+       <br>
+       <label for="Socio_3">Socio 3</label>
+       <input type="text" name="Socio_3" id="Socio_3">
+       <br>
+       <label for="Socio_4">Socio 4</label>
+       <input type="text" name="Socio_4" id="Socio_4">
+       <br>
+       <label for="Socio_5">Socio 5</label>
+       <input type="text" name="Socio_5" id="Socio_5">
+       <br>
+       
        
        <input type="submit" value="Enviar Solicitud">
-    
-   </form>
+
+
+     
