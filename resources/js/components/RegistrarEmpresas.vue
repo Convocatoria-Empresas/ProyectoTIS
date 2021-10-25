@@ -10,35 +10,35 @@
 
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input type="text" placeholder="Nombre Lardo Empresa" name="NombreLargo"class="form-control" id="NombreLargo"  required>
+                                <input type="text" placeholder="Nombre Lardo Empresa" name="NombreLargo" class="form-control" id="NombreLargo"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socios (Codigo SIS)</strong></label>
-                                <input type="text" placeholder="Representante Legal" name="Socio1"class="form-control" id="Socio1"  required>
+                                <input type="text" placeholder="Representante Legal" name="Socio1" class="form-control" id="Socio1"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-5 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Corto</strong></label>
-                                <input type="text" placeholder="Nombre Corto Empresa" name="NombreCorto"class="form-control" id="NombreCorto"  required>
+                                <input type="text" placeholder="Nombre Corto Empresa" name="NombreCorto" class="form-control" id="NombreCorto"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio2"class="form-control" id="Socio2"  required>
+                                <input type="text" placeholder="Integrante" name="Socio2" class="form-control" id="Socio2"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-5 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Dirección/Ubicación</strong></label>
-                                <input type="text" placeholder="Dirección Empresa" name="Dirección"class="form-control" id="Dirección"  required>
+                                <input type="text" placeholder="Dirección Empresa" name="Dirección" class="form-control" id="Dirección"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -59,21 +59,21 @@
 
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio4"class="form-control" id="Socio 4"  required>
+                                <input type="text" placeholder="Integrante" name="Socio4" class="form-control" id="Socio 4"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>NIT</strong></label>
-                                <input type="text" placeholder="NIT Empresa" name="NIT"class="form-control" id="NIT"  required>
+                                <input type="text" placeholder="NIT Empresa" name="NIT" class="form-control" id="NIT"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
                                 
                                 <div class="col-lg-4 offset-md-2">
                                  <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio5"class="form-control" id="Socio5"  required>
+                                <input type="text" placeholder="Integrante" name="Socio5" class="form-control" id="Socio5"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
