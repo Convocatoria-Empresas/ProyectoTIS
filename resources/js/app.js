@@ -17,10 +17,6 @@ import {routes} from './routes';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
-const router = new VueRouter({
-    mode: 'history',
-    routes: routes
-});
 
 //finalmente, definimos nuestra app de Vue
 const app = new Vue({

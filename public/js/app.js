@@ -2150,11 +2150,7 @@ window.Vue = vue__WEBPACK_IMPORTED_MODULE_0__["default"]; //Componente important
 
 
 Vue.use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-Vue.use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-axios'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), (axios__WEBPACK_IMPORTED_MODULE_3___default()));
-var router = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({
-  mode: 'history',
-  routes: _routes__WEBPACK_IMPORTED_MODULE_4__.routes
-}); //finalmente, definimos nuestra app de Vue
+Vue.use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-axios'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), (axios__WEBPACK_IMPORTED_MODULE_3___default())); //finalmente, definimos nuestra app de Vue
 
 var app = new Vue({
   el: '#app',
