@@ -6,8 +6,13 @@
         </div>
         <div class="col-12">
                     <div class="table-responsive">
+<<<<<<< Updated upstream
                         <table class="table table-bordered">
                             <thead class="text-white bg-dark">
+=======
+                        <table class="table table-dark">
+                            <thead class="text-white bg-primary">
+>>>>>>> Stashed changes
                                 <tr>
                                     <th>Gestión</th>
                                     <th>Título</th>
