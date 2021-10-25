@@ -2095,6 +2095,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -19770,123 +19772,120 @@ var render = function() {
   return _c("main", [
     _c("nav", { staticClass: "navbar bg-danger" }),
     _vm._v(" "),
-    _c(
-      "nav",
-      { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary" },
-      [
-        _c("div", { staticClass: "container-fluid" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "navbarSupportedContent" }
-            },
-            [
-              _c("ul", { staticClass: "navbar-nav me-auto mb-2 mb-lg-0" }, [
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link active",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/",
-                          "aria-current": "page"
-                        }
-                      },
-                      [_vm._v("Inicio")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: { "exact-active-class": "active", to: "/blogs" }
-                      },
-                      [_vm._v("Convocatorias")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/contacto"
-                        }
-                      },
-                      [_vm._v("Empresas")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/seguimiento"
-                        }
-                      },
-                      [_vm._v("Seguimiento")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/RegistrarEmpresas"
-                        }
-                      },
-                      [_vm._v("Registrar")]
-                    )
-                  ],
-                  1
-                )
-              ]),
+    _c("nav", { staticClass: "navbar bg-primary" }),
+    _vm._v(" "),
+    _c("nav", { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "collapse navbar-collapse",
+            attrs: { id: "navbarSupportedContent" }
+          },
+          [
+            _c("ul", { staticClass: "mb-2 navbar-nav me-auto mb-lg-0" }, [
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link active",
+                      attrs: {
+                        "exact-active-class": "active",
+                        to: "/",
+                        "aria-current": "page"
+                      }
+                    },
+                    [_vm._v("Inicio")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(2)
-            ]
-          )
-        ])
-      ]
-    ),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/blogs" }
+                    },
+                    [_vm._v("Convocatorias")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/contacto" }
+                    },
+                    [_vm._v("Empresas")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        "exact-active-class": "active",
+                        to: "/seguimiento"
+                      }
+                    },
+                    [_vm._v("Seguimiento")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        "exact-active-class": "active",
+                        to: "/RegistrarEmpresas"
+                      }
+                    },
+                    [_vm._v("Registrar")]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("nav", { staticClass: "navbar bg-primary" }),
     _vm._v(" "),
     _c("nav", { staticClass: "navbar bg-danger" }),
     _vm._v(" "),
@@ -19904,8 +19903,8 @@ var staticRenderFns = [
           src:
             "http://creadictivo.com/wp-content/uploads/2018/05/umss-san-simon.png",
           alt: "",
-          width: "30",
-          height: "24"
+          width: "50",
+          height: "30"
         }
       })
     ])
