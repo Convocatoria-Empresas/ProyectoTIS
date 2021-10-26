@@ -1327,7 +1327,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
+            attrs: { type: "file", id: "Documento_1" }
           })
         ]),
         _vm._v(" "),
@@ -1340,7 +1340,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
+            attrs: { type: "file", id: "Documento_2" }
           })
         ]),
         _vm._v(" "),
@@ -1353,7 +1353,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
+            attrs: { type: "file", id: "Documento_3" }
           })
         ]),
         _vm._v(" "),
@@ -1366,7 +1366,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
+            attrs: { type: "file", id: "Documento_4" }
           })
         ])
       ]),

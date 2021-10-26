@@ -82,19 +82,19 @@
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" id="Documento_1">
                                 </div>
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="formFile" class="form-label"><strong>Plan de Pago</strong></label>
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" id="Documento_2">
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Constitución de la Empresa</strong></label>
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" id="Documento_3">
                                 </div>
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="formFile" class="form-label"><strong>Carta de Presentación</strong></label>
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" id="Documento_4">
                                 </div>
                             </div>
                             <div class="row">
