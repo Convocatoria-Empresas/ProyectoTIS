@@ -38,6 +38,11 @@
                             <router-link exact-active-class="active" to="/RegistrarEmpresas" class="nav-link">Registrar Empresa</router-link>
                         </span>
                     </li>
+                    <li class="nav-item">
+                        <span class="mb-0 navbar-brand h1">
+                            <router-link exact-active-class="active" to="/empresa" class="nav-link">LA EMPRESA</router-link>
+                        </span>
+                    </li>
                 </ul>
                 </div>
             </div>

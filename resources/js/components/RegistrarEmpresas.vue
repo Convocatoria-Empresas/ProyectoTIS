@@ -10,56 +10,56 @@
 
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input type="text" placeholder="Nombre Lardo Empresa" name="NombreLargo" class="form-control" id="NombreLargo"  required>
+                                <input type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socios (Codigo SIS)</strong></label>
-                                <input type="text" placeholder="Representante Legal" name="Socio1" class="form-control" id="Socio1"  required>
+                                <input type="text" placeholder="Representante Legal" name="Socio_1" class="form-control" id="Socio_1"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-5 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Corto</strong></label>
-                                <input type="text" placeholder="Nombre Corto Empresa" name="NombreCorto" class="form-control" id="NombreCorto"  required>
+                                <input type="text" placeholder="Nombre Corto Empresa" name="Nombre_Corto" class="form-control" id="Nombre_Corto"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio2" class="form-control" id="Socio2"  required>
+                                <input type="text" placeholder="Integrante" name="Socio_2" class="form-control" id="Socio_2"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-5 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Dirección/Ubicación</strong></label>
-                                <input type="text" placeholder="Dirección Empresa" name="Dirección" class="form-control" id="Dirección"  required>
+                                <input type="text" placeholder="Dirección Empresa" name="Direccion" class="form-control" id="Direccion"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio3"class="form-control" id="Socio3"  required>
+                                <input type="text" placeholder="Integrante" name="Socio_3" class="form-control" id="Socio_3"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
                                 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Telefono</strong></label>
-                                <input type="text" placeholder="Telefono Empresa" name="Telefono"class="form-control" id="Telefono"  required>
+                                <input type="text" placeholder="Telefono Empresa" name="Telefono" class="form-control" id="Telefono"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio4" class="form-control" id="Socio 4"  required>
+                                <input type="text" placeholder="Integrante" name="Socio_4" class="form-control" id="Socio_4"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -73,7 +73,7 @@
                                 
                                 <div class="col-lg-4 offset-md-2">
                                  <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio5" class="form-control" id="Socio5"  required>
+                                <input type="text" placeholder="Integrante" name="Socio_5" class="form-control" id="Socio_5"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -108,7 +108,7 @@
                                      <button type="submit" class="btn btn-primary">Cancelar</button>
                                      </div>
                                      <div class="col-lg-4">
-                                     <button type="submit" class="btn btn-primary">Registrar</button>
+                                     <button @click="guardar();" type="submit" class="btn btn-primary">Registrar</button>
                                      </div>
                                      </div>
                                      
@@ -127,22 +127,33 @@
 
 <script>
 export default {
-    name:"crear-blog",
+
+    name: 'empresa',
     data(){
         return {
-            blog:{
-                titulo:"",
-                Descripcion:""
-            }
+            
+            empresa:[],
+ 
         }
     },
     methods:{
+
+        async listar() {
+            const res = await axios.get('empresa');
+            this.empresa = res.data;
+    },
+        
         async crear(){
             await this.axios.post('/api/blog',this.blog).then(response=>{
                 this.$router.push({name:"mostrarBlogs"})
             }).catch(error=>{
                 console.log(error)
             })
+        },
+        async guardar(){
+                const res= await axios.post('/empresa', this.empresa);
+                this.listar();
+
         }
     }
 }

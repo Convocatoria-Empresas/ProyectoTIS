@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpresaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('{any}', function () {
     return view('app');
 })->where('any', '.*');
+
+
+Auth::routes();
+
+Route::apiResource('/empresa', EmpresaController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
