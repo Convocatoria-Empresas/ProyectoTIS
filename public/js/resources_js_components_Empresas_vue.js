@@ -80,24 +80,29 @@ var staticRenderFns = [
         _c("div", { staticClass: "text-center col" }, [
           _c("h1", [_vm._v("Aqui vendran todas las Empresas")]),
           _vm._v(" "),
-          _c("form", { staticClass: "my-2 form-inline my-lg-0" }, [
-            _c("input", {
-              staticClass: "form-control mr-sm-2",
-              attrs: {
-                type: "search",
-                placeholder: "Search",
-                "aria-label": "Search"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "my-2 btn btn-outline-success my-sm-0",
-                attrs: { type: "submit" }
-              },
-              [_vm._v("Buscar")]
-            )
+          _c("nav", { staticClass: "navbar navbar-dark bg-dark" }, [
+            _c("form", { staticClass: "form-inline" }, [
+              _c("div", { staticClass: "input-group" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "my-2 btn btn-outline-success my-sm-0",
+                    attrs: { type: "submit" }
+                  },
+                  [_vm._v("Search")]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Username",
+                    "aria-label": "Username",
+                    "aria-describedby": "basic-addon1"
+                  }
+                })
+              ])
+            ])
           ])
         ])
       ])

@@ -1086,7 +1086,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "row  needs-validation", attrs: { novalidate: "" } },
+        { staticClass: "row needs-validation", attrs: { novalidate: "" } },
         [
           _c("div", { staticClass: "col-lg-6" }, [
             _c(
