@@ -1,12 +1,16 @@
 <template>
     <div class="row">
+        <div class="text-center col">
+            <h1>REGISTRO DE EMPRESAS</h1><h2></h2>
+        </div>
         <div class="col-12">
             <div class="card">
-                <div class="card-header"><h4> <strong>Registrar Empresas</strong></h4></div>
+
+                <div class="card-header"><h4> <strong>Registrar Empresa</strong></h4></div>
                 <div class="card-body">
                     <form @submit.prevent="crear">
                         <div  class="row">
-                            <div  class="row  needs-validation" novalidate>
+                            <div  class="row needs-validation" novalidate>
 
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
@@ -45,14 +49,14 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio3"class="form-control" id="Socio3"  required>
+                                <input type="text" placeholder="Integrante" name="Socio3" class="form-control" id="Socio3"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
-                                
+
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Telefono</strong></label>
-                                <input type="text" placeholder="Telefono Empresa" name="Telefono"class="form-control" id="Telefono"  required>
+                                <input type="text" placeholder="Telefono Empresa" name="Telefono" class="form-control" id="Telefono"  required>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -70,7 +74,7 @@
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
-                                
+
                                 <div class="col-lg-4 offset-md-2">
                                  <label for="validationCustom01" class="form-label"></label>
                                 <input type="text" placeholder="Integrante" name="Socio5" class="form-control" id="Socio5"  required>
@@ -99,24 +103,24 @@
                             </div>
                             <div class="row">
                                    <div class="col-lg-5 offset-md-1">
-                                  <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link">Mas información</a></li>
+                                  <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link text-info">Mas información</a></li>
                                   </div>
                                      <div class="col-lg-6">
                                      <label for="validationCustom01" class="form-label"></label>
                                      <div class="row">
                                      <div class="col-lg-6 offset-md-2">
-                                     <button type="submit" class="btn btn-primary">Cancelar</button>
+                                     <button type="submit" class="btn btn-danger">Cancelar</button>
                                      </div>
                                      <div class="col-lg-4">
-                                     <button type="submit" class="btn btn-primary">Registrar</button>
+                                     <button type="submit" class="btn btn-lg btn-success">Registrar</button>
                                      </div>
                                      </div>
-                                     
+
                                      </div>
                             </div>
-                            
-                            
-                            
+
+
+
                         </div>
                     </form>
                 </div>
