@@ -14,28 +14,28 @@
 
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input type="text" placeholder="Nombre Lardo Empresa" name="NombreLargo" class="form-control" id="NombreLargo"  required>
+                                <input maxlength="20" type="text" placeholder="Nombre Largo Empresa" name="NombreLargo" class="form-control" id="NombreLargo"  required pattern="[a-zA-Z- -\.]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socios (Codigo SIS)</strong></label>
-                                <input type="text" placeholder="Representante Legal" name="Socio1" class="form-control" id="Socio1"  required>
+                                <input type="text" placeholder="Representante Legal" name="Socio1" class="form-control" id="Socio1"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-5 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Corto</strong></label>
-                                <input type="text" placeholder="Nombre Corto Empresa" name="NombreCorto" class="form-control" id="NombreCorto"  required>
+                                <input type="text" placeholder="Nombre Corto Empresa" name="NombreCorto" class="form-control" id="NombreCorto"  required pattern="[a-zA-Z- -\.]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio2" class="form-control" id="Socio2"  required>
+                                <input type="text" placeholder="Integrante" name="Socio2" class="form-control" id="Socio2"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -49,35 +49,35 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio3" class="form-control" id="Socio3"  required>
+                                <input type="text" placeholder="Integrante" name="Socio3"class="form-control" id="Socio3"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Telefono</strong></label>
-                                <input type="text" placeholder="Telefono Empresa" name="Telefono" class="form-control" id="Telefono"  required>
+                                <input maxlength="8" minlength="7" type="text" placeholder="Telefono Empresa" name="Telefono" class="form-control" id="Telefono"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio4" class="form-control" id="Socio 4"  required>
+                                <input type="text" placeholder="Integrante" name="Socio4" class="form-control" id="Socio 4"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>NIT</strong></label>
-                                <input type="text" placeholder="NIT Empresa" name="NIT" class="form-control" id="NIT"  required>
+                                <input type="text" placeholder="NIT Empresa" name="NIT" class="form-control" id="NIT"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-2">
                                  <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio5" class="form-control" id="Socio5"  required>
+                                <input type="text" placeholder="Integrante" name="Socio5" class="form-control" id="Socio5"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -86,19 +86,19 @@
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
-                                <input class="form-control" type="file" id="Documento_1">
+                                <input class="form-control" accept=".pdf" type="file" id="Documento_1">
                                 </div>
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="formFile" class="form-label"><strong>Plan de Pago</strong></label>
-                                <input class="form-control" type="file" id="Documento_2">
+                                <input class="form-control"  accept=".pdf" type="file" id="Documento_2">
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Constitución de la Empresa</strong></label>
-                                <input class="form-control" type="file" id="Documento_3">
+                                <input class="form-control" accept=".pdf" type="file" id="Documento_3">
                                 </div>
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="formFile" class="form-label"><strong>Carta de Presentación</strong></label>
-                                <input class="form-control" type="file" id="Documento_4">
+                                <input class="form-control" accept=".pdf" type="file" id="Documento_4">
                                 </div>
                             </div>
                             <div class="row">
@@ -114,6 +114,8 @@
                                      <div class="col-lg-4">
                                      <button type="submit" class="btn btn-lg btn-success">Registrar</button>
                                      </div>
+
+
                                      </div>
 
                                      </div>
@@ -151,6 +153,7 @@ export default {
     }
 }
 </script>
+
 (function () {
   'use strict'
 
@@ -170,3 +173,33 @@ export default {
       }, false)
     })
 })()
+
+<script type="text/javascript">
+    function validarExt(){
+
+        var archivoInput = document.getElementById('Documento_1');
+        var archivoRuta = archivoInput.value;
+        var extPermitida = /(.pdf)$/i;
+
+        if(!extPermitida.exec(archivoRuta)){
+            alert('Asegurate de haber seleccionado un PDf');
+            archivoInput.value;
+            return false;
+        }
+        else{
+
+                if(archivoInput.files && archivoInput[0]){
+
+                        var visor = new FileReader();
+                        visor.onload=function(e){
+                        document.getElementById('visorArchivo').innerHTML= '<embed src="+e.target.result" width>';
+
+                        }
+                }
+                
+
+        }
+
+    }
+
+</script>
