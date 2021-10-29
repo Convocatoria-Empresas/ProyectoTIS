@@ -157,6 +157,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "crear-blog",
   data: function data() {
@@ -1051,9 +1055,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _vm._m(0),
+    _vm._v(" "),
     _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "card" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
           _c(
@@ -1066,7 +1072,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._m(1)]
+            [_vm._m(2)]
           )
         ])
       ])
@@ -1078,8 +1084,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center col" }, [
+      _c("h1", [_vm._v("REGISTRO DE EMPRESA")]),
+      _c("h2")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_c("strong", [_vm._v("Registrar Empresas")])])
+      _c("h4", [_c("strong", [_vm._v("Registrar Empresa")])])
     ])
   },
   function() {
@@ -1089,7 +1104,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "row  needs-validation", attrs: { novalidate: "" } },
+        { staticClass: "row needs-validation", attrs: { novalidate: "" } },
         [
           _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
             _c(
@@ -1377,7 +1392,7 @@ var staticRenderFns = [
             _c(
               "a",
               {
-                staticClass: "nav-link",
+                staticClass: "nav-link text-info",
                 attrs: {
                   href: "https://www.facebook.com/lacocoyodotcom/",
                   target: "_blank"
@@ -1398,7 +1413,10 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-lg-6 offset-md-2" }, [
               _c(
                 "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+                {
+                  staticClass: "btn btn-lg btn-danger",
+                  attrs: { type: "submit" }
+                },
                 [_vm._v("Cancelar")]
               )
             ]),
@@ -1406,7 +1424,10 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-lg-4" }, [
               _c(
                 "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+                {
+                  staticClass: "btn btn-lg btn-success",
+                  attrs: { type: "submit" }
+                },
                 [_vm._v("Registrar")]
               )
             ])

@@ -77,12 +77,32 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container mt-4" }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col text-center" }, [
+        _c("div", { staticClass: "text-center col" }, [
           _c("h1", [
             _vm._v("Aqui vendran todas las "),
             _c("span", { staticClass: "badge bg-secondary" }, [
               _vm._v("EMPRESAS")
             ])
+          ]),
+          _vm._v(" "),
+          _c("form", { staticClass: "my-2 form-inline my-lg-0" }, [
+            _c("input", {
+              staticClass: "form-control mr-sm-2",
+              attrs: {
+                type: "search",
+                placeholder: "Search",
+                "aria-label": "Search"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "my-2 btn btn-outline-success my-sm-0",
+                attrs: { type: "submit" }
+              },
+              [_vm._v("Buscar")]
+            )
           ])
         ])
       ])

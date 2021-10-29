@@ -81,17 +81,15 @@ var staticRenderFns = [
           _c("div", { staticClass: "text-center col" }, [
             _c("nav", { staticClass: "bg-white navbar" }, [
               _c("div", [
-                _c("a", { attrs: { href: "navbar-brand" } }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
-                      alt: "",
-                      width: "100",
-                      height: "130"
-                    }
-                  })
-                ])
+                _c("img", {
+                  attrs: {
+                    src:
+                      "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
+                    alt: "",
+                    width: "100",
+                    height: "130"
+                  }
+                })
               ])
             ])
           ])
