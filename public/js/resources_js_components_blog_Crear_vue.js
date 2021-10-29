@@ -58,102 +58,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "crear-blog",
   data: function data() {
@@ -1063,7 +967,19 @@ var render = function() {
                 }
               }
             },
-            [_vm._m(1)]
+            [
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "button",
+                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+                [_vm._v("Submit")]
+              )
+            ]
           )
         ])
       ])
@@ -1076,320 +992,66 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_vm._v("Registrar Empresas")])
+      _c("h4", [_vm._v("Crear Convocatoria")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "mb-3" }, [
       _c(
-        "div",
-        { staticClass: "row needs-validation", attrs: { novalidate: "" } },
-        [
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
-              },
-              [_vm._v("Nombre Largo")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "NombreLargo",
-                id: "NombreLargo",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
-              },
-              [_vm._v("Socios (Codigo SIS)")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Socio1",
-                id: "Socio1",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
-              },
-              [_vm._v("Nombre Corto")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "NombreCorto",
-                id: "NombreCorto",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Socio2",
-                id: "Socio2",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
-              },
-              [_vm._v("Dirección/Ubicación")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Dirección",
-                id: "Dirección",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Socio3",
-                id: "Socio3",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
-              },
-              [_vm._v("Telefono")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Telefono",
-                id: "Telefono",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Socio4",
-                id: "Socio 4",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
-              },
-              [_vm._v("NIT")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "NIT", id: "NIT", required: "" }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "Socio5",
-                id: "Socio5",
-                required: ""
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ])
-        ]
+        "label",
+        { staticClass: "form-label", attrs: { for: "exampleInputEmail1" } },
+        [_vm._v("Título")]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("Sobre A")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("Plan de pago")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("Sobre B")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_vm._v("C.V")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "file", id: "formFile" }
-          })
-        ])
-      ]),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "email",
+          id: "exampleInputEmail1",
+          "aria-describedby": "emailHelp"
+        }
+      }),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c("li", [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: {
-                  href: "https://www.facebook.com/lacocoyodotcom/",
-                  target: "_blank"
-                }
-              },
-              [_vm._v("Mas información")]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Cancelar")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Registrar")]
-              )
-            ])
-          ])
-        ])
+      _c("div", { staticClass: "form-text", attrs: { id: "emailHelp" } }, [
+        _vm._v("We'll never share your email with anyone else.")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-3" }, [
+      _c(
+        "label",
+        { staticClass: "form-label", attrs: { for: "exampleInputPassword1" } },
+        [_vm._v("Password")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "password", id: "exampleInputPassword1" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-3 form-check" }, [
+      _c("input", {
+        staticClass: "form-check-input",
+        attrs: { type: "checkbox", id: "exampleCheck1" }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        { staticClass: "form-check-label", attrs: { for: "exampleCheck1" } },
+        [_vm._v("Check me out")]
+      )
     ])
   }
 ]

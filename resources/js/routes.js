@@ -9,6 +9,7 @@ const Editar = () => import('./components/blog/Editar.vue');
 //importar form empresa
 
 
+
 export const routes = [
     {
         name: 'home',
