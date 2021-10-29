@@ -78,29 +78,75 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container mt-4" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "text-center col" }, [
-          _c("h1", [_vm._v("Aqui vendran todas las Empresas")]),
+          _c("h1", [_vm._v("Historial de Empresas Registradas")]),
+          _vm._v(".\n            "),
+          _c("div", { staticClass: "input-group mb-3" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder: "Buscar el nombre de la empresa registrada",
+                "aria-label": "Burcar el nombre de la empresa registrada",
+                "aria-describedby": "basic-addon2"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-group-append" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-lg btn-primary",
+                  attrs: { type: "button" }
+                },
+                [_vm._v("Buscar")]
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c("nav", { staticClass: "navbar navbar-dark bg-dark" }, [
-            _c("form", { staticClass: "form-inline" }, [
-              _c("div", { staticClass: "input-group" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "my-2 btn btn-outline-success my-sm-0",
-                    attrs: { type: "submit" }
-                  },
-                  [_vm._v("Search")]
-                ),
+          _c("div", [
+            _c("table", { staticClass: "table table-dark table-hover" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("First")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Last")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Handle")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("fila1")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("fila2")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("fila3")])
+                ]),
                 _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Username",
-                    "aria-label": "Username",
-                    "aria-describedby": "basic-addon1"
-                  }
-                })
+                _c("tr", [
+                  _c("th", { attrs: { scope: "row" } }, [_vm._v("2")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Jacob")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Thornton")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("@fat")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", { attrs: { scope: "row" } }, [_vm._v("3")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Larry the Bird")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("@twitter")]),
+                  _vm._v(" "),
+                  _c("td")
+                ])
               ])
             ])
           ])

@@ -18,21 +18,25 @@
                             <router-link exact-active-class="active" to="/" class="nav-link active" aria-current="page">Inicio</router-link>
                         </span>
                     </li>
-                    <li class="nav-item">
-                        <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/blogs" class="nav-link">Convocatorias</router-link>
-                        </span>
-                    </li>
+
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
                             <router-link exact-active-class="active" to="/empresas" class="nav-link">Empresas</router-link>
                         </span>
                     </li>
+
+                    <li class="nav-item">
+                        <span class="mb-0 navbar-brand h1">
+                            <router-link exact-active-class="active" to="/blogs" class="nav-link">Convocatorias</router-link>
+                        </span>
+                    </li>
+
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
                             <router-link exact-active-class="active" to="/seguimiento" class="nav-link">Seguimiento</router-link>
                         </span>
                     </li>
+                    
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
                             <router-link exact-active-class="active" to="/RegistrarEmpresas" class="nav-link">Registrar Empresa</router-link>

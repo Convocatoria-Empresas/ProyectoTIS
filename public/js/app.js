@@ -2103,6 +2103,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -19825,9 +19829,12 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "nav-link",
-                        attrs: { "exact-active-class": "active", to: "/blogs" }
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/empresas"
+                        }
                       },
-                      [_vm._v("Convocatorias")]
+                      [_vm._v("Empresas")]
                     )
                   ],
                   1
@@ -19843,12 +19850,9 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/empresas"
-                        }
+                        attrs: { "exact-active-class": "active", to: "/blogs" }
                       },
-                      [_vm._v("Empresas")]
+                      [_vm._v("Convocatorias")]
                     )
                   ],
                   1
