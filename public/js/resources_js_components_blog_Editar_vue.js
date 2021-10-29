@@ -1087,8 +1087,8 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-12" }, [
       _c(
         "button",
-        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Guardar")]
+        { staticClass: "btn btn-success", attrs: { type: "submit" } },
+        [_vm._v("Guardar Cambios")]
       )
     ])
   }

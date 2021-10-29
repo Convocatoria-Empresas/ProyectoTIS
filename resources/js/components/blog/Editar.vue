@@ -20,7 +20,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <button type="submit" class="btn btn-success">Guardar Cambios</button>
                             </div>
                         </div>
                     </form>
