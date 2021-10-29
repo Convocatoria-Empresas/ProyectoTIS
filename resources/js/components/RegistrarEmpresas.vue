@@ -49,7 +49,7 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
-                                <input type="text" placeholder="Integrante" name="Socio3"class="form-control" id="Socio3"  required pattern="[0-9]+">
+                                <input type="text" placeholder="Integrante" name="Socio3" class="form-control" id="Socio3"  required pattern="[0-9]+">
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -196,7 +196,7 @@ export default {
 
                         }
                 }
-                
+
 
         }
 
