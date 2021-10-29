@@ -1413,7 +1413,10 @@ var staticRenderFns = [
             _c("div", { staticClass: "col-lg-6 offset-md-2" }, [
               _c(
                 "button",
-                { staticClass: "btn btn-danger", attrs: { type: "submit" } },
+                {
+                  staticClass: "btn btn-lg btn-danger",
+                  attrs: { type: "submit" }
+                },
                 [_vm._v("Cancelar")]
               )
             ]),

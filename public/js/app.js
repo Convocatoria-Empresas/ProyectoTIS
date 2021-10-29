@@ -2198,8 +2198,8 @@ var Home = function Home() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Home.vue */ "./resources/js/components/Home.vue"));
 };
 
-var Contacto = function Contacto() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_Contacto_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Contacto.vue */ "./resources/js/components/Contacto.vue"));
+var Empresas = function Empresas() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Empresas_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Empresas.vue */ "./resources/js/components/Empresas.vue"));
 };
 
 var Seguimiento = function Seguimiento() {
@@ -2249,9 +2249,9 @@ var routes = [{
   path: '/sguimiento',
   component: Seguimiento
 }, {
-  name: 'contacto',
-  path: '/contacto',
-  component: Contacto
+  name: 'empresas',
+  path: '/empresas',
+  component: Empresas
 }];
 
 /***/ }),
@@ -19845,7 +19845,7 @@ var render = function() {
                         staticClass: "nav-link",
                         attrs: {
                           "exact-active-class": "active",
-                          to: "/contacto"
+                          to: "/empresas"
                         }
                       },
                       [_vm._v("Empresas")]
@@ -35387,7 +35387,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Contacto_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_RegistrarEmpresas_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_RegistrarEmpresas_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

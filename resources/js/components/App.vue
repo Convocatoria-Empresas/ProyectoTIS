@@ -25,7 +25,7 @@
                     </li>
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/contacto" class="nav-link">Empresas</router-link>
+                            <router-link exact-active-class="active" to="/empresas" class="nav-link">Empresas</router-link>
                         </span>
                     </li>
                     <li class="nav-item">
