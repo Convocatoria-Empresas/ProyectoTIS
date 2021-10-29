@@ -78,12 +78,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container mt-4" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "text-center col" }, [
-          _c("h1", [
-            _vm._v("Aqui vendran todas las "),
-            _c("span", { staticClass: "badge bg-secondary" }, [
-              _vm._v("EMPRESAS")
-            ])
-          ]),
+          _c("h1", [_vm._v("Aqui vendran todas las Empresas")]),
           _vm._v(" "),
           _c("form", { staticClass: "my-2 form-inline my-lg-0" }, [
             _c("input", {

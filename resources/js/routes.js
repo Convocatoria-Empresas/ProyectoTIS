@@ -37,7 +37,7 @@ export const routes = [
     },
     {
         name: 'seguimiento',
-        path: '/sguimiento',
+        path: '/seguimiento',
         component: Seguimiento
     },
     {

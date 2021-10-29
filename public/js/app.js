@@ -2246,7 +2246,7 @@ var routes = [{
   component: Editar
 }, {
   name: 'seguimiento',
-  path: '/sguimiento',
+  path: '/seguimiento',
   component: Seguimiento
 }, {
   name: 'empresas',
