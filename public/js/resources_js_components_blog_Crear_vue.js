@@ -54,10 +54,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "crear-blog",
   data: function data() {
@@ -970,14 +966,10 @@ var render = function() {
             [
               _vm._m(1),
               _vm._v(" "),
-              _vm._m(2),
-              _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
               _c(
                 "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Submit")]
+                { staticClass: "btn btn-success", attrs: { type: "submit" } },
+                [_vm._v("Registrar")]
               )
             ]
           )
@@ -1002,7 +994,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "mb-3" }, [
       _c(
         "label",
-        { staticClass: "form-label", attrs: { for: "exampleInputEmail1" } },
+        { staticClass: "form-label", attrs: { for: "tituloconvocatoria" } },
         [_vm._v("Título")]
       ),
       _vm._v(" "),
@@ -1010,48 +1002,29 @@ var staticRenderFns = [
         staticClass: "form-control",
         attrs: {
           type: "email",
-          id: "exampleInputEmail1",
-          "aria-describedby": "emailHelp"
+          id: "tituloconvocatoria",
+          "aria-describedby": "titulo",
+          placeholder: "Título de la convocatoria"
         }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "form-text", attrs: { id: "emailHelp" } }, [
-        _vm._v("We'll never share your email with anyone else.")
+      _c("h2"),
+      _vm._v(" "),
+      _c("div", { staticClass: "mb-3" }, [
+        _c(
+          "label",
+          {
+            staticClass: "form-label",
+            attrs: { for: "descripcionConvocatoria" }
+          },
+          [_vm._v("Descripción")]
+        ),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-control",
+          attrs: { id: "descripcionConvocatoria", rows: "3" }
+        })
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-3" }, [
-      _c(
-        "label",
-        { staticClass: "form-label", attrs: { for: "exampleInputPassword1" } },
-        [_vm._v("Password")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "password", id: "exampleInputPassword1" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-3 form-check" }, [
-      _c("input", {
-        staticClass: "form-check-input",
-        attrs: { type: "checkbox", id: "exampleCheck1" }
-      }),
-      _vm._v(" "),
-      _c(
-        "label",
-        { staticClass: "form-check-label", attrs: { for: "exampleCheck1" } },
-        [_vm._v("Check me out")]
-      )
     ])
   }
 ]

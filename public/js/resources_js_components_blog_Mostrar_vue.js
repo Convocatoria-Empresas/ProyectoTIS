@@ -65,6 +65,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -969,6 +971,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _vm._m(0),
+    _vm._v(" "),
     _c(
       "div",
       { staticClass: "mb-2 col-12" },
@@ -981,7 +985,7 @@ var render = function() {
           },
           [
             _c("i", { staticClass: "fas fa-plus-circle" }, [
-              _vm._v(" Crear Nueva Convocatoria")
+              _vm._v(" Nueva Convocatoria")
             ])
           ]
         )
@@ -992,17 +996,17 @@ var render = function() {
     _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "table-responsive" }, [
         _c("table", { staticClass: "table table-bordered" }, [
-          _vm._m(0),
+          _vm._m(1),
           _vm._v(" "),
           _c(
             "tbody",
             _vm._l(_vm.blogs, function(blog) {
               return _c("tr", { key: blog.id }, [
-                _c("td", [_vm._v(_vm._s(blog.id))]),
+                _c("td", [_vm._v(_vm._s(blog.gestion))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.titulo))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.contenido))]),
+                _c("td", [_vm._v(_vm._s(blog.descipcion))]),
                 _vm._v(" "),
                 _c(
                   "td",
@@ -1012,7 +1016,10 @@ var render = function() {
                       {
                         staticClass: "btn btn-info",
                         attrs: {
-                          to: { name: "editarBlog", params: { id: blog.id } }
+                          to: {
+                            name: "editarBlog",
+                            params: { gestion: blog.gestion }
+                          }
                         }
                       },
                       [_c("i", { staticClass: "fas fa-edit" })]
@@ -1025,7 +1032,7 @@ var render = function() {
                         attrs: { type: "button" },
                         on: {
                           click: function($event) {
-                            return _vm.borrarBlog(blog.id)
+                            return _vm.borrarBlog(blog.gestion)
                           }
                         }
                       },
@@ -1044,6 +1051,14 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center col" }, [
+      _c("h1", [_vm._v("Convocatorias de empresas")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
