@@ -1,7 +1,6 @@
 <template>
     <div class="row">
         <div class="mb-2 col-12">
-            <!-- llamamos al componente para Crear   -->
             <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-plus-circle"> Crear Nueva Convocatoria</i></router-link>
         </div>
         <div class="col-12">
@@ -11,10 +10,9 @@
                                 <tr>
                                     <th>Gestión</th>
                                     <th>Título</th>
-                                    <th>Contenido</th>
+                                    <th>Descrpcion</th>
                                     <th>Acciones </th>
                                 </tr>
-
                             </thead>
                             <tbody>
                                 <tr v-for="blog in blogs" :key="blog.id">
