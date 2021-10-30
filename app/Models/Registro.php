@@ -12,9 +12,11 @@ class Registro extends Model
         'Nombre_Largo',
         'Nombre_Corto',
         'Telefono',
-}       'Correo_electronico',
+       'Correo_electronico',
         'Documento_1',
         'Documento_2',
         'Documento_3',
         'Documento_4',
-
+    ];
+    
+    }

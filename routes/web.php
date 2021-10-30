@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegistroController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/empleado/create',[EmpleadoController::class,'create']);
 
-Route::resource('empleado',EmpleadoController::class);
-Route::resource('empresa', EmpresaController::class);
-Route::resource('empresa',SocioController::class);
+
+
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::apiresource('/registro', RegistroController::class);

@@ -14,7 +14,7 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        //
+        return Registro::get();
     }
 
     /**
@@ -25,8 +25,8 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $registro = new Registro;
+        $registro->create($request->all());
 
     /**
      * Display the specified resource.
@@ -36,7 +36,7 @@ class RegistroController extends Controller
      */
     public function show(Registro $registro)
     {
-        //
+        return $registro;
     }
 
     /**
