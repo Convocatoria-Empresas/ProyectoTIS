@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmpleadoController;
-use App\Http\Controllers\EmpresaController;
-use App\Http\Controllers\SocioController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
