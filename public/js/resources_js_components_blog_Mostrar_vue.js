@@ -995,7 +995,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "table-responsive" }, [
-        _c("table", { staticClass: "table table-bordered" }, [
+        _c("table", { staticClass: "table table-hover table-bordered" }, [
           _vm._m(1),
           _vm._v(" "),
           _c(
@@ -1071,7 +1071,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Descripción")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Acciones ")])
+        _c("th", [_vm._v("Acciones")])
       ])
     ])
   }

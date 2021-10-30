@@ -8,13 +8,13 @@
         </div>
         <div class="col-12">
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-hover table-bordered">
                     <thead class="text-white bg-dark">
                         <tr>
                             <th>Gestión</th>
                             <th>Título</th>
                             <th>Descripción</th>
-                            <th>Acciones </th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>

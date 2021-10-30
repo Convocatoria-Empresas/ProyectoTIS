@@ -133,7 +133,7 @@
 
 <script>
 export default {
-    name:"crear-blog",
+    name:"",
     data(){
         return {
             blog:{
@@ -144,8 +144,8 @@ export default {
     },
     methods:{
         async crear(){
-            await this.axios.post('/api/blog',this.blog).then(response=>{
-                this.$router.push({name:"mostrarBlogs"})
+            await this.axios.post('/api/',this.blog).then(response=>{
+                this.$router.push({name:""})
             }).catch(error=>{
                 console.log(error)
             })
