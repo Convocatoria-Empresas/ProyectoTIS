@@ -2228,6 +2228,10 @@ var Editar = function Editar() {
 }; //importar form empresa
 
 
+var MostrarReg = function MostrarReg() {
+  return Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './components/paraEmpresas/MostrarReg.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; });
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -2252,6 +2256,10 @@ var routes = [{
   name: 'seguimiento',
   path: '/seguimiento',
   component: Seguimiento
+}, {
+  name: 'empresas',
+  path: '/empresas',
+  component: Empresas
 }, {
   name: 'empresas',
   path: '/empresas',

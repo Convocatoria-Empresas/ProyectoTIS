@@ -7,7 +7,7 @@ const Mostrar = () => import('./components/blog/Mostrar.vue');
 const Crear = () => import('./components/blog/Crear.vue');
 const Editar = () => import('./components/blog/Editar.vue');
 //importar form empresa
-
+const MostrarReg = () => import('./components/paraEmpresas/MostrarReg.vue');
 
 
 export const routes = [
@@ -40,6 +40,11 @@ export const routes = [
         name: 'seguimiento',
         path: '/seguimiento',
         component: Seguimiento
+    },
+    {
+        name: 'empresas',
+        path: '/empresas',
+        component: Empresas
     },
     {
         name: 'empresas',
