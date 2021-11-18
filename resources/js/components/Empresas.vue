@@ -4,8 +4,10 @@
             <div class="mb-5 text-center col">
             <h1>Historial de Empresas Registradas</h1>.
             <div class="mb-5 input-group">
-                    <router-link :to='{name:"regEmpresa"}' class="btn btn-success"><i class="fas fa-plus-circle"> Registrar Empresa</i></router-link>
-                <span class="input-group-text" id="basic-addon1">  </span>
+                <router-link :to='{name:"regEmpresa"}' class="btn btn-success">
+                    <i class="fas fa-plus-circle"> Registrar Empresa</i>
+                </router-link>
+                <span class="input-group-text" id="basic-addon1">  Nombre de la empresa -></span>
                 <input type="text" class="form-control" placeholder="Buscar el nombre de la empresa registrada" aria-label="Burcar el nombre de la empresa registrada" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button type="button" class="btn btn-primary">Buscar</button>

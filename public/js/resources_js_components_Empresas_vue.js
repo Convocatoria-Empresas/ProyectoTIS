@@ -90,10 +90,14 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("span", {
-              staticClass: "input-group-text",
-              attrs: { id: "basic-addon1" }
-            }),
+            _c(
+              "span",
+              {
+                staticClass: "input-group-text",
+                attrs: { id: "basic-addon1" }
+              },
+              [_vm._v("  Nombre de la empresa ->")]
+            ),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",

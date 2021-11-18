@@ -39,6 +39,11 @@
                         </span>
                     </li>
                 </ul>
+                <ul class="px-3 navbar-nav">
+                    <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                    </li>
+                </ul>
                 </div>
             </div>
         </nav>
