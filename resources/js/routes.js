@@ -1,7 +1,7 @@
 const Home = () => import('./components/Home.vue');
 const Empresas = () => import('./components/Empresas.vue');
 const Seguimiento = () => import('./components/Seguimiento.vue');
-const RegistrarEmpresas = () => import('./components/RegistrarEmpresas.vue');
+//const RegistrarEmpresas = () => import('./components/RegistrarEmpresas.vue');
 //importamos los componentes para el blog
 const Mostrar = () => import('./components/blog/Mostrar.vue');
 const Crear = () => import('./components/blog/Crear.vue');
@@ -20,11 +20,6 @@ export const routes = [
         name: 'mostrarBlogs',
         path: '/blogs',
         component: Mostrar,
-    },
-    {
-        name: 'mostrarEmpresas',
-        path: '/RegistrarEmpresas',
-        component: RegistrarEmpresas,
     },
     {
         name: 'crearBlog',

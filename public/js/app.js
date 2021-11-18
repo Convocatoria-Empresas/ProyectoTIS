@@ -2107,6 +2107,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2208,11 +2216,8 @@ var Empresas = function Empresas() {
 
 var Seguimiento = function Seguimiento() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento.vue */ "./resources/js/components/Seguimiento.vue"));
-};
-
-var RegistrarEmpresas = function RegistrarEmpresas() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_RegistrarEmpresas_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/RegistrarEmpresas.vue */ "./resources/js/components/RegistrarEmpresas.vue"));
-}; //importamos los componentes para el blog
+}; //const RegistrarEmpresas = () => import('./components/RegistrarEmpresas.vue');
+//importamos los componentes para el blog
 
 
 var Mostrar = function Mostrar() {
@@ -2237,10 +2242,6 @@ var routes = [{
   name: 'mostrarBlogs',
   path: '/blogs',
   component: Mostrar
-}, {
-  name: 'mostrarEmpresas',
-  path: '/RegistrarEmpresas',
-  component: RegistrarEmpresas
 }, {
   name: 'crearBlog',
   path: '/crear',
@@ -19799,6 +19800,10 @@ var render = function() {
           },
           [
             _c("ul", { staticClass: "mb-2 navbar-nav me-auto mb-lg-0" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
                 _c(
                   "span",
@@ -19807,7 +19812,7 @@ var render = function() {
                     _c(
                       "router-link",
                       {
-                        staticClass: "nav-link active",
+                        staticClass: "nav-link ",
                         attrs: {
                           "exact-active-class": "active",
                           to: "/",
@@ -19879,27 +19884,6 @@ var render = function() {
                   ],
                   1
                 )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "span",
-                  { staticClass: "mb-0 navbar-brand h1" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/RegistrarEmpresas"
-                        }
-                      },
-                      [_vm._v("Registrar Empresa")]
-                    )
-                  ],
-                  1
-                )
               ])
             ])
           ]
@@ -19950,6 +19934,32 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("nav", { staticClass: "navbar navbar-light bg-light" }, [
+      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+        _c("img", {
+          attrs: {
+            src: "/assets/brand/bootstrap-solid.svg",
+            width: "30",
+            height: "30",
+            alt: ""
+          }
+        })
+      ]),
+      _vm._v("\n  ...\n")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("nav", { staticClass: "navbar navbar-light bg-light" }, [
+      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } })
+    ])
   }
 ]
 render._withStripped = true
@@ -35392,7 +35402,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_RegistrarEmpresas_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
