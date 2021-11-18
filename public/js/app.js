@@ -2204,19 +2204,19 @@ var Empresas = function Empresas() {
 
 var Seguimiento = function Seguimiento() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento.vue */ "./resources/js/components/Seguimiento.vue"));
-}; //importamos los componentes para el blog
+}; //importamos los componentes para el convocatorias
 
 
 var Mostrar = function Mostrar() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_blog_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/blog/Mostrar.vue */ "./resources/js/components/blog/Mostrar.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_convotacoraias_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/convotacoraias/Mostrar.vue */ "./resources/js/components/convotacoraias/Mostrar.vue"));
 };
 
 var Crear = function Crear() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_blog_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/blog/Crear.vue */ "./resources/js/components/blog/Crear.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_convotacoraias_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/convotacoraias/Crear.vue */ "./resources/js/components/convotacoraias/Crear.vue"));
 };
 
 var Editar = function Editar() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_blog_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/blog/Editar.vue */ "./resources/js/components/blog/Editar.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_convotacoraias_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/convotacoraias/Editar.vue */ "./resources/js/components/convotacoraias/Editar.vue"));
 }; //importar form empresa
 
 
@@ -35366,7 +35366,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

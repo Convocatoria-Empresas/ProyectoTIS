@@ -2,10 +2,10 @@ const Home = () => import('./components/Home.vue');
 const Empresas = () => import('./components/Empresas.vue');
 const Seguimiento = () => import('./components/Seguimiento.vue');
 
-//importamos los componentes para el blog
-const Mostrar = () => import('./components/blog/Mostrar.vue');
-const Crear = () => import('./components/blog/Crear.vue');
-const Editar = () => import('./components/blog/Editar.vue');
+//importamos los componentes para el convocatorias
+const Mostrar = () => import('./components/convotacoraias/Mostrar.vue');
+const Crear = () => import('./components/convotacoraias/Crear.vue');
+const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
 const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue')
 
