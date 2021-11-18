@@ -70,18 +70,18 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container mt-4" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "text-center col mb-5" }, [
+      _c("div", { staticClass: "mb-5 text-center col" }, [
         _c("h1", [_vm._v("Historial de Empresas Registradas")]),
         _vm._v(".\n        "),
         _c(
           "div",
-          { staticClass: "input-group mb-5" },
+          { staticClass: "mb-5 input-group" },
           [
             _c(
               "router-link",
               {
                 staticClass: "btn btn-success",
-                attrs: { to: { name: "crearBlog" } }
+                attrs: { to: { name: "regEmpresa" } }
               },
               [
                 _c("i", { staticClass: "fas fa-plus-circle" }, [

@@ -14,18 +14,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="mb-2 navbar-nav me-auto mb-lg-0">
 
-                    <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-  </a>
-  ...
-</nav>
-<!-- O si queremos incluir un logotipo y texto... -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    
-  </a>
-</nav>
 
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">

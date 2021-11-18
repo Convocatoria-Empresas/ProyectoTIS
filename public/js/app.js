@@ -2103,18 +2103,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2216,8 +2204,7 @@ var Empresas = function Empresas() {
 
 var Seguimiento = function Seguimiento() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento.vue */ "./resources/js/components/Seguimiento.vue"));
-}; //const RegistrarEmpresas = () => import('./components/RegistrarEmpresas.vue');
-//importamos los componentes para el blog
+}; //importamos los componentes para el blog
 
 
 var Mostrar = function Mostrar() {
@@ -2231,8 +2218,11 @@ var Crear = function Crear() {
 var Editar = function Editar() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_blog_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/blog/Editar.vue */ "./resources/js/components/blog/Editar.vue"));
 }; //importar form empresa
-//const MostrarReg = () => import('./components/paraEmpresas/MostrarReg.vue');
 
+
+var RegEmpresa = function RegEmpresa() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_paraEmpresas_MostrarRegEm_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/paraEmpresas/MostrarRegEm.vue */ "./resources/js/components/paraEmpresas/MostrarRegEm.vue"));
+};
 
 var routes = [{
   name: 'home',
@@ -2258,6 +2248,10 @@ var routes = [{
   name: 'empresas',
   path: '/empresas',
   component: Empresas
+}, {
+  name: 'regEmpresa',
+  path: '/RegEmpresa',
+  component: RegEmpresa
 }];
 
 /***/ }),
@@ -19800,10 +19794,6 @@ var render = function() {
           },
           [
             _c("ul", { staticClass: "mb-2 navbar-nav me-auto mb-lg-0" }, [
-              _vm._m(2),
-              _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
                 _c(
                   "span",
@@ -19934,32 +19924,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "navbar navbar-light bg-light" }, [
-      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-        _c("img", {
-          attrs: {
-            src: "/assets/brand/bootstrap-solid.svg",
-            width: "30",
-            height: "30",
-            alt: ""
-          }
-        })
-      ]),
-      _vm._v("\n  ...\n")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "navbar navbar-light bg-light" }, [
-      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } })
-    ])
   }
 ]
 render._withStripped = true
@@ -35402,7 +35366,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_blog_Mostrar_vue":1,"resources_js_components_blog_Crear_vue":1,"resources_js_components_blog_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
