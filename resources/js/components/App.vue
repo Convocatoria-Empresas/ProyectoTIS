@@ -8,13 +8,13 @@
                     <!-- llamamos al logo -->
                     <img src="http://m.exam-10.com/pars_docs/refs/13/12262/12262_html_32a82c9a.png" alt="" width="53" height="68">
                 </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="mb-2 navbar-nav me-auto mb-lg-0">
-
-
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
                             <router-link exact-active-class="active" to="/" class="nav-link " aria-current="page">Inicio</router-link>
