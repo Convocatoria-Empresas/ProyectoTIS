@@ -102,27 +102,21 @@
                                 </div>
                             </div>
                             <div class="row">
-                                   <div class="col-lg-5 offset-md-1">
-                                  <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link text-info">Mas información</a></li>
-                                  </div>
-                                     <div class="col-lg-6">
-                                     <label for="validationCustom01" class="form-label"></label>
-                                     <div class="row">
-                                     <div class="col-lg-6 offset-md-2">
-                                     <button type="submit" class="btn btn-lg btn-danger">Cancelar</button>
-                                     </div>
-                                     <div class="col-lg-4">
-                                     <button type="submit" class="btn btn-lg btn-success">Registrar</button>
-                                     </div>
-
-
-                                     </div>
-
-                                     </div>
+                                <div class="col-lg-5 offset-md-1">
+                                <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link text-info">Mas información</a></li>
+                                </div>
+                                    <div class="col-lg-6">
+                                    <label for="validationCustom01" class="form-label"></label>
+                                    <div class="row">
+                                    <div class="col-lg-6 offset-md-2">
+                                    <button type="submit" class="btn btn-lg btn-danger">Cancelar</button>
+                                    </div>
+                                    <div class="col-lg-4">
+                                    <button type="submit" class="btn btn-lg btn-success">Registrar</button>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
-
-
-
                         </div>
                     </form>
                 </div>

@@ -182,6 +182,16 @@
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 function validarExt() {
   var archivoInput = document.getElementById('Documento_1');
   var archivoRuta = archivoInput.value;
@@ -364,13 +374,16 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
-                maxlength: "20",
+                maxlength: "30",
                 type: "text",
                 placeholder: "Nombre Largo Empresa",
                 name: "NombreLargo",
                 id: "NombreLargo",
                 required: "",
-                pattern: "[a-zA-Z- -\\.]+"
+                pattern: "[a-zA-Z- -\\.]+",
+                oninvalid:
+                  "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -390,12 +403,16 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "9",
+                minlength: "9",
                 type: "text",
                 placeholder: "Representante Legal",
                 name: "Socio1",
                 id: "Socio1",
                 required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -415,12 +432,16 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "20",
                 type: "text",
                 placeholder: "Nombre Corto Empresa",
                 name: "NombreCorto",
                 id: "NombreCorto",
                 required: "",
-                pattern: "[a-zA-Z- -\\.]+"
+                pattern: "[a-zA-Z- -\\.]+",
+                oninvalid:
+                  "setCustomValidity('Porfavor llena el nombre corto con caracteres de la A-Z')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -436,12 +457,16 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "9",
+                minlength: "9",
                 type: "text",
                 placeholder: "Integrante",
                 name: "Socio2",
                 id: "Socio2",
                 required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid: "setCustomValidity('Revise el codigo SIS  ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -455,17 +480,21 @@ var staticRenderFns = [
                 staticClass: "form-label",
                 attrs: { for: "validationCustom01" }
               },
-              [_c("strong", [_vm._v("Dirección/Ubicación")])]
+              [_c("strong", [_vm._v("Correo de la Empresa")])]
             ),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
               attrs: {
-                type: "text",
-                placeholder: "Dirección Empresa",
-                name: "Dirección",
-                id: "Dirección",
-                required: ""
+                type: "email",
+                name: "email",
+                id: "Correo_Emp",
+                required: "",
+                pattern:
+                  "[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)[.][a-zA-Z]{1,5}",
+                oninvalid:
+                  "setCustomValidity('Por favor ingresa una dirección de correo valida ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -481,12 +510,16 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "9",
+                minlength: "9",
                 type: "text",
                 placeholder: "Integrante",
                 name: "Socio3",
                 id: "Socio3",
                 required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -513,7 +546,10 @@ var staticRenderFns = [
                 name: "Telefono",
                 id: "Telefono",
                 required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid:
+                  "setCustomValidity('Porfavor llene el Telefono, solo se aceptan numeros y el minumo son 7 digitos')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -529,12 +565,15 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "9",
+                minlength: "9",
                 type: "text",
                 placeholder: "Integrante",
                 name: "Socio4",
                 id: "Socio 4",
-                required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -554,12 +593,17 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "7",
+                minlength: "7",
                 type: "text",
                 placeholder: "NIT Empresa",
                 name: "NIT",
                 id: "NIT",
                 required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid:
+                  "setCustomValidity('Porfavor llene el NIT de la Empresa, solo se aceptan numeros ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -575,12 +619,15 @@ var staticRenderFns = [
             _c("input", {
               staticClass: "form-control",
               attrs: {
+                maxlength: "9",
+                minlength: "9",
                 type: "text",
                 placeholder: "Integrante",
                 name: "Socio5",
                 id: "Socio5",
-                required: "",
-                pattern: "[0-9]+"
+                pattern: "[0-9]+",
+                oninvalid: "setCustomValidity('Revise el codigo SIS  ')",
+                onchange: "try{setCustomValidity('')}catch(e){}"
               }
             }),
             _vm._v(" "),
@@ -599,7 +646,12 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { accept: ".pdf", type: "file", id: "Documento_1" }
+            attrs: {
+              accept: ".pdf",
+              type: "file",
+              id: "Documento_1",
+              required: ""
+            }
           })
         ]),
         _vm._v(" "),
@@ -612,7 +664,12 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { accept: ".pdf", type: "file", id: "Documento_2" }
+            attrs: {
+              accept: ".pdf",
+              type: "file",
+              id: "Documento_2",
+              required: ""
+            }
           })
         ]),
         _vm._v(" "),
@@ -625,7 +682,12 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { accept: ".pdf", type: "file", id: "Documento_3" }
+            attrs: {
+              accept: ".pdf",
+              type: "file",
+              id: "Documento_3",
+              required: ""
+            }
           })
         ]),
         _vm._v(" "),
@@ -638,7 +700,12 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { accept: ".pdf", type: "file", id: "Documento_4" }
+            attrs: {
+              accept: ".pdf",
+              type: "file",
+              id: "Documento_4",
+              required: ""
+            }
           })
         ])
       ]),

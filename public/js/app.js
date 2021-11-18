@@ -2226,11 +2226,8 @@ var Crear = function Crear() {
 var Editar = function Editar() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_blog_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/blog/Editar.vue */ "./resources/js/components/blog/Editar.vue"));
 }; //importar form empresa
+//const MostrarReg = () => import('./components/paraEmpresas/MostrarReg.vue');
 
-
-var MostrarReg = function MostrarReg() {
-  return Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './components/paraEmpresas/MostrarReg.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; });
-};
 
 var routes = [{
   name: 'home',
@@ -2256,10 +2253,6 @@ var routes = [{
   name: 'seguimiento',
   path: '/seguimiento',
   component: Seguimiento
-}, {
-  name: 'empresas',
-  path: '/empresas',
-  component: Empresas
 }, {
   name: 'empresas',
   path: '/empresas',
