@@ -8,7 +8,7 @@
                          <div class="row">
                             <div class="mb-2 col-12">
                                 <div class="form-group">
-                                    <label>Título</label>
+                                    <label>Editar la Convocatoria</label>
                                     <input type="text" class="form-control" v-model="convocatorias.titulo">
                                 </div>
                             </div>

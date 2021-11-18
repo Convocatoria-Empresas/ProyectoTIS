@@ -1005,7 +1005,7 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "mb-2 col-12" }, [
                   _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Título")]),
+                    _c("label", [_vm._v("Editar la Convocatoria")]),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
