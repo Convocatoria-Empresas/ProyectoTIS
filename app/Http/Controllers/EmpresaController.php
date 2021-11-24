@@ -14,7 +14,7 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        return Empresa::get();
     }
 
     /**
@@ -25,7 +25,9 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //guarda los registros en la base de datos
+        $empresa = new Empresa;
+        $empresa->create($request->all());
     }
 
     /**
@@ -36,7 +38,7 @@ class EmpresaController extends Controller
      */
     public function show(Empresa $empresa)
     {
-        //
+        return $empresa;
     }
 
     /**
@@ -59,6 +61,6 @@ class EmpresaController extends Controller
      */
     public function destroy(Empresa $empresa)
     {
-        //
+        $empresa->delete();
     }
 }
