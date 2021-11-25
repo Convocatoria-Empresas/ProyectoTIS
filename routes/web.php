@@ -14,13 +14,18 @@ use App\Http\Controllers\EmpresaController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
 
 //Usar el ApiResource nos sirve para usar las direcciones que tenemos en nuestro CONTROLADOR
 Route::apiResource('/empresa', EmpresaController::class);
+
+
+Route::get('{any}', function(){
+    return view('app');
+})->where('any','.*');
