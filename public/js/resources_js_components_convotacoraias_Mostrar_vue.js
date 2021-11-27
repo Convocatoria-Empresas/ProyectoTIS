@@ -87,7 +87,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get('/api/blog').then(function (response) {
+                return _this.axios.get('/api/convoEmpre').then(function (response) {
+                  console.log(response.data);
                   _this.blogs = response.data;
                 })["catch"](function (error) {
                   console.log(error);
@@ -966,7 +967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -981,14 +982,14 @@ var render = function() {
           "router-link",
           {
             staticClass: "btn btn-success",
-            attrs: { to: { name: "crearBlog" } }
+            attrs: { to: { name: "crearBlog" } },
           },
           [
             _c("i", { staticClass: "fas fa-plus-circle" }, [
-              _vm._v(" Nueva Convocatoria")
-            ])
+              _vm._v(" Nueva Convocatoria"),
+            ]),
           ]
-        )
+        ),
       ],
       1
     ),
@@ -1000,7 +1001,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "tbody",
-            _vm._l(_vm.blogs, function(blog) {
+            _vm._l(_vm.blogs, function (blog) {
               return _c("tr", { key: blog.id }, [
                 _c("td", [_vm._v(_vm._s(blog.gestion))]),
                 _vm._v(" "),
@@ -1018,9 +1019,9 @@ var render = function() {
                         attrs: {
                           to: {
                             name: "editarBlog",
-                            params: { gestion: blog.gestion }
-                          }
-                        }
+                            params: { gestion: blog.gestion },
+                          },
+                        },
                       },
                       [_c("i", { staticClass: "fas fa-edit" })]
                     ),
@@ -1031,35 +1032,35 @@ var render = function() {
                         staticClass: "btn btn-danger",
                         attrs: { type: "button" },
                         on: {
-                          click: function($event) {
+                          click: function ($event) {
                             return _vm.borrarBlog(blog.gestion)
-                          }
-                        }
+                          },
+                        },
                       },
                       [_c("i", { staticClass: "fas fa-trash" })]
-                    )
+                    ),
                   ],
                   1
-                )
+                ),
               ])
             }),
             0
-          )
-        ])
-      ])
-    ])
+          ),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center col" }, [
-      _c("h1", [_vm._v("Convocatorias de empresas")])
+      _c("h1", [_vm._v("Convocatorias de empresas")]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
@@ -1071,10 +1072,10 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Descripción")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Acciones")])
-      ])
+        _c("th", [_vm._v("Acciones")]),
+      ]),
     ])
-  }
+  },
 ]
 render._withStripped = true
 

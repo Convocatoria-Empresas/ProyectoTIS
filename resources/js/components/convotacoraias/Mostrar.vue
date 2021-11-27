@@ -48,7 +48,8 @@ export default {
     },
     methods:{
         async mostrarBlogs(){
-            await this.axios.get('/api/blog').then(response=>{
+            await this.axios.get('/api/convoEmpre').then(response=>{
+                console.log(response.data)
                 this.blogs = response.data
             }).catch(error=>{
                 console.log(error)
@@ -57,7 +58,7 @@ export default {
         },
         borrarBlog(id){
             if(confirm("¿Confirma eliminar el registro?")){
-                this.axios.delete(`/api/blog/${id}`).then(response=>{
+                    this.axios.delete(`/api/blog/${id}`).then(response=>{
                     this.mostrarBlogs()
                 }).catch(error=>{
                     console.log(error)

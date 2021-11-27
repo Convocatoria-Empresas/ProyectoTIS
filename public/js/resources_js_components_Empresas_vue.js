@@ -64,7 +64,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -81,12 +81,12 @@ var render = function() {
               "router-link",
               {
                 staticClass: "btn btn-success",
-                attrs: { to: { name: "regEmpresa" } }
+                attrs: { to: { name: "regEmpresa" } },
               },
               [
                 _c("i", { staticClass: "fas fa-plus-circle" }, [
-                  _vm._v(" Registrar Empresa")
-                ])
+                  _vm._v(" Registrar Empresa"),
+                ]),
               ]
             ),
             _vm._v(" "),
@@ -94,7 +94,7 @@ var render = function() {
               "span",
               {
                 staticClass: "input-group-text",
-                attrs: { id: "basic-addon1" }
+                attrs: { id: "basic-addon1" },
               },
               [_vm._v("  Nombre de la empresa ->")]
             ),
@@ -105,22 +105,22 @@ var render = function() {
                 type: "text",
                 placeholder: "Buscar el nombre de la empresa registrada",
                 "aria-label": "Burcar el nombre de la empresa registrada",
-                "aria-describedby": "basic-addon2"
-              }
+                "aria-describedby": "basic-addon2",
+              },
             }),
             _vm._v(" "),
-            _vm._m(0)
+            _vm._m(0),
           ],
           1
         ),
         _vm._v(" "),
-        _vm._m(1)
-      ])
-    ])
+        _vm._m(1),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
@@ -129,10 +129,10 @@ var staticRenderFns = [
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "button" } },
         [_vm._v("Buscar")]
-      )
+      ),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
@@ -144,11 +144,11 @@ var staticRenderFns = [
           _c("th", { attrs: { scope: "col" } }, [_vm._v("Gestión")]),
           _vm._v(" "),
           _c("th", { attrs: { scope: "col" } }, [
-            _vm._v("Nombre de la Empresa")
+            _vm._v("Nombre de la Empresa"),
           ]),
           _vm._v(" "),
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("Asesor")])
-        ])
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("Asesor")]),
+        ]),
       ]),
       _vm._v(" "),
       _c("tbody", [
@@ -159,7 +159,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("td", [_vm._v("Otto")]),
           _vm._v(" "),
-          _c("td", [_vm._v("@mdo")])
+          _c("td", [_vm._v("@mdo")]),
         ]),
         _vm._v(" "),
         _c("tr", [
@@ -169,7 +169,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("td", [_vm._v("Thornton")]),
           _vm._v(" "),
-          _c("td", [_vm._v("@fat")])
+          _c("td", [_vm._v("@fat")]),
         ]),
         _vm._v(" "),
         _c("tr", [
@@ -179,7 +179,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("td"),
           _vm._v(" "),
-          _c("td", [_vm._v("@twitter")])
+          _c("td", [_vm._v("@twitter")]),
         ]),
         _vm._v(" "),
         _c("tr", [
@@ -189,11 +189,11 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("td"),
           _vm._v(" "),
-          _c("td")
-        ])
-      ])
+          _c("td"),
+        ]),
+      ]),
     ])
-  }
+  },
 ]
 render._withStripped = true
 

@@ -981,7 +981,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -995,11 +995,11 @@ var render = function() {
             "form",
             {
               on: {
-                submit: function($event) {
+                submit: function ($event) {
                   $event.preventDefault()
                   return _vm.actualizar.apply(null, arguments)
-                }
-              }
+                },
+              },
             },
             [
               _c("div", { staticClass: "row" }, [
@@ -1013,14 +1013,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatorias.titulo,
-                          expression: "convocatorias.titulo"
-                        }
+                          expression: "convocatorias.titulo",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { type: "text" },
                       domProps: { value: _vm.convocatorias.titulo },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -1029,10 +1029,10 @@ var render = function() {
                             "titulo",
                             $event.target.value
                           )
-                        }
-                      }
-                    })
-                  ])
+                        },
+                      },
+                    }),
+                  ]),
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "mb-2 col-12" }, [
@@ -1043,15 +1043,15 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatorias.contenido,
-                          expression: "convocatorias.contenido"
-                        }
+                          expression: "convocatorias.contenido",
+                        },
                       ],
                       staticClass: "form-control",
                       staticStyle: { height: "100px" },
                       attrs: { id: "floatingTextarea2" },
                       domProps: { value: _vm.convocatorias.contenido },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -1060,35 +1060,35 @@ var render = function() {
                             "contenido",
                             $event.target.value
                           )
-                        }
-                      }
+                        },
+                      },
                     }),
                     _vm._v(" "),
                     _c("label", { attrs: { for: "floatingTextarea2" } }, [
-                      _vm._v("Contenido")
-                    ])
-                  ])
+                      _vm._v("Contenido"),
+                    ]),
+                  ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(1)
-              ])
+                _vm._m(1),
+              ]),
             ]
-          )
-        ])
-      ])
-    ])
+          ),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_vm._v("Editar Convocatoria")])
+      _c("h4", [_vm._v("Editar Convocatoria")]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
@@ -1097,9 +1097,9 @@ var staticRenderFns = [
         "button",
         { staticClass: "btn btn-success", attrs: { type: "submit" } },
         [_vm._v("Guardar Cambios")]
-      )
+      ),
     ])
-  }
+  },
 ]
 render._withStripped = true
 
