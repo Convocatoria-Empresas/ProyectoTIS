@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //Aqui se coloca el nombre del modelo con la que estamos trabajando
         // \App\Models\User::factory(10)->create();
+        \App\Models\Empresa::factory(20)->create();
     }
 }
