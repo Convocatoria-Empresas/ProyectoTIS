@@ -2,6 +2,7 @@
     <div class="row">
         <div class="text-center col">
             <h1>Convocatorias de empresas</h1>
+            <hr>
         </div>
         <div class="mb-2 col-12">
             <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-plus-circle"> Nueva Convocatoria</i></router-link>

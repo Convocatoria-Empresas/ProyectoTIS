@@ -12,7 +12,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="mb-2 navbar-nav me-auto mb-lg-0">
                     <li class="nav-item">
@@ -34,9 +34,17 @@
                     </li>
 
                     <li class="nav-item">
-                        <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/seguimiento" class="nav-link">Seguimiento</router-link>
-                        </span>
+                        <div class="dropdown h1">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                            Seguimiento
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href=""></a>
+                            <router-link class="dropdown-item active" type="button" exact-active-class="" to="/seguimiento">Empresas</router-link>
+                            <router-link class="dropdown-item active" exact-active-class="" to="/seguimiento">Postulantes</router-link>
+                            <a class="dropdown-item" href="#">Postulantes</a>
+                        </div>
+                        </div>
                     </li>
                 </ul>
                 <ul class="px-3 navbar-nav">

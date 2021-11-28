@@ -186,12 +186,6 @@
 //
 //
 //
-//
-//
-//
-//
-//
-//
 function validarExt() {
   var archivoInput = document.getElementById('Documento_1');
   var archivoRuta = archivoInput.value;

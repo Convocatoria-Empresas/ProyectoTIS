@@ -67,6 +67,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -1058,6 +1059,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center col" }, [
       _c("h1", [_vm._v("Convocatorias de empresas")]),
+      _vm._v(" "),
+      _c("hr"),
     ])
   },
   function () {

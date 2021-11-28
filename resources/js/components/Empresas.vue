@@ -2,7 +2,8 @@
     <div class="container mt-4">
         <div class="row">
             <div class="mb-5 text-center col">
-            <h1>Historial de Empresas Registradas</h1>.
+            <h1>Historial de Empresas Registradas</h1>
+            <hr>
             <div class="mb-5 input-group">
                 <router-link :to='{name:"regEmpresa"}' class="btn btn-success">
                     <i class="fas fa-plus-circle"> Registrar Empresa</i>
@@ -53,3 +54,4 @@
         </div>
     </div>
 </template>
+

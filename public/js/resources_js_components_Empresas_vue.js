@@ -72,7 +72,9 @@ var render = function () {
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "mb-5 text-center col" }, [
         _c("h1", [_vm._v("Historial de Empresas Registradas")]),
-        _vm._v(".\n        "),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
         _c(
           "div",
           { staticClass: "mb-5 input-group" },

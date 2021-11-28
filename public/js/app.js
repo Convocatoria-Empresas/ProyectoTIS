@@ -2123,6 +2123,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -37804,24 +37812,69 @@ var render = function () {
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "span",
-                  { staticClass: "mb-0 navbar-brand h1" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/seguimiento",
-                        },
+                _c("div", { staticClass: "dropdown h1" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-secondary dropdown-toggle",
+                      attrs: {
+                        href: "#",
+                        role: "button",
+                        id: "dropdownMenuLink",
+                        "data-toggle": "dropdown",
+                        "aria-expanded": "false",
                       },
-                      [_vm._v("Seguimiento")]
-                    ),
-                  ],
-                  1
-                ),
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Seguimiento\n                    "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "dropdownMenuLink" },
+                    },
+                    [
+                      _c("a", { attrs: { href: "" } }),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "dropdown-item active",
+                          attrs: {
+                            type: "button",
+                            "exact-active-class": "",
+                            to: "/seguimiento",
+                          },
+                        },
+                        [_vm._v("Empresas")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "dropdown-item active",
+                          attrs: {
+                            "exact-active-class": "",
+                            to: "/seguimiento",
+                          },
+                        },
+                        [_vm._v("Postulantes")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [_vm._v("Postulantes")]
+                      ),
+                    ],
+                    1
+                  ),
+                ]),
               ]),
             ]),
             _vm._v(" "),
