@@ -22,7 +22,7 @@
                         <tr v-for="blog in blogs" :key="blog.id">
                             <td>{{ blog.gestion }}</td>
                             <td>{{ blog.titulo }}</td>
-                            <td>{{ blog.descipcion }}</td>
+                            <td>{{ blog.descripcion }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"editarBlog",params:{gestion:blog.gestion}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>

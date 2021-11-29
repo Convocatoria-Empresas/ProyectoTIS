@@ -1008,7 +1008,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.titulo))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.descipcion))]),
+                _c("td", [_vm._v(_vm._s(blog.descripcion))]),
                 _vm._v(" "),
                 _c(
                   "td",
