@@ -12,9 +12,26 @@ class EmpresaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        /*if($request->ajax()){
+            return Empresa::all();
+        } else{
+            return view('empresa')->with('state','index');
+        }*/
+        $RegisEmpre = Empresa::all(['Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
+        'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5']);
+        return response()->json($RegisEmpre);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('empresa')->with('state', 'create');
     }
 
     /**
@@ -25,7 +42,30 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      /*  $datosEmpresa= request()->except('_token');
+        if($request-> hasFile('Solvencia')){
+            $datosEmpresa['Solvencia']=$request->file('Solvencia')->store('uploads', 'public');
+        }
+
+        $empresa= new Empresa();
+        $empresa-> Nombre_Largo = $request->Nombre_Largo;
+        $empresa->Nombre_Corto = $request->Nombre_Corto;
+        $empresa->Correo_electronico = $request->Correo_electronico;
+        $empresa->Telefono = $request->Telefono;
+        $empresa->NIT = $request->NIT;
+        $empresa->Solvencia = $request->Solvencia;
+        $empresa->Constitucion = $request->Constitucion;
+        $empresa->Plan_Pago = $request->Plan_Pago;
+        $empresa->Carta = $request->Carta;
+        $empresa->Socio_1 = $request->Socio_1;
+        $empresa->Socio_2 = $request->Socio_2;
+        $empresa->Socio_3 = $request->Socio_3;
+        $empresa->Socio_4 = $request->Socio_4;
+        $empresa->Socio_5 = $request->Socio_5;
+        $empresa->save();
+
+        return $empresa;*/
     }
 
     /**
@@ -35,6 +75,27 @@ class EmpresaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Empresa $empresa)
+    {
+
+        $empresa = Empresa::create($empresa->post());
+        return response()->json([
+            'empresa'=>$empresa]);
+        /*if($request->ajax()){
+           return Empresa::where('id', auth()->id());
+            //return Empresa::table('empresas')->find('id');
+        } else{
+            return view('empresa');
+        }*/
+        //return $empresa;
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Empresa  $empresa
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Empresa $empresa)
     {
         //
     }

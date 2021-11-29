@@ -44,6 +44,8 @@ import {routes} from './routes';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
+Vue.component("empresa", require('./components/Empresas.vue').default);
+
 const router = new VueRouter({
     mode: 'history',
     routes: routes

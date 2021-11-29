@@ -7,7 +7,7 @@ const Mostrar = () => import('./components/convotacoraias/Mostrar.vue');
 const Crear = () => import('./components/convotacoraias/Crear.vue');
 const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
-const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue')
+const CrearEmpresa = () => import('./components/EmpresaCreate.vue')
 
 export const routes = [
     {
@@ -24,7 +24,7 @@ export const routes = [
         name: 'crearBlog',
         path: '/crear',
         component: Crear
-    },
+    },  
     {
         name: 'editarBlog',
         path: '/editar/:id',
@@ -42,8 +42,8 @@ export const routes = [
     }
     ,
     {
-        name: 'regEmpresa',
-        path: '/RegEmpresa',
-        component: RegEmpresa
+        name: 'crearempresa',
+        path: '/CrearEmpresa',
+        component: CrearEmpresa
     }
 ];
