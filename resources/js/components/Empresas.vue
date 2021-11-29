@@ -5,7 +5,7 @@
             <h1>Historial de Empresas Registradas</h1>
             <hr>
             <div class="mb-5 input-group">
-                <router-link :to='{name:"crearempresa"}' class="btn btn-success">
+                <router-link :to='{name:"regEmpresa"}' class="btn btn-success">
                     <i class="fas fa-plus-circle"> Registrar Empresa</i>
                 </router-link>
                 <span class="input-group-text" id="basic-addon1">  Nombre de la empresa -></span>

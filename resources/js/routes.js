@@ -7,7 +7,7 @@ const Mostrar = () => import('./components/convotacoraias/Mostrar.vue');
 const Crear = () => import('./components/convotacoraias/Crear.vue');
 const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
-const CrearEmpresa = () => import('./components/EmpresaCreate.vue')
+const regEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue')
 
 export const routes = [
     {
@@ -42,8 +42,8 @@ export const routes = [
     }
     ,
     {
-        name: 'crearempresa',
-        path: '/CrearEmpresa',
-        component: CrearEmpresa
+        name: 'regEmpresa',
+        path: '/RegEmpresa',
+        component: regEmpresa
     }
 ];

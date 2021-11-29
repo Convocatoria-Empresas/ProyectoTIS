@@ -2449,8 +2449,8 @@ var Editar = function Editar() {
 }; //importar form empresa
 
 
-var CrearEmpresa = function CrearEmpresa() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_EmpresaCreate_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/EmpresaCreate.vue */ "./resources/js/components/EmpresaCreate.vue"));
+var regEmpresa = function regEmpresa() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_paraEmpresas_MostrarRegEm_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/paraEmpresas/MostrarRegEm.vue */ "./resources/js/components/paraEmpresas/MostrarRegEm.vue"));
 };
 
 var routes = [{
@@ -2478,9 +2478,9 @@ var routes = [{
   path: '/empresas',
   component: Empresas
 }, {
-  name: 'crearempresa',
-  path: '/CrearEmpresa',
-  component: CrearEmpresa
+  name: 'regEmpresa',
+  path: '/RegEmpresa',
+  component: regEmpresa
 }];
 
 /***/ }),
@@ -39051,7 +39051,7 @@ var render = function() {
               "router-link",
               {
                 staticClass: "btn btn-success",
-                attrs: { to: { name: "crearempresa" } }
+                attrs: { to: { name: "regEmpresa" } }
               },
               [
                 _c("i", { staticClass: "fas fa-plus-circle" }, [
@@ -54623,7 +54623,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\wamp64\\\\www\\\\P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_EmpresaCreate_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
