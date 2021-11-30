@@ -2285,6 +2285,20 @@ var Editar = function Editar() {
 
 var RegEmpresa = function RegEmpresa() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_paraEmpresas_MostrarRegEm_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/paraEmpresas/MostrarRegEm.vue */ "./resources/js/components/paraEmpresas/MostrarRegEm.vue"));
+}; //importamos para el seguimiento para empresas
+
+
+var SegEmpresa = function SegEmpresa() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_SegEmpresas_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/SegEmpresas.vue */ "./resources/js/components/Seguimiento/SegEmpresas.vue"));
+};
+
+var RevSegEmpre = function RevSegEmpre() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_RevSegEmpre_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/RevSegEmpre.vue */ "./resources/js/components/Seguimiento/RevSegEmpre.vue"));
+}; //importamos para el seguimiento para postulantes
+
+
+var SegPostulante = function SegPostulante() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_SegPostulantes_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/SegPostulantes.vue */ "./resources/js/components/Seguimiento/SegPostulantes.vue"));
 };
 
 var routes = [{
@@ -2315,6 +2329,18 @@ var routes = [{
   name: 'regEmpresa',
   path: '/RegEmpresa',
   component: RegEmpresa
+}, {
+  name: 'SegEmpresa',
+  path: '/SegEmpresa',
+  component: SegEmpresa
+}, {
+  name: 'RevSegEmpre',
+  path: '/RevSegEmpre',
+  component: RevSegEmpre
+}, {
+  name: 'SegPostulante',
+  path: '/SegPostulante',
+  component: SegPostulante
 }];
 
 /***/ }),
@@ -37848,7 +37874,7 @@ var render = function () {
                           attrs: {
                             type: "button",
                             "exact-active-class": "",
-                            to: "/seguimiento",
+                            to: "/SegEmpresa",
                           },
                         },
                         [_vm._v("Empresas")]
@@ -37860,15 +37886,9 @@ var render = function () {
                           staticClass: "dropdown-item active",
                           attrs: {
                             "exact-active-class": "",
-                            to: "/seguimiento",
+                            to: "/SegPostulante",
                           },
                         },
-                        [_vm._v("Postulantes")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "dropdown-item", attrs: { href: "#" } },
                         [_vm._v("Postulantes")]
                       ),
                     ],
@@ -53393,7 +53413,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
