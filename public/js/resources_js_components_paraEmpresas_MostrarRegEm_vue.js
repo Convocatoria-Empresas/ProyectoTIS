@@ -299,7 +299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -315,38 +315,38 @@ var render = function() {
             "form",
             {
               on: {
-                submit: function($event) {
+                submit: function ($event) {
                   $event.preventDefault()
                   return _vm.RegEmpresa.apply(null, arguments)
-                }
-              }
+                },
+              },
             },
             [_vm._m(2)]
-          )
-        ])
-      ])
-    ])
+          ),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center col" }, [
       _c("h1", [_vm._v("REGISTRO DE EMPRESA")]),
-      _c("h2")
+      _c("h2"),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_c("strong", [_vm._v("Registrar Empresa")])])
+      _c("h4", [_c("strong", [_vm._v("Registrar Empresa")])]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
@@ -360,7 +360,7 @@ var staticRenderFns = [
               "label",
               {
                 staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
+                attrs: { for: "validationCustom01" },
               },
               [_c("strong", [_vm._v("Nombre Largo")])]
             ),
@@ -377,11 +377,11 @@ var staticRenderFns = [
                 pattern: "[a-zA-Z- -\\.]+",
                 oninvalid:
                   "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
@@ -389,7 +389,7 @@ var staticRenderFns = [
               "label",
               {
                 staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
+                attrs: { for: "validationCustom01" },
               },
               [_c("strong", [_vm._v("Socios (Codigo SIS)")])]
             ),
@@ -406,11 +406,11 @@ var staticRenderFns = [
                 required: "",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
@@ -418,7 +418,7 @@ var staticRenderFns = [
               "label",
               {
                 staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
+                attrs: { for: "validationCustom01" },
               },
               [_c("strong", [_vm._v("Nombre Corto")])]
             ),
@@ -435,17 +435,17 @@ var staticRenderFns = [
                 pattern: "[a-zA-Z- -\\.]+",
                 oninvalid:
                   "setCustomValidity('Porfavor llena el nombre corto con caracteres de la A-Z')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c("label", {
               staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
+              attrs: { for: "validationCustom01" },
             }),
             _vm._v(" "),
             _c("input", {
@@ -460,11 +460,11 @@ var staticRenderFns = [
                 required: "",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS  ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
@@ -472,7 +472,7 @@ var staticRenderFns = [
               "label",
               {
                 staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
+                attrs: { for: "validationCustom01" },
               },
               [_c("strong", [_vm._v("Correo de la Empresa")])]
             ),
@@ -483,17 +483,17 @@ var staticRenderFns = [
                 type: "email",
                 name: "email",
                 id: "Correo_Emp",
-                placeholder: "Correo Electrónico de la Empresa"
-              }
+                placeholder: "Correo Electrónico de la Empresa",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
             _c("label", {
               staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
+              attrs: { for: "validationCustom01" },
             }),
             _vm._v(" "),
             _c("input", {
@@ -508,11 +508,11 @@ var staticRenderFns = [
                 required: "",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
@@ -520,7 +520,7 @@ var staticRenderFns = [
               "label",
               {
                 staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
+                attrs: { for: "validationCustom01" },
               },
               [_c("strong", [_vm._v("Telefono")])]
             ),
@@ -538,17 +538,17 @@ var staticRenderFns = [
                 pattern: "[0-9]+",
                 oninvalid:
                   "setCustomValidity('Porfavor llene el Telefono, solo se aceptan numeros y el minumo son 7 digitos')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
             _c("label", {
               staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
+              attrs: { for: "validationCustom01" },
             }),
             _vm._v(" "),
             _c("input", {
@@ -562,11 +562,11 @@ var staticRenderFns = [
                 id: "Socio 4",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
@@ -574,7 +574,7 @@ var staticRenderFns = [
               "label",
               {
                 staticClass: "form-label",
-                attrs: { for: "validationCustom01" }
+                attrs: { for: "validationCustom01" },
               },
               [_c("strong", [_vm._v("NIT")])]
             ),
@@ -592,17 +592,17 @@ var staticRenderFns = [
                 pattern: "[0-9]+",
                 oninvalid:
                   "setCustomValidity('Porfavor llene el NIT de la Empresa, solo se aceptan numeros ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
+            _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
             _c("label", {
               staticClass: "form-label",
-              attrs: { for: "validationCustom01" }
+              attrs: { for: "validationCustom01" },
             }),
             _vm._v(" "),
             _c("input", {
@@ -616,12 +616,12 @@ var staticRenderFns = [
                 id: "Socio5",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS  ')",
-                onchange: "try{setCustomValidity('')}catch(e){}"
-              }
+                onchange: "try{setCustomValidity('')}catch(e){}",
+              },
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" })
-          ])
+            _c("div", { staticClass: "valid-feedback" }),
+          ]),
         ]
       ),
       _vm._v(" "),
@@ -639,9 +639,9 @@ var staticRenderFns = [
               accept: ".pdf",
               type: "file",
               id: "Documento_1",
-              required: ""
-            }
-          })
+              required: "",
+            },
+          }),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
@@ -657,9 +657,9 @@ var staticRenderFns = [
               accept: ".pdf",
               type: "file",
               id: "Documento_2",
-              required: ""
-            }
-          })
+              required: "",
+            },
+          }),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
@@ -675,9 +675,9 @@ var staticRenderFns = [
               accept: ".pdf",
               type: "file",
               id: "Documento_3",
-              required: ""
-            }
-          })
+              required: "",
+            },
+          }),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
@@ -693,10 +693,10 @@ var staticRenderFns = [
               accept: ".pdf",
               type: "file",
               id: "Documento_4",
-              required: ""
-            }
-          })
-        ])
+              required: "",
+            },
+          }),
+        ]),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
@@ -708,18 +708,18 @@ var staticRenderFns = [
                 staticClass: "nav-link text-info",
                 attrs: {
                   href: "https://www.facebook.com/lacocoyodotcom/",
-                  target: "_blank"
-                }
+                  target: "_blank",
+                },
               },
               [_vm._v("Mas información")]
-            )
-          ])
+            ),
+          ]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-6" }, [
           _c("label", {
             staticClass: "form-label",
-            attrs: { for: "validationCustom01" }
+            attrs: { for: "validationCustom01" },
           }),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -728,10 +728,10 @@ var staticRenderFns = [
                 "button",
                 {
                   staticClass: "btn btn-lg btn-danger",
-                  attrs: { type: "submit" }
+                  attrs: { type: "submit" },
                 },
                 [_vm._v("Cancelar")]
-              )
+              ),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-lg-4" }, [
@@ -739,16 +739,16 @@ var staticRenderFns = [
                 "button",
                 {
                   staticClass: "btn btn-lg btn-success",
-                  attrs: { type: "submit" }
+                  attrs: { type: "submit" },
                 },
                 [_vm._v("Registrar")]
-              )
-            ])
-          ])
-        ])
-      ])
+              ),
+            ]),
+          ]),
+        ]),
+      ]),
     ])
-  }
+  },
 ]
 render._withStripped = true
 
