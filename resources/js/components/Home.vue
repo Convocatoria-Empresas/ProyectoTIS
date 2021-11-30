@@ -6,37 +6,41 @@
   <div class="jumbotron">
     <div class="container">
 
-        <h1 class="display-3">Hello, world!</h1>
+        <h1 class="display-3">Bienvenido al Sistema de Apoyo de la Empresa TIS!</h1>
         <img src="https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png" alt="" width="100" height="130">
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <p>Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Leer más »</a></p>
         </div>
     </div>
-
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Standing on the frontline when the bombs start to fall. Heaven is jealous of our love, angels are crying from up above. Can't replace you with a million rings. Boy, when you're with me I'll give you a taste. There’s no going back. Before you met me I was alright but things were kinda heavy. Heavy is the head that wears the crown.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Playing ping pong all night long, everything's all neon and hazy. Yeah, she's so in demand. She's sweet as pie but if you break her heart. But down to earth. It's time to face the music I'm no longer your muse. I guess that I forgot I had a choice.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
+    <div class="text-center col">
+        <h2>Asesores Destacados</h2>
+        <hr>
     </div>
 
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
+
+        <h2>Lic. </h2>
+        <p>Establece procesos y gestiona eficinetemente los proyectos aportando pautas, formatos y plantillas que guíen al equipo.</p>
+        <p><a class="btn btn-secondary" href="#">Ver más detalles »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
+
+        <h2>Lic.</h2>
+        <p>Aporta formación y conocimientos a los miembros del equipo, para que consigan un mejor desempeño.</p>
+        <p><a class="btn btn-secondary" href="#">Ver más detalles »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
+
+        <h2>Lic.</h2>
+        <p>Colabora con el Scrum Master y el Representante legal para conseguir que su trabajo sea adecuado y eficiente.</p>
+        <p><a class="btn btn-secondary" href="#">Ver más detalles »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div>
     <hr>
-
-  </div> <!-- /container -->
-
 </main>
     </main>
 </template>

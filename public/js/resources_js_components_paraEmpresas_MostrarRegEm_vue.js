@@ -186,6 +186,7 @@
 //
 //
 //
+//
 function validarExt() {
   var archivoInput = document.getElementById('Documento_1');
   var archivoRuta = archivoInput.value;
@@ -335,7 +336,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center col" }, [
       _c("h1", [_vm._v("REGISTRO DE EMPRESA")]),
-      _c("h2"),
+      _vm._v(" "),
+      _c("hr"),
     ])
   },
   function () {
