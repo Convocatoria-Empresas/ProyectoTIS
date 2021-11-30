@@ -20,9 +20,9 @@
                     </thead>
                     <tbody>
                         <tr v-for="blog in blogs" :key="blog.id">
-                            <td>{{ blog.gestion }}</td>
-                            <td>{{ blog.titulo }}</td>
-                            <td>{{ blog.descipcion }}</td>
+                            <td>{{ blog.Gestion }}</td>
+                            <td>{{ blog.Titulo }}</td>
+                            <td>{{ blog.Descripcion }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"editarBlog",params:{gestion:blog.gestion}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
@@ -49,7 +49,7 @@ export default {
     },
     methods:{
         async mostrarBlogs(){
-            await this.axios.get('/api/convoEmpre').then(response=>{
+            await this.axios.get('/api/convocatoria').then(response=>{
                 console.log(response.data)
                 this.blogs = response.data
             }).catch(error=>{
@@ -59,7 +59,7 @@ export default {
         },
         borrarBlog(id){
             if(confirm("¿Confirma eliminar el registro?")){
-                    this.axios.delete(`/api/blog/${id}`).then(response=>{
+                    this.axios.delete(`/api/convocatoria/${id}`).then(response=>{
                     this.mostrarBlogs()
                 }).catch(error=>{
                     console.log(error)

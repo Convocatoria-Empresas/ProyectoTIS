@@ -77,7 +77,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get('/api/convoEmpre').then(function (response) {
+                return _this.axios.get('/api/convocatoria').then(function (response) {
                   console.log(response.data);
                   _this.blogs = response.data;
                 })["catch"](function (error) {
@@ -97,7 +97,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this2 = this;
 
       if (confirm("¿Confirma eliminar el registro?")) {
-        this.axios["delete"]("/api/blog/".concat(id)).then(function (response) {
+        this.axios["delete"]("/api/convocatoria/".concat(id)).then(function (response) {
           _this2.mostrarBlogs();
         })["catch"](function (error) {
           console.log(error);
@@ -225,11 +225,11 @@ var render = function() {
             "tbody",
             _vm._l(_vm.blogs, function(blog) {
               return _c("tr", { key: blog.id }, [
-                _c("td", [_vm._v(_vm._s(blog.gestion))]),
+                _c("td", [_vm._v(_vm._s(blog.Gestion))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.titulo))]),
+                _c("td", [_vm._v(_vm._s(blog.Titulo))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.descipcion))]),
+                _c("td", [_vm._v(_vm._s(blog.Descripcion))]),
                 _vm._v(" "),
                 _c(
                   "td",

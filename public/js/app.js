@@ -2436,7 +2436,7 @@ var Seguimiento = function Seguimiento() {
 }; //importamos los componentes para el convocatorias
 
 
-var Mostrar = function Mostrar() {
+var MostrarConv = function MostrarConv() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_convotacoraias_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/convotacoraias/Mostrar.vue */ "./resources/js/components/convotacoraias/Mostrar.vue"));
 };
 
@@ -2458,9 +2458,9 @@ var routes = [{
   path: '/',
   component: Home
 }, {
-  name: 'mostrarBlogs',
-  path: '/blogs',
-  component: Mostrar
+  name: 'convocatoria',
+  path: '/convocatoria',
+  component: MostrarConv
 }, {
   name: 'crearBlog',
   path: '/crear',
@@ -38875,7 +38875,10 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "nav-link",
-                        attrs: { "exact-active-class": "active", to: "/blogs" }
+                        attrs: {
+                          "exact-active-class": "active",
+                          to: "/convocatoria"
+                        }
                       },
                       [_vm._v("Convocatorias")]
                     )
