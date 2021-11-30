@@ -107,8 +107,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     borrarBlog: function borrarBlog(id) {
       var _this2 = this;
 
-      if (confirm("¿Confirma eliminar el registro?")) {
-        this.axios["delete"]("/api/blog/".concat(id)).then(function (response) {
+      if (confirm("¿Confirma la eliminación de la convocatoria?")) {
+        this.axios["delete"]('/api/convoEmpre/${id}').then(function (response) {
           _this2.mostrarBlogs();
         })["catch"](function (error) {
           console.log(error);
@@ -1019,7 +1019,7 @@ var render = function () {
                         staticClass: "btn btn-info",
                         attrs: {
                           to: {
-                            name: "editarBlog",
+                            name: "editarConvo",
                             params: { gestion: blog.gestion },
                           },
                         },

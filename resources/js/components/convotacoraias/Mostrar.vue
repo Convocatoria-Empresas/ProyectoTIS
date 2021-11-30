@@ -25,7 +25,7 @@
                             <td>{{ blog.descripcion }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"editarBlog",params:{gestion:blog.gestion}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
+                                <router-link :to='{name:"editarConvo",params:{gestion:blog.gestion}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
                                 <a type="button" @click="borrarBlog(blog.gestion)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
@@ -37,35 +37,35 @@
 </template>
 
 <script>
-export default {
-    name:"blogs",
-    data(){
-        return {
-            blogs:[]
-        }
-    },
-    mounted(){
-        this.mostrarBlogs()
-    },
-    methods:{
-        async mostrarBlogs(){
-            await this.axios.get('/api/convoEmpre').then(response=>{
-                console.log(response.data)
-                this.blogs = response.data
-            }).catch(error=>{
-                console.log(error)
-                this.blogs = []
-            })
+    export default {
+        name:"blogs",
+        data(){
+            return {
+                blogs:[]
+            }
         },
-        borrarBlog(id){
-            if(confirm("¿Confirma eliminar el registro?")){
-                    this.axios.delete(`/api/blog/${id}`).then(response=>{
-                    this.mostrarBlogs()
+        mounted(){
+            this.mostrarBlogs()
+        },
+        methods:{
+            async mostrarBlogs(){
+                await this.axios.get('/api/convoEmpre').then(response=>{
+                    console.log(response.data)
+                    this.blogs = response.data
                 }).catch(error=>{
                     console.log(error)
+                    this.blogs = []
                 })
+            },
+            borrarBlog(id){
+                if(confirm("¿Confirma la eliminación de la convocatoria?")){
+                        this.axios.delete('/api/convoEmpre/${id}').then(response=>{
+                        this.mostrarBlogs()
+                    }).catch(error=>{
+                        console.log(error)
+                    })
+                }
             }
         }
     }
-}
 </script>
