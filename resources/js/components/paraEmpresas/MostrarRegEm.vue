@@ -1,7 +1,8 @@
 <template>
     <div class="row">
         <div class="text-center col">
-            <h1>REGISTRO DE EMPRESA</h1><h2></h2>
+            <h1>REGISTRO DE EMPRESA</h1>
+            <hr>
         </div>
         <div class="col-12">
             <div class="card">

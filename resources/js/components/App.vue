@@ -40,9 +40,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a href=""></a>
-                            <router-link class="dropdown-item active" type="button" exact-active-class="" to="/seguimiento">Empresas</router-link>
-                            <router-link class="dropdown-item active" exact-active-class="" to="/seguimiento">Postulantes</router-link>
-                            <a class="dropdown-item" href="#">Postulantes</a>
+                            <router-link class="dropdown-item active" type="button" exact-active-class="" to="/SegEmpresa">Empresas</router-link>
+                            <router-link class="dropdown-item active" exact-active-class="" to="/SegPostulante">Postulantes</router-link>
+
                         </div>
                         </div>
                     </li>

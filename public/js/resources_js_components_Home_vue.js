@@ -68,115 +68,256 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("main", [
+    _c("main", { attrs: { role: "main" } }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "text-center col-lg-4" }, [
+          _c(
+            "svg",
+            {
+              staticClass: "bd-placeholder-img rounded-circle",
+              attrs: {
+                width: "140",
+                height: "140",
+                xmlns: "http://www.w3.org/2000/svg",
+                role: "img",
+                "aria-label": "Placeholder: 140x140",
+                preserveAspectRatio: "xMidYMid slice",
+                focusable: "false",
+              },
+            },
+            [
+              _c("title", [_vm._v("Placeholder")]),
+              _c("rect", {
+                staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+                attrs: {
+                  width: "100%",
+                  height: "100%",
+                  fill: "#777",
+                  "data-darkreader-inline-fill": "",
+                },
+              }),
+              _c(
+                "text",
+                {
+                  staticStyle: { "--darkreader-inline-fill": "#9d9488" },
+                  attrs: {
+                    x: "50%",
+                    y: "50%",
+                    fill: "#777",
+                    dy: ".3em",
+                    "data-darkreader-inline-fill": "",
+                  },
+                },
+                [_vm._v("140x140")]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Lic. ")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Establece procesos y gestiona eficinetemente los proyectos aportando pautas, formatos y plantillas que guíen al equipo."
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._m(2),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center col-lg-4" }, [
+          _c(
+            "svg",
+            {
+              staticClass: "bd-placeholder-img rounded-circle",
+              attrs: {
+                width: "140",
+                height: "140",
+                xmlns: "http://www.w3.org/2000/svg",
+                role: "img",
+                "aria-label": "Placeholder: 140x140",
+                preserveAspectRatio: "xMidYMid slice",
+                focusable: "false",
+              },
+            },
+            [
+              _c("title", [_vm._v("Placeholder")]),
+              _c("rect", {
+                staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+                attrs: {
+                  width: "100%",
+                  height: "100%",
+                  fill: "#777",
+                  "data-darkreader-inline-fill": "",
+                },
+              }),
+              _c(
+                "text",
+                {
+                  staticStyle: { "--darkreader-inline-fill": "#9d9488" },
+                  attrs: {
+                    x: "50%",
+                    y: "50%",
+                    fill: "#777",
+                    dy: ".3em",
+                    "data-darkreader-inline-fill": "",
+                  },
+                },
+                [_vm._v("140x140")]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Lic.")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Aporta formación y conocimientos a los miembros del equipo, para que consigan un mejor desempeño."
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._m(3),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center col-lg-4" }, [
+          _c(
+            "svg",
+            {
+              staticClass: "bd-placeholder-img rounded-circle",
+              attrs: {
+                width: "140",
+                height: "140",
+                xmlns: "http://www.w3.org/2000/svg",
+                role: "img",
+                "aria-label": "Placeholder: 140x140",
+                preserveAspectRatio: "xMidYMid slice",
+                focusable: "false",
+              },
+            },
+            [
+              _c("title", [_vm._v("Placeholder")]),
+              _c("rect", {
+                staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+                attrs: {
+                  width: "100%",
+                  height: "100%",
+                  fill: "#777",
+                  "data-darkreader-inline-fill": "",
+                },
+              }),
+              _c(
+                "text",
+                {
+                  staticStyle: { "--darkreader-inline-fill": "#9d9488" },
+                  attrs: {
+                    x: "50%",
+                    y: "50%",
+                    fill: "#777",
+                    dy: ".3em",
+                    "data-darkreader-inline-fill": "",
+                  },
+                },
+                [_vm._v("140x140")]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Lic.")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Colabora con el Scrum Master y el Representante legal para conseguir que su trabajo sea adecuado y eficiente."
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._m(4),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("main", [
-      _c("main", { attrs: { role: "main" } }, [
-        _c("div", { staticClass: "jumbotron" }, [
-          _c("div", { staticClass: "container" }, [
-            _c("h1", { staticClass: "display-3" }, [_vm._v("Hello, world!")]),
-            _vm._v(" "),
-            _c("img", {
-              attrs: {
-                src: "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
-                alt: "",
-                width: "100",
-                height: "130",
-              },
-            }),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-primary btn-lg",
-                  attrs: { href: "#", role: "button" },
-                },
-                [_vm._v("Learn more »")]
-              ),
-            ]),
-          ]),
+    return _c("div", { staticClass: "jumbotron" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "display-3" }, [
+          _vm._v("Bienvenido al Sistema de Apoyo de la Empresa TIS!"),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-4" }, [
-              _c("h2", [_vm._v("Heading")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { href: "#", role: "button" },
-                  },
-                  [_vm._v("View details »")]
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-4" }, [
-              _c("h2", [_vm._v("Heading")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Standing on the frontline when the bombs start to fall. Heaven is jealous of our love, angels are crying from up above. Can't replace you with a million rings. Boy, when you're with me I'll give you a taste. There’s no going back. Before you met me I was alright but things were kinda heavy. Heavy is the head that wears the crown."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { href: "#", role: "button" },
-                  },
-                  [_vm._v("View details »")]
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-4" }, [
-              _c("h2", [_vm._v("Heading")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Playing ping pong all night long, everything's all neon and hazy. Yeah, she's so in demand. She's sweet as pie but if you break her heart. But down to earth. It's time to face the music I'm no longer your muse. I guess that I forgot I had a choice."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { href: "#", role: "button" },
-                  },
-                  [_vm._v("View details »")]
-                ),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("hr"),
+        _c("img", {
+          attrs: {
+            src: "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
+            alt: "",
+            width: "100",
+            height: "130",
+          },
+        }),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para los diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional."
+          ),
         ]),
+        _vm._v(" "),
+        _c("p", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-primary btn-lg",
+              attrs: { href: "#", role: "button" },
+            },
+            [_vm._v("Leer más »")]
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center col" }, [
+      _c("h2", [_vm._v("Asesores Destacados")]),
+      _vm._v(" "),
+      _c("hr"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("a", { staticClass: "btn btn-secondary", attrs: { href: "#" } }, [
+        _vm._v("Ver más detalles »"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("a", { staticClass: "btn btn-secondary", attrs: { href: "#" } }, [
+        _vm._v("Ver más detalles »"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("a", { staticClass: "btn btn-secondary", attrs: { href: "#" } }, [
+        _vm._v("Ver más detalles »"),
       ]),
     ])
   },
