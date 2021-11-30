@@ -123,7 +123,7 @@
         <label for="title">El registro</label>
         <hr>
         <label for="content">Nombre_Larg</label>
-        <input class="form-control" id="Nombre_Larg" type="text" v-model="empresa.Nombre_Largo">
+        <input class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
         <label for="content">Nombre corto</label>
         <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
         <label for="content">Correo</label>
@@ -131,7 +131,7 @@
         <label for="content">Telefono</label>
         <input class="form-control" id="title" type="text" v-model="empresa.Telefono">
         <label for="content">NIT</label>
-        <input class="form-control" id="Telefono" type="text" v-model="empresa.NIT">
+        <input class="form-control" id="NIT" type="text" v-model="empresa.NIT">
 
 
         <label for="content">Doc1</label>

@@ -18,7 +18,10 @@ class CreateConvocatoriasTable extends Migration
             $table->string('Codigo_Conv',5)->unique();
             $table->string('Titulo');
             $table->text('Descripcion');
+            $table->string('Asesor');
             $table->date('Fecha');
+            $table->string('Informacion_A');
+            $table->string('Informacion_B');
             $table->string('Gestion');
             $table->timestamps();
         });

@@ -14,7 +14,7 @@ class ConvocatoriaController extends Controller
      */
     public function index()
     {
-        $RegisConv = Convocatoria::all(['Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Gestion']);
+        $RegisConv = Convocatoria::all(['Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
         return response()->json($RegisConv);
     }
 
@@ -26,7 +26,19 @@ class ConvocatoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $convocatoria= new Convocatoria();
+        $convocatoria->Titulo = $request->Titulo;
+        $convocatoria->Codigo_Conv = $request->Codigo_Conv;
+        $convocatoria->Descripcion = $request->Descripcion;
+        $convocatoria->Asesor = $request->Asesor;
+        $convocatoria->Fecha = $request->Fecha;
+        $convocatoria->Informacion_A = $request->Informacion_A;
+        $convocatoria->Informacion_B = $request->Informacion_B;
+        $convocatoria->Gestion = $request->Gestion;
+        
+        $convocatoria->save();
+
+        return $convocatoria;
     }
 
     /**
@@ -62,6 +74,9 @@ class ConvocatoriaController extends Controller
      */
     public function destroy(Convocatoria $convocatoria)
     {
-        //
+        $convocatoria= Convocatoria::find($id);
+        $convocatoria->delete();
+
+        return $convocatoria;
     }
 }
