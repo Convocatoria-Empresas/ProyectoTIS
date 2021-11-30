@@ -14,10 +14,10 @@ class CreateConvocatoriaEmpresasTable extends Migration
     public function up()
     {
         Schema::create('convocatoria_empresas', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->String('gestion');
             $table->String('titulo');
-            $table->String('descripcion');
+            $table->Text('descripcion');
         });
     }
 

@@ -2480,7 +2480,7 @@ var routes = [{
   path: '/crear',
   component: Crear
 }, {
-  name: 'editarBlog',
+  name: 'editarConvo',
   path: '/editar/:id',
   component: Editar
 }, {

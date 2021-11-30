@@ -26,7 +26,7 @@ export const routes = [
         component: Crear
     },  
     {
-        name: 'editarBlog',
+        name: 'editarConvo',
         path: '/editar/:id',
         component: Editar,
     },
