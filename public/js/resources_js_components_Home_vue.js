@@ -75,7 +75,7 @@ var render = function () {
       _vm._m(1),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-4" }, [
+        _c("div", { staticClass: "text-center col-lg-4" }, [
           _c(
             "svg",
             {
@@ -129,7 +129,7 @@ var render = function () {
           _vm._m(2),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4" }, [
+        _c("div", { staticClass: "text-center col-lg-4" }, [
           _c(
             "svg",
             {
@@ -183,7 +183,7 @@ var render = function () {
           _vm._m(3),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4" }, [
+        _c("div", { staticClass: "text-center col-lg-4" }, [
           _c(
             "svg",
             {
