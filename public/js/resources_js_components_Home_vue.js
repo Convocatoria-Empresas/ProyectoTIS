@@ -264,7 +264,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional."
+            "Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para los diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional."
           ),
         ]),
         _vm._v(" "),
