@@ -27,9 +27,9 @@
 
 
         <label for="content">Información sobre A</label>
-        <input class="form-control" id="Informacion_1" type="text" v-model="convocatoria.Informacion_A">
+        <input class="form-control" id="Informacion_1" type="file" @change="processFileInf1">
         <label for="content">Información sobre B</label>
-        <input class="form-control" id="Informacion_2" type="text" v-model="convocatoria.Informacion_B">
+        <input class="form-control" id="Informacion_2" type="file" @change="processFileInf2">
         
         <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
         {{ convocatoria }}

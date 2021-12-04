@@ -1177,29 +1177,9 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.convocatoria.Informacion_A,
-                    expression: "convocatoria.Informacion_A"
-                  }
-                ],
                 staticClass: "form-control",
-                attrs: { id: "Informacion_1", type: "text" },
-                domProps: { value: _vm.convocatoria.Informacion_A },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(
-                      _vm.convocatoria,
-                      "Informacion_A",
-                      $event.target.value
-                    )
-                  }
-                }
+                attrs: { id: "Informacion_1", type: "file" },
+                on: { change: _vm.processFileInf1 }
               }),
               _vm._v(" "),
               _c("label", { attrs: { for: "content" } }, [
@@ -1207,29 +1187,9 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.convocatoria.Informacion_B,
-                    expression: "convocatoria.Informacion_B"
-                  }
-                ],
                 staticClass: "form-control",
-                attrs: { id: "Informacion_2", type: "text" },
-                domProps: { value: _vm.convocatoria.Informacion_B },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(
-                      _vm.convocatoria,
-                      "Informacion_B",
-                      $event.target.value
-                    )
-                  }
-                }
+                attrs: { id: "Informacion_2", type: "file" },
+                on: { change: _vm.processFileInf2 }
               }),
               _vm._v(" "),
               _c(

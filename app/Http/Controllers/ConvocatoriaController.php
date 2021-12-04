@@ -14,7 +14,7 @@ class ConvocatoriaController extends Controller
      */
     public function index()
     {
-        $RegisConv = Convocatoria::all(['Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
+        $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
         return response()->json($RegisConv);
     }
 
@@ -61,9 +61,31 @@ class ConvocatoriaController extends Controller
      * @param  \App\Models\Convocatoria  $convocatoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Convocatoria $convocatoria)
+    public function update(Request $request, $convocatorium)
     {
-        //
+        $convocatoria= Convocatoria::find($convocatorium);
+      /*  $convocatoria->Titulo = $request->Titulo;
+        $convocatoria->Codigo_Conv = $request->Codigo_Conv;
+        $convocatoria->Descripcion = $request->Descripcion;
+        $convocatoria->Asesor = $request->Asesor;
+        $convocatoria->Fecha = $request->Fecha;
+        $convocatoria->Informacion_A = $request->Informacion_A;
+        $convocatoria->Informacion_B = $request->Informacion_B;
+        $convocatoria->Gestion = $request->Gestion;*/
+        
+        
+        $nuevaConv=[];
+        
+        $nuevaConv['Titulo']=$request->get('Titulo');
+        $nuevaConv['Gestion']=$request->get('Gestion');
+        $nuevaConv['Descripcion']=$request->get('Descripcion');
+        $nuevaConv['Asesor']=$request->get('Asesor');
+        $nuevaConv['Fecha']=$request->get('Fecha');
+        $nuevaConv['Informacion_A']=$request->get('Informacion_A');
+        $nuevaConv['Informacion_B']=$request->get('Informacion_B');
+        $convocatoria->update($nuevaConv);
+      //  return $convocatoria;
+        return response()->json($nuevaConv);
     }
 
     /**
@@ -72,11 +94,13 @@ class ConvocatoriaController extends Controller
      * @param  \App\Models\Convocatoria  $convocatoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Convocatoria $convocatoria)
+    public function destroy($convocatorium)
     {
-        $convocatoria= Convocatoria::find($id);
-        $convocatoria->delete();
 
-        return $convocatoria;
+       $convo= Convocatoria::find($convocatorium);
+      $convo->delete();
+
+      $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
+        return response()->json($RegisConv);
     }
 }

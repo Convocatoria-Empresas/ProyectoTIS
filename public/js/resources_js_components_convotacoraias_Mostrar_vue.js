@@ -68,6 +68,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -107,13 +109,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     borrarBlog: function borrarBlog(id) {
       var _this2 = this;
 
-      if (confirm("¿Confirma eliminar el registro?")) {
-        this.axios["delete"]('/api/convocatoria' + id).then(function (response) {
-          _this2.mostrarBlogs();
-        })["catch"](function (error) {
-          console.log(error);
-        });
-      }
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // if(confirm("¿Confirma eliminar el registro?")){
+                console.log(id);
+                _context2.next = 3;
+                return _this2.axios["delete"]('/api/convocatoria/' + id).then(function (response) {
+                  console.log(response.data);
+                  _this2.blogs = response.data;
+                })["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 3:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
     }
   }
 });
@@ -1018,10 +1035,7 @@ var render = function() {
                       {
                         staticClass: "btn btn-info",
                         attrs: {
-                          to: {
-                            name: "editarBlog",
-                            params: { gestion: blog.gestion }
-                          }
+                          to: { name: "editarBlog", params: { id: blog.id } }
                         }
                       },
                       [_c("i", { staticClass: "fas fa-edit" })]

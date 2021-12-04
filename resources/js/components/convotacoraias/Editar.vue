@@ -8,15 +8,26 @@
                          <div class="row">
                             <div class="mb-2 col-12">
                                 <div class="form-group">
-                                    <label>Editar la Convocatoria</label>
-                                    <input type="text" class="form-control" v-model="convocatorias.titulo">
+                        
+                                    <label for="content">Título</label>
+                                    <input class="form-control" id="Titulo" type="text" v-model="convocatoria.Titulo">
                                 </div>
                             </div>
                             <div class="mb-2 col-12">
 
-                                <div class="form-floating">
-                                <textarea class="form-control" id="floatingTextarea2" v-model="convocatorias.contenido" style="height: 100px"></textarea>
-                                <label for="floatingTextarea2">Contenido</label>
+                                <div>
+                                <label for="content">Gestión</label>    
+                                <input class="form-control" id="Gestion" type="text" v-model="convocatoria.Gestion">
+                                <label for="floatingTextarea2">Asesor</label>
+                                <input class="form-control" id="Asesor" type="text" v-model="convocatoria.Asesor">
+                                <label for="floatingTextarea2">Fecha</label>
+                                <input class="form-control" id="Fecha" type="date" v-model="convocatoria.Fecha">
+                                <label for="content">Descripción</label>
+                                <input class="form-control" id="Descripcion" type="text" v-model="convocatoria.Descripcion">
+                                <label for="content">Información sobre A</label>
+                                <input class="form-control" id="Informacion_1" type="text" v-model="convocatoria.Informacion_A">
+                                <label for="content">Información sobre B</label>
+                                <input class="form-control" id="Informacion_2" type="text" v-model="convocatoria.Informacion_B">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -35,27 +46,33 @@ export default {
     name:"editar-blog",
     data(){
         return {
-            blog:{
-                titulo:"",
-                contenido:"",
+            convocatoria:{
+            Titulo:"",
+            Gestion:"",
+            Asesor:"",
+            Fecha:"",
+	        Descripcion:"",
+            Informacion_A:"",
+            Informacion_B:"",
             }
         }
     },
     mounted(){
-        this.mostrarBlog()
+        //this.mostrarBlog()
     },
     methods:{
         async mostrarBlog(){
-            await this.axios.get(`/api/blog/${this.$route.params.id}`).then(response=>{
+            await this.axios.get(`/api/convocatoria/${this.$route.params.id}`).then(response=>{
                 const { titulo, contenido } = response.data
-                this.blog.titulo = titulo
-                this.blog.contenido = contenido
+                this.convocatoria.titulo = titulo
+                this.convocatoria.contenido = contenido
             }).catch(error=>{
                 console.log(error)
             })
         },
         async actualizar(){
-            await this.axios.put(`/api/blog/${this.$route.params.id}`,this.blog).then(response=>{
+            await this.axios.put(`/api/convocatoria/${this.$route.params.id}`,this.convocatoria).then(response=>{
+                console.log(response.data)
                 this.$router.push({name:"mostrarBlogs"})
             }).catch(error=>{
                 console.log(error)
