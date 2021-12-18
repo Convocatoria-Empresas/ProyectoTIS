@@ -8,11 +8,12 @@ const Crear = () => import('./components/convotacoraias/Crear.vue');
 const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
 const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue')
-//importamos para el seguimiento para empresas
+//importamos para el seguimiento y revision para empresas
 const SegEmpresa = () => import('./components/Seguimiento/SegEmpresas.vue');
 const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
-//importamos para el seguimiento para postulantes
+//importamos para el seguimiento y revision para postulantes
 const SegPostulante = () => import('./components/Seguimiento/SegPostulantes.vue');
+const RevSegPost = () => import('./components/Seguimiento/RevSegPost.vue');
 
 export const routes = [
     {
@@ -65,5 +66,10 @@ export const routes = [
         name: 'SegPostulante',
         path: '/SegPostulante',
         component: SegPostulante
+    },
+    {
+        name: 'RevSegPost',
+        path: '/RevSegPost',
+        component: RevSegPost
     }
 ];
