@@ -11,6 +11,7 @@
                     <th scope="col">Gestión</th>
                     <th scope="col">Nombre de la Empresa</th>
                     <th scope="col">Representante Legal</th>
+                    <th scope="col">Revisar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,6 +21,10 @@
                         <td>{{ tablaSeg.gestion}}k}</td>
                         <td>{{ tablaSeg.nombreEmpresa}}k}</td>
                         <td>{{ tablaSeg.representanteLegal}}k}</td>
+                        <td>
+                                <!-- llamamos al componente para Editar     -->
+                                <router-link to='/RevSegPost' class="btn btn-info"><i class="fas fa-eye"></i></router-link>
+                        </td>
                     </tr>
                 </tbody>
                 </table>
