@@ -14,23 +14,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <tr v-for="tablaSeg in tablasSeg" :key=" tablaSeg.id">
+                        <th scope="row">1</th>
+                        <td>{{ tablaSeg.id}}k}</td>
+                        <td>{{ tablaSeg.gestion}}k}</td>
+                        <td>{{ tablaSeg.nombreEmpresa}}k}</td>
+                        <td>{{ tablaSeg.representanteLegal}}k}</td>
                     </tr>
                 </tbody>
                 </table>
@@ -40,34 +29,26 @@
 </template>
 <script>
 export default {
-    name:"blogs",
+    name:"tablasSeg",
     data(){
         return {
-            blogs:[]
+            tablasSeg:[]
         }
     },
     mounted(){
-        this.mostrarBlogs()
+        this.mostrarSeg()
     },
     methods:{
-        async mostrarBlogs(){
+        async mostrarSeg(){
             await this.axios.get('/api/convoEmpre').then(response=>{
                 console.log(response.data)
-                this.blogs = response.data
+                this.tablasSeg = response.data
             }).catch(error=>{
                 console.log(error)
-                this.blogs = []
+                this.tablasSeg = []
             })
         },
-        borrarBlog(id){
-            if(confirm("¿Confirma eliminar el registro?")){
-                    this.axios.delete(`/api/blog/${id}`).then(response=>{
-                    this.mostrarBlogs()
-                }).catch(error=>{
-                    console.log(error)
-                })
-            }
-        }
+
     }
 }
 </script>
