@@ -59,6 +59,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "tablasSeg",
   data: function data() {
@@ -975,6 +980,21 @@ var render = function () {
                 _c("td", [_vm._v(_vm._s(tablaSeg.nombreEmpresa) + "k}")]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(tablaSeg.representanteLegal) + "k}")]),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-info",
+                        attrs: { to: "/RevSegPost" },
+                      },
+                      [_c("i", { staticClass: "fas fa-eye" })]
+                    ),
+                  ],
+                  1
+                ),
               ])
             }),
             0
@@ -998,6 +1018,8 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Nombre de la Empresa")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Representante Legal")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Revisar")]),
       ]),
     ])
   },
