@@ -2285,7 +2285,7 @@ var Editar = function Editar() {
 
 var RegEmpresa = function RegEmpresa() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_paraEmpresas_MostrarRegEm_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/paraEmpresas/MostrarRegEm.vue */ "./resources/js/components/paraEmpresas/MostrarRegEm.vue"));
-}; //importamos para el seguimiento para empresas
+}; //importamos para el seguimiento y revision para empresas
 
 
 var SegEmpresa = function SegEmpresa() {
@@ -2294,11 +2294,15 @@ var SegEmpresa = function SegEmpresa() {
 
 var RevSegEmpre = function RevSegEmpre() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_RevSegEmpre_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/RevSegEmpre.vue */ "./resources/js/components/Seguimiento/RevSegEmpre.vue"));
-}; //importamos para el seguimiento para postulantes
+}; //importamos para el seguimiento y revision para postulantes
 
 
 var SegPostulante = function SegPostulante() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_SegPostulantes_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/SegPostulantes.vue */ "./resources/js/components/Seguimiento/SegPostulantes.vue"));
+};
+
+var RevSegPost = function RevSegPost() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_RevSegPost_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/RevSegPost.vue */ "./resources/js/components/Seguimiento/RevSegPost.vue"));
 };
 
 var routes = [{
@@ -2341,6 +2345,10 @@ var routes = [{
   name: 'SegPostulante',
   path: '/SegPostulante',
   component: SegPostulante
+}, {
+  name: 'RevSegPost',
+  path: '/RevSegPost',
+  component: RevSegPost
 }];
 
 /***/ }),
@@ -53413,7 +53421,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

@@ -1,6 +1,6 @@
 <template>
     <div class="text-center col">
-        <h1>Revision de la Grupo-Empresas</h1>
+        <h1>Revision de los Postulantes</h1>
         <hr>
 
     </div>

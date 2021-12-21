@@ -64,24 +64,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "blogs",
+  name: "tablasSeg",
   data: function data() {
     return {
-      blogs: []
+      tablasSeg: []
     };
   },
   mounted: function mounted() {
-    this.mostrarBlogs();
+    this.mostrarSeg();
   },
   methods: {
-    mostrarBlogs: function mostrarBlogs() {
+    mostrarSeg: function mostrarSeg() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -92,10 +86,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.next = 2;
                 return _this.axios.get('/api/convoEmpre').then(function (response) {
                   console.log(response.data);
-                  _this.blogs = response.data;
+                  _this.tablasSeg = response.data;
                 })["catch"](function (error) {
                   console.log(error);
-                  _this.blogs = [];
+                  _this.tablasSeg = [];
                 });
 
               case 2:
@@ -105,17 +99,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
-    },
-    borrarBlog: function borrarBlog(id) {
-      var _this2 = this;
-
-      if (confirm("¿Confirma eliminar el registro?")) {
-        this.axios["delete"]("/api/blog/".concat(id)).then(function (response) {
-          _this2.mostrarBlogs();
-        })["catch"](function (error) {
-          console.log(error);
-        });
-      }
     }
   }
 });
@@ -974,70 +957,69 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container mt-4" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "text-center col" }, [
+        _c("h1", [_vm._v("Tabla de Postulantes")]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("table", { staticClass: "table" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.tablasSeg, function (tablaSeg) {
+              return _c("tr", { key: tablaSeg.id }, [
+                _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(tablaSeg.id) + "k}")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(tablaSeg.gestion) + "k}")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(tablaSeg.nombreEmpresa) + "k}")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(tablaSeg.representanteLegal) + "k}")]),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-info",
+                        attrs: { to: "/RevSegPost" },
+                      },
+                      [_c("i", { staticClass: "fas fa-eye" })]
+                    ),
+                  ],
+                  1
+                ),
+              ])
+            }),
+            0
+          ),
+        ]),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-4" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "text-center col" }, [
-          _c("h1", [_vm._v("Tabla de Postulantes")]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c("table", { staticClass: "table" }, [
-            _c("thead", { staticClass: "thead-dark" }, [
-              _c("tr", [
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("N°")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Gestión")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [
-                  _vm._v("Nombre de la Empresa"),
-                ]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [
-                  _vm._v("Representante Legal"),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Mark")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Otto")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("@mdo")]),
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("th", { attrs: { scope: "row" } }, [_vm._v("2")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Jacob")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Thornton")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("@fat")]),
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("th", { attrs: { scope: "row" } }, [_vm._v("3")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Larry")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("the Bird")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("@twitter")]),
-              ]),
-            ]),
-          ]),
-        ]),
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("N°")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Gestión")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nombre de la Empresa")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Representante Legal")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Revisar")]),
       ]),
     ])
   },
