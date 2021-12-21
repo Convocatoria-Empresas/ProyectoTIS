@@ -219,7 +219,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -233,18 +233,18 @@ var render = function() {
             "form",
             {
               on: {
-                submit: function($event) {
+                submit: function ($event) {
                   $event.preventDefault()
                   return _vm.actualizar.apply(null, arguments)
-                }
-              }
+                },
+              },
             },
             [
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "mb-2 col-12" }, [
                   _c("div", { staticClass: "form-group" }, [
                     _c("label", { attrs: { for: "content" } }, [
-                      _vm._v("Título")
+                      _vm._v("Título"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -253,14 +253,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Titulo,
-                          expression: "convocatoria.Titulo"
-                        }
+                          expression: "convocatoria.Titulo",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Titulo", type: "text" },
                       domProps: { value: _vm.convocatoria.Titulo },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -269,16 +269,16 @@ var render = function() {
                             "Titulo",
                             $event.target.value
                           )
-                        }
-                      }
-                    })
-                  ])
+                        },
+                      },
+                    }),
+                  ]),
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "mb-2 col-12" }, [
                   _c("div", [
                     _c("label", { attrs: { for: "content" } }, [
-                      _vm._v("Gestión")
+                      _vm._v("Gestión"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -287,14 +287,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Gestion,
-                          expression: "convocatoria.Gestion"
-                        }
+                          expression: "convocatoria.Gestion",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Gestion", type: "text" },
                       domProps: { value: _vm.convocatoria.Gestion },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -303,12 +303,12 @@ var render = function() {
                             "Gestion",
                             $event.target.value
                           )
-                        }
-                      }
+                        },
+                      },
                     }),
                     _vm._v(" "),
                     _c("label", { attrs: { for: "floatingTextarea2" } }, [
-                      _vm._v("Asesor")
+                      _vm._v("Asesor"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -317,14 +317,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Asesor,
-                          expression: "convocatoria.Asesor"
-                        }
+                          expression: "convocatoria.Asesor",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Asesor", type: "text" },
                       domProps: { value: _vm.convocatoria.Asesor },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -333,12 +333,12 @@ var render = function() {
                             "Asesor",
                             $event.target.value
                           )
-                        }
-                      }
+                        },
+                      },
                     }),
                     _vm._v(" "),
                     _c("label", { attrs: { for: "floatingTextarea2" } }, [
-                      _vm._v("Fecha")
+                      _vm._v("Fecha"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -347,14 +347,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Fecha,
-                          expression: "convocatoria.Fecha"
-                        }
+                          expression: "convocatoria.Fecha",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Fecha", type: "date" },
                       domProps: { value: _vm.convocatoria.Fecha },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -363,12 +363,12 @@ var render = function() {
                             "Fecha",
                             $event.target.value
                           )
-                        }
-                      }
+                        },
+                      },
                     }),
                     _vm._v(" "),
                     _c("label", { attrs: { for: "content" } }, [
-                      _vm._v("Descripción")
+                      _vm._v("Descripción"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -377,14 +377,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Descripcion,
-                          expression: "convocatoria.Descripcion"
-                        }
+                          expression: "convocatoria.Descripcion",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Descripcion", type: "text" },
                       domProps: { value: _vm.convocatoria.Descripcion },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -393,12 +393,12 @@ var render = function() {
                             "Descripcion",
                             $event.target.value
                           )
-                        }
-                      }
+                        },
+                      },
                     }),
                     _vm._v(" "),
                     _c("label", { attrs: { for: "content" } }, [
-                      _vm._v("Información sobre A")
+                      _vm._v("Información sobre A"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -407,14 +407,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Informacion_A,
-                          expression: "convocatoria.Informacion_A"
-                        }
+                          expression: "convocatoria.Informacion_A",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Informacion_1", type: "text" },
                       domProps: { value: _vm.convocatoria.Informacion_A },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -423,12 +423,12 @@ var render = function() {
                             "Informacion_A",
                             $event.target.value
                           )
-                        }
-                      }
+                        },
+                      },
                     }),
                     _vm._v(" "),
                     _c("label", { attrs: { for: "content" } }, [
-                      _vm._v("Información sobre B")
+                      _vm._v("Información sobre B"),
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -437,14 +437,14 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.convocatoria.Informacion_B,
-                          expression: "convocatoria.Informacion_B"
-                        }
+                          expression: "convocatoria.Informacion_B",
+                        },
                       ],
                       staticClass: "form-control",
                       attrs: { id: "Informacion_2", type: "text" },
                       domProps: { value: _vm.convocatoria.Informacion_B },
                       on: {
-                        input: function($event) {
+                        input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
@@ -453,31 +453,31 @@ var render = function() {
                             "Informacion_B",
                             $event.target.value
                           )
-                        }
-                      }
-                    })
-                  ])
+                        },
+                      },
+                    }),
+                  ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(1)
-              ])
+                _vm._m(1),
+              ]),
             ]
-          )
-        ])
-      ])
-    ])
+          ),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_vm._v("Editar Convocatoria")])
+      _c("h4", [_vm._v("Editar Convocatoria")]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
@@ -486,9 +486,9 @@ var staticRenderFns = [
         "button",
         { staticClass: "btn btn-success", attrs: { type: "submit" } },
         [_vm._v("Guardar Cambios")]
-      )
+      ),
     ])
-  }
+  },
 ]
 render._withStripped = true
 

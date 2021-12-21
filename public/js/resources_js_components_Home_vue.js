@@ -64,7 +64,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -87,8 +87,8 @@ var render = function() {
                 role: "img",
                 "aria-label": "Placeholder: 140x140",
                 preserveAspectRatio: "xMidYMid slice",
-                focusable: "false"
-              }
+                focusable: "false",
+              },
             },
             [
               _c("title", [_vm._v("Placeholder")]),
@@ -98,8 +98,8 @@ var render = function() {
                   width: "100%",
                   height: "100%",
                   fill: "#777",
-                  "data-darkreader-inline-fill": ""
-                }
+                  "data-darkreader-inline-fill": "",
+                },
               }),
               _c(
                 "text",
@@ -110,11 +110,11 @@ var render = function() {
                     y: "50%",
                     fill: "#777",
                     dy: ".3em",
-                    "data-darkreader-inline-fill": ""
-                  }
+                    "data-darkreader-inline-fill": "",
+                  },
                 },
                 [_vm._v("140x140")]
-              )
+              ),
             ]
           ),
           _vm._v(" "),
@@ -123,10 +123,10 @@ var render = function() {
           _c("p", [
             _vm._v(
               "Establece procesos y gestiona eficinetemente los proyectos aportando pautas, formatos y plantillas que guíen al equipo."
-            )
+            ),
           ]),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(2),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "text-center col-lg-4" }, [
@@ -141,8 +141,8 @@ var render = function() {
                 role: "img",
                 "aria-label": "Placeholder: 140x140",
                 preserveAspectRatio: "xMidYMid slice",
-                focusable: "false"
-              }
+                focusable: "false",
+              },
             },
             [
               _c("title", [_vm._v("Placeholder")]),
@@ -152,8 +152,8 @@ var render = function() {
                   width: "100%",
                   height: "100%",
                   fill: "#777",
-                  "data-darkreader-inline-fill": ""
-                }
+                  "data-darkreader-inline-fill": "",
+                },
               }),
               _c(
                 "text",
@@ -164,11 +164,11 @@ var render = function() {
                     y: "50%",
                     fill: "#777",
                     dy: ".3em",
-                    "data-darkreader-inline-fill": ""
-                  }
+                    "data-darkreader-inline-fill": "",
+                  },
                 },
                 [_vm._v("140x140")]
-              )
+              ),
             ]
           ),
           _vm._v(" "),
@@ -177,10 +177,10 @@ var render = function() {
           _c("p", [
             _vm._v(
               "Aporta formación y conocimientos a los miembros del equipo, para que consigan un mejor desempeño."
-            )
+            ),
           ]),
           _vm._v(" "),
-          _vm._m(3)
+          _vm._m(3),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "text-center col-lg-4" }, [
@@ -195,8 +195,8 @@ var render = function() {
                 role: "img",
                 "aria-label": "Placeholder: 140x140",
                 preserveAspectRatio: "xMidYMid slice",
-                focusable: "false"
-              }
+                focusable: "false",
+              },
             },
             [
               _c("title", [_vm._v("Placeholder")]),
@@ -206,8 +206,8 @@ var render = function() {
                   width: "100%",
                   height: "100%",
                   fill: "#777",
-                  "data-darkreader-inline-fill": ""
-                }
+                  "data-darkreader-inline-fill": "",
+                },
               }),
               _c(
                 "text",
@@ -218,11 +218,11 @@ var render = function() {
                     y: "50%",
                     fill: "#777",
                     dy: ".3em",
-                    "data-darkreader-inline-fill": ""
-                  }
+                    "data-darkreader-inline-fill": "",
+                  },
                 },
                 [_vm._v("140x140")]
-              )
+              ),
             ]
           ),
           _vm._v(" "),
@@ -231,42 +231,41 @@ var render = function() {
           _c("p", [
             _vm._v(
               "Colabora con el Scrum Master y el Representante legal para conseguir que su trabajo sea adecuado y eficiente."
-            )
+            ),
           ]),
           _vm._v(" "),
-          _vm._m(4)
-        ])
+          _vm._m(4),
+        ]),
       ]),
       _vm._v(" "),
-      _c("hr")
-    ])
+      _c("hr"),
+    ]),
   ])
 }
 var staticRenderFns = [
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "jumbotron" }, [
       _c("div", { staticClass: "container" }, [
         _c("h1", { staticClass: "display-3" }, [
-          _vm._v("Bienvenido al Sistema de Apoyo de la Empresa TIS!")
+          _vm._v("Bienvenido al Sistema de Apoyo de la Empresa TIS!"),
         ]),
         _vm._v(" "),
         _c("img", {
           attrs: {
-            src:
-              "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
+            src: "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
             alt: "",
             width: "100",
-            height: "130"
-          }
+            height: "130",
+          },
         }),
         _vm._v(" "),
         _c("p", [
           _vm._v(
             "Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para los diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional."
-          )
+          ),
         ]),
         _vm._v(" "),
         _c("p", [
@@ -274,54 +273,54 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary btn-lg",
-              attrs: { href: "#", role: "button" }
+              attrs: { href: "#", role: "button" },
             },
             [_vm._v("Leer más »")]
-          )
-        ])
-      ])
+          ),
+        ]),
+      ]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center col" }, [
       _c("h2", [_vm._v("Asesores Destacados")]),
       _vm._v(" "),
-      _c("hr")
+      _c("hr"),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
       _c("a", { staticClass: "btn btn-secondary", attrs: { href: "#" } }, [
-        _vm._v("Ver más detalles »")
-      ])
+        _vm._v("Ver más detalles »"),
+      ]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
       _c("a", { staticClass: "btn btn-secondary", attrs: { href: "#" } }, [
-        _vm._v("Ver más detalles »")
-      ])
+        _vm._v("Ver más detalles »"),
+      ]),
     ])
   },
-  function() {
+  function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
       _c("a", { staticClass: "btn btn-secondary", attrs: { href: "#" } }, [
-        _vm._v("Ver más detalles »")
-      ])
+        _vm._v("Ver más detalles »"),
+      ]),
     ])
-  }
+  },
 ]
 render._withStripped = true
 
