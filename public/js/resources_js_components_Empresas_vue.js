@@ -129,85 +129,51 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    var _this = this;
-
-    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-      var response, data;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return axios.get("/empresa");
-
-            case 2:
-              response = _context.sent;
-              data = response.data;
-              console.log("Lo de abajo no debería estar vacío");
-              console.log(data);
-              _this.empresa = response.data; //this.empresa= data;
-
-            case 7:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
-  },
+  name: "blogs",
   data: function data() {
     return {
-      empresa: []
-      /*{
-      Nombre_Largo : 'rgersg',
-      Nombre_Corto : '',
-      Correo_electronico : '',
-      Telefono : '',
-      NIT : '',
-      Solvencia : '',
-      Constitucion : '',
-      Plan_Pago : '',
-      Carta : '',
-      Socio_1 : '',
-      Socio_2 : '',
-      Socio_3 : '',
-      Socio_4 : '',
-      Socio_5 : '',
-      }*/
-
+      blogs: []
     };
   },
+  mounted: function mounted() {
+    this.mostrarEmp();
+  },
   methods: {
-    list: function list() {
-      var _this2 = this;
+    mostrarEmp: function mostrarEmp() {
+      var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        var res;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context.prev = _context.next) {
               case 0:
-                _context2.next = 2;
-                return axios.get('empresas');
+                _context.next = 2;
+                return _this.axios.get('/api/empresa').then(function (response) {
+                  console.log(response.data);
+                  _this.blogs = response.data;
+                })["catch"](function (error) {
+                  console.log(error);
+                  _this.blogs = [];
+                });
 
               case 2:
-                res = _context2.sent;
-                console.log("patito");
-                console.log(res);
-                _this2.empresa = res.data;
-
-              case 6:
               case "end":
-                return _context2.stop();
+                return _context.stop();
             }
           }
-        }, _callee2);
+        }, _callee);
       }))();
     }
-  },
-  created: function created() {
-    this.list();
+    /*borrarBlog(id){
+        if(confirm("¿Confirma eliminar el registro?")){
+                this.axios.delete(`/api/blog/${id}`).then(response=>{
+                this.mostrarBlogs()
+            }).catch(error=>{
+                console.log(error)
+            })
+        }
+    }*/
+
   }
 });
 
@@ -1080,7 +1046,7 @@ var render = function() {
               "router-link",
               {
                 staticClass: "btn btn-success",
-                attrs: { to: { name: "crearempresa" } }
+                attrs: { to: { name: "regEmpresa" } }
               },
               [
                 _c("i", { staticClass: "fas fa-plus-circle" }, [
@@ -1118,37 +1084,39 @@ var render = function() {
           _vm._v(" "),
           _c(
             "tbody",
-            _vm._l(_vm.empresa, function(emp) {
-              return _c("tr", { key: emp.id }, [
-                _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(emp.id))]),
+            _vm._l(_vm.blogs, function(blog) {
+              return _c("tr", { key: blog.id }, [
+                _c("th", { attrs: { scope: "row" } }, [
+                  _vm._v(_vm._s(blog.id))
+                ]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Nombre_Largo))]),
+                _c("td", [_vm._v(_vm._s(blog.Nombre_Largo))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Nombre_Corto))]),
+                _c("td", [_vm._v(_vm._s(blog.Nombre_Corto))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Correo_electronico))]),
+                _c("td", [_vm._v(_vm._s(blog.Correo_electronico))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Telefono))]),
+                _c("td", [_vm._v(_vm._s(blog.Telefono))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.NIT))]),
+                _c("td", [_vm._v(_vm._s(blog.NIT))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Solvencia))]),
+                _c("td", [_vm._v(_vm._s(blog.Solvencia))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Constitucion))]),
+                _c("td", [_vm._v(_vm._s(blog.Constitucion))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Plan_Pago))]),
+                _c("td", [_vm._v(_vm._s(blog.Plan_Pago))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Carta))]),
+                _c("td", [_vm._v(_vm._s(blog.Carta))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Socio_1))]),
+                _c("td", [_vm._v(_vm._s(blog.Socio_1))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Socio_2))]),
+                _c("td", [_vm._v(_vm._s(blog.Socio_2))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Socio_3))]),
+                _c("td", [_vm._v(_vm._s(blog.Socio_3))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Socio_4))]),
+                _c("td", [_vm._v(_vm._s(blog.Socio_4))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(emp.Socio_5))])
+                _c("td", [_vm._v(_vm._s(blog.Socio_5))])
               ])
             }),
             0

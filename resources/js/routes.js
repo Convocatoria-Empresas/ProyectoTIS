@@ -3,7 +3,7 @@ const Empresas = () => import('./components/Empresas.vue');
 const Seguimiento = () => import('./components/Seguimiento.vue');
 
 //importamos los componentes para el convocatorias
-const Mostrar = () => import('./components/convotacoraias/Mostrar.vue');
+const MostrarConv = () => import('./components/convotacoraias/Mostrar.vue');
 const Crear = () => import('./components/convotacoraias/Crear.vue');
 const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
@@ -21,10 +21,11 @@ export const routes = [
         component: Home,
     },
     {
-        name: 'mostrarBlogs',
-        path: '/blogs',
-        component: Mostrar,
+        name: 'convocatoria',
+        path: '/convocatoria',
+        component: MostrarConv,
     },
+    
     {
         name: 'crearBlog',
         path: '/crear',

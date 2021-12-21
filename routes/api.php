@@ -11,7 +11,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Route::resource('blog',App\Http\Controllers\BlogController::class)->only(['index','store','show','update','destroy']);
 
 //de esta forma nos genera todas las rutas
-Route::resource('convoEmpre',App\Http\Controllers\ConvocatoriaEmpresaController::class);
+Route::resource('convocatoria',App\Http\Controllers\ConvocatoriaController::class);
 Route::resource('empresa',App\Http\Controllers\EmpresaController::class);
 
 //Route::resource('convocatorias', ConvocatoriaEmpresaController::class);
