@@ -5,6 +5,7 @@
             <hr>
         </div>
         <div class="mb-2 col-12">
+          
             <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-plus-circle"> Nueva Convocatoria</i></router-link>
         </div>
         <div class="col-12">
@@ -20,13 +21,14 @@
                     </thead>
                     <tbody>
                         <tr v-for="blog in blogs" :key="blog.id">
-                            <td>{{ blog.gestion }}</td>
-                            <td>{{ blog.titulo }}</td>
-                            <td>{{ blog.descripcion }}</td>
+
+                            <td>{{ blog.Gestion }}</td>
+                            <td>{{ blog.Titulo }}</td>
+                            <td>{{ blog.Descripcion }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"editarConvo",params:{gestion:blog.gestion}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
-                                <a type="button" @click="borrarBlog(blog.gestion)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                <router-link :to='{name:"editarBlog",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
+                                <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     </tbody>
@@ -37,35 +39,40 @@
 </template>
 
 <script>
-    export default {
-        name:"blogs",
-        data(){
-            return {
-                blogs:[]
-            }
+export default {
+    name:"blogs",
+    data(){
+        return {
+            blogs:[]
+        }
+    },
+    mounted(){
+        this.mostrarBlogs()
+    },
+    methods:{
+        async mostrarBlogs(){
+            await this.axios.get('/api/convocatoria').then(response=>{
+                console.log(response.data)
+                this.blogs = response.data
+            }).catch(error=>{
+                console.log(error)
+                this.blogs = []
+            })
         },
-        mounted(){
-            this.mostrarBlogs()
-        },
-        methods:{
-            async mostrarBlogs(){
-                await this.axios.get('/api/convoEmpre').then(response=>{
-                    console.log(response.data)
-                    this.blogs = response.data
-                }).catch(error=>{
-                    console.log(error)
-                    this.blogs = []
-                })
-            },
-            borrarBlog(id){
-                if(confirm("¿Confirma la eliminación de la convocatoria?")){
-                        this.axios.delete('/api/convoEmpre/${id}').then(response=>{
-                        this.mostrarBlogs()
-                    }).catch(error=>{
-                        console.log(error)
-                    })
-                }
-            }
+      async  borrarBlog(id){
+           // if(confirm("¿Confirma eliminar el registro?")){
+                console.log(id)
+                    await this.axios.delete('/api/convocatoria/' +id).then(response=>{
+                console.log(response.data)
+                this.blogs = response.data
+            }).catch(error=>{
+                console.log(error)
+               
+            })
+               /* const res= await axios.delete('/api/convocatoria/' + id);
+                this.blogs = res.data();*/
+          //  }
         }
     }
+}
 </script>

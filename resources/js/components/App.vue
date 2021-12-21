@@ -29,7 +29,7 @@
 
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/blogs" class="nav-link">Convocatorias</router-link>
+                            <router-link exact-active-class="active" to="/convocatoria" class="nav-link">Convocatorias</router-link>
                         </span>
                     </li>
 

@@ -17,7 +17,7 @@
                     <tbody>
                         <tr v-for="blog in blogs" :key="blog.id">
                             <td>{{ blog.id }}</td>
-                            <td>{{ blog.gestion }}</td>
+                            <td>{{ blog.Gestion }}</td>
                             <td>{{ blog.nomb_empre }}</td>
                             <td>{{ blog.asesor }}</td>
                             <td>
@@ -44,7 +44,7 @@ export default {
     },
     methods:{
         async mostrarBlogs(){
-            await this.axios.get('/api/convoEmpre').then(response=>{
+            await this.axios.get('/api/convocatoria').then(response=>{
                 console.log(response.data)
                 this.blogs = response.data
             }).catch(error=>{
