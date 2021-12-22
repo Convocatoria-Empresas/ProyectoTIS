@@ -68,178 +68,176 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main", [
-    _c("main", { attrs: { role: "main" } }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "text-center col-lg-4" }, [
-          _c(
-            "svg",
-            {
-              staticClass: "bd-placeholder-img rounded-circle",
-              attrs: {
-                width: "140",
-                height: "140",
-                xmlns: "http://www.w3.org/2000/svg",
-                role: "img",
-                "aria-label": "Placeholder: 140x140",
-                preserveAspectRatio: "xMidYMid slice",
-                focusable: "false",
-              },
+  return _c("main", { attrs: { role: "main" } }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "text-center col-lg-4" }, [
+        _c(
+          "svg",
+          {
+            staticClass: "bd-placeholder-img rounded-circle",
+            attrs: {
+              width: "140",
+              height: "140",
+              xmlns: "http://www.w3.org/2000/svg",
+              role: "img",
+              "aria-label": "Placeholder: 140x140",
+              preserveAspectRatio: "xMidYMid slice",
+              focusable: "false",
             },
-            [
-              _c("title", [_vm._v("Placeholder")]),
-              _c("rect", {
-                staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+          },
+          [
+            _c("title", [_vm._v("Placeholder")]),
+            _c("rect", {
+              staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+              attrs: {
+                width: "100%",
+                height: "100%",
+                fill: "#777",
+                "data-darkreader-inline-fill": "",
+              },
+            }),
+            _c(
+              "text",
+              {
+                staticStyle: { "--darkreader-inline-fill": "#9d9488" },
                 attrs: {
-                  width: "100%",
-                  height: "100%",
+                  x: "50%",
+                  y: "50%",
                   fill: "#777",
+                  dy: ".3em",
                   "data-darkreader-inline-fill": "",
                 },
-              }),
-              _c(
-                "text",
-                {
-                  staticStyle: { "--darkreader-inline-fill": "#9d9488" },
-                  attrs: {
-                    x: "50%",
-                    y: "50%",
-                    fill: "#777",
-                    dy: ".3em",
-                    "data-darkreader-inline-fill": "",
-                  },
-                },
-                [_vm._v("140x140")]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h2", [_vm._v("Lic. ")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Establece procesos y gestiona eficinetemente los proyectos aportando pautas, formatos y plantillas que guíen al equipo."
+              },
+              [_vm._v("140x140")]
             ),
-          ]),
-          _vm._v(" "),
-          _vm._m(2),
+          ]
+        ),
+        _vm._v(" "),
+        _c("h2", [_vm._v("Lic. ")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Establece procesos y gestiona eficinetemente los proyectos aportando pautas, formatos y plantillas que guíen al equipo."
+          ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "text-center col-lg-4" }, [
-          _c(
-            "svg",
-            {
-              staticClass: "bd-placeholder-img rounded-circle",
-              attrs: {
-                width: "140",
-                height: "140",
-                xmlns: "http://www.w3.org/2000/svg",
-                role: "img",
-                "aria-label": "Placeholder: 140x140",
-                preserveAspectRatio: "xMidYMid slice",
-                focusable: "false",
-              },
-            },
-            [
-              _c("title", [_vm._v("Placeholder")]),
-              _c("rect", {
-                staticStyle: { "--darkreader-inline-fill": "#5a6165" },
-                attrs: {
-                  width: "100%",
-                  height: "100%",
-                  fill: "#777",
-                  "data-darkreader-inline-fill": "",
-                },
-              }),
-              _c(
-                "text",
-                {
-                  staticStyle: { "--darkreader-inline-fill": "#9d9488" },
-                  attrs: {
-                    x: "50%",
-                    y: "50%",
-                    fill: "#777",
-                    dy: ".3em",
-                    "data-darkreader-inline-fill": "",
-                  },
-                },
-                [_vm._v("140x140")]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h2", [_vm._v("Lic.")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Aporta formación y conocimientos a los miembros del equipo, para que consigan un mejor desempeño."
-            ),
-          ]),
-          _vm._v(" "),
-          _vm._m(3),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "text-center col-lg-4" }, [
-          _c(
-            "svg",
-            {
-              staticClass: "bd-placeholder-img rounded-circle",
-              attrs: {
-                width: "140",
-                height: "140",
-                xmlns: "http://www.w3.org/2000/svg",
-                role: "img",
-                "aria-label": "Placeholder: 140x140",
-                preserveAspectRatio: "xMidYMid slice",
-                focusable: "false",
-              },
-            },
-            [
-              _c("title", [_vm._v("Placeholder")]),
-              _c("rect", {
-                staticStyle: { "--darkreader-inline-fill": "#5a6165" },
-                attrs: {
-                  width: "100%",
-                  height: "100%",
-                  fill: "#777",
-                  "data-darkreader-inline-fill": "",
-                },
-              }),
-              _c(
-                "text",
-                {
-                  staticStyle: { "--darkreader-inline-fill": "#9d9488" },
-                  attrs: {
-                    x: "50%",
-                    y: "50%",
-                    fill: "#777",
-                    dy: ".3em",
-                    "data-darkreader-inline-fill": "",
-                  },
-                },
-                [_vm._v("140x140")]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c("h2", [_vm._v("Lic.")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Colabora con el Scrum Master y el Representante legal para conseguir que su trabajo sea adecuado y eficiente."
-            ),
-          ]),
-          _vm._v(" "),
-          _vm._m(4),
-        ]),
+        _vm._m(2),
       ]),
       _vm._v(" "),
-      _c("hr"),
+      _c("div", { staticClass: "text-center col-lg-4" }, [
+        _c(
+          "svg",
+          {
+            staticClass: "bd-placeholder-img rounded-circle",
+            attrs: {
+              width: "140",
+              height: "140",
+              xmlns: "http://www.w3.org/2000/svg",
+              role: "img",
+              "aria-label": "Placeholder: 140x140",
+              preserveAspectRatio: "xMidYMid slice",
+              focusable: "false",
+            },
+          },
+          [
+            _c("title", [_vm._v("Placeholder")]),
+            _c("rect", {
+              staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+              attrs: {
+                width: "100%",
+                height: "100%",
+                fill: "#777",
+                "data-darkreader-inline-fill": "",
+              },
+            }),
+            _c(
+              "text",
+              {
+                staticStyle: { "--darkreader-inline-fill": "#9d9488" },
+                attrs: {
+                  x: "50%",
+                  y: "50%",
+                  fill: "#777",
+                  dy: ".3em",
+                  "data-darkreader-inline-fill": "",
+                },
+              },
+              [_vm._v("140x140")]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("h2", [_vm._v("Lic.")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Aporta formación y conocimientos a los miembros del equipo, para que consigan un mejor desempeño."
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(3),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-center col-lg-4" }, [
+        _c(
+          "svg",
+          {
+            staticClass: "bd-placeholder-img rounded-circle",
+            attrs: {
+              width: "140",
+              height: "140",
+              xmlns: "http://www.w3.org/2000/svg",
+              role: "img",
+              "aria-label": "Placeholder: 140x140",
+              preserveAspectRatio: "xMidYMid slice",
+              focusable: "false",
+            },
+          },
+          [
+            _c("title", [_vm._v("Placeholder")]),
+            _c("rect", {
+              staticStyle: { "--darkreader-inline-fill": "#5a6165" },
+              attrs: {
+                width: "100%",
+                height: "100%",
+                fill: "#777",
+                "data-darkreader-inline-fill": "",
+              },
+            }),
+            _c(
+              "text",
+              {
+                staticStyle: { "--darkreader-inline-fill": "#9d9488" },
+                attrs: {
+                  x: "50%",
+                  y: "50%",
+                  fill: "#777",
+                  dy: ".3em",
+                  "data-darkreader-inline-fill": "",
+                },
+              },
+              [_vm._v("140x140")]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("h2", [_vm._v("Lic.")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Colabora con el Scrum Master y el Representante legal para conseguir que su trabajo sea adecuado y eficiente."
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(4),
+      ]),
     ]),
+    _vm._v(" "),
+    _c("hr"),
   ])
 }
 var staticRenderFns = [
@@ -253,14 +251,16 @@ var staticRenderFns = [
           _vm._v("Bienvenido al Sistema de Apoyo de la Empresa TIS!"),
         ]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src: "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
-            alt: "",
-            width: "100",
-            height: "130",
-          },
-        }),
+        _c("a", { attrs: { href: "https://www.umss.edu.bo/" } }, [
+          _c("img", {
+            attrs: {
+              src: "https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png",
+              alt: "",
+              width: "100",
+              height: "130",
+            },
+          }),
+        ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
