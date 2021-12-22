@@ -2130,7 +2130,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2303,6 +2302,15 @@ var SegPostulante = function SegPostulante() {
 
 var RevSegPost = function RevSegPost() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Seguimiento_RevSegPost_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Seguimiento/RevSegPost.vue */ "./resources/js/components/Seguimiento/RevSegPost.vue"));
+}; //agregamos el login y el registro
+
+
+var Login = function Login() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Login.vue */ "./resources/js/components/Login.vue"));
+};
+
+var Registrarse = function Registrarse() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Registrarse_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Registrarse.vue */ "./resources/js/components/Registrarse.vue"));
 };
 
 var routes = [{
@@ -2349,6 +2357,14 @@ var routes = [{
   name: 'RevSegPost',
   path: '/RevSegPost',
   component: RevSegPost
+}, {
+  name: 'Login',
+  path: '/Login',
+  component: Login
+}, {
+  name: 'Registrarse',
+  path: '/Registrarse',
+  component: Registrarse
 }];
 
 /***/ }),
@@ -53421,7 +53437,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Empresas_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_Registrarse_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

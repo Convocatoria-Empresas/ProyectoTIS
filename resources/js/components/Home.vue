@@ -1,15 +1,18 @@
 <template>
-    <main>
-        <main role="main">
+    <main role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-
+        <div class="jumbotron">
+        <div class="container">
         <h1 class="display-3">Bienvenido al Sistema de Apoyo de la Empresa TIS!</h1>
-        <img src="https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png" alt="" width="100" height="130">
+        <a href="https://www.umss.edu.bo/">
+            <img src="https://www.umss.edu.bo/wp-content/uploads/2019/04/logotipo-01.png" class="" alt="" width="100" height="130">
+        </a>
+
         <p>Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para los diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Leer más »</a></p>
+
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Leer más »</a>
+        </p>
         </div>
     </div>
     <div class="text-center col">
@@ -37,9 +40,8 @@
         <h2>Lic.</h2>
         <p>Colabora con el Scrum Master y el Representante legal para conseguir que su trabajo sea adecuado y eficiente.</p>
         <p><a class="btn btn-secondary" href="#">Ver más detalles »</a></p>
-      </div><!-- /.col-lg-4 -->
+        </div>
     </div>
     <hr>
-</main>
     </main>
 </template>

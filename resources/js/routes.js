@@ -15,6 +15,10 @@ const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
 const SegPostulante = () => import('./components/Seguimiento/SegPostulantes.vue');
 const RevSegPost = () => import('./components/Seguimiento/RevSegPost.vue');
 
+//agregamos el login y el registro
+const Login =() => import('./components/Login.vue');
+const Registrarse = () => import('./components/Registrarse.vue');
+
 export const routes = [
     {
         name: 'home',
@@ -71,5 +75,15 @@ export const routes = [
         name: 'RevSegPost',
         path: '/RevSegPost',
         component: RevSegPost
+    },
+    {
+        name:'Login',
+        path: '/Login',
+        component: Login
+    },
+    {
+        name:'Registrarse',
+        path:'/Registrarse',
+        component: Registrarse
     }
 ];
