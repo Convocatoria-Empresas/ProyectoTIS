@@ -16,11 +16,10 @@
                 </thead>
                 <tbody>
                     <tr v-for="tablaSeg in tablasSeg" :key=" tablaSeg.id">
-                        <th scope="row">1</th>
-                        <td>{{ tablaSeg.id}}k}</td>
-                        <td>{{ tablaSeg.gestion}}k}</td>
-                        <td>{{ tablaSeg.nombreEmpresa}}k}</td>
-                        <td>{{ tablaSeg.representanteLegal}}k}</td>
+                        <th scope="row">{{ tablaSeg.id}}</th>
+                        <td>{{ tablaSeg.NIT}}</td>
+                        <td>{{ tablaSeg.Nombre_Largo}}</td>
+                        <td>{{ tablaSeg.Socio_1}}</td>
                         <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link to='/RevSegPost' class="btn btn-info"><i class="fas fa-eye"></i></router-link>
@@ -45,7 +44,7 @@ export default {
     },
     methods:{
         async mostrarSeg(){
-            await this.axios.get('/api/convoEmpre').then(response=>{
+            await this.axios.get('/api/empresa').then(response=>{
                 console.log(response.data)
                 this.tablasSeg = response.data
             }).catch(error=>{

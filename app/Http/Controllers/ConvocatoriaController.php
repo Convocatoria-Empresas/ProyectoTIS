@@ -103,4 +103,4 @@ class ConvocatoriaController extends Controller
       $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
         return response()->json($RegisConv);
     }
-}    
+}

@@ -256,7 +256,7 @@ var render = function () {
                       {
                         staticClass: "btn btn-info",
                         attrs: {
-                          to: { name: "editarBlog", params: { id: blog.id } },
+                          to: { name: "editarConvo", params: { id: blog.id } },
                         },
                       },
                       [_c("i", { staticClass: "fas fa-edit" })]
