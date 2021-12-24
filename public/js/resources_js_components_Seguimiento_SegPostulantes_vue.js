@@ -208,7 +208,12 @@ var render = function () {
                       "router-link",
                       {
                         staticClass: "btn btn-info",
-                        attrs: { to: "/RevSegPost" },
+                        attrs: {
+                          to: {
+                            name: "/RevSegPost",
+                            params: { id: tablaSeg.id },
+                          },
+                        },
                       },
                       [_c("i", { staticClass: "fas fa-eye" })]
                     ),

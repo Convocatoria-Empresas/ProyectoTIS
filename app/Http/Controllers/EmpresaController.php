@@ -80,15 +80,29 @@ class EmpresaController extends Controller
         $empresa = Empresa::create($empresa->post());
         return response()->json([
             'empresa'=>$empresa]);
-        /*if($request->ajax()){
-           return Empresa::where('id', auth()->id());
-            //return Empresa::table('empresas')->find('id');
-        } else{
-            return view('empresa');
-        }*/
-        //return $empresa;
+     
     }
-
+    public function obtain(Request $request,  $empresium)
+    {
+        $empresa= Empresa::find($empresium);
+        
+        
+        $LaEmp=[];
+        
+        $LaEmp['Nombre_Largo']=$request->get('Nombre_Largo');
+        $LaEmp['Correo']=$request->get('Correo');
+        $LaEmp['Plan_de_Pago']=$request->get('Plan_de_Pago');
+        $LaEmp['Constitucion']=$request->get('Constitucion');
+        $LaEmp['Carta']=$request->get('Carta');
+        $LaEmp['Solvencia']=$request->get('Solvencia');
+        $LaEmp['Socio_1']=$request->get('Socio_1');
+        $LaEmp['Socio_2']=$request->get('Socio_2');
+        $LaEmp['Socio_3']=$request->get('Socio_3');
+        $LaEmp['Socio_4']=$request->get('Socio_4');
+        $LaEmp['Socio_5']=$request->get('Socio_5');
+      //  return $convocatoria;
+        return response()->json($LaEmp);
+    }
     /**
      * Show the form for editing the specified resource.
      *

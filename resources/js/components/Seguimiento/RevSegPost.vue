@@ -14,8 +14,7 @@
 
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="NombreLargo" class="form-control" id="NombreLargo"  required pattern="[a-zA-Z- -\.]+"
-                                oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
+                                <input class="fomr-control" type="text" placeholder="" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -28,13 +27,7 @@
                                  </div>
                                 </div>
 
-                                <div class="col-lg-5 offset-md-1">
-                                <label for="validationCustom01" class="form-label"><strong>Nombre Corto</strong></label>
-                                <input maxlength="20"  type="text" placeholder="Nombre Corto Empresa" name="NombreCorto" class="form-control" id="NombreCorto"  required pattern="[a-zA-Z- -\.]+"
-                                oninvalid="setCustomValidity('Porfavor llena el nombre corto con caracteres de la A-Z')" onchange="try{setCustomValidity('')}catch(e){}" />
-                                <div class="valid-feedback">
-                                 </div>
-                                </div>
+
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"></label>
@@ -59,13 +52,7 @@
                                  </div>
                                 </div>
 
-                                <div class="col-lg-4 offset-md-1">
-                                <label for="validationCustom01" class="form-label"><strong>Telefono</strong></label>
-                                <input maxlength="8" minlength="7" type="text" placeholder="Telefono Empresa" name="Telefono" class="form-control" id="Telefono"  required pattern="[0-9]+"
-                                oninvalid="setCustomValidity('Porfavor llene el Telefono, solo se aceptan numeros y el minumo son 7 digitos')" onchange="try{setCustomValidity('')}catch(e){}" />
-                                <div class="valid-feedback">
-                                 </div>
-                                </div>
+                                
 
                                 <div class="col-lg-4 offset-md-2">
                                 <label for="validationCustom01" class="form-label"></label>
@@ -75,13 +62,7 @@
                                  </div>
                                 </div>
 
-                                <div class="col-lg-4 offset-md-1">
-                                <label for="validationCustom01" class="form-label"><strong>NIT</strong></label>
-                                <input maxlength="7" minlength="7" type="text" placeholder="NIT Empresa" name="NIT" class="form-control" id="NIT"  required pattern="[0-9]+"
-                                oninvalid="setCustomValidity('Porfavor llene el NIT de la Empresa, solo se aceptan numeros ')" onchange="try{setCustomValidity('')}catch(e){}" />
-                                <div class="valid-feedback">
-                                 </div>
-                                </div>
+                                
 
                                 <div class="col-lg-4 offset-md-2">
                                  <label for="validationCustom01" class="form-label"></label>
@@ -135,3 +116,63 @@
     
     
 </template>
+
+<script>
+export default {
+    name:"laempresa",
+    data(){
+        return {
+            laempresa:{
+             ID: "",
+             Nombre_Largo: "",
+             Nombre_Corto: "",
+             Correo: "",
+             Teléfono: "",
+             NIT: "",
+             Solvencia: "",
+             Constitución: "",
+             Plan_de_Pago: "",
+             Carta: "",
+             Socio_1: "",
+             Socio_2: "",
+             Socio_3: "",
+             Socio_4: "",
+             Socio_5: "",
+            }
+            
+        }
+    },
+    mounted(){
+        //this.mostrarEmp()
+    },
+    methods:{
+        async mostrarEmp(){
+            await this.axios.get(`/api/empresa/${this.$route.params.id}`).then(response=>{
+                const { Nombre_Largo, Correo, Plan_de_Pago, Constitucion, Carta,Solvencia, Socio_1, Socio_2, Socio_3, Socio_4, Socio_5 } = response.data
+                this.empresa.Nombre_Largo = Nombre_Largo
+                this.empresa.Correo = Correo
+                this.empresa.Plan_de_Pago = Plan_de_Pago 
+                this.empresa.Constitucion = Constitucion 
+                this.empresa.Carta = Carta 
+                this.empresa.Solvencia = Solvencia
+                this.empresa.Socio_1 = Socio_1 
+                this.empresa.Socio_2 = Socio_2
+                this.empresa.Socio_3 = Socio_3 
+                this.empresa.Socio_4 = Socio_4
+                this.empresa.Socio_5 = Socio_5
+                
+            }).catch(error=>{
+                console.log(error)
+            })
+        },
+        async actualizar(){
+            await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.empresa).then(response=>{
+                console.log(response.data)
+                this.$router.push({name:"laempresa"})
+            }).catch(error=>{
+                console.log(error)
+            })
+        }
+    }
+}
+</script>

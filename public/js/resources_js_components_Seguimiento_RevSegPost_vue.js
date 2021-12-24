@@ -1,6 +1,246 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Seguimiento_RevSegPost_vue"],{
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "laempresa",
+  data: function data() {
+    return {
+      laempresa: {
+        ID: "",
+        Nombre_Largo: "",
+        Nombre_Corto: "",
+        Correo: "",
+        Teléfono: "",
+        NIT: "",
+        Solvencia: "",
+        Constitución: "",
+        Plan_de_Pago: "",
+        Carta: "",
+        Socio_1: "",
+        Socio_2: "",
+        Socio_3: "",
+        Socio_4: "",
+        Socio_5: ""
+      }
+    };
+  },
+  mounted: function mounted() {//this.mostrarEmp()
+  },
+  methods: {
+    mostrarEmp: function mostrarEmp() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.axios.get("/api/empresa/".concat(_this.$route.params.id)).then(function (response) {
+                  var _response$data = response.data,
+                      Nombre_Largo = _response$data.Nombre_Largo,
+                      Correo = _response$data.Correo,
+                      Plan_de_Pago = _response$data.Plan_de_Pago,
+                      Constitucion = _response$data.Constitucion,
+                      Carta = _response$data.Carta,
+                      Solvencia = _response$data.Solvencia,
+                      Socio_1 = _response$data.Socio_1,
+                      Socio_2 = _response$data.Socio_2,
+                      Socio_3 = _response$data.Socio_3,
+                      Socio_4 = _response$data.Socio_4,
+                      Socio_5 = _response$data.Socio_5;
+                  _this.empresa.Nombre_Largo = Nombre_Largo;
+                  _this.empresa.Correo = Correo;
+                  _this.empresa.Plan_de_Pago = Plan_de_Pago;
+                  _this.empresa.Constitucion = Constitucion;
+                  _this.empresa.Carta = Carta;
+                  _this.empresa.Solvencia = Solvencia;
+                  _this.empresa.Socio_1 = Socio_1;
+                  _this.empresa.Socio_2 = Socio_2;
+                  _this.empresa.Socio_3 = Socio_3;
+                  _this.empresa.Socio_4 = Socio_4;
+                  _this.empresa.Socio_5 = Socio_5;
+                })["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    actualizar: function actualizar() {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return _this2.axios.put("/api/empresa/".concat(_this2.$route.params.id), _this2.empresa).then(function (response) {
+                  console.log(response.data);
+
+                  _this2.$router.push({
+                    name: "laempresa"
+                  });
+                })["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 2:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/components/Seguimiento/RevSegPost.vue":
 /*!************************************************************!*\
   !*** ./resources/js/components/Seguimiento/RevSegPost.vue ***!
@@ -12,15 +252,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RevSegPost.vue?vue&type=template&id=00b1bb23& */ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RevSegPost.vue?vue&type=script&lang=js& */ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__.render,
   _RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -34,6 +276,21 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 if (false) { var api; }
 component.options.__file = "resources/js/components/Seguimiento/RevSegPost.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RevSegPost.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -124,19 +381,8 @@ var staticRenderFns = [
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "30",
-                type: "text",
-                placeholder: "Nombre Largo Empresa",
-                name: "NombreLargo",
-                id: "NombreLargo",
-                required: "",
-                pattern: "[a-zA-Z- -\\.]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
+              staticClass: "fomr-control",
+              attrs: { type: "text", placeholder: "", readonly: "" },
             }),
             _vm._v(" "),
             _c("div", { staticClass: "valid-feedback" }),
@@ -164,35 +410,6 @@ var staticRenderFns = [
                 required: "",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Nombre Corto")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "20",
-                type: "text",
-                placeholder: "Nombre Corto Empresa",
-                name: "NombreCorto",
-                id: "NombreCorto",
-                required: "",
-                pattern: "[a-zA-Z- -\\.]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llena el nombre corto con caracteres de la A-Z')",
                 onchange: "try{setCustomValidity('')}catch(e){}",
               },
             }),
@@ -273,36 +490,6 @@ var staticRenderFns = [
             _c("div", { staticClass: "valid-feedback" }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Telefono")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "8",
-                minlength: "7",
-                type: "text",
-                placeholder: "Telefono Empresa",
-                name: "Telefono",
-                id: "Telefono",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llene el Telefono, solo se aceptan numeros y el minumo son 7 digitos')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
             _c("label", {
               staticClass: "form-label",
@@ -320,36 +507,6 @@ var staticRenderFns = [
                 id: "Socio 4",
                 pattern: "[0-9]+",
                 oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("NIT")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "7",
-                minlength: "7",
-                type: "text",
-                placeholder: "NIT Empresa",
-                name: "NIT",
-                id: "NIT",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llene el NIT de la Empresa, solo se aceptan numeros ')",
                 onchange: "try{setCustomValidity('')}catch(e){}",
               },
             }),
