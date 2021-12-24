@@ -31,7 +31,7 @@
                             <router-link exact-active-class="active" to="/convocatoria" class="nav-link">Convocatorias</router-link>
                         </span>
                     </li>
-
+    
                     <li class="nav-item">
                         <div class="dropdown h1">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
