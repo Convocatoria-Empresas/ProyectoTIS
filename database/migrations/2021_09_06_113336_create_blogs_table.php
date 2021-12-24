@@ -31,3 +31,5 @@ class CreateBlogsTable extends Migration
         Schema::dropIfExists('blogs');
     }
 }
+
+///Prueba auto
