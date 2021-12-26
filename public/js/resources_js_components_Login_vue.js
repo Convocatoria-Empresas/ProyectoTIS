@@ -176,14 +176,14 @@ var staticRenderFns = [
       _c("div", { attrs: { id: "login_panel" } }, [
         _c("div", { attrs: { id: "login_panel_header" } }),
         _vm._v(" "),
-        _c("b", [_vm._v("Correo Institucional")]),
+        _c("b", [_vm._v("Inicio de Sesión")]),
         _vm._v(" "),
         _c("table", [
           _c("tbody", [
             _c("tr", [
               _c("td", { staticClass: "title" }, [
                 _c("label", { attrs: { for: "username_ex" } }, [
-                  _vm._v("Nombre de usuario"),
+                  _vm._v("Correo institucional"),
                 ]),
               ]),
             ]),

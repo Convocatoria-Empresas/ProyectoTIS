@@ -46,6 +46,17 @@
                         </div>
                     </li>
                 </ul>
+
+                <div class="text-end">
+                    <button class="btn btn-warning"><i class="fas fa-bell"></i></button>
+                    <router-link :to='{name:"Login"}' class="btn btn-primary">
+                        <i class="bi bi-bell"></i> Iniciar Sesión
+                    </router-link>
+                    <router-link :to='{name:"Registrarse"}' class="btn btn-primary">
+                        <i class="fas fa-user"></i> Registrarse
+                    </router-link>
+                </div>
+
                 <ul class="px-3 navbar-nav">
                     <li class="nav-item text-nowrap">
                     <a class="nav-link" href="#">Cerrar Sesión</a>

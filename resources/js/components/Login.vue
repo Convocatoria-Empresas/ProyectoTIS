@@ -7,12 +7,12 @@
 	    </div>
         <div id="login_panel">
 		<div id="login_panel_header"></div>
-		<b>Correo Institucional</b>
+		<b>Inicio de Sesión</b>
 		<table>
 		<tbody>
 			<tr>
 				<td class="title">
-					<label for="username_ex">Nombre de usuario</label>
+					<label for="username_ex">Correo institucional</label>
 				</td>
  			</tr>
 			<tr>
