@@ -39049,7 +39049,8 @@ var staticRenderFns = [
     return _c("ul", { staticClass: "px-3 navbar-nav" }, [
       _c("li", { staticClass: "nav-item text-nowrap" }, [
         _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-          _vm._v("Cerrar Sesión"),
+          _c("i", { staticClass: "fas fa-sign-out-alt" }),
+          _vm._v(" Cerrar Sesión"),
         ]),
       ]),
     ])

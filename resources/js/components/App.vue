@@ -59,7 +59,7 @@
 
                 <ul class="px-3 navbar-nav">
                     <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                     </li>
                 </ul>
                 </div>
