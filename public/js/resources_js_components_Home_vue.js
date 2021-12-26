@@ -273,7 +273,7 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary btn-lg",
-              attrs: { href: "#", role: "button" },
+              attrs: { href: "https://disu.umss.edu.bo/", role: "button" },
             },
             [_vm._v("Leer más »")]
           ),

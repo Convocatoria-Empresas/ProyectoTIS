@@ -2166,7 +2166,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -38881,7 +38880,10 @@ var render = function () {
                           to: "/empresas",
                         },
                       },
-                      [_vm._v("Empresas")]
+                      [
+                        _c("i", { staticClass: "fas fa-building" }),
+                        _vm._v(" Empresas"),
+                      ]
                     ),
                   ],
                   1
@@ -38902,7 +38904,10 @@ var render = function () {
                           to: "/convocatoria",
                         },
                       },
-                      [_vm._v("Convocatorias")]
+                      [
+                        _c("i", { staticClass: "far fa-comment-alt" }),
+                        _vm._v(" Convocatorias"),
+                      ]
                     ),
                   ],
                   1
@@ -38911,24 +38916,7 @@ var render = function () {
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
                 _c("div", { staticClass: "dropdown h1" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-secondary dropdown-toggle",
-                      attrs: {
-                        href: "#",
-                        role: "button",
-                        id: "dropdownMenuLink",
-                        "data-toggle": "dropdown",
-                        "aria-expanded": "false",
-                      },
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Seguimiento\n                        "
-                      ),
-                    ]
-                  ),
+                  _vm._m(2),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -38949,7 +38937,10 @@ var render = function () {
                             to: "/SegEmpresa",
                           },
                         },
-                        [_vm._v("Empresas")]
+                        [
+                          _c("i", { staticClass: "fas fa-user-tie" }),
+                          _vm._v(" Empresas"),
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
@@ -38961,7 +38952,10 @@ var render = function () {
                             to: "/SegPostulante",
                           },
                         },
-                        [_vm._v("Postulantes")]
+                        [
+                          _c("i", { staticClass: "fas fa-users" }),
+                          _vm._v(" Postulantes"),
+                        ]
                       ),
                     ],
                     1
@@ -38974,9 +38968,9 @@ var render = function () {
               "div",
               { staticClass: "text-end" },
               [
-                _vm._m(2),
-                _vm._v(" "),
                 _vm._m(3),
+                _vm._v(" "),
+                _vm._m(4),
                 _vm._v(" "),
                 _c(
                   "router-link",
@@ -38985,7 +38979,7 @@ var render = function () {
                     attrs: { to: { name: "Login" } },
                   },
                   [
-                    _c("i", { staticClass: "bi bi-bell" }),
+                    _c("i", { staticClass: "fas fa-sign-in-alt" }),
                     _vm._v(" Iniciar Sesión\n                    "),
                   ]
                 ),
@@ -39005,7 +38999,7 @@ var render = function () {
               1
             ),
             _vm._v(" "),
-            _vm._m(4),
+            _vm._m(5),
           ]
         ),
       ]),
@@ -39052,6 +39046,30 @@ var staticRenderFns = [
         },
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "btn btn-secondary dropdown-toggle",
+        attrs: {
+          href: "#",
+          role: "button",
+          id: "dropdownMenuLink",
+          "data-toggle": "dropdown",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("i", { staticClass: "fas fa-search" }),
+        _vm._v(
+          "\n                            Seguimiento\n                        "
+        ),
+      ]
     )
   },
   function () {

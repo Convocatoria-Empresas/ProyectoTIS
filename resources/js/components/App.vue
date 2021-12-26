@@ -22,25 +22,25 @@
 
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/empresas" class="nav-link">Empresas</router-link>
+                            <router-link exact-active-class="active" to="/empresas" class="nav-link"><i class="fas fa-building"></i> Empresas</router-link>
                         </span>
                     </li>
 
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/convocatoria" class="nav-link">Convocatorias</router-link>
+                            <router-link exact-active-class="active" to="/convocatoria" class="nav-link"><i class="far fa-comment-alt"></i> Convocatorias</router-link>
                         </span>
                     </li>
 
                     <li class="nav-item">
                         <div class="dropdown h1">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-search"></i>
                             Seguimiento
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a href=""></a>
-                            <router-link class="dropdown-item active" type="button" exact-active-class="" to="/SegEmpresa">Empresas</router-link>
-                            <router-link class="dropdown-item active" exact-active-class="" to="/SegPostulante">Postulantes</router-link>
+                            <router-link class="dropdown-item active" type="button" exact-active-class="" to="/SegEmpresa"><i class="fas fa-user-tie"></i> Empresas</router-link>
+                            <router-link class="dropdown-item active" exact-active-class="" to="/SegPostulante"><i class="fas fa-users"></i> Postulantes</router-link>
 
                         </div>
                         </div>
@@ -64,8 +64,7 @@
                         <button type="button" class="btn btn-warning" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></button>
                     </div>
 
-                    <router-link :to='{name:"Login"}' class="btn btn-primary">
-                        <i class="bi bi-bell"></i> Iniciar Sesión
+                    <router-link :to='{name:"Login"}' class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                     </router-link>
                     <router-link :to='{name:"Registrarse"}' class="btn btn-primary">
                         <i class="fas fa-user"></i> Registrarse

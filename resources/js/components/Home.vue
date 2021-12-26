@@ -11,7 +11,7 @@
         <p>Nuestra labor siempre ha sido fundamental para el acompañamiento y el asesoramiento de proyectos para los diferentes sistemas de apoyo que se aplican en la vida real y también en el desarrollo profesional.</p>
 
         <p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Leer más »</a>
+            <a class="btn btn-primary btn-lg" href="https://disu.umss.edu.bo/" role="button">Leer más »</a>
         </p>
         </div>
     </div>
