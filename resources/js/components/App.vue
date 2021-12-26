@@ -28,7 +28,7 @@
 
                     <li class="nav-item">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/convocatoria" class="nav-link"><i class="far fa-comment-alt"></i> Convocatorias</router-link>
+                            <router-link exact-active-class="active" to="/convocatoria" class="nav-link"><i class="fas fa-bullhorn"></i> Convocatorias</router-link>
                         </span>
                     </li>
 
@@ -48,22 +48,8 @@
                 </ul>
 
                 <div class="text-end">
-
-                    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
-    Dropdown
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
-  </div>
-</div>
-
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-warning" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></button>
-                    </div>
-
+                    <button type="button" class="btn btn-warning"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span>
+                    </button>
                     <router-link :to='{name:"Login"}' class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                     </router-link>
                     <router-link :to='{name:"Registrarse"}' class="btn btn-primary">
