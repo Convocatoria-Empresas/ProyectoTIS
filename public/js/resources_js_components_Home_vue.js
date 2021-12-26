@@ -117,7 +117,7 @@ var render = function () {
           ]
         ),
         _vm._v(" "),
-        _c("h2", [_vm._v("Lic. ")]),
+        _c("h2", [_vm._v("Lic.")]),
         _vm._v(" "),
         _c("p", [
           _vm._v(

@@ -23,7 +23,7 @@
       <div class="text-center col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text></svg>
 
-        <h2>Lic. </h2>
+        <h2>Lic.</h2>
         <p>Establece procesos y gestiona eficinetemente los proyectos aportando pautas, formatos y plantillas que guíen al equipo.</p>
         <p><a class="btn btn-secondary" href="#">Ver más detalles »</a></p>
       </div><!-- /.col-lg-4 -->
