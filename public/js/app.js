@@ -2152,6 +2152,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -38842,7 +38857,10 @@ var render = function () {
                           "aria-current": "page",
                         },
                       },
-                      [_vm._v("Inicio")]
+                      [
+                        _c("i", { staticClass: "fas fa-home" }),
+                        _vm._v(" Inicio"),
+                      ]
                     ),
                   ],
                   1
@@ -38907,7 +38925,7 @@ var render = function () {
                     },
                     [
                       _vm._v(
-                        "\n                        Seguimiento\n                    "
+                        "\n                            Seguimiento\n                        "
                       ),
                     ]
                   ),
@@ -38958,6 +38976,8 @@ var render = function () {
               [
                 _vm._m(2),
                 _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
                 _c(
                   "router-link",
                   {
@@ -38966,7 +38986,7 @@ var render = function () {
                   },
                   [
                     _c("i", { staticClass: "bi bi-bell" }),
-                    _vm._v(" Iniciar Sesión\n                "),
+                    _vm._v(" Iniciar Sesión\n                    "),
                   ]
                 ),
                 _vm._v(" "),
@@ -38978,14 +38998,14 @@ var render = function () {
                   },
                   [
                     _c("i", { staticClass: "fas fa-user" }),
-                    _vm._v(" Registrarse\n                "),
+                    _vm._v(" Registrarse\n                    "),
                   ]
                 ),
               ],
               1
             ),
             _vm._v(" "),
-            _vm._m(3),
+            _vm._m(4),
           ]
         ),
       ]),
@@ -39038,8 +39058,66 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "btn btn-warning" }, [
-      _c("i", { staticClass: "fas fa-bell" }),
+    return _c("div", { staticClass: "dropdown" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-secondary dropdown-toggle",
+          attrs: {
+            type: "button",
+            id: "dropdownMenu2",
+            "data-toggle": "dropdown",
+            "aria-expanded": "false",
+          },
+        },
+        [_vm._v("\n    Dropdown\n  ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "dropdown-menu",
+          attrs: { "aria-labelledby": "dropdownMenu2" },
+        },
+        [
+          _c(
+            "button",
+            { staticClass: "dropdown-item", attrs: { type: "button" } },
+            [_vm._v("Action")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "dropdown-item", attrs: { type: "button" } },
+            [_vm._v("Another action")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "dropdown-item", attrs: { type: "button" } },
+            [_vm._v("Something else here")]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dropdown" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-warning",
+          attrs: {
+            type: "button",
+            "data-toggle": "dropdown",
+            "aria-expanded": "false",
+          },
+        },
+        [_c("i", { staticClass: "fas fa-bell" })]
+      ),
     ])
   },
   function () {
