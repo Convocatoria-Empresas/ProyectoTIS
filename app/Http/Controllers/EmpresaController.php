@@ -20,7 +20,7 @@ class EmpresaController extends Controller
             return view('empresa')->with('state','index');
         }*/
         $RegisEmpre = Empresa::all(['id','Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
-        'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5']);
+        'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5','Estado_Aprob']);
         return response()->json($RegisEmpre);
     }
 
@@ -126,6 +126,7 @@ class EmpresaController extends Controller
         $LaEmp->Socio_3=$empresa->Socio_3;
         $LaEmp->Socio_4=$empresa->Socio_4;
         $LaEmp->Socio_5=$empresa->Socio_5;
+        $LaEmp->Estado_Aprob=$empresa->Estado_Aprob;
       //  return $convocatoria;
         return response()->json($LaEmp);
     }

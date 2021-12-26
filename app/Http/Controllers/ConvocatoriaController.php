@@ -26,6 +26,16 @@ class ConvocatoriaController extends Controller
      */
     public function store(Request $request)
     {
+        /*$input=$request->except('_token');
+        if($request->hasfile('file')){
+            
+            $archivo=$request->file('file');
+            $input ['Informacion_A']=time().'_'.$archivo->getClientOriginalName();
+            
+            $archivo->move(public_path('Archivos'),$input['Informacion_A']);
+        }*/
+
+
         $convocatoria= new Convocatoria();
         $convocatoria->Titulo = $request->Titulo;
         $convocatoria->Codigo_Conv = $request->Codigo_Conv;

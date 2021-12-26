@@ -34,6 +34,7 @@ class CreateEmpresasTable extends Migration
             $table->foreign('Socio_4')->references('Codigo')->on('socios');
             $table->string('Socio_5',9);
             $table->foreign('Socio_5')->references('Codigo')->on('socios');
+            $table->boolean('Estado_Aprob')->default(0);
             $table->timestamps();
         });
     }

@@ -28,11 +28,12 @@
 
         <label for="content">Información sobre A</label>
         <input class="form-control" id="Informacion_1" type="file" @change="processFileInf1">
+        <!--<embed :src="algo" type="application/pdf" width="100%" height="600px" /> -->
         <label for="content">Información sobre B</label>
         <input class="form-control" id="Informacion_2" type="file" @change="processFileInf2">
         
         <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
-        {{ convocatoria }}
+        <!--{{ convocatoria }} -->
         
 
     </form>
@@ -54,6 +55,7 @@ export default {
     data() {
         return{
         convocatoria:{
+
             Titulo:"",
             Codigo_Conv:"",
             Gestion:"",
@@ -62,8 +64,11 @@ export default {
 	        Descripcion:"",
             Informacion_A:"",
             Informacion_B:"",
-            }
+            },
+            algo: ''
+
         }
+        
         
     },
     
@@ -87,15 +92,28 @@ export default {
             
         },
         processFileInf1(event){
+            const self= this;
              var In1file= event.target.files[0];
-            this.convocatoria.Informacion_A = In1file;
-            console.log(event.target.files[0]);
+             const reader = new FileReader();
+             reader.onload = function(evt) {
+            //console.log(evt.target.result);
+            
+            self.convocatoria.Informacion_A=reader.result;
+            //console.log(self.algo);
+            };
+            reader.readAsDataURL(In1file);
+         
         },
         
          processFileInf2(event){
+             const self= this;
             var In2file= event.target.files[0];
-            this.convocatoria.Informacion_B = In2file;
-            console.log(event.target.files[0]);
+            const reader = new FileReader();
+             reader.onload = function(evt) {  
+            self.convocatoria.Informacion_B=reader.result;
+            };
+            reader.readAsDataURL(In2file);
+           
         },
         
     },

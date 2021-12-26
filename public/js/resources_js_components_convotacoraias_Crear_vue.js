@@ -63,6 +63,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   /*async mounted(){
       const response = await axios.get("/create");
@@ -80,7 +81,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Descripcion: "",
         Informacion_A: "",
         Informacion_B: ""
-      }
+      },
+      algo: ''
     };
   },
   methods: {
@@ -117,14 +119,27 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     processFileInf1: function processFileInf1(event) {
+      var self = this;
       var In1file = event.target.files[0];
-      this.convocatoria.Informacion_A = In1file;
-      console.log(event.target.files[0]);
+      var reader = new FileReader();
+
+      reader.onload = function (evt) {
+        //console.log(evt.target.result);
+        self.convocatoria.Informacion_A = reader.result; //console.log(self.algo);
+      };
+
+      reader.readAsDataURL(In1file);
     },
     processFileInf2: function processFileInf2(event) {
+      var self = this;
       var In2file = event.target.files[0];
-      this.convocatoria.Informacion_B = In2file;
-      console.log(event.target.files[0]);
+      var reader = new FileReader();
+
+      reader.onload = function (evt) {
+        self.convocatoria.Informacion_B = reader.result;
+      };
+
+      reader.readAsDataURL(In2file);
     }
   }
 });
@@ -421,7 +436,6 @@ var render = function () {
                 },
                 [_vm._v("Ingresar")]
               ),
-              _vm._v("\n    " + _vm._s(_vm.convocatoria) + "\n    \n\n"),
             ]
           ),
         ]),
