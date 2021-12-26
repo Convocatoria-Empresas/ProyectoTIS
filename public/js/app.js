@@ -2535,7 +2535,7 @@ var routes = [{
   component: SegPostulante
 }, {
   name: 'RevSegPost',
-  path: '/RevSegPost',
+  path: '/RevSegPost/:id',
   component: RevSegPost
 }, {
   name: 'Login',

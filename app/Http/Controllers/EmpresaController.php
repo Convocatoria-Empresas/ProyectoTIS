@@ -19,7 +19,7 @@ class EmpresaController extends Controller
         } else{
             return view('empresa')->with('state','index');
         }*/
-        $RegisEmpre = Empresa::all(['Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
+        $RegisEmpre = Empresa::all(['id','Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
         'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5']);
         return response()->json($RegisEmpre);
     }
@@ -82,26 +82,9 @@ class EmpresaController extends Controller
             'empresa'=>$empresa]);
      
     }
-    public function obtain(Request $request,  $empresium)
+    public function obtain()
     {
-        $empresa= Empresa::find($empresium);
-        
-        
-        $LaEmp=[];
-        
-        $LaEmp['Nombre_Largo']=$request->get('Nombre_Largo');
-        $LaEmp['Correo']=$request->get('Correo');
-        $LaEmp['Plan_de_Pago']=$request->get('Plan_de_Pago');
-        $LaEmp['Constitucion']=$request->get('Constitucion');
-        $LaEmp['Carta']=$request->get('Carta');
-        $LaEmp['Solvencia']=$request->get('Solvencia');
-        $LaEmp['Socio_1']=$request->get('Socio_1');
-        $LaEmp['Socio_2']=$request->get('Socio_2');
-        $LaEmp['Socio_3']=$request->get('Socio_3');
-        $LaEmp['Socio_4']=$request->get('Socio_4');
-        $LaEmp['Socio_5']=$request->get('Socio_5');
-      //  return $convocatoria;
-        return response()->json($LaEmp);
+      
     }
     /**
      * Show the form for editing the specified resource.
@@ -121,9 +104,30 @@ class EmpresaController extends Controller
      * @param  \App\Models\Empresa  $empresa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empresa $empresa)
+    public function update($empresium, Request $request)
     {
-        //
+        $empresa= Empresa::find($empresium);
+        
+        
+        $LaEmp= new Empresa();
+
+        
+        $LaEmp->Nombre_Largo=$empresa->Nombre_Largo;
+        $LaEmp->Nombre_Corto=$empresa->Nombre_Corto;
+        $LaEmp->Correo_electronico=$empresa->Correo_electronico;
+        $LaEmp->Telefono=$empresa->Telefono;
+        $LaEmp->NIT=$empresa->NIT;
+        $LaEmp->Plan_Pago=$empresa->Plan_Pago;
+        $LaEmp->Constitucion=$empresa->Constitucion;
+        $LaEmp->Carta=$empresa->Carta;
+        $LaEmp->Solvencia=$empresa->Solvencia;
+        $LaEmp->Socio_1=$empresa->Socio_1;
+        $LaEmp->Socio_2=$empresa->Socio_2;
+        $LaEmp->Socio_3=$empresa->Socio_3;
+        $LaEmp->Socio_4=$empresa->Socio_4;
+        $LaEmp->Socio_5=$empresa->Socio_5;
+      //  return $convocatoria;
+        return response()->json($LaEmp);
     }
 
     /**

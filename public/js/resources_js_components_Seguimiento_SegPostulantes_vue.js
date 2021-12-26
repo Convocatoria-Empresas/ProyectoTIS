@@ -210,7 +210,7 @@ var render = function () {
                         staticClass: "btn btn-info",
                         attrs: {
                           to: {
-                            name: "/RevSegPost",
+                            name: "RevSegPost",
                             params: { id: tablaSeg.id },
                           },
                         },

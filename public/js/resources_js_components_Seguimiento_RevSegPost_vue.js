@@ -138,20 +138,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "laempresa",
   data: function data() {
     return {
       laempresa: {
-        ID: "",
         Nombre_Largo: "",
-        Nombre_Corto: "",
-        Correo: "",
-        Teléfono: "",
-        NIT: "",
+        Correo_electronico: "",
         Solvencia: "",
-        Constitución: "",
-        Plan_de_Pago: "",
+        Constitucion: "",
+        Plan_Pago: "",
         Carta: "",
         Socio_1: "",
         Socio_2: "",
@@ -161,7 +160,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
     };
   },
-  mounted: function mounted() {//this.mostrarEmp()
+  mounted: function mounted() {
+    this.mostrarEmp();
   },
   methods: {
     mostrarEmp: function mostrarEmp() {
@@ -173,30 +173,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get("/api/empresa/".concat(_this.$route.params.id)).then(function (response) {
-                  var _response$data = response.data,
-                      Nombre_Largo = _response$data.Nombre_Largo,
-                      Correo = _response$data.Correo,
-                      Plan_de_Pago = _response$data.Plan_de_Pago,
-                      Constitucion = _response$data.Constitucion,
-                      Carta = _response$data.Carta,
-                      Solvencia = _response$data.Solvencia,
-                      Socio_1 = _response$data.Socio_1,
-                      Socio_2 = _response$data.Socio_2,
-                      Socio_3 = _response$data.Socio_3,
-                      Socio_4 = _response$data.Socio_4,
-                      Socio_5 = _response$data.Socio_5;
-                  _this.empresa.Nombre_Largo = Nombre_Largo;
-                  _this.empresa.Correo = Correo;
-                  _this.empresa.Plan_de_Pago = Plan_de_Pago;
-                  _this.empresa.Constitucion = Constitucion;
-                  _this.empresa.Carta = Carta;
-                  _this.empresa.Solvencia = Solvencia;
-                  _this.empresa.Socio_1 = Socio_1;
-                  _this.empresa.Socio_2 = Socio_2;
-                  _this.empresa.Socio_3 = Socio_3;
-                  _this.empresa.Socio_4 = Socio_4;
-                  _this.empresa.Socio_5 = Socio_5;
+                return _this.axios.put("/api/empresa/".concat(_this.$route.params.id), _this.laempresa).then(function (response) {
+                  console.log(response.data);
+                  _this.laempresa.Nombre_Largo = response.data.Nombre_Largo;
+                  _this.laempresa.Correo_electronico = response.data.Correo_electronico;
+                  _this.laempresa.Plan_Pago = response.data.Plan_Pago;
+                  _this.laempresa.Constitucion = response.data.Constitucion;
+                  _this.laempresa.Carta = response.data.Carta;
+                  _this.laempresa.Solvencia = response.data.Solvencia;
+                  _this.laempresa.Socio_1 = response.data.Socio_1;
+                  _this.laempresa.Socio_2 = response.data.Socio_2;
+                  _this.laempresa.Socio_3 = response.data.Socio_3;
+                  _this.laempresa.Socio_4 = response.data.Socio_4;
+                  _this.laempresa.Socio_5 = response.data.Socio_5;
+                  console.log(_this.laempresa.Nombre_Largo);
                 })["catch"](function (error) {
                   console.log(error);
                 });
@@ -345,7 +335,127 @@ var render = function () {
                 },
               },
             },
-            [_vm._m(1)]
+            [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "row needs-validation",
+                    attrs: { novalidate: "" },
+                  },
+                  [
+                    _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Nombre_Largo,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Socio_1,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Socio_2,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Correo_electronico,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(5),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Socio_3,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+                      _vm._m(6),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Socio_4,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+                      _vm._m(7),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Socio_5,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(8),
+                _vm._v(" "),
+                _vm._m(9),
+              ]),
+            ]
           ),
         ]),
       ]),
@@ -365,300 +475,179 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Nombre Largo")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Socios (Codigo SIS)")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Socio 2")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Correo de la Empresa")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Socio 3")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Socio 4")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Socio 5")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "row needs-validation", attrs: { novalidate: "" } },
-        [
-          _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Nombre Largo")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "fomr-control",
-              attrs: { type: "text", placeholder: "", readonly: "" },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Socios (Codigo SIS)")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "9",
-                minlength: "9",
-                type: "text",
-                placeholder: "Representante Legal",
-                name: "Socio1",
-                id: "Socio1",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "9",
-                minlength: "9",
-                type: "text",
-                placeholder: "Integrante",
-                name: "Socio2",
-                id: "Socio2",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid: "setCustomValidity('Revise el codigo SIS  ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Correo de la Empresa")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "email",
-                name: "email",
-                id: "Correo_Emp",
-                placeholder: "Correo Electrónico de la Empresa",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "9",
-                minlength: "9",
-                type: "text",
-                placeholder: "Integrante",
-                name: "Socio3",
-                id: "Socio3",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "9",
-                minlength: "9",
-                type: "text",
-                placeholder: "Integrante",
-                name: "Socio4",
-                id: "Socio 4",
-                pattern: "[0-9]+",
-                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
-            _c("label", {
-              staticClass: "form-label",
-              attrs: { for: "validationCustom01" },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "9",
-                minlength: "9",
-                type: "text",
-                placeholder: "Integrante",
-                name: "Socio5",
-                id: "Socio5",
-                pattern: "[0-9]+",
-                oninvalid: "setCustomValidity('Revise el codigo SIS  ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-        ]
-      ),
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Solvencia Tecnica")]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
+          [_vm._v("Descargar")]
+        ),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_c("strong", [_vm._v("Solvencia Tecnica")])]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              accept: ".pdf",
-              type: "file",
-              id: "Documento_1",
-              required: "",
-            },
-          }),
+      _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Plan de Pago")]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_c("strong", [_vm._v("Plan de Pago")])]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              accept: ".pdf",
-              type: "file",
-              id: "Documento_2",
-              required: "",
-            },
-          }),
+        _c(
+          "button",
+          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
+          [_vm._v("Descargar")]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Constitución de la Empresa")]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_c("strong", [_vm._v("Constitución de la Empresa")])]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              accept: ".pdf",
-              type: "file",
-              id: "Documento_3",
-              required: "",
-            },
-          }),
+        _c(
+          "button",
+          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
+          [_vm._v("Descargar")]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Carta de Presentación")]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
+          [_vm._v("Descargar")]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+        _c("li", [
           _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "formFile" } },
-            [_c("strong", [_vm._v("Carta de Presentación")])]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              accept: ".pdf",
-              type: "file",
-              id: "Documento_4",
-              required: "",
+            "a",
+            {
+              staticClass: "nav-link text-info",
+              attrs: {
+                href: "https://www.facebook.com/lacocoyodotcom/",
+                target: "_blank",
+              },
             },
-          }),
+            [_vm._v("Mas información")]
+          ),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-          _c("li", [
+      _c("div", { staticClass: "col-lg-6" }, [
+        _c("label", {
+          staticClass: "form-label",
+          attrs: { for: "validationCustom01" },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "form-group col-md-4" }, [
+            _c("label", { attrs: { for: "inputState" } }, [_vm._v("Estado")]),
+            _vm._v(" "),
             _c(
-              "a",
-              {
-                staticClass: "nav-link text-info",
-                attrs: {
-                  href: "https://www.facebook.com/lacocoyodotcom/",
-                  target: "_blank",
-                },
-              },
-              [_vm._v("Mas información")]
+              "select",
+              { staticClass: "form-control", attrs: { id: "inputState" } },
+              [
+                _c("option", { attrs: { selected: "" } }, [
+                  _vm._v("Rechazado"),
+                ]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Aprobado")]),
+              ]
             ),
           ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c("label", {
-            staticClass: "form-label",
-            attrs: { for: "validationCustom01" },
-          }),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6 offset-md-2" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-lg btn-danger",
-                  attrs: { type: "submit" },
-                },
-                [_vm._v("Cancelar")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-lg btn-success",
-                  attrs: { type: "submit" },
-                },
-                [_vm._v("Registrar")]
-              ),
-            ]),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-lg btn-success",
+                attrs: { type: "submit" },
+              },
+              [_vm._v("Aceptar")]
+            ),
           ]),
         ]),
       ]),

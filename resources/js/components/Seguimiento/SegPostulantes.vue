@@ -22,9 +22,9 @@
                         <td>{{ tablaSeg.Socio_1}}</td>
                         <td>
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"/RevSegPost",params:{id:tablaSeg.id}}' class="btn btn-info"><i class="fas fa-eye"></i></router-link>
+                                <router-link :to='{name:"RevSegPost",params: {id:tablaSeg.id}}' class="btn btn-info"><i class="fas fa-eye"></i></router-link>
                         </td>
-                    </tr>
+                    </tr>   
                 </tbody>
                 </table>
             </div>
