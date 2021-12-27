@@ -19,11 +19,11 @@ class CreateEmpresasTable extends Migration
             $table->string('Nombre_Corto', 10);
             $table->string('Correo_electronico');
             $table->string	('Telefono');
-	        $table->string('NIT');
-            $table->string('Solvencia');
-            $table->string('Constitucion');
-            $table->string('Plan_Pago');
-            $table->string('Carta');
+	        $table->longText('NIT');
+            $table->longText('Solvencia');
+            $table->longText('Constitucion');
+            $table->longText('Plan_Pago');
+            $table->longText('Carta');
             $table->string('Socio_1',9);
             $table->foreign('Socio_1')->references('Codigo')->on('socios');
             $table->string('Socio_2',9);

@@ -141,6 +141,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "laempresa",
   data: function data() {
@@ -199,7 +203,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    actualizar: function actualizar() {
+    AcpeRe: function AcpeRe(e) {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
@@ -207,11 +211,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
-                return _this2.axios.put("/api/empresa/".concat(_this2.$route.params.id), _this2.empresa).then(function (response) {
+                if (e) {
+                  _this2.laempresa.Estado_Aprob = 1;
+                } else {
+                  _this2.laempresa.Estado_Aprob = 0;
+                }
+
+                console.log(_this2.laempresa.Estado_Aprob);
+
+              case 2:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    },
+    actualizar: function actualizar() {
+      var _this3 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.next = 2;
+                return _this3.axios.put("/api/empresa/".concat(_this3.$route.params.id), _this3.empresa).then(function (response) {
                   console.log(response.data);
 
-                  _this2.$router.push({
+                  _this3.$router.push({
                     name: "laempresa"
                   });
                 })["catch"](function (error) {
@@ -220,10 +248,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2);
+        }, _callee3);
       }))();
     }
   }
@@ -453,7 +481,68 @@ var render = function () {
                 _vm._v(" "),
                 _vm._m(8),
                 _vm._v(" "),
-                _vm._m(9),
+                _c("div", { staticClass: "row" }, [
+                  _vm._m(9),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-6" }, [
+                    _c("label", {
+                      staticClass: "form-label",
+                      attrs: { for: "validationCustom01" },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "form-group col-md-4" }, [
+                        _c("div", { staticClass: "col-auto my-1" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "mr-sm-2",
+                              attrs: { for: "inlineFormCustomSelect" },
+                            },
+                            [_vm._v("Estado")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              staticClass: "custom-select mr-sm-2",
+                              attrs: { id: "inlineFormCustomSelect" },
+                            },
+                            [
+                              _c("option", { attrs: { selected: "" } }, [
+                                _vm._v("Aceptar/Rechazar"),
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                _vm._b(
+                                  { attrs: { value: "1" } },
+                                  "option",
+                                  _vm.AcpeRe(true),
+                                  false
+                                ),
+                                [_vm._v("Aceptar")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                _vm._b(
+                                  { attrs: { value: "2" } },
+                                  "option",
+                                  _vm.AcpeRe(false),
+                                  false
+                                ),
+                                [_vm._v("Rechazar")]
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(10),
+                    ]),
+                  ]),
+                ]),
               ]),
             ]
           ),
@@ -599,58 +688,32 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link text-info",
-              attrs: {
-                href: "https://www.facebook.com/lacocoyodotcom/",
-                target: "_blank",
-              },
+    return _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "nav-link text-info",
+            attrs: {
+              href: "https://www.facebook.com/lacocoyodotcom/",
+              target: "_blank",
             },
-            [_vm._v("Mas información")]
-          ),
-        ]),
+          },
+          [_vm._v("Mas información")]
+        ),
       ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-6" }, [
-        _c("label", {
-          staticClass: "form-label",
-          attrs: { for: "validationCustom01" },
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "form-group col-md-4" }, [
-            _c("label", { attrs: { for: "inputState" } }, [_vm._v("Estado")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              { staticClass: "form-control", attrs: { id: "inputState" } },
-              [
-                _c("option", { attrs: { selected: "" } }, [
-                  _vm._v("Rechazado"),
-                ]),
-                _vm._v(" "),
-                _c("option", [_vm._v("Aprobado")]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-lg btn-success",
-                attrs: { type: "submit" },
-              },
-              [_vm._v("Aceptar")]
-            ),
-          ]),
-        ]),
-      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-lg btn-success", attrs: { type: "submit" } },
+        [_vm._v("Aceptar")]
+      ),
     ])
   },
 ]

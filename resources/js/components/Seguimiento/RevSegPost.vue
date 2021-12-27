@@ -98,11 +98,15 @@
                                     <button type="submit" class="btn btn-lg btn-danger">Cancelar</button>
                                     </div>-->
                                     <div class="form-group col-md-4">
-                                    <label for="inputState">Estado</label>
-                                      <select id="inputState" class="form-control">
-                                       <option selected>Rechazado</option>
-                                       <option>Aprobado</option>
-                                       </select>
+                                    
+                                    <div class="col-auto my-1">
+                                         <label class="mr-sm-2" for="inlineFormCustomSelect">Estado</label>
+                                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                           <option selected>Aceptar/Rechazar</option>
+                                           <option value="1" v-bind="AcpeRe(true)">Aceptar</option>
+                                           <option value="2" v-bind="AcpeRe(false)">Rechazar</option>
+                                         </select>
+                                       </div>
                                     </div>
                                     <div class="col-lg-4">
                                     <button type="submit" class="btn btn-lg btn-success">Aceptar</button>
@@ -169,6 +173,17 @@ export default {
             })
             
         },
+        async AcpeRe(e){
+            if(e){
+                this.laempresa.Estado_Aprob = 1;
+                
+            }
+            else{
+                this.laempresa.Estado_Aprob = 0;
+            }
+            console.log(this.laempresa.Estado_Aprob);
+        },
+        
         async actualizar(){
             await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.empresa).then(response=>{
                 console.log(response.data)
