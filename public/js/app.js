@@ -39121,20 +39121,12 @@ var render = function () {
                 attrs: { to: { name: "regEmpresa" } },
               },
               [
-                _c("i", { staticClass: "fas fa-plus-circle" }, [
-                  _vm._v(" Registrar Empresa"),
-                ]),
+                _c("i", { staticClass: "fas fa-user-plus" }),
+                _vm._v(" Registrar Empresa\n            "),
               ]
             ),
             _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "input-group-text",
-                attrs: { id: "basic-addon1" },
-              },
-              [_vm._v("  Nombre de la empresa ->")]
-            ),
+            _vm._m(0),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control",
@@ -39146,13 +39138,13 @@ var render = function () {
               },
             }),
             _vm._v(" "),
-            _vm._m(0),
+            _vm._m(1),
           ],
           1
         ),
         _vm._v(" "),
         _c("table", { staticClass: "table" }, [
-          _vm._m(1),
+          _vm._m(2),
           _vm._v(" "),
           _c(
             "tbody",
@@ -39203,11 +39195,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "input-group-text", attrs: { id: "basic-addon1" } },
+      [
+        _c("i", { staticClass: "fad fa-file-signature" }),
+        _vm._v("  Nombre de la empresa ->"),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input-group-append" }, [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "button" } },
-        [_vm._v("Buscar")]
+        [_c("i", { staticClass: "fas fa-search" }), _vm._v(" Buscar")]
       ),
     ])
   },

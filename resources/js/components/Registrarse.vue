@@ -68,18 +68,16 @@
 
                             </div>
                             <div class="row">
-                                <div class="col-lg-5 offset-md-1">
-
-                                </div>
-                                    <div class="text-center">
+                                <div class="text-center">
                                     <label for="validationCustom01" class="form-label"></label>
                                     <div class="row">
-                                    <div class="col-lg-4">
-                                    <button type="submit" class="btn btn-lg btn-danger">Cancelar</button>
-                                    </div>
-                                    <div class="col-lg-5">
-                                    <button type="submit" class="btn btn-lg btn-success">Registrar</button>
-                                    </div>
+                                        <div class="col-lg-4">
+                                            <router-link :to='{name:"Login"}' class="btn btn-danger"><i class="far fa-ballot-check"></i> Cancelar
+                                            </router-link>
+                                        </div>
+                                        <div class="col-lg-4">
+                                        <button type="submit" class="btn btn-success">Registrarse</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

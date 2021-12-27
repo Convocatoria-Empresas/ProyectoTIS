@@ -5,8 +5,8 @@
             <hr>
         </div>
         <div class="mb-2 col-12">
-          
-            <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-plus-circle"> Nueva Convocatoria</i></router-link>
+
+            <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-folder-plus"></i> Nueva Convocatoria</router-link>
         </div>
         <div class="col-12">
             <div class="table-responsive">
@@ -67,7 +67,7 @@ export default {
                 this.blogs = response.data
             }).catch(error=>{
                 console.log(error)
-               
+
             })
                /* const res= await axios.delete('/api/convocatoria/' + id);
                 this.blogs = res.data();*/

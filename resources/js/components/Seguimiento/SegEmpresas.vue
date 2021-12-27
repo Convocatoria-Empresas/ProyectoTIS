@@ -22,7 +22,7 @@
                             <td>{{ blog.asesor }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link to='/RevSegEmpre' class="btn btn-info"><i class="fas fa-eye"></i></router-link>
+                                <router-link to='/RevSegEmpre' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>
                             </td>
                         </tr>
                     </tbody>

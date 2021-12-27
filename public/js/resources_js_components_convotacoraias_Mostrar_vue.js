@@ -224,9 +224,8 @@ var render = function () {
             attrs: { to: { name: "crearBlog" } },
           },
           [
-            _c("i", { staticClass: "fas fa-plus-circle" }, [
-              _vm._v(" Nueva Convocatoria"),
-            ]),
+            _c("i", { staticClass: "fas fa-folder-plus" }),
+            _vm._v(" Nueva Convocatoria"),
           ]
         ),
       ],

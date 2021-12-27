@@ -87,7 +87,45 @@ var render = function () {
                   },
                 },
               },
-              [_vm._m(2)]
+              [
+                _c("div", { staticClass: "row" }, [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "text-center" }, [
+                      _c("label", {
+                        staticClass: "form-label",
+                        attrs: { for: "validationCustom01" },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-lg-4" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "btn btn-danger",
+                                attrs: { to: { name: "Login" } },
+                              },
+                              [
+                                _c("i", { staticClass: "far fa-ballot-check" }),
+                                _vm._v(
+                                  " Cancelar\n                                        "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _vm._m(3),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]
             ),
           ]),
         ]),
@@ -125,246 +163,200 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "row needs-validation", attrs: { novalidate: "" } },
-        [
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Nombre(s)")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "30",
-                type: "text",
-                placeholder: "Ej: Rodrigo Ariel",
-                name: "NombrePersonal",
-                id: "NombrePersonal",
-                required: "",
-                pattern: "[a-zA-Z- -\\.]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
+    return _c(
+      "div",
+      { staticClass: "row needs-validation", attrs: { novalidate: "" } },
+      [
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Nombre(s)")])]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Apellido Paterno")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "30",
-                type: "text",
-                placeholder: "Ej: Ledezma",
-                name: "NombrePaterno",
-                id: "NombrePaterno",
-                required: "",
-                pattern: "[a-zA-Z- -\\.]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Apellido Materno")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "30",
-                type: "text",
-                placeholder: "Ej: Lopez",
-                name: "NombreMaterno",
-                id: "NombreMaterno",
-                required: "",
-                pattern: "[a-zA-Z- -\\.]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Código SIS")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "9",
-                minlength: "9",
-                type: "text",
-                placeholder: "Código SIS (sólo números)",
-                name: "CodigoSis",
-                id: "CodigoSis",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid: "setCustomValidity('Revise el codigo SIS ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Correo electrónico")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "email",
-                name: "email",
-                id: "CorreoVigen",
-                placeholder: "Ej: pepitopelapapas@gmail.com",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Número de Celular")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "8",
-                minlength: "7",
-                type: "text",
-                placeholder: "Debe ser vigente. Ej: 65316647",
-                name: "Celular",
-                id: "Celular",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llene el Celular, solo se aceptan numeros y el minumo son 8 digitos')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-            _c(
-              "label",
-              {
-                staticClass: "form-label",
-                attrs: { for: "validationCustom01" },
-              },
-              [_c("strong", [_vm._v("Carnet de Identidad")])]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                maxlength: "7",
-                minlength: "7",
-                type: "text",
-                placeholder: "Ej: 431579521",
-                name: "NIT",
-                id: "NIT",
-                required: "",
-                pattern: "[0-9]+",
-                oninvalid:
-                  "setCustomValidity('Porfavor llene el carnet de identidad, solo se aceptan numeros ')",
-                onchange: "try{setCustomValidity('')}catch(e){}",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "valid-feedback" }),
-          ]),
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-5 offset-md-1" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "text-center" }, [
-          _c("label", {
-            staticClass: "form-label",
-            attrs: { for: "validationCustom01" },
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              maxlength: "30",
+              type: "text",
+              placeholder: "Ej: Rodrigo Ariel",
+              name: "NombrePersonal",
+              id: "NombrePersonal",
+              required: "",
+              pattern: "[a-zA-Z- -\\.]+",
+              oninvalid:
+                "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+              onchange: "try{setCustomValidity('')}catch(e){}",
+            },
           }),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-lg btn-danger",
-                  attrs: { type: "submit" },
-                },
-                [_vm._v("Cancelar")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-5" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-lg btn-success",
-                  attrs: { type: "submit" },
-                },
-                [_vm._v("Registrar")]
-              ),
-            ]),
-          ]),
+          _c("div", { staticClass: "valid-feedback" }),
         ]),
-      ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Apellido Paterno")])]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              maxlength: "30",
+              type: "text",
+              placeholder: "Ej: Ledezma",
+              name: "NombrePaterno",
+              id: "NombrePaterno",
+              required: "",
+              pattern: "[a-zA-Z- -\\.]+",
+              oninvalid:
+                "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+              onchange: "try{setCustomValidity('')}catch(e){}",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "valid-feedback" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Apellido Materno")])]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              maxlength: "30",
+              type: "text",
+              placeholder: "Ej: Lopez",
+              name: "NombreMaterno",
+              id: "NombreMaterno",
+              required: "",
+              pattern: "[a-zA-Z- -\\.]+",
+              oninvalid:
+                "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+              onchange: "try{setCustomValidity('')}catch(e){}",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "valid-feedback" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Código SIS")])]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              maxlength: "9",
+              minlength: "9",
+              type: "text",
+              placeholder: "Código SIS (sólo números)",
+              name: "CodigoSis",
+              id: "CodigoSis",
+              required: "",
+              pattern: "[0-9]+",
+              oninvalid: "setCustomValidity('Revise el codigo SIS ')",
+              onchange: "try{setCustomValidity('')}catch(e){}",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "valid-feedback" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Correo electrónico")])]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              type: "email",
+              name: "email",
+              id: "CorreoVigen",
+              placeholder: "Ej: pepitopelapapas@gmail.com",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "valid-feedback" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Número de Celular")])]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              maxlength: "8",
+              minlength: "7",
+              type: "text",
+              placeholder: "Debe ser vigente. Ej: 65316647",
+              name: "Celular",
+              id: "Celular",
+              required: "",
+              pattern: "[0-9]+",
+              oninvalid:
+                "setCustomValidity('Porfavor llene el Celular, solo se aceptan numeros y el minumo son 8 digitos')",
+              onchange: "try{setCustomValidity('')}catch(e){}",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "valid-feedback" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+            [_c("strong", [_vm._v("Carnet de Identidad")])]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              maxlength: "7",
+              minlength: "7",
+              type: "text",
+              placeholder: "Ej: 431579521",
+              name: "NIT",
+              id: "NIT",
+              required: "",
+              pattern: "[0-9]+",
+              oninvalid:
+                "setCustomValidity('Porfavor llene el carnet de identidad, solo se aceptan numeros ')",
+              onchange: "try{setCustomValidity('')}catch(e){}",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "valid-feedback" }),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-success", attrs: { type: "submit" } },
+        [_vm._v("Registrarse")]
+      ),
     ])
   },
 ]

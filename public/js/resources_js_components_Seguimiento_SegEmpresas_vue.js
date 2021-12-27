@@ -219,7 +219,10 @@ var render = function () {
                         staticClass: "btn btn-info",
                         attrs: { to: "/RevSegEmpre" },
                       },
-                      [_c("i", { staticClass: "fas fa-eye" })]
+                      [
+                        _c("i", { staticClass: "fas fa-eye" }),
+                        _vm._v(" Revisar"),
+                      ]
                     ),
                   ],
                   1

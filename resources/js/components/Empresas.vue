@@ -6,12 +6,12 @@
             <hr>
             <div class="mb-5 input-group">
                 <router-link :to='{name:"regEmpresa"}' class="btn btn-success">
-                    <i class="fas fa-plus-circle"> Registrar Empresa</i>
+                    <i class="fas fa-user-plus"></i> Registrar Empresa
                 </router-link>
-                <span class="input-group-text" id="basic-addon1">  Nombre de la empresa -></span>
+                <span class="input-group-text" id="basic-addon1"><i class="fad fa-file-signature"></i>  Nombre de la empresa -></span>
                 <input type="text" class="form-control" placeholder="Buscar el nombre de la empresa registrada" aria-label="Burcar el nombre de la empresa registrada" aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button type="button" class="btn btn-primary">Buscar</button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
                 </div>
             </div>
             <!-- <table class="table table-hover table-dark ">
