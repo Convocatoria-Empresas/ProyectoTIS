@@ -38,29 +38,6 @@
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /***/ }),
 
@@ -167,188 +144,84 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("main", [
-      _c("div", { attrs: { id: "login_outer" } }, [
-        _c("div", { attrs: { id: "login_title" } }, [
-          _c("span", [_vm._v("Universidad Mayor de San Simon")]),
+      _c("div", { staticClass: "text-center" }, [
+        _c("div", { attrs: { id: "login_outer" } }, [
+          _c("div", { attrs: { id: "login_title" } }, [
+            _c("h1", [_vm._v("Universidad Mayor de San Simón")]),
+          ]),
         ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "login_panel" } }, [
-        _c("div", { attrs: { id: "login_panel_header" } }),
         _vm._v(" "),
-        _c("b", [_vm._v("Inicio de Sesión")]),
-        _vm._v(" "),
-        _c("table", [
-          _c("tbody", [
-            _c("tr", [
-              _c("td", { staticClass: "title" }, [
-                _c("label", { attrs: { for: "username_ex" } }, [
-                  _vm._v("Correo institucional"),
-                ]),
+        _c("div", { attrs: { id: "login_panel" } }, [
+          _c("div", { attrs: { id: "login_panel_header" } }),
+          _vm._v(" "),
+          _c("b", [_vm._v("Inicio de Sesión")]),
+          _vm._v(" "),
+          _c("form", [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                _c("i", { staticClass: "far fa-envelope" }),
+                _vm._v(" Correo Institucional"),
               ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control",
+                attrs: {
+                  type: "email",
+                  id: "exampleInputEmail1",
+                  "aria-describedby": "emailHelp",
+                  placeholder: "Introduzca su correo institucional",
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "small",
+                {
+                  staticClass: "form-text text-muted",
+                  attrs: { id: "emailHelp" },
+                },
+                [_vm._v("No comparta su correo electrónico con nadie más.")]
+              ),
             ]),
             _vm._v(" "),
-            _c("tr", [
-              _c("td", { staticClass: "input" }, [
-                _c("input", {
-                  staticClass: "boton",
-                  attrs: {
-                    type: "text",
-                    id: "username_ex",
-                    name: "username_ex",
-                    value: "",
-                    tabindex: "1",
-                    required: "required",
-                    size: "40",
-                    autocapitalize: "off",
-                    autocomplete: "off",
-                    "wtx-context": "FA6ACC72-C2D6-4F85-BD9D-40A8FAD3B370",
-                  },
-                }),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputPassword1" } }, [
+                _c("i", { staticClass: "fas fa-unlock-alt" }),
+                _vm._v(" Contraseña"),
               ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control",
+                attrs: {
+                  type: "password",
+                  id: "exampleInputPassword1",
+                  placeholder: "Introduzca su contraseña",
+                },
+              }),
             ]),
             _vm._v(" "),
-            _c("tr", [
-              _c("td", { staticClass: "title" }, [
-                _c("label", { attrs: { for: "password" } }, [
-                  _vm._v("Contraseña"),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [
-                _c("input", {
-                  staticClass: "boton",
-                  attrs: {
-                    type: "password",
-                    id: "password",
-                    name: "password",
-                    tabindex: "2",
-                    required: "required",
-                    size: "40",
-                    autocapitalize: "off",
-                    autocomplete: "off",
-                    "wtx-context": "083C7546-3F04-42F3-8A86-D6D164278C95",
-                  },
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  attrs: {
-                    type: "hidden",
-                    id: "interface_ex",
-                    name: "interface_ex",
-                    value: "ajax",
-                    "wtx-context": "E8B863C5-97EF-4935-A7BE-E5AD67057A0F",
-                  },
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  attrs: {
-                    type: "hidden",
-                    id: "language",
-                    name: "language",
-                    value: "Spanish",
-                    "wtx-context": "CD77BDB9-99EF-47F0-8B01-2CED81ACA079",
-                  },
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  attrs: {
-                    type: "hidden",
-                    name: "lang_last",
-                    value: "Spanish",
-                    "wtx-context": "FB6744EB-A65B-40F8-8752-7D3A66897C50",
-                  },
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  attrs: {
-                    type: "hidden",
-                    name: "lang_showall",
-                    value: "Spanish",
-                    "wtx-context": "711635A0-0533-44E4-896F-764CCC7A3767",
-                  },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("tr", { attrs: { id: "remember_me" } }, [
-              _c("td", { staticClass: "title", attrs: { colspan: "2" } }, [
-                _vm._v("Recordar mis datos"),
-                _c("input", {
-                  attrs: {
-                    name: "remember",
-                    id: "remember",
-                    type: "checkbox",
-                    "wtx-context": "7CE6AA85-F08E-41F5-91C4-5273C86BD87A",
-                  },
-                }),
-              ]),
+            _c("div", { staticClass: "form-check" }, [
+              _c("input", {
+                staticClass: "form-check-input",
+                attrs: { type: "checkbox", id: "exampleCheck1" },
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                {
+                  staticClass: "form-check-label",
+                  attrs: { for: "exampleCheck1" },
+                },
+                [
+                  _c("i", { staticClass: "far fa-save" }),
+                  _vm._v(" Guardar mis datos"),
+                ]
+              ),
             ]),
             _vm._v(" "),
             _c(
-              "tr",
-              {
-                staticStyle: { "text-align": "left", display: "none" },
-                attrs: { id: "bad_browser" },
-              },
-              [
-                _c("td", { attrs: { colspan: "2" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticStyle: {
-                        "padding-top": "5px",
-                        "padding-bottom": "5px",
-                      },
-                    },
-                    [
-                      _vm._v("Navegador: \t\t"),
-                      _c("span", { staticClass: "boldred" }, [
-                        _vm._v("FAILED TEST"),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticStyle: { "font-size": "0.9em" } }, [
-                    _vm._v("Note:"),
-                    _c("span", { staticClass: "red" }, [
-                      _vm._v(
-                        "Un navegador moderno es necesario para usar el interfaz estandard (Ajax/Web 2.0)"
-                      ),
-                    ]),
-                    _c("br"),
-                    _vm._v(
-                      "  - Validado para funcionar: IE7+, Safari 3.1+, Firefox 3.0+, Google Chrome 1+"
-                    ),
-                    _c("br"),
-                    _vm._v(
-                      "  - Mayormente funciona en: Opera 9.51, Firefox 2.0, Camino 1.69"
-                    ),
-                    _c("br"),
-                    _vm._v(
-                      "  - NO funciona en: varios otros navegadores antiguos incluyendo IE6"
-                    ),
-                    _c("br"),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticStyle: {
-                        "padding-top": "5px",
-                        "padding-bottom": "5px",
-                      },
-                    },
-                    [
-                      _vm._v(
-                        "Nota: Otros navegadores modernos como Opera pueden funcionar pero se esta evaluando y desarrollando mayor compatibilidad"
-                      ),
-                    ]
-                  ),
-                ]),
-              ]
+              "button",
+              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+              [_vm._v("Iniciar Sesión")]
             ),
           ]),
         ]),
