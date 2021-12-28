@@ -10,7 +10,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.4"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -52,11 +53,9 @@
         ]
     },
     "extra": {
-       "laravel": {
-          "dont-discover": [
-            "laravel/dusk"
-          ]
-      }
+        "laravel": {
+            "dont-discover": []
+        }
     },
     "config": {
         "optimize-autoloader": true,
@@ -66,3 +65,4 @@
     "minimum-stability": "dev",
     "prefer-stable": true
 }
+
