@@ -179,7 +179,7 @@ var staticRenderFns = [
             attrs: {
               maxlength: "30",
               type: "text",
-              placeholder: "Ej: Rodrigo Ariel",
+              placeholder: "Ej: José Luis",
               name: "NombrePersonal",
               id: "NombrePersonal",
               required: "",
@@ -205,7 +205,7 @@ var staticRenderFns = [
             attrs: {
               maxlength: "30",
               type: "text",
-              placeholder: "Ej: Ledezma",
+              placeholder: "Ej: Romero",
               name: "NombrePaterno",
               id: "NombrePaterno",
               required: "",
@@ -231,7 +231,7 @@ var staticRenderFns = [
             attrs: {
               maxlength: "30",
               type: "text",
-              placeholder: "Ej: Lopez",
+              placeholder: "Ej: Fernandez",
               name: "NombreMaterno",
               id: "NombreMaterno",
               required: "",
