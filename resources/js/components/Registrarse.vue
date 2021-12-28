@@ -17,20 +17,20 @@
                             <div  class="row needs-validation" novalidate>
                                 <div class="col-lg-4 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre(s)</strong></label>
-                                <input maxlength="30" type="text" placeholder="Ej: Rodrigo Ariel" name="NombrePersonal" class="form-control" id="NombrePersonal"  required pattern="[a-zA-Z- -\.]+"
+                                <input maxlength="30" type="text" placeholder="Ej: José Luis" name="NombrePersonal" class="form-control" id="NombrePersonal"  required pattern="[a-zA-Z- -\.]+"
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
                                 <div class="col-lg-4 offset-md-1" >
                                     <label for="validationCustom01" class="form-label"><strong>Apellido Paterno</strong></label>
-                                    <input maxlength="30" type="text" placeholder="Ej: Ledezma" name="NombrePaterno" class="form-control" id="NombrePaterno"  required pattern="[a-zA-Z- -\.]+"
+                                    <input maxlength="30" type="text" placeholder="Ej: Romero" name="NombrePaterno" class="form-control" id="NombrePaterno"  required pattern="[a-zA-Z- -\.]+"
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                     <div class="valid-feedback"></div>
                                 </div>
                                 <div class="col-lg-4 offset-md-1" >
                                     <label for="validationCustom01" class="form-label"><strong>Apellido Materno</strong></label>
-                                    <input maxlength="30" type="text" placeholder="Ej: Lopez" name="NombreMaterno" class="form-control" id="NombreMaterno"  required pattern="[a-zA-Z- -\.]+"
+                                    <input maxlength="30" type="text" placeholder="Ej: Fernandez" name="NombreMaterno" class="form-control" id="NombreMaterno"  required pattern="[a-zA-Z- -\.]+"
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                     <div class="valid-feedback"></div>
                                 </div>
