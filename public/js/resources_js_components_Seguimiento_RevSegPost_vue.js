@@ -189,7 +189,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.laempresa.Socio_2 = response.data.Socio_2;
                   _this.laempresa.Socio_3 = response.data.Socio_3;
                   _this.laempresa.Socio_4 = response.data.Socio_4;
-                  _this.laempresa.Socio_5 = response.data.Socio_5;
+                  _this.laempresa.Socio_5 = response.data.Socio_5; //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
+
+                  //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
                   console.log(_this.laempresa.Nombre_Largo);
                 })["catch"](function (error) {
                   console.log(error);
@@ -204,6 +206,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     AcpeRe: function AcpeRe(e) {
+      if (e.target.value == 1) {
+        this.laempresa.Estado_Aprob = 1;
+      } else {
+        this.laempresa.Estado_Aprob = 0;
+      }
+
+      console.log(this.laempresa.Estado_Aprob);
+    },
+    actualizar: function actualizar() {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
@@ -211,47 +222,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (e) {
-                  _this2.laempresa.Estado_Aprob = 1;
-                } else {
-                  _this2.laempresa.Estado_Aprob = 0;
-                }
+                /* await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.laempresa).then(response=>{
+                     console.log(response.data)
+                     this.$router.push({name:"SegPostulante"})
+                 }).catch(error=>{
+                     console.log(error)
+                 })*/
+                _this2.$router.push({
+                  name: "SegPostulante"
+                });
 
-                console.log(_this2.laempresa.Estado_Aprob);
-
-              case 2:
+              case 1:
               case "end":
                 return _context2.stop();
             }
           }
         }, _callee2);
-      }))();
-    },
-    actualizar: function actualizar() {
-      var _this3 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                _context3.next = 2;
-                return _this3.axios.put("/api/empresa/".concat(_this3.$route.params.id), _this3.empresa).then(function (response) {
-                  console.log(response.data);
-
-                  _this3.$router.push({
-                    name: "laempresa"
-                  });
-                })["catch"](function (error) {
-                  console.log(error);
-                });
-
-              case 2:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3);
       }))();
     }
   }
@@ -359,7 +345,7 @@ var render = function () {
               on: {
                 submit: function ($event) {
                   $event.preventDefault()
-                  return _vm.RegEmpresa.apply(null, arguments)
+                  return _vm.actualizar.apply(null, arguments)
                 },
               },
             },
@@ -372,7 +358,7 @@ var render = function () {
                     attrs: { novalidate: "" },
                   },
                   [
-                    _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
                       _vm._m(1),
                       _vm._v(" "),
                       _c("input", {
@@ -424,7 +410,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Correo_electronico,
+                          placeholder: this.laempresa.Socio_3,
                           readonly: "",
                         },
                       }),
@@ -439,21 +425,6 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Socio_3,
-                          readonly: "",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "valid-feedback" }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
-                      _vm._m(6),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
                           placeholder: this.laempresa.Socio_4,
                           readonly: "",
                         },
@@ -462,14 +433,29 @@ var render = function () {
                       _c("div", { staticClass: "valid-feedback" }),
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
-                      _vm._m(7),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(6),
                       _vm._v(" "),
                       _c("input", {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
                           placeholder: this.laempresa.Socio_5,
+                          readonly: "",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(7),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: this.laempresa.Correo_electronico,
                           readonly: "",
                         },
                       }),
@@ -506,34 +492,30 @@ var render = function () {
                             "select",
                             {
                               staticClass: "custom-select mr-sm-2",
-                              attrs: { id: "inlineFormCustomSelect" },
+                              attrs: {
+                                id: "inlineFormCustomSelect",
+                                required: "",
+                              },
+                              on: {
+                                change: function ($event) {
+                                  return _vm.AcpeRe($event)
+                                },
+                              },
                             },
                             [
-                              _c("option", { attrs: { selected: "" } }, [
-                                _vm._v("Aceptar/Rechazar"),
+                              _c(
+                                "option",
+                                { attrs: { disabled: "", selected: "" } },
+                                [_vm._v("Aceptar/Rechazar")]
+                              ),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "1" } }, [
+                                _vm._v("Aceptar"),
                               ]),
                               _vm._v(" "),
-                              _c(
-                                "option",
-                                _vm._b(
-                                  { attrs: { value: "1" } },
-                                  "option",
-                                  _vm.AcpeRe(true),
-                                  false
-                                ),
-                                [_vm._v("Aceptar")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                _vm._b(
-                                  { attrs: { value: "2" } },
-                                  "option",
-                                  _vm.AcpeRe(false),
-                                  false
-                                ),
-                                [_vm._v("Rechazar")]
-                              ),
+                              _c("option", { attrs: { value: "0" } }, [
+                                _vm._v("Rechazar"),
+                              ]),
                             ]
                           ),
                         ]),
@@ -597,16 +579,6 @@ var staticRenderFns = [
     return _c(
       "label",
       { staticClass: "form-label", attrs: { for: "validationCustom01" } },
-      [_c("strong", [_vm._v("Correo de la Empresa")])]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
       [_c("strong", [_vm._v("Socio 3")])]
     )
   },
@@ -634,29 +606,35 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Correo de la Empresa")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
           _c("strong", [_vm._v("Solvencia Tecnica")]),
         ]),
         _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
-          [_vm._v("Descargar")]
-        ),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
           _c("strong", [_vm._v("Plan de Pago")]),
         ]),
         _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
-          [_vm._v("Descargar")]
-        ),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
@@ -664,23 +642,19 @@ var staticRenderFns = [
           _c("strong", [_vm._v("Constitución de la Empresa")]),
         ]),
         _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
-          [_vm._v("Descargar")]
-        ),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
           _c("strong", [_vm._v("Carta de Presentación")]),
         ]),
         _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-primary mb-2", attrs: { type: "submit" } },
-          [_vm._v("Descargar")]
-        ),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
       ]),
     ])
   },

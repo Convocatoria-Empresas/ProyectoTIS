@@ -8,12 +8,12 @@
                     <h4> <strong>Registrar Empresa</strong></h4>
                 </div>
                 <div class="card-body">
-                    <form @submit.prevent="RegEmpresa">
+                    <form @submit.prevent="actualizar">
                         <div  class="row">
                             <div  class="row needs-validation" novalidate>
 
-                                <div class="col-lg-5 offset-md-1" >
-                             
+                                <div class="col-lg-4 offset-md-1" >
+
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
                                 <input class="form-control" type="text" :placeholder="this.laempresa.Nombre_Largo" readonly>
                                 <div class="valid-feedback">
@@ -36,12 +36,7 @@
                                  </div>
                                 </div>
 
-                                <div class="col-lg-4 offset-md-1">
-                                 <label for="validationCustom01" class="form-label"><strong>Correo de la Empresa</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Correo_electronico" readonly>
-                                <div class="valid-feedback">
-                                 </div>
-                                </div>
+
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 3</strong></label>
@@ -52,7 +47,7 @@
 
                                 
 
-                                <div class="col-lg-4 offset-md-2">
+                                <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 4</strong></label>
                                 <input class="form-control" type="text" :placeholder="this.laempresa.Socio_4" readonly>
                                 <div class="valid-feedback">
@@ -61,9 +56,16 @@
 
                                 
 
-                                <div class="col-lg-4 offset-md-2">
+                                <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socio 5</strong></label>
                                 <input class="form-control" type="text" :placeholder="this.laempresa.Socio_5" readonly>
+                                <div class="valid-feedback">
+                                 </div>
+                                </div>
+
+                                 <div class="col-lg-4 offset-md-1">
+                                 <label for="validationCustom01" class="form-label"><strong>Correo de la Empresa</strong></label>
+                                <input class="form-control" type="text" :placeholder="this.laempresa.Correo_electronico" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -72,19 +74,19 @@
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
-                                <button type="submit" class="btn btn-primary mb-2">Descargar</button>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
-                                <div class="col-lg-4 offset-md-2">
+                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Plan de Pago</strong></label>
-                                <button type="submit" class="btn btn-primary mb-2">Descargar</button>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Constitución de la Empresa</strong></label>
-                                <button type="submit" class="btn btn-primary mb-2">Descargar</button>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
-                                <div class="col-lg-4 offset-md-2">
+                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Carta de Presentación</strong></label>
-                                <button type="submit" class="btn btn-primary mb-2">Descargar</button>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -94,17 +96,15 @@
                                     <div class="col-lg-6">
                                     <label for="validationCustom01" class="form-label"></label>
                                     <div class="row">
-                                   <!-- <div class="col-lg-6 offset-md-2">
-                                    <button type="submit" class="btn btn-lg btn-danger">Cancelar</button>
-                                    </div>-->
+                                   
                                     <div class="form-group col-md-4">
                                     
                                     <div class="col-auto my-1">
                                          <label class="mr-sm-2" for="inlineFormCustomSelect">Estado</label>
-                                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                           <option selected>Aceptar/Rechazar</option>
-                                           <option value="1" v-bind="AcpeRe(true)">Aceptar</option>
-                                           <option value="2" v-bind="AcpeRe(false)">Rechazar</option>
+                                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect"  @change="AcpeRe($event)" required>
+                                           <option disabled selected>Aceptar/Rechazar</option>
+                                           <option value=1 >Aceptar</option>
+                                           <option value=0 >Rechazar</option>
                                          </select>
                                        </div>
                                     </div>
@@ -155,7 +155,7 @@ export default {
         async mostrarEmp(){
             await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.laempresa).then(response=>{
                 console.log(response.data)
-                this.laempresa.Nombre_Largo = response.data.Nombre_Largo
+                 this.laempresa.Nombre_Largo = response.data.Nombre_Largo
                 this.laempresa.Correo_electronico = response.data.Correo_electronico
                 this.laempresa.Plan_Pago = response.data.Plan_Pago 
                 this.laempresa.Constitucion = response.data.Constitucion
@@ -166,6 +166,8 @@ export default {
                 this.laempresa.Socio_3 = response.data.Socio_3
                 this.laempresa.Socio_4 = response.data.Socio_4
                 this.laempresa.Socio_5 = response.data.Socio_5
+                //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
+                
                 console.log(this.laempresa.Nombre_Largo)
                 
             }).catch(error=>{
@@ -173,8 +175,8 @@ export default {
             })
             
         },
-        async AcpeRe(e){
-            if(e){
+         AcpeRe(e){
+            if(e.target.value==1){
                 this.laempresa.Estado_Aprob = 1;
                 
             }
@@ -185,12 +187,13 @@ export default {
         },
         
         async actualizar(){
-            await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.empresa).then(response=>{
+           /* await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.laempresa).then(response=>{
                 console.log(response.data)
-                this.$router.push({name:"laempresa"})
+                this.$router.push({name:"SegPostulante"})
             }).catch(error=>{
                 console.log(error)
-            })
+            })*/
+            this.$router.push({name:"SegPostulante"})
         }
     }
 }

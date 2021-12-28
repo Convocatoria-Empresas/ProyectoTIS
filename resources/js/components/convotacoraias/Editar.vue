@@ -25,9 +25,9 @@
                                 <label for="content">Descripción</label>
                                 <input class="form-control" id="Descripcion" type="text" v-model="convocatoria.Descripcion">
                                 <label for="content">Información sobre A</label>
-                                <input class="form-control" id="Informacion_1" type="text" v-model="convocatoria.Informacion_A">
+                                <input class="form-control" id="Informacion_1" type="file" @change="processFileInf1">
                                 <label for="content">Información sobre B</label>
-                                <input class="form-control" id="Informacion_2" type="text" v-model="convocatoria.Informacion_B">
+                                <input class="form-control" id="Informacion_2" type="file" @change="processFileInf2">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -77,7 +77,28 @@ export default {
             }).catch(error=>{
                 console.log(error)
             })
-        }
+        },
+        processFileInf1(event){
+            const self= this;
+             var In1file= event.target.files[0];
+             const reader = new FileReader();
+             reader.onload = function(evt) {
+            self.convocatoria.Informacion_A=reader.result;
+            };
+            reader.readAsDataURL(In1file);
+         
+        },
+        
+         processFileInf2(event){
+             const self= this;
+            var In2file= event.target.files[0];
+            const reader = new FileReader();
+             reader.onload = function(evt) {  
+            self.convocatoria.Informacion_B=reader.result;
+            };
+            reader.readAsDataURL(In2file);
+           
+        },
     }
 }
 </script>
