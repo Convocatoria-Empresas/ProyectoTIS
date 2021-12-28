@@ -52,7 +52,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "tablasSeg",
   data: function data() {
@@ -73,7 +72,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get('/api/convoEmpre').then(function (response) {
+                return _this.axios.get('/api/empresa').then(function (response) {
                   console.log(response.data);
                   _this.tablasSeg = response.data;
                 })["catch"](function (error) {
@@ -192,15 +191,15 @@ var render = function () {
             "tbody",
             _vm._l(_vm.tablasSeg, function (tablaSeg) {
               return _c("tr", { key: tablaSeg.id }, [
-                _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+                _c("th", { attrs: { scope: "row" } }, [
+                  _vm._v(_vm._s(tablaSeg.id)),
+                ]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.id) + "k}")]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.NIT))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.gestion) + "k}")]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.Nombre_Largo))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.nombreEmpresa) + "k}")]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.representanteLegal) + "k}")]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.Socio_1))]),
                 _vm._v(" "),
                 _c(
                   "td",
@@ -209,7 +208,12 @@ var render = function () {
                       "router-link",
                       {
                         staticClass: "btn btn-info",
-                        attrs: { to: "/RevSegPost" },
+                        attrs: {
+                          to: {
+                            name: "RevSegPost",
+                            params: { id: tablaSeg.id },
+                          },
+                        },
                       },
                       [_c("i", { staticClass: "fas fa-eye" })]
                     ),

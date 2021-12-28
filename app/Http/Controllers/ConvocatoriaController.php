@@ -26,6 +26,16 @@ class ConvocatoriaController extends Controller
      */
     public function store(Request $request)
     {
+        /*$input=$request->except('_token');
+        if($request->hasfile('file')){
+            
+            $archivo=$request->file('file');
+            $input ['Informacion_A']=time().'_'.$archivo->getClientOriginalName();
+            
+            $archivo->move(public_path('Archivos'),$input['Informacion_A']);
+        }*/
+
+
         $convocatoria= new Convocatoria();
         $convocatoria->Titulo = $request->Titulo;
         $convocatoria->Codigo_Conv = $request->Codigo_Conv;
@@ -64,14 +74,7 @@ class ConvocatoriaController extends Controller
     public function update(Request $request, $convocatorium)
     {
         $convocatoria= Convocatoria::find($convocatorium);
-      /*  $convocatoria->Titulo = $request->Titulo;
-        $convocatoria->Codigo_Conv = $request->Codigo_Conv;
-        $convocatoria->Descripcion = $request->Descripcion;
-        $convocatoria->Asesor = $request->Asesor;
-        $convocatoria->Fecha = $request->Fecha;
-        $convocatoria->Informacion_A = $request->Informacion_A;
-        $convocatoria->Informacion_B = $request->Informacion_B;
-        $convocatoria->Gestion = $request->Gestion;*/
+      
         
         
         $nuevaConv=[];
@@ -103,4 +106,4 @@ class ConvocatoriaController extends Controller
       $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
         return response()->json($RegisConv);
     }
-}    
+}

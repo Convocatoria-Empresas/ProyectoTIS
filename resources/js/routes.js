@@ -74,7 +74,7 @@ export const routes = [
     },
     {
         name: 'RevSegPost',
-        path: '/RevSegPost',
+        path: '/RevSegPost/:id',
         component: RevSegPost
     },
     {

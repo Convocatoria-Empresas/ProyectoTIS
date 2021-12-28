@@ -27,7 +27,7 @@
                             <td>{{ blog.Descripcion }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"editarBlog",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
+                                <router-link :to='{name:"editarConvo",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
                                 <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
