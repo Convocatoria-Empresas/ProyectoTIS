@@ -120,9 +120,9 @@
                         </div>
                     </form>-->
                     <form class="form-group" @submit.prevent="submit">
-        <label for="title">El registro</label>
+        
         <hr>
-        <label for="content">Nombre_Larg</label>
+        <label for="content">Nombre Largo</label>
         <input class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
         <label for="content">Nombre corto</label>
         <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
@@ -134,15 +134,15 @@
         <input class="form-control" id="NIT" type="text" v-model="empresa.NIT">
 
 
-        <label for="content">Doc1</label>
-        <input  id="Solvencia" type="text" v-model="empresa.Solvencia" >
+        <label for="content">Solvencia</label>
+        <input class="form-control"  id="Solvencia" type="file" @change="processFileSolv" >
         
-        <label for="content">Doc2</label>
-        <input  id="Constitucion" type="text" v-model="empresa.Constitucion" >
-        <label for="content">Doc3</label>  
-        <input id="Plan_Pago" type="text" v-model="empresa.Plan_Pago">
-        <label for="content">Doc4</label>
-        <input id="Carta" type="text" v-model="empresa.Carta">
+        <label for="content">Constitución</label>
+        <input class="form-control"  id="Constitucion" type="file" @change="processFileConst" >
+        <label for="content">Plan de Pago</label>  
+        <input class="form-control" id="Plan_Pago" type="file" @change="processFilePlan">
+        <label for="content">Carta</label>
+        <input class="form-control" id="Carta" type="file" @change="processFileCarta">
 
 
         <label for="content">Socio 1</label>
@@ -156,7 +156,7 @@
         <label for="content">Socio 5</label>
         <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
         <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
-        {{ empresa }}
+        
         
 
     </form>
@@ -223,25 +223,45 @@ export default {
             
         },
         processFileSolv(event){
-             var Solvfile= event.target.files[0];
-            this.empresa.Solvencia = Solvfile;
-            console.log(event.target.files[0]);
+             const self= this;
+             var Solv= event.target.files[0];
+             const reader = new FileReader();
+             reader.onload = function(evt) {
+            
+            self.empresa.Solvencia=reader.result;
+            };
+            reader.readAsDataURL(Solv);
         },
         
          processFileConst(event){
-            var Constfile= event.target.files[0];
-            this.empresa.Constitucion = Constfile;
-            console.log(event.target.files[0]);
+            const self= this;
+             var Consti= event.target.files[0];
+             const reader = new FileReader();
+             reader.onload = function(evt) {
+            
+            self.empresa.Constitucion=reader.result;
+            };
+            reader.readAsDataURL(Consti);
         },
          processFilePlan(event){
-            var Planfile=event.target.files[0];
-            this.empresa.Plan_Pago = Planfile;
-            console.log(event.target.files[0]);
+            const self= this;
+             var Plande= event.target.files[0];
+             const reader = new FileReader();
+             reader.onload = function(evt) {
+            
+            self.empresa.Plan_Pago=reader.result;
+            };
+            reader.readAsDataURL(Plande);
         },
          processFileCarta(event){
-            var Cartafile=event.target.files[0];
-            this.empresa.Carta = Cartafile;
-            console.log(event.target.files[0]);
+            const self= this;
+             var Car= event.target.files[0];
+             const reader = new FileReader();
+             reader.onload = function(evt) {
+            
+            self.empresa.Carta=reader.result;
+            };
+            reader.readAsDataURL(Car);
         }
     },
 }

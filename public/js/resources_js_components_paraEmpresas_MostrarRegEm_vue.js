@@ -255,24 +255,48 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     processFileSolv: function processFileSolv(event) {
-      var Solvfile = event.target.files[0];
-      this.empresa.Solvencia = Solvfile;
-      console.log(event.target.files[0]);
+      var self = this;
+      var Solv = event.target.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (evt) {
+        self.empresa.Solvencia = reader.result;
+      };
+
+      reader.readAsDataURL(Solv);
     },
     processFileConst: function processFileConst(event) {
-      var Constfile = event.target.files[0];
-      this.empresa.Constitucion = Constfile;
-      console.log(event.target.files[0]);
+      var self = this;
+      var Consti = event.target.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (evt) {
+        self.empresa.Constitucion = reader.result;
+      };
+
+      reader.readAsDataURL(Consti);
     },
     processFilePlan: function processFilePlan(event) {
-      var Planfile = event.target.files[0];
-      this.empresa.Plan_Pago = Planfile;
-      console.log(event.target.files[0]);
+      var self = this;
+      var Plande = event.target.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (evt) {
+        self.empresa.Plan_Pago = reader.result;
+      };
+
+      reader.readAsDataURL(Plande);
     },
     processFileCarta: function processFileCarta(event) {
-      var Cartafile = event.target.files[0];
-      this.empresa.Carta = Cartafile;
-      console.log(event.target.files[0]);
+      var self = this;
+      var Car = event.target.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (evt) {
+        self.empresa.Carta = reader.result;
+      };
+
+      reader.readAsDataURL(Car);
     }
   }
 });
@@ -383,12 +407,10 @@ var render = function () {
               },
             },
             [
-              _c("label", { attrs: { for: "title" } }, [_vm._v("El registro")]),
-              _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
               _c("label", { attrs: { for: "content" } }, [
-                _vm._v("Nombre_Larg"),
+                _vm._v("Nombre Largo"),
               ]),
               _vm._v(" "),
               _c("input", {
@@ -515,96 +537,40 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Doc1")]),
+              _c("label", { attrs: { for: "content" } }, [_vm._v("Solvencia")]),
               _vm._v(" "),
               _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Solvencia,
-                    expression: "empresa.Solvencia",
-                  },
-                ],
-                attrs: { id: "Solvencia", type: "text" },
-                domProps: { value: _vm.empresa.Solvencia },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Solvencia", $event.target.value)
-                  },
-                },
+                staticClass: "form-control",
+                attrs: { id: "Solvencia", type: "file" },
+                on: { change: _vm.processFileSolv },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Doc2")]),
+              _c("label", { attrs: { for: "content" } }, [
+                _vm._v("Constitución"),
+              ]),
               _vm._v(" "),
               _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Constitucion,
-                    expression: "empresa.Constitucion",
-                  },
-                ],
-                attrs: { id: "Constitucion", type: "text" },
-                domProps: { value: _vm.empresa.Constitucion },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Constitucion", $event.target.value)
-                  },
-                },
+                staticClass: "form-control",
+                attrs: { id: "Constitucion", type: "file" },
+                on: { change: _vm.processFileConst },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Doc3")]),
+              _c("label", { attrs: { for: "content" } }, [
+                _vm._v("Plan de Pago"),
+              ]),
               _vm._v(" "),
               _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Plan_Pago,
-                    expression: "empresa.Plan_Pago",
-                  },
-                ],
-                attrs: { id: "Plan_Pago", type: "text" },
-                domProps: { value: _vm.empresa.Plan_Pago },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Plan_Pago", $event.target.value)
-                  },
-                },
+                staticClass: "form-control",
+                attrs: { id: "Plan_Pago", type: "file" },
+                on: { change: _vm.processFilePlan },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Doc4")]),
+              _c("label", { attrs: { for: "content" } }, [_vm._v("Carta")]),
               _vm._v(" "),
               _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Carta,
-                    expression: "empresa.Carta",
-                  },
-                ],
-                attrs: { id: "Carta", type: "text" },
-                domProps: { value: _vm.empresa.Carta },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Carta", $event.target.value)
-                  },
-                },
+                staticClass: "form-control",
+                attrs: { id: "Carta", type: "file" },
+                on: { change: _vm.processFileCarta },
               }),
               _vm._v(" "),
               _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 1")]),
@@ -735,7 +701,6 @@ var render = function () {
                 },
                 [_vm._v("Ingresar")]
               ),
-              _vm._v("\n    " + _vm._s(_vm.empresa) + "\n    \n\n"),
             ]
           ),
         ]),
