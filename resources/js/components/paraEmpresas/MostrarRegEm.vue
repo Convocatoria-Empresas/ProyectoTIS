@@ -169,11 +169,7 @@
 <script>
 export default {
     
-    /*async mounted(){
-        const response = await axios.get("/create");
-        const data= response.data;
-        console.log(data);
-    },*/
+    
     
     data() {
         return{

@@ -188,11 +188,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  /*async mounted(){
-      const response = await axios.get("/create");
-      const data= response.data;
-      console.log(data);
-  },*/
   data: function data() {
     return {
       empresa: {

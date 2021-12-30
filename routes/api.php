@@ -13,5 +13,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //de esta forma nos genera todas las rutas
 Route::resource('convocatoria',App\Http\Controllers\ConvocatoriaController::class);
 Route::resource('empresa',App\Http\Controllers\EmpresaController::class);
+Route::resource('user',App\Http\Controllers\UserController::class);
 
 //Route::resource('convocatorias', ConvocatoriaEmpresaController::class);
