@@ -47,11 +47,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -209,24 +204,6 @@ var render = function () {
                 _c("td", [_vm._v(_vm._s(blog.nomb_empre))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.asesor))]),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-info",
-                        attrs: { to: "/RevSegEmpre" },
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-eye" }),
-                        _vm._v(" Revisar"),
-                      ]
-                    ),
-                  ],
-                  1
-                ),
               ])
             }),
             0
@@ -250,8 +227,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("Nombre de la Empresa")]),
         _vm._v(" "),
         _c("th", [_vm._v("Asesor")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Revisar Información")]),
       ]),
     ])
   },
