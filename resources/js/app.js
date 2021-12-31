@@ -32,6 +32,8 @@ window.Vue = vue;
 
 //Componente importante
 import App from './components/App.vue';
+import AppEst from './components/Estudiante/AppEst.vue';
+import AppAse from './components/ASESOR/AppAse.vue';
 
 //importamos Axios
 import VueAxios from 'vue-axios';
@@ -40,6 +42,8 @@ import axios from 'axios';
 //Importamos y configuramos el Vue-router
 import VueRouter from 'vue-router';
 import {routes} from './routes';
+import {routeEst} from './routeEst';
+import {routeAse} from './routeAse';
 
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
@@ -51,9 +55,30 @@ const router = new VueRouter({
     routes: routes
 });
 
+const routerest = new VueRouter({
+    mode: 'history',
+    routes: routeEst
+});
+
+const routerase = new VueRouter({
+    mode: 'history',
+    routes: routeAse
+});
+
+
 
 const app = new Vue({
     el: '#app',
     router: router,
     render: h => h(App),
+});
+const appest = new Vue({
+    el: '#app',
+    routerest: routerest,
+    render: h => h(AppEst),
+});
+const appase = new Vue({
+    el: '#app',
+    routerase: routerase,
+    render: h => h(AppAse),
 });
