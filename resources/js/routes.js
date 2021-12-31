@@ -1,5 +1,7 @@
 const Home = () => import('./components/Home.vue');
+
 const Empresas = () => import('./components/Empresas.vue');
+
 const Seguimiento = () => import('./components/Seguimiento.vue');
 
 //importamos los componentes para el convocatorias

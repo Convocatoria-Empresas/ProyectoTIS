@@ -74,19 +74,20 @@
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
-                                <button  class="btn btn-primary mb-2">Descargar</button>
+                                
+                              <a download=Solvencia :href="this.laempresa.Solvencia" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Plan de Pago</strong></label>
-                                <button  class="btn btn-primary mb-2">Descargar</button>
+                                <a download=Plan_de_Pago :href="this.laempresa.Plan_Pago" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Constitución de la Empresa</strong></label>
-                                <button  class="btn btn-primary mb-2">Descargar</button>
+                                <a download=Constitución :href="this.laempresa.Constitucion" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Carta de Presentación</strong></label>
-                                <button  class="btn btn-primary mb-2">Descargar</button>
+                                <a download=Carta :href="this.laempresa.Carta" title='Download pdf document' >Descargar</a>
                                 </div>
                             </div>
                             <div class="row">
@@ -194,7 +195,18 @@ export default {
                 console.log(error)
             })*/
             this.$router.push({name:"SegPostulante"})
-        }
+        },
+
+        /*downloadPDF(pdf) {
+                const linkSource = `data:application/pdf;base64,${pdf}`;
+                const downloadLink = document.createElement("a");
+                const fileName = "abc.pdf";
+                downloadLink.href = linkSource;
+                downloadLink.download = fileName;
+                downloadLink.click();
+        }*/
+
+
     }
 }
 </script>
