@@ -14,10 +14,19 @@ const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
 //importamos para el seguimiento y revision para postulantes
 const SegPostulante = () => import('./components/Seguimiento/SegPostulantes.vue');
 const RevSegPost = () => import('./components/Seguimiento/RevSegPost.vue');
-
 //agregamos el login y el registro
 const Login =() => import('./components/Login.vue');
 const Registrarse = () => import('./components/Registrarse.vue');
+
+
+//Todo para los ESTUDIANTES
+const HomeEst = () => import ('./components/Estudiante/HomeEst.vue');
+const EmpresaEst = () => import('./components/Estudiante/EmpresaEst.vue');
+const ConvoEst = () => import ('./components/Estudiante/ConvoEst.vue');
+const SegEmpEst = () => import ('./components/Estudiante/EmpEstudiante/SegEmpEst.vue');
+const SegPostEst = () => import ('./components/Estudiante/PostEstudiante/SegPostEst.vue');
+
+
 
 export const routes = [
     {
@@ -30,7 +39,7 @@ export const routes = [
         path: '/convocatoria',
         component: MostrarConv,
     },
-    
+
     {
         name: 'crearBlog',
         path: '/crear',
@@ -86,5 +95,30 @@ export const routes = [
         name:'Registrarse',
         path:'/Registrarse',
         component: Registrarse
+    },
+    {
+        name:'AppEst',
+        path:'/HomeEst',
+        component: HomeEst
+    },
+    {
+        name:'EmpresaEst',
+        path:'/EmpresaEst',
+        component: EmpresaEst
+    },
+    {
+        name:'ConvoEst',
+        path:'/ConvoEst',
+        component: ConvoEst
+    },
+    {
+        name:'SegEmpEst',
+        path:'/SegEmpEst',
+        component: SegEmpEst
+    },
+    {
+        name:'SegPostEst',
+        path:'/SegPostEst',
+        component: SegPostEst
     }
 ];
