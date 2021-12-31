@@ -97,18 +97,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var contuar = this.ellogin.contra;
       var self = this;
       this.ellogin.usuarios.forEach(function (usuario) {
-        console.log("VAS bIEN VAS BIEN"); //console.log(usuario.Correo_usu);
-
+        //console.log("VAS bIEN VAS BIEN");
         if (usuario.Correo_usu == corr) {
           cont = 1;
-          console.log("Lo de abajo debe ser el correo");
-          console.log(usuario.Correo_usu);
-          console.log(usuario.Contrasena_usu);
-          console.log(usuario.Carnet);
-          console.log(contuar);
+          /* console.log("Lo de abajo debe ser el correo");
+           console.log(usuario.Correo_usu);
+           console.log(usuario.Contrasena_usu);
+           console.log(usuario.Carnet);
+           console.log(contuar);*/
 
           if (usuario.Contrasena_usu == contuar) {
             console.log("Bienvenido");
+
+            switch (usuario.Rol_usu) {
+              case "Estudiante":
+                break;
+
+              case "Asesor":
+                break;
+
+              case "Administrador":
+                break;
+            }
+
             self.$router.push({
               name: "home"
             });
