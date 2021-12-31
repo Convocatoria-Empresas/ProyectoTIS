@@ -4,10 +4,6 @@
             <h1>Convocatorias de empresas</h1>
             <hr>
         </div>
-        <div class="mb-2 col-12">
-
-            <router-link :to='{name:"crearBlog"}' class="btn btn-success"><i class="fas fa-folder-plus"></i> Nueva Convocatoria</router-link>
-        </div>
         <div class="col-12">
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
@@ -27,8 +23,7 @@
                             <td>{{ blog.Descripcion }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"editarConvo",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
-                                <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                <router-link :to='{name:"PostularEst",params:{id:blog.id}}' class="btn btn-warning"><i class="fas fa-user-edit"></i> Postular</router-link>
                             </td>
                         </tr>
                     </tbody>

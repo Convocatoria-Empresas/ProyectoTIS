@@ -52,6 +52,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "tablasSeg",
   data: function data() {
@@ -201,6 +203,8 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(tablaSeg.Socio_1))]),
                 _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(tablaSeg.Estado))]),
+                _vm._v(" "),
                 _c(
                   "td",
                   [
@@ -243,6 +247,8 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Nombre de la Empresa")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Representante Legal")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Estado")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Revisar")]),
       ]),

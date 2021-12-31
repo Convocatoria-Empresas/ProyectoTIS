@@ -1,5 +1,7 @@
 const Home = () => import('./components/Home.vue');
+
 const Empresas = () => import('./components/Empresas.vue');
+
 const Seguimiento = () => import('./components/Seguimiento.vue');
 
 //importamos los componentes para el convocatorias
@@ -25,7 +27,8 @@ const EmpresaEst = () => import('./components/Estudiante/EmpresaEst.vue');
 const ConvoEst = () => import ('./components/Estudiante/ConvoEst.vue');
 const SegEmpEst = () => import ('./components/Estudiante/EmpEstudiante/SegEmpEst.vue');
 const SegPostEst = () => import ('./components/Estudiante/PostEstudiante/SegPostEst.vue');
-
+const PostularEst = () => import ('./components/Estudiante/PostEstudiante/PostularEst.vue');
+const RevPostEst =() => import('./components/Estudiante/PostEstudiante/RevPostEst.vue');
 
 
 export const routes = [
@@ -39,7 +42,6 @@ export const routes = [
         path: '/convocatoria',
         component: MostrarConv,
     },
-
     {
         name: 'crearBlog',
         path: '/crear',
@@ -59,8 +61,7 @@ export const routes = [
         name: 'empresas',
         path: '/empresas',
         component: Empresas
-    }
-    ,
+    },
     {
         name: 'regEmpresa',
         path: '/RegEmpresa',
@@ -120,5 +121,15 @@ export const routes = [
         name:'SegPostEst',
         path:'/SegPostEst',
         component: SegPostEst
+    },
+    {
+        name:'PostularEst',
+        path:'/PostularEst',
+        component: PostularEst
+    },
+    {
+        name:'RevPostEst',
+        path:'/RevPosEst',
+        component: RevPostEst
     }
 ];

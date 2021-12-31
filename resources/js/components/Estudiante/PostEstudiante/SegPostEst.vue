@@ -11,7 +11,7 @@
                     <th scope="col">Gestión</th>
                     <th scope="col">Nombre de la Empresa</th>
                     <th scope="col">Representante Legal</th>
-                    <th scope="col">Revisar</th>
+                    <th scope="col">Estado</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,10 +20,7 @@
                         <td>{{ tablaSeg.NIT}}</td>
                         <td>{{ tablaSeg.Nombre_Largo}}</td>
                         <td>{{ tablaSeg.Socio_1}}</td>
-                        <td>
-                                <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"RevSegPost",params: {id:tablaSeg.id}}' class="btn btn-info"><i class="fas fa-eye"></i></router-link>
-                        </td>
+                        <td>{{ tablaSeg.Estado}}</td>
                     </tr>
                 </tbody>
                 </table>

@@ -11,7 +11,6 @@
                             <th>Gestión</th>
                             <th>Nombre de la Empresa</th>
                             <th>Asesor</th>
-                            <th>Revisar Información</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,10 +19,6 @@
                             <td>{{ blog.Gestion }}</td>
                             <td>{{ blog.nomb_empre }}</td>
                             <td>{{ blog.asesor }}</td>
-                            <td>
-                                <!-- llamamos al componente para Editar     -->
-                                <router-link to='/RevSegEmpre' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>
-                            </td>
                         </tr>
                     </tbody>
                 </table>

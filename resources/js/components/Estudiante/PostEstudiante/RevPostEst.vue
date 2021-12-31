@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <h1>Revision de los Postulantes</h1>
+        <h1>Mis datos de Postulante</h1>
         <hr>
         <div class="col-12">
             <div class="card">
@@ -45,7 +45,7 @@
                                  </div>
                                 </div>
 
-                                
+
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 4</strong></label>
@@ -54,7 +54,7 @@
                                  </div>
                                 </div>
 
-                                
+
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socio 5</strong></label>
@@ -74,20 +74,19 @@
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
-                                
-                              <a download=Solvencia :href="this.laempresa.Solvencia" title='Download pdf document' >Descargar</a>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Plan de Pago</strong></label>
-                                <a download=Plan_de_Pago :href="this.laempresa.Plan_Pago" title='Download pdf document' >Descargar</a>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Constitución de la Empresa</strong></label>
-                                <a download=Constitución :href="this.laempresa.Constitucion" title='Download pdf document' >Descargar</a>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Carta de Presentación</strong></label>
-                                <a download=Carta :href="this.laempresa.Carta" title='Download pdf document' >Descargar</a>
+                                <button  class="btn btn-primary mb-2">Descargar</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -97,9 +96,9 @@
                                     <div class="col-lg-6">
                                     <label for="validationCustom01" class="form-label"></label>
                                     <div class="row">
-                                   
+
                                     <div class="form-group col-md-4">
-                                    
+
                                     <div class="col-auto my-1">
                                          <label class="mr-sm-2" for="inlineFormCustomSelect">Estado</label>
                                          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect"  @change="AcpeRe($event)" required>
@@ -121,8 +120,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 </template>
 
 <script>
@@ -145,7 +144,7 @@ export default {
              Socio_4: "",
              Socio_5: "",
             }
-            
+
         }
     },
     mounted(){
@@ -158,7 +157,7 @@ export default {
                 console.log(response.data)
                  this.laempresa.Nombre_Largo = response.data.Nombre_Largo
                 this.laempresa.Correo_electronico = response.data.Correo_electronico
-                this.laempresa.Plan_Pago = response.data.Plan_Pago 
+                this.laempresa.Plan_Pago = response.data.Plan_Pago
                 this.laempresa.Constitucion = response.data.Constitucion
                 this.laempresa.Carta = response.data.Carta
                 this.laempresa.Solvencia = response.data.Solvencia
@@ -168,25 +167,25 @@ export default {
                 this.laempresa.Socio_4 = response.data.Socio_4
                 this.laempresa.Socio_5 = response.data.Socio_5
                 //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
-                
+
                 console.log(this.laempresa.Nombre_Largo)
-                
+
             }).catch(error=>{
                 console.log(error)
             })
-            
+
         },
          AcpeRe(e){
             if(e.target.value==1){
                 this.laempresa.Estado_Aprob = 1;
-                
+
             }
             else{
                 this.laempresa.Estado_Aprob = 0;
             }
             console.log(this.laempresa.Estado_Aprob);
         },
-        
+
         async actualizar(){
            /* await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.laempresa).then(response=>{
                 console.log(response.data)
@@ -195,18 +194,7 @@ export default {
                 console.log(error)
             })*/
             this.$router.push({name:"SegPostulante"})
-        },
-
-        /*downloadPDF(pdf) {
-                const linkSource = `data:application/pdf;base64,${pdf}`;
-                const downloadLink = document.createElement("a");
-                const fileName = "abc.pdf";
-                downloadLink.href = linkSource;
-                downloadLink.download = fileName;
-                downloadLink.click();
-        }*/
-
-
+        }
     }
 }
 </script>

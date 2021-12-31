@@ -31,25 +31,43 @@
                             <router-link exact-active-class="active" to="/convocatoria" class="nav-link"><i class="fas fa-bullhorn"></i> Convocatorias</router-link>
                         </span>
                     </li>
-    
-                    <li class="nav-item">
-                        <div class="dropdown h1">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-search"></i>
-                            Seguimiento
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a href=""></a>
-                            <router-link class="dropdown-item active" type="button" exact-active-class="" to="/SegEmpresa"><i class="fas fa-user-tie"></i> Empresas</router-link>
-                            <router-link class="dropdown-item active" exact-active-class="" to="/SegPostulante"><i class="fas fa-users"></i> Postulantes</router-link>
 
+                    <li class="nav-item">
+                        <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header dark" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left btn-dark " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="far fa-folder-open"></i>
+                                Seguimiento
+                                </button>
+                            </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <router-link class="dropdown-item active btn-warning btn" type="button" exact-active-class="" to="/SegEmpresa"><i class="fas fa-user-tie"></i> Empresas</router-link>
+                            </div>
+                            <div class="card-body">
+                                <router-link class="dropdown-item active btn-warning btn" exact-active-class="" to="/SegPostulante"><i class="fas fa-users"></i> Postulantes</router-link>
+                            </div>
+                            </div>
                         </div>
                         </div>
                     </li>
                 </ul>
 
+                <div class="dropdown text-end">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">1</a>
+                        <a class="dropdown-item" href="#">2</a>
+                        <a class="dropdown-item" href="#">3</a>
+                        <a class="dropdown-item" href="#">4</a>
+                    </div>
+                </div>
+
                 <div class="text-end">
-                    <button type="button" class="btn btn-warning"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span>
-                    </button>
+
                     <router-link :to='{name:"Login"}' class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                     </router-link>
                     <router-link :to='{name:"Registrarse"}' class="btn btn-primary">

@@ -74,11 +74,11 @@ const app = new Vue({
 });
 const appest = new Vue({
     el: '#app',
-    routerest: routerest,
+    router: routerest,
     render: h => h(AppEst),
 });
 const appase = new Vue({
     el: '#app',
-    routerase: routerase,
+    router: routerase,
     render: h => h(AppAse),
 });

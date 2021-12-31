@@ -48,7 +48,7 @@ class ConvocatoriaController extends Controller
         
         $convocatoria->save();
 
-        return $convocatoria;
+        //return $convocatoria;
     }
 
     /**

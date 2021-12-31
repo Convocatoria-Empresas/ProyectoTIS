@@ -1,10 +1,10 @@
 "use strict";
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Seguimiento_RevSegPost_vue"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Estudiante_PostEstudiante_RevPostEst_vue"],{
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -19,7 +19,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -241,33 +240,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     }
-    /*downloadPDF(pdf) {
-            const linkSource = `data:application/pdf;base64,${pdf}`;
-            const downloadLink = document.createElement("a");
-            const fileName = "abc.pdf";
-            downloadLink.href = linkSource;
-            downloadLink.download = fileName;
-            downloadLink.click();
-    }*/
-
   }
 });
 
 /***/ }),
 
-/***/ "./resources/js/components/Seguimiento/RevSegPost.vue":
-/*!************************************************************!*\
-  !*** ./resources/js/components/Seguimiento/RevSegPost.vue ***!
-  \************************************************************/
+/***/ "./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue ***!
+  \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RevSegPost.vue?vue&type=template&id=00b1bb23& */ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23&");
-/* harmony import */ var _RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RevSegPost.vue?vue&type=script&lang=js& */ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _RevPostEst_vue_vue_type_template_id_35b82ca4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RevPostEst.vue?vue&type=template&id=35b82ca4& */ "./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=template&id=35b82ca4&");
+/* harmony import */ var _RevPostEst_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RevPostEst.vue?vue&type=script&lang=js& */ "./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -276,9 +266,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__.render,
-  _RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _RevPostEst_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _RevPostEst_vue_vue_type_template_id_35b82ca4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _RevPostEst_vue_vue_type_template_id_35b82ca4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -288,46 +278,46 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/Seguimiento/RevSegPost.vue"
+component.options.__file = "resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************/
+/***/ "./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RevSegPost.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RevPostEst_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RevPostEst.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RevPostEst_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23&":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23& ***!
-  \*******************************************************************************************/
+/***/ "./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=template&id=35b82ca4&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=template&id=35b82ca4& ***!
+  \*********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RevPostEst_vue_vue_type_template_id_35b82ca4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RevPostEst_vue_vue_type_template_id_35b82ca4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RevSegPost_vue_vue_type_template_id_00b1bb23___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RevSegPost.vue?vue&type=template&id=00b1bb23& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RevPostEst_vue_vue_type_template_id_35b82ca4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RevPostEst.vue?vue&type=template&id=35b82ca4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=template&id=35b82ca4&");
 
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23&":
-/*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Seguimiento/RevSegPost.vue?vue&type=template&id=00b1bb23& ***!
-  \**********************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=template&id=35b82ca4&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Estudiante/PostEstudiante/RevPostEst.vue?vue&type=template&id=35b82ca4& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -340,7 +330,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("h1", [_vm._v("Revision de los Postulantes")]),
+    _c("h1", [_vm._v("Mis datos de Postulante")]),
     _vm._v(" "),
     _c("hr"),
     _vm._v(" "),
@@ -475,74 +465,10 @@ var render = function () {
                   ]
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-                    _vm._m(8),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          download: "Solvencia",
-                          href: this.laempresa.Solvencia,
-                          title: "Download pdf document",
-                        },
-                      },
-                      [_vm._v("Descargar")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-                    _vm._m(9),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          download: "Plan_de_Pago",
-                          href: this.laempresa.Plan_Pago,
-                          title: "Download pdf document",
-                        },
-                      },
-                      [_vm._v("Descargar")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-                    _vm._m(10),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          download: "Constitución",
-                          href: this.laempresa.Constitucion,
-                          title: "Download pdf document",
-                        },
-                      },
-                      [_vm._v("Descargar")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-                    _vm._m(11),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          download: "Carta",
-                          href: this.laempresa.Carta,
-                          title: "Download pdf document",
-                        },
-                      },
-                      [_vm._v("Descargar")]
-                    ),
-                  ]),
-                ]),
+                _vm._m(8),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
-                  _vm._m(12),
+                  _vm._m(9),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-lg-6" }, [
                     _c("label", {
@@ -595,7 +521,7 @@ var render = function () {
                         ]),
                       ]),
                       _vm._v(" "),
-                      _vm._m(13),
+                      _vm._m(10),
                     ]),
                   ]),
                 ]),
@@ -690,41 +616,47 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "form-label", attrs: { for: "formFile" } },
-      [_c("strong", [_vm._v("Solvencia Tecnica")])]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "form-label", attrs: { for: "formFile" } },
-      [_c("strong", [_vm._v("Plan de Pago")])]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "form-label", attrs: { for: "formFile" } },
-      [_c("strong", [_vm._v("Constitución de la Empresa")])]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      { staticClass: "form-label", attrs: { for: "formFile" } },
-      [_c("strong", [_vm._v("Carta de Presentación")])]
-    )
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Solvencia Tecnica")]),
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Plan de Pago")]),
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Constitución de la Empresa")]),
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
+          _c("strong", [_vm._v("Carta de Presentación")]),
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-primary mb-2" }, [
+          _vm._v("Descargar"),
+        ]),
+      ]),
+    ])
   },
   function () {
     var _vm = this

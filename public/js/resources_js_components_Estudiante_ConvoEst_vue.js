@@ -54,11 +54,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -213,25 +208,6 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _vm._m(0),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "mb-2 col-12" },
-      [
-        _c(
-          "router-link",
-          {
-            staticClass: "btn btn-success",
-            attrs: { to: { name: "crearBlog" } },
-          },
-          [
-            _c("i", { staticClass: "fas fa-folder-plus" }),
-            _vm._v(" Nueva Convocatoria"),
-          ]
-        ),
-      ],
-      1
-    ),
-    _vm._v(" "),
     _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "table-responsive" }, [
         _c("table", { staticClass: "table table-hover table-bordered" }, [
@@ -253,26 +229,15 @@ var render = function () {
                     _c(
                       "router-link",
                       {
-                        staticClass: "btn btn-info",
+                        staticClass: "btn btn-warning",
                         attrs: {
-                          to: { name: "editarConvo", params: { id: blog.id } },
+                          to: { name: "PostularEst", params: { id: blog.id } },
                         },
                       },
-                      [_c("i", { staticClass: "fas fa-edit" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn btn-danger",
-                        attrs: { type: "button" },
-                        on: {
-                          click: function ($event) {
-                            return _vm.borrarBlog(blog.id)
-                          },
-                        },
-                      },
-                      [_c("i", { staticClass: "fas fa-trash" })]
+                      [
+                        _c("i", { staticClass: "fas fa-user-edit" }),
+                        _vm._v(" Postular"),
+                      ]
                     ),
                   ],
                   1

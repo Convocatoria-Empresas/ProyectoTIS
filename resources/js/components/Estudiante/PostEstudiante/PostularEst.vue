@@ -1,19 +1,20 @@
 <template>
     <div class="row">
         <div class="text-center col">
-            <h1>REGISTRO DE EMPRESA</h1><h2></h2>
+            <h1>Registro de Postulación</h1>
+            <hr>
         </div>
         <div class="col-12">
             <div class="card">
 
-                <div class="card-header"><h4> <strong>Registrar Empresa</strong></h4></div>
+                <div class="card-header"><h4> <strong>Llenar los datos para el registro a la Postulación</strong></h4></div>
                 <div class="card-body">
                <!--     <form @submit.prevent="submit">
                         <div  class="row">
                             <div  class="row needs-validation" novalidate>
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo" v-model="empresa.Nombre_Largo" required pattern="[a-zA-Z- -\.]+"  
+                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo" v-model="empresa.Nombre_Largo" required pattern="[a-zA-Z- -\.]+"
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
@@ -80,7 +81,7 @@
                                 oninvalid="setCustomValidity('Revise el codigo SIS  ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
@@ -120,45 +121,43 @@
                         </div>
                     </form>-->
                     <form class="form-group" @submit.prevent="submit">
-        
+
+        <label for="content"><i class="fas fa-signature"></i> Nombre Largo</label>
+        <input class="form-control" placeholder="Nombre completo con la cual estan fundando la empresa" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
+        <label for="content"><i class="fas fa-file-signature"></i> Nombre corto</label>
+        <input class="form-control" placeholder="Las siglas del nombre de la empresa" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
+        <label for="content"><i class="far fa-envelope"></i> Correo</label>
+        <input class="form-control" placeholder="Correo de la empresa / representante legal" id="Correo_electronico" type="text" v-model="empresa.Correo_electronico">
+        <label for="content"><i class="fas fa-mobile-alt"></i> Telefono</label>
+        <input class="form-control" placeholder="Número de celular del representante legal" id="title" type="text" v-model="empresa.Telefono">
         <hr>
-        <label for="content">Nombre Largo</label>
-        <input class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
-        <label for="content">Nombre corto</label>
-        <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
-        <label for="content">Correo</label>
-        <input class="form-control" id="Correo_electronico" type="text" v-model="empresa.Correo_electronico">
-        <label for="content">Telefono</label>
-        <input class="form-control" id="title" type="text" v-model="empresa.Telefono">
-        <label for="content">NIT</label>
-        <input class="form-control" id="NIT" type="text" v-model="empresa.NIT">
 
+        <label for="content"><i class="fas fa-file-pdf"></i> Solvencia</label>
+        <input class="form-control"  id="Solvencia" type="file" @change="processFileSolv" accept=".pdf" required>
 
-        <label for="content">Solvencia</label>
-        <input class="form-control"  id="Solvencia" type="file" @change="processFileSolv" >
-        
-        <label for="content">Constitución</label>
-        <input class="form-control"  id="Constitucion" type="file" @change="processFileConst" >
-        <label for="content">Plan de Pago</label>  
-        <input class="form-control" id="Plan_Pago" type="file" @change="processFilePlan">
-        <label for="content">Carta</label>
-        <input class="form-control" id="Carta" type="file" @change="processFileCarta">
+        <label for="content"><i class="fas fa-file-pdf"></i> Constitución</label>
+        <input class="form-control"  id="Constitucion" type="file" @change="processFileConst" accept=".pdf" required>
+        <label for="content"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
+        <input class="form-control" id="Plan_Pago" type="file" @change="processFilePlan" accept=".pdf" required>
+        <label for="content"><i class="fas fa-file-pdf"></i> Carta</label>
+        <input class="form-control" id="Carta" type="file" @change="processFileCarta" accept=".pdf" required>
 
-
+        <hr>
+        <h5><i class="fas fa-user-friends"></i> Socios que conforman la empresa (Código SIS)</h5>
+        <h6><p>Requisito: Mínimo deben ser 3 integrantes para conformar una Empresa</p></h6>
         <label for="content">Socio 1</label>
-        <input class="form-control" id="Socio_1" type="text" v-model="empresa.Socio_1">
+        <input class="form-control" placeholder="Código SIS del representante legal" id="Socio_1" type="text" v-model="empresa.Socio_1">
         <label for="content">Socio 2</label>
-        <input class="form-control" id="Socio_2" type="text" v-model="empresa.Socio_2">
+        <input class="form-control" placeholder="Código SIS" id="Socio_2" type="text" v-model="empresa.Socio_2">
         <label for="content">Socio 3</label>
-        <input class="form-control" id="Socio_3" type="text" v-model="empresa.Socio_3">
+        <input class="form-control" placeholder="Código SIS" id="Socio_3" type="text" v-model="empresa.Socio_3">
         <label for="content">Socio 4</label>
-        <input class="form-control" id="Socio_4" type="text" v-model="empresa.Socio_4">
+        <input class="form-control" placeholder="Código SIS" id="Socio_4" type="text" v-model="empresa.Socio_4">
         <label for="content">Socio 5</label>
-        <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
-        <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
-        
-        
+        <input class="form-control" placeholder="Código SIS" id="Socio_5" type="text" v-model="empresa.Socio_5">
 
+        <router-link :to='{name:"ConvoEst"}' type="submit" class="btn btn-warning mt-3"> Volver</router-link>
+        <button type="submit" class="btn btn-primary mt-3">Registrar mi Empresa</button>
     </form>
                 </div>
             </div>
@@ -168,9 +167,9 @@
 
 <script>
 export default {
-    
-    
-    
+
+
+
     data() {
         return{
             empresa:{
@@ -191,21 +190,21 @@ export default {
             Estado_Aprob:"",
             }
         }
-        
+
     },
-    
+
      methods:{
-        
+
         async submit(){
-            console.log("Todo bien aquí");
-           await axios.post('/api/empresa', this.empresa);
-           console.log("El problema es aquí");
+
+           const response = await axios.post('/api/empresa', this.empresa);
+
             this.empresa.Nombre_Largo = "";
             this.empresa.Nombre_Corto = "";
             this.empresa.Correo_electronico = "";
             this.empresa.Telefono = "";
 	        this.empresa.NIT = "";
-            this.empresa.Solvencia = "";
+           this.empresa.Solvencia = "";
             this.empresa.Constitucion = "";
             this.empresa.Plan_Pago = "";
             this.empresa.Carta = "";
@@ -216,30 +215,25 @@ export default {
             this.empresa.Socio_5 = "";
             this.empresa.Estado_Aprob= 0;
             console.log(this.response);
-            
+
         },
         processFileSolv(event){
              const self= this;
              var Solv= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Solvencia=reader.result;
             };
             reader.readAsDataURL(Solv);
-
-
-            console.log("Esto me mostrará el tipo de dato");
-            console.log(typeof reader.result);
-
         },
-        
+
          processFileConst(event){
             const self= this;
              var Consti= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Constitucion=reader.result;
             };
             reader.readAsDataURL(Consti);
@@ -249,7 +243,7 @@ export default {
              var Plande= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Plan_Pago=reader.result;
             };
             reader.readAsDataURL(Plande);
@@ -259,7 +253,7 @@ export default {
              var Car= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Carta=reader.result;
             };
             reader.readAsDataURL(Car);
@@ -267,5 +261,3 @@ export default {
     },
 }
 </script>
-
-
