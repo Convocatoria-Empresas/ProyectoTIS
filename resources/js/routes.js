@@ -26,7 +26,7 @@ const ConvoEst = () => import ('./components/Estudiante/ConvoEst.vue');
 const SegEmpEst = () => import ('./components/Estudiante/EmpEstudiante/SegEmpEst.vue');
 const SegPostEst = () => import ('./components/Estudiante/PostEstudiante/SegPostEst.vue');
 const PostularEst = () => import ('./components/Estudiante/PostEstudiante/PostularEst.vue');
-
+const RevPostEst =() => import('./components/Estudiante/PostEstudiante/RevPostEst.vue');
 
 
 export const routes = [
@@ -124,5 +124,10 @@ export const routes = [
         name:'PostularEst',
         path:'/PostularEst',
         component: PostularEst
+    },
+    {
+        name:'RevPostEst',
+        path:'/RevPosEst',
+        component: RevPostEst
     }
 ];

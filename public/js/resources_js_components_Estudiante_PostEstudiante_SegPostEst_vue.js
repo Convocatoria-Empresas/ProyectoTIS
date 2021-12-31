@@ -49,9 +49,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "tablasSeg",
   data: function data() {
@@ -201,25 +198,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(tablaSeg.Socio_1))]),
                 _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-info",
-                        attrs: {
-                          to: {
-                            name: "RevSegPost",
-                            params: { id: tablaSeg.id },
-                          },
-                        },
-                      },
-                      [_c("i", { staticClass: "fas fa-eye" })]
-                    ),
-                  ],
-                  1
-                ),
+                _c("td", [_vm._v(_vm._s(tablaSeg.Estado))]),
               ])
             }),
             0
@@ -244,7 +223,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Representante Legal")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Revisar")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Estado")]),
       ]),
     ])
   },
