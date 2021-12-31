@@ -13,6 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -214,16 +216,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                console.log("Todo bien aquí");
+                _context.next = 3;
                 return axios.post('/api/empresa', _this.empresa);
 
-              case 2:
-                response = _context.sent;
+              case 3:
+                console.log("El problema es aquí");
                 _this.empresa.Nombre_Largo = "";
                 _this.empresa.Nombre_Corto = "";
                 _this.empresa.Correo_electronico = "";
@@ -241,7 +243,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.empresa.Estado_Aprob = 0;
                 console.log(_this.response);
 
-              case 19:
+              case 20:
               case "end":
                 return _context.stop();
             }
@@ -259,6 +261,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       };
 
       reader.readAsDataURL(Solv);
+      console.log("Esto me mostrará el tipo de dato");
+      console.log(_typeof(reader.result));
     },
     processFileConst: function processFileConst(event) {
       var self = this;

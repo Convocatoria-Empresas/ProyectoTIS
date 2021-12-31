@@ -145,6 +145,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "laempresa",
   data: function data() {
@@ -240,6 +241,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     }
+    /*downloadPDF(pdf) {
+            const linkSource = `data:application/pdf;base64,${pdf}`;
+            const downloadLink = document.createElement("a");
+            const fileName = "abc.pdf";
+            downloadLink.href = linkSource;
+            downloadLink.download = fileName;
+            downloadLink.click();
+    }*/
+
   }
 });
 
@@ -465,10 +475,74 @@ var render = function () {
                   ]
                 ),
                 _vm._v(" "),
-                _vm._m(8),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                    _vm._m(8),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          download: "Solvencia",
+                          href: this.laempresa.Solvencia,
+                          title: "Download pdf document",
+                        },
+                      },
+                      [_vm._v("Descargar")]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          download: "Plan_de_Pago",
+                          href: this.laempresa.Plan_Pago,
+                          title: "Download pdf document",
+                        },
+                      },
+                      [_vm._v("Descargar")]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                    _vm._m(10),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          download: "Constitución",
+                          href: this.laempresa.Constitucion,
+                          title: "Download pdf document",
+                        },
+                      },
+                      [_vm._v("Descargar")]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                    _vm._m(11),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          download: "Carta",
+                          href: this.laempresa.Carta,
+                          title: "Download pdf document",
+                        },
+                      },
+                      [_vm._v("Descargar")]
+                    ),
+                  ]),
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
-                  _vm._m(9),
+                  _vm._m(12),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-lg-6" }, [
                     _c("label", {
@@ -521,7 +595,7 @@ var render = function () {
                         ]),
                       ]),
                       _vm._v(" "),
-                      _vm._m(10),
+                      _vm._m(13),
                     ]),
                   ]),
                 ]),
@@ -616,47 +690,41 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
-          _c("strong", [_vm._v("Solvencia Tecnica")]),
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-primary mb-2" }, [
-          _vm._v("Descargar"),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
-          _c("strong", [_vm._v("Plan de Pago")]),
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-primary mb-2" }, [
-          _vm._v("Descargar"),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
-          _c("strong", [_vm._v("Constitución de la Empresa")]),
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-primary mb-2" }, [
-          _vm._v("Descargar"),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
-        _c("label", { staticClass: "form-label", attrs: { for: "formFile" } }, [
-          _c("strong", [_vm._v("Carta de Presentación")]),
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-primary mb-2" }, [
-          _vm._v("Descargar"),
-        ]),
-      ]),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Solvencia Tecnica")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Plan de Pago")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Constitución de la Empresa")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Carta de Presentación")])]
+    )
   },
   function () {
     var _vm = this

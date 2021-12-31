@@ -197,15 +197,15 @@ export default {
      methods:{
         
         async submit(){
-            
-           const response = await axios.post('/api/empresa', this.empresa);
-           
+            console.log("Todo bien aquí");
+           await axios.post('/api/empresa', this.empresa);
+           console.log("El problema es aquí");
             this.empresa.Nombre_Largo = "";
             this.empresa.Nombre_Corto = "";
             this.empresa.Correo_electronico = "";
             this.empresa.Telefono = "";
 	        this.empresa.NIT = "";
-           this.empresa.Solvencia = "";
+            this.empresa.Solvencia = "";
             this.empresa.Constitucion = "";
             this.empresa.Plan_Pago = "";
             this.empresa.Carta = "";
@@ -227,6 +227,11 @@ export default {
             self.empresa.Solvencia=reader.result;
             };
             reader.readAsDataURL(Solv);
+
+
+            console.log("Esto me mostrará el tipo de dato");
+            console.log(typeof reader.result);
+
         },
         
          processFileConst(event){
