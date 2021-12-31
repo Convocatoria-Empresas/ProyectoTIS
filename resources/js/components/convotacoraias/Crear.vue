@@ -76,7 +76,7 @@ export default {
         
         async submit(){
             
-           const response = await axios.post('/api/convocatoria', this.convocatoria);
+            await axios.post('/api/convocatoria', this.convocatoria);
            
     
             
@@ -88,7 +88,7 @@ export default {
 	        this.convocatoria.Descripcion="";
             this.convocatoria.Informacion_A="";
             this.convocatoria.Informacion_B="";
-            console.log(this.response);
+            //console.log(this.response);
             
         },
         processFileInf1(event){

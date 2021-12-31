@@ -90,7 +90,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -99,7 +98,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return axios.post('/api/convocatoria', _this.convocatoria);
 
               case 2:
-                response = _context.sent;
                 _this.convocatoria.Titulo = "";
                 _this.convocatoria.Codigo_Conv = "";
                 _this.convocatoria.Gestion = "";
@@ -107,10 +105,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.convocatoria.Fecha = "";
                 _this.convocatoria.Descripcion = "";
                 _this.convocatoria.Informacion_A = "";
-                _this.convocatoria.Informacion_B = "";
-                console.log(_this.response);
+                _this.convocatoria.Informacion_B = ""; //console.log(this.response);
 
-              case 12:
+              case 10:
               case "end":
                 return _context.stop();
             }
