@@ -25,6 +25,7 @@ const EmpresaEst = () => import('./components/Estudiante/EmpresaEst.vue');
 const ConvoEst = () => import ('./components/Estudiante/ConvoEst.vue');
 const SegEmpEst = () => import ('./components/Estudiante/EmpEstudiante/SegEmpEst.vue');
 const SegPostEst = () => import ('./components/Estudiante/PostEstudiante/SegPostEst.vue');
+const PostularEst = () => import ('./components/Estudiante/PostEstudiante/PostularEst.vue');
 
 
 
@@ -39,7 +40,6 @@ export const routes = [
         path: '/convocatoria',
         component: MostrarConv,
     },
-
     {
         name: 'crearBlog',
         path: '/crear',
@@ -59,8 +59,7 @@ export const routes = [
         name: 'empresas',
         path: '/empresas',
         component: Empresas
-    }
-    ,
+    },
     {
         name: 'regEmpresa',
         path: '/RegEmpresa',
@@ -120,5 +119,10 @@ export const routes = [
         name:'SegPostEst',
         path:'/SegPostEst',
         component: SegPostEst
+    },
+    {
+        name:'PostularEst',
+        path:'/PostularEst',
+        component: PostularEst
     }
 ];

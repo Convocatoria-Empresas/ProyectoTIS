@@ -2409,14 +2409,14 @@ var app = new Vue({
 });
 var appest = new Vue({
   el: '#app',
-  routerest: routerest,
+  router: routerest,
   render: function render(h) {
     return h(_components_Estudiante_AppEst_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
   }
 });
 var appase = new Vue({
   el: '#app',
-  routerase: routerase,
+  router: routerase,
   render: function render(h) {
     return h(_components_ASESOR_AppAse_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
   }
@@ -2577,6 +2577,10 @@ var SegPostEst = function SegPostEst() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Estudiante_PostEstudiante_SegPostEst_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Estudiante/PostEstudiante/SegPostEst.vue */ "./resources/js/components/Estudiante/PostEstudiante/SegPostEst.vue"));
 };
 
+var PostularEst = function PostularEst() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Estudiante_PostEstudiante_PostularEst_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Estudiante/PostEstudiante/PostularEst.vue */ "./resources/js/components/Estudiante/PostEstudiante/PostularEst.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -2649,6 +2653,10 @@ var routes = [{
   name: 'SegPostEst',
   path: '/SegPostEst',
   component: SegPostEst
+}, {
+  name: 'PostularEst',
+  path: '/PostularEst',
+  component: PostularEst
 }];
 
 /***/ }),
@@ -54869,7 +54877,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_Registrarse_vue":1,"resources_js_components_Estudiante_HomeEst_vue":1,"resources_js_components_Estudiante_EmpresaEst_vue":1,"resources_js_components_Estudiante_ConvoEst_vue":1,"resources_js_components_Estudiante_EmpEstudiante_SegEmpEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_SegPostEst_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_Registrarse_vue":1,"resources_js_components_Estudiante_HomeEst_vue":1,"resources_js_components_Estudiante_EmpresaEst_vue":1,"resources_js_components_Estudiante_ConvoEst_vue":1,"resources_js_components_Estudiante_EmpEstudiante_SegEmpEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_SegPostEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_PostularEst_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
