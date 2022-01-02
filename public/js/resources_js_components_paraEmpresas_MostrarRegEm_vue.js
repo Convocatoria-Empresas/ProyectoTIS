@@ -240,10 +240,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.empresa.Socio_3 = "";
                 _this.empresa.Socio_4 = "";
                 _this.empresa.Socio_5 = "";
-                _this.empresa.Estado_Aprob = 0;
-                console.log(_this.response);
+                _this.empresa.Estado_Aprob = 0; //onsole.log(this.response);
 
-              case 20:
+              case 19:
               case "end":
                 return _context.stop();
             }

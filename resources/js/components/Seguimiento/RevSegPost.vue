@@ -131,8 +131,7 @@ export default {
     name:"laempresa",
     data(){
         return {
-            laempresa:
-            {
+            laempresa: {
              Nombre_Largo: "",
              Correo_electronico: "",
              Solvencia: "",
@@ -144,6 +143,7 @@ export default {
              Socio_3: "",
              Socio_4: "",
              Socio_5: "",
+             Estado_Aprob:"",
             }
             
         }
@@ -155,8 +155,9 @@ export default {
 
         async mostrarEmp(){
             await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.laempresa).then(response=>{
+                
                 console.log(response.data)
-                 this.laempresa.Nombre_Largo = response.data.Nombre_Largo
+                this.laempresa.Nombre_Largo = response.data.Nombre_Largo
                 this.laempresa.Correo_electronico = response.data.Correo_electronico
                 this.laempresa.Plan_Pago = response.data.Plan_Pago 
                 this.laempresa.Constitucion = response.data.Constitucion
@@ -167,9 +168,8 @@ export default {
                 this.laempresa.Socio_3 = response.data.Socio_3
                 this.laempresa.Socio_4 = response.data.Socio_4
                 this.laempresa.Socio_5 = response.data.Socio_5
-                //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
+                this.laempresa.Estado_Aprob = response.data.Estado_Aprob
                 
-                console.log(this.laempresa.Nombre_Largo)
                 
             }).catch(error=>{
                 console.log(error)
@@ -183,28 +183,22 @@ export default {
             }
             else{
                 this.laempresa.Estado_Aprob = 0;
+                
             }
             console.log(this.laempresa.Estado_Aprob);
         },
         
         async actualizar(){
-           /* await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.laempresa).then(response=>{
+          await this.axios.get(`/api/empresa/${this.$route.params.id}/approve/${this.laempresa.Estado_Aprob}`,this.laempresa).then(response=>{
+                
                 console.log(response.data)
-                this.$router.push({name:"SegPostulante"})
+                
+                
             }).catch(error=>{
                 console.log(error)
-            })*/
-            this.$router.push({name:"SegPostulante"})
+            })
+            this.$router.push({name:"SegPostulante"}).catch(()=>{});
         },
-
-        /*downloadPDF(pdf) {
-                const linkSource = `data:application/pdf;base64,${pdf}`;
-                const downloadLink = document.createElement("a");
-                const fileName = "abc.pdf";
-                downloadLink.href = linkSource;
-                downloadLink.download = fileName;
-                downloadLink.click();
-        }*/
 
 
     }

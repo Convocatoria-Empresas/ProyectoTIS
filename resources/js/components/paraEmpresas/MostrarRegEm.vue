@@ -215,7 +215,7 @@ export default {
             this.empresa.Socio_4 = "";
             this.empresa.Socio_5 = "";
             this.empresa.Estado_Aprob= 0;
-            console.log(this.response);
+            //onsole.log(this.response);
             
         },
         processFileSolv(event){
