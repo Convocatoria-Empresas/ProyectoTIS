@@ -59,10 +59,6 @@
                     <th scope="col">Correo</th>
                     <th scope="col">Teléfono</th>
                     <th scope="col">NIT</th>
-                    <th scope="col">Solvencia</th>
-                    <th scope="col">Constitución</th>
-                    <th scope="col">Plan de Pago</th>
-                    <th scope="col">Carta</th>
                     <th scope="col">Socio 1</th>
                     <th scope="col">Socio 2</th>
                     <th scope="col">Socio 3</th>
@@ -78,10 +74,6 @@
                     <td>{{blog.Correo_electronico}}</td>
                     <td>{{blog.Telefono}}</td>
                     <td>{{blog.NIT}}</td>
-                    <td>{{blog.Solvencia}}</td>
-                    <td>{{blog.Constitucion}}</td>
-                    <td>{{blog.Plan_Pago}}</td>
-                    <td>{{blog.Carta}}</td>
                     <td>{{blog.Socio_1}}</td>
                     <td>{{blog.Socio_2}}</td>
                     <td>{{blog.Socio_3}}</td>

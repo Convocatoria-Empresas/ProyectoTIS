@@ -2283,14 +2283,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -39568,14 +39560,6 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.NIT))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Solvencia))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Constitucion))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Plan_Pago))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Carta))]),
-                _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_1))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_2))]),
@@ -39637,14 +39621,6 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Teléfono")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("NIT")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Solvencia")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Constitución")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Plan de Pago")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Carta")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Socio 1")]),
         _vm._v(" "),
