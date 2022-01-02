@@ -79,6 +79,14 @@
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                     <div class="valid-feedback"></div>
                                 </div>
+                                <div class="col-lg-4 offset-md-1">
+                                         <label class="form-label" for="inlineFormCustomSelect">¿A quién registra?</label>
+                                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect"  @change="SelecTipoUsuar($event)" required>
+                                           <option disabled selected>Seleccione</option>
+                                           <option value=1 >Asesor</option>
+                                           <option value=0 >Estudiante</option>
+                                         </select>
+                                       </div>
 
                             </div>
                             <div class="row">
@@ -121,7 +129,7 @@ export default {
             Telf:"",
             Carnet:"",
             Contrasena_usu:"",
-            Rol_usu:"Estudiante",
+            Rol_usu:"",
             }
         }
         
@@ -148,6 +156,18 @@ export default {
 
             
         },
+
+        SelecTipoUsuar(e){
+            if(e.target.value==1){
+                this.users.Rol_usu="Asesor";
+                
+            }
+            else{
+                this.users.Rol_usu="Estudiante";
+                
+            }
+            
+        }
         
     },
 }

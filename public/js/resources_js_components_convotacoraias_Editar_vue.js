@@ -77,7 +77,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
     };
   },
-  mounted: function mounted() {//this.mostrarBlog()
+  mounted: function mounted() {
+    this.mostrarBlog();
   },
   methods: {
     mostrarBlog: function mostrarBlog() {
@@ -89,12 +90,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get("/api/convocatoria/".concat(_this.$route.params.id)).then(function (response) {
-                  var _response$data = response.data,
-                      titulo = _response$data.titulo,
-                      contenido = _response$data.contenido;
-                  _this.convocatoria.titulo = titulo;
-                  _this.convocatoria.contenido = contenido;
+                return _this.axios.put("/api/convocatoria/mostrar/".concat(_this.$route.params.id), _this.convocatoria).then(function (response) {
+                  _this.convocatoria.Codigo_Conv = response.data.Codigo_Conv;
+                  _this.convocatoria.Titulo = response.data.Titulo;
+                  _this.convocatoria.Descripcion = response.data.Descripcion;
+                  _this.convocatoria.Asesor = response.data.Asesor;
+                  _this.convocatoria.Fecha = response.data.Fecha;
+                  _this.convocatoria.Informacion_A = response.data.Informacion_A;
+                  _this.convocatoria.Informacion_B = response.data.Informacion_B;
+                  _this.convocatoria.Gestion = response.data.Gestion;
                 })["catch"](function (error) {
                   console.log(error);
                 });
@@ -313,7 +317,11 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
-                      attrs: { id: "Gestion", type: "text" },
+                      attrs: {
+                        id: "Gestion",
+                        type: "text",
+                        placeholder: this.convocatoria.Gestion,
+                      },
                       domProps: { value: _vm.convocatoria.Gestion },
                       on: {
                         input: function ($event) {
@@ -343,7 +351,11 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
-                      attrs: { id: "Asesor", type: "text" },
+                      attrs: {
+                        id: "Asesor",
+                        type: "text",
+                        placeholder: this.convocatoria.Asesor,
+                      },
                       domProps: { value: _vm.convocatoria.Asesor },
                       on: {
                         input: function ($event) {
@@ -373,7 +385,11 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
-                      attrs: { id: "Fecha", type: "date" },
+                      attrs: {
+                        id: "Fecha",
+                        type: "date",
+                        placeholder: this.convocatoria.Fecha,
+                      },
                       domProps: { value: _vm.convocatoria.Fecha },
                       on: {
                         input: function ($event) {
@@ -403,7 +419,11 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
-                      attrs: { id: "Descripcion", type: "text" },
+                      attrs: {
+                        id: "Descripcion",
+                        type: "text",
+                        placeholder: this.convocatoria.Descripcion,
+                      },
                       domProps: { value: _vm.convocatoria.Descripcion },
                       on: {
                         input: function ($event) {

@@ -16,6 +16,7 @@
                             <th>Gestión</th>
                             <th>Título</th>
                             <th>Descripción</th>
+                            <th>Documentos</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -25,6 +26,11 @@
                             <td>{{ blog.Gestion }}</td>
                             <td>{{ blog.Titulo }}</td>
                             <td>{{ blog.Descripcion }}</td>
+                            <td>
+                                <a download=Informacion_A :href="blog.Informacion_A" title='Download pdf document' >Información A</a>
+                                <p class="vs"></p>
+                                <a download=Informacion_B :href="blog.Informacion_B" title='Download pdf document' >Información B</a>
+                            </td>   
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"editarConvo",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>

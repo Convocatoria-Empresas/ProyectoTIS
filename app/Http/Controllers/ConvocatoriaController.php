@@ -50,6 +50,24 @@ class ConvocatoriaController extends Controller
 
         //return $convocatoria;
     }
+    public function mostrar($convocatoria, Request $request){
+        $convocatorium= Convocatoria::find($convocatoria);
+        $LaConv= new Convocatoria();
+        
+      
+        $LaConv->Codigo_Conv=$convocatorium->Codigo_Conv;
+        $LaConv->Titulo=$convocatorium->Titulo;
+        $LaConv->Descripcion=$convocatorium->Descripcion;
+        $LaConv->Asesor=$convocatorium->Asesor;
+        $LaConv->Fecha=$convocatorium->Fecha;
+        $LaConv->Informacion_A=$convocatorium->Informacion_A;
+        $LaConv->Informacion_B=$convocatorium->Informacion_B;
+        $LaConv->Gestion=$convocatorium->Gestion;
+        
+         
+       
+        return response()->json($LaConv);
+    }
 
     /**
      * Display the specified resource.
