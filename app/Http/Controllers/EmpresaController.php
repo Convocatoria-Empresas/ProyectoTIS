@@ -58,6 +58,7 @@ class EmpresaController extends Controller
         $empresa->Socio_3 = $request->Socio_3;
         $empresa->Socio_4 = $request->Socio_4;
         $empresa->Socio_5 = $request->Socio_5;
+        $empresa->Estado_Aprob = $request->Estado_Aprob;
         $empresa->save();
 
         //return $empresa;
@@ -78,6 +79,7 @@ class EmpresaController extends Controller
      
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -96,15 +98,17 @@ class EmpresaController extends Controller
      * @param  \App\Models\Empresa  $empresa
      * @return \Illuminate\Http\Response
      */
-    public function update($empresium, Request $request)
+    public function update($empresium, Request $request )
     {
         $empresa= Empresa::find($empresium);
-        
-        
         $LaEmp= new Empresa();
-        //$LaEmp= [];
-
         
+    
+       /* if($empresa->Estado_Aprob != $request->Estado_Aprob){
+         $empresa->Estado_Aprob=$request->Estado_Aprob;
+         $empresa->save();
+        }*/
+      
         $LaEmp->Nombre_Largo=$empresa->Nombre_Largo;
         $LaEmp->Nombre_Corto=$empresa->Nombre_Corto;
         $LaEmp->Correo_electronico=$empresa->Correo_electronico;
@@ -120,7 +124,10 @@ class EmpresaController extends Controller
         $LaEmp->Socio_4=$empresa->Socio_4;
         $LaEmp->Socio_5=$empresa->Socio_5;
         $LaEmp->Estado_Aprob=$empresa->Estado_Aprob;
-
+      
+        
+       
+        return response()->json($LaEmp);
        /* $LaEmp['Nombre_Largo']=$request->get('Nombre_Largo');
         $LaEmp['Nombre_Corto']=$request->get('Nombre_Corto');
         $LaEmp['Correo_electronico']=$request->get('Correo_electronico');
@@ -139,7 +146,8 @@ class EmpresaController extends Controller
 
        // $empresap->update($LaEmp);
       //  return $convocatoria;
-        return response()->json($LaEmp);
+        
+        
     }
 
     /**
@@ -152,4 +160,43 @@ class EmpresaController extends Controller
     {
         //
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Empresa  $empresa
+     * @return \Illuminate\Http\Response
+     */
+    public function approve($empresium, $aprob )
+    {
+        $empresa= Empresa::find($empresium);
+        /*$LaEmp= [];
+
+        $LaEmp['Nombre_Largo']=$request->get('Nombre_Largo');
+        $LaEmp['Nombre_Corto']=$request->get('Nombre_Corto');
+        $LaEmp['Correo_electronico']=$request->get('Correo_electronico');
+        $LaEmp['Telefono']=$request->get('Telefono');
+        $LaEmp['NIT']=$request->get('NIT');
+        $LaEmp['Plan_Pago']=$request->get('Plan_Pago');
+        $LaEmp['Constitucion']=$request->get('Constitucion');
+        $LaEmp['Carta']=$request->get('Carta');
+        $LaEmp['Solvencia']=$request->get('Solvencia');
+        $LaEmp['Socio_1']=$request->get('Socio_1');
+        $LaEmp['Socio_2']=$request->get('Socio_2');
+        $LaEmp['Socio_3']=$request->get('Socio_3');
+        $LaEmp['Socio_4']=$request->get('Socio_4');
+        $LaEmp['Socio_5']=$request->get('Socio_5');
+        $LaEmp['Estado_Aprob']=$request->get('Estado_Aprob');*/
+      
+        //$empresa->update($LaEmp);
+         $empresa->Estado_Aprob=$aprob;
+         $empresa->save();
+        /*if($empresa->Estado_Aprob != $request->Estado_Aprob){
+            
+       
+           }*/
+           return response()->json($empresa);
+    }
+
 }

@@ -161,7 +161,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Socio_2: "",
         Socio_3: "",
         Socio_4: "",
-        Socio_5: ""
+        Socio_5: "",
+        Estado_Aprob: ""
       }
     };
   },
@@ -190,10 +191,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.laempresa.Socio_2 = response.data.Socio_2;
                   _this.laempresa.Socio_3 = response.data.Socio_3;
                   _this.laempresa.Socio_4 = response.data.Socio_4;
-                  _this.laempresa.Socio_5 = response.data.Socio_5; //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
-
-                  //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
-                  console.log(_this.laempresa.Nombre_Largo);
+                  _this.laempresa.Socio_5 = response.data.Socio_5;
+                  _this.laempresa.Estado_Aprob = response.data.Estado_Aprob;
                 })["catch"](function (error) {
                   console.log(error);
                 });
@@ -223,17 +222,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                /* await this.axios.put(`/api/empresa/${this.$route.params.id}`,this.laempresa).then(response=>{
-                     console.log(response.data)
-                     this.$router.push({name:"SegPostulante"})
-                 }).catch(error=>{
-                     console.log(error)
-                 })*/
-                _this2.$router.push({
-                  name: "SegPostulante"
+                _context2.next = 2;
+                return _this2.axios.get("/api/empresa/".concat(_this2.$route.params.id, "/approve/").concat(_this2.laempresa.Estado_Aprob), _this2.laempresa).then(function (response) {
+                  console.log(response.data);
+                })["catch"](function (error) {
+                  console.log(error);
                 });
 
-              case 1:
+              case 2:
+                _this2.$router.push({
+                  name: "SegPostulante"
+                })["catch"](function () {});
+
+              case 3:
               case "end":
                 return _context2.stop();
             }
@@ -241,15 +242,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     }
-    /*downloadPDF(pdf) {
-            const linkSource = `data:application/pdf;base64,${pdf}`;
-            const downloadLink = document.createElement("a");
-            const fileName = "abc.pdf";
-            downloadLink.href = linkSource;
-            downloadLink.download = fileName;
-            downloadLink.click();
-    }*/
-
   }
 });
 
