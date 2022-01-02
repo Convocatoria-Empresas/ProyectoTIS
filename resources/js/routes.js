@@ -9,7 +9,9 @@ const MostrarConv = () => import('./components/convotacoraias/Mostrar.vue');
 const Crear = () => import('./components/convotacoraias/Crear.vue');
 const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
-const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue')
+const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue');
+const EditarEmpre = () => import('./components/paraEmpresas/EditarRegEm.vue');
+
 //importamos para el seguimiento y revision para empresas
 const SegEmpresa = () => import('./components/Seguimiento/SegEmpresas.vue');
 const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
@@ -66,6 +68,11 @@ export const routes = [
         name: 'regEmpresa',
         path: '/RegEmpresa',
         component: RegEmpresa
+    },
+    {
+        name: 'editarEmpre',
+        path: '/EditarRegEm/:id',
+        component: EditarEmpre
     },
     {
         name: 'SegEmpresa',

@@ -64,6 +64,7 @@
                     <th scope="col">Socio 3</th>
                     <th scope="col">Socio 4</th>
                     <th scope="col">Socio 5</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -79,7 +80,11 @@
                     <td>{{blog.Socio_3}}</td>
                     <td>{{blog.Socio_4}}</td>
                     <td>{{blog.Socio_5}}</td>
-
+                    <td>
+                        <!-- llamamos al componente para Editar     -->
+                        <router-link :to='{name:"editarEmpre",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
+                        <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -109,15 +114,18 @@ export default {
                 this.blogs = []
             })
         },
-        /*borrarBlog(id){
-            if(confirm("¿Confirma eliminar el registro?")){
-                    this.axios.delete(`/api/blog/${id}`).then(response=>{
-                    this.mostrarBlogs()
-                }).catch(error=>{
-                    console.log(error)
-                })
-            }
-        }*/
+        async  borrarBlog(id){
+           // if(confirm("¿Confirma eliminar el registro?")){
+                console.log(id)
+                    await this.axios.delete('/api/empresa/' +id).then(response=>{
+                console.log(response.data)
+                this.blogs = response.data
+            }).catch(error=>{
+                console.log(error)
+
+            })
+            
+        }
     }
 }
 </script>

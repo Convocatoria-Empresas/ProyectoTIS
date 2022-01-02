@@ -28,6 +28,38 @@ class EmpresaController extends Controller
     {
         return view('empresa')->with('state', 'create');
     }
+/** 
+  *  @param  \Illuminate\Http\Request  $request
+    */
+
+    public function edit($empresa, $editar, Request $request)
+    {
+      
+       $empresium= Empresa::find($empresa);
+      
+        
+        
+        $nuevaEmp=[];
+        
+        $empresium-> Nombre_Largo = $request->Nombre_Largo;
+        $empresium->Nombre_Corto = $request->Nombre_Corto;
+        $empresium->Correo_electronico = $request->Correo_electronico;
+        $empresium->Telefono = $request->Telefono;
+        $empresium->NIT = $request->NIT;
+        $empresium->Solvencia = $request->Solvencia;
+        $empresium->Constitucion = $request->Constitucion;
+        $empresium->Plan_Pago = $request->Plan_Pago;
+        $empresium->Carta = $request->Carta;
+        $empresium->Socio_1 = $request->Socio_1;
+        $empresium->Socio_2 = $request->Socio_2;
+        $empresium->Socio_3 = $request->Socio_3;
+        $empresium->Socio_4 = $request->Socio_4;
+        $empresium->Socio_5 = $request->Socio_5;
+        $empresium->Estado_Aprob = $request->Estado_Aprob;
+        $empresium->save();
+        //return $editar;
+        return response()->json($empresium);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -128,22 +160,7 @@ class EmpresaController extends Controller
         
        
         return response()->json($LaEmp);
-       /* $LaEmp['Nombre_Largo']=$request->get('Nombre_Largo');
-        $LaEmp['Nombre_Corto']=$request->get('Nombre_Corto');
-        $LaEmp['Correo_electronico']=$request->get('Correo_electronico');
-        $LaEmp['Telefono']=$request->get('Telefono');
-        $LaEmp['NIT']=$request->get('NIT');
-        $LaEmp['Plan_Pago']=$request->get('Plan_Pago');
-        $LaEmp['Constitucion']=$request->get('Constitucion');
-        $LaEmp['Carta']=$request->get('Carta');
-        $LaEmp['Solvencia']=$request->get('Solvencia');
-        $LaEmp['Socio_1']=$request->get('Socio_1');
-        $LaEmp['Socio_2']=$request->get('Socio_2');
-        $LaEmp['Socio_3']=$request->get('Socio_3');
-        $LaEmp['Socio_4']=$request->get('Socio_4');
-        $LaEmp['Socio_5']=$request->get('Socio_5');
-        $LaEmp['Estado_Aprob']=$request->get('Estado_Aprob');*/
-
+  
        // $empresap->update($LaEmp);
       //  return $convocatoria;
         
@@ -156,9 +173,14 @@ class EmpresaController extends Controller
      * @param  \App\Models\Empresa  $empresa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Empresa $empresa)
+    public function destroy(Empresa $empresium)
     {
-        //
+        $empresa= Empresa::find($empresium);
+      $empresa->delete();
+
+      $RegisEmpre = Empresa::all(['id','Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
+      'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5','Estado_Aprob']);
+        return response()->json($RegisEmpre);
     }
 
     /**
