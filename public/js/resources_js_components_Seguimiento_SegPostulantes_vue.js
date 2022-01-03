@@ -79,7 +79,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get('/api/empresa').then(function (response) {
+                return _this.axios.get('/api/postulacion').then(function (response) {
                   console.log(response.data);
                   _this.tablasSeg = response.data;
                 })["catch"](function (error) {
@@ -202,13 +202,13 @@ var render = function () {
                   _vm._v(_vm._s(tablaSeg.id)),
                 ]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.NIT))]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.PNIT))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.Nombre_Largo))]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.PNombre_Largo))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.Socio_1))]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.PSocio_1))]),
                 _vm._v(" "),
-                tablaSeg.Estado_Aprob == 1
+                tablaSeg.PEstado_Aprob == 1
                   ? _c("a", [_c("td", [_vm._v("Aceptado")])])
                   : _c("a", [_c("td", [_vm._v("Rechazado")])]),
                 _vm._v(" "),

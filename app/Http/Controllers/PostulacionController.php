@@ -59,9 +59,32 @@ class PostulacionController extends Controller
         $postulacion->save();
     }
 
-    public function edit(Blog $blog)
+    public function edit($postulacion, $editar, Request $request)
     {
-        //
+        $postolium= Postulacion::find($postulacion);
+      
+        
+        
+        $nuevaPost=[];
+        
+        $postolium->PNombre_Largo = $request->PNombre_Largo;
+        $postolium->PNombre_Corto = $request->PNombre_Corto;
+        $postolium->PCorreo_electronico = $request->PCorreo_electronico;
+        $postolium->PTelefono = $request->PTelefono;
+        $postolium->PNIT = $request->PNIT;
+        $postolium->PSolvencia = $request->PSolvencia;
+        $postolium->PConstitucion = $request->PConstitucion;
+        $postolium->PPlan_Pago = $request->PPlan_Pago;
+        $postolium->PCarta = $request->PCarta;
+        $postolium->PSocio_1 = $request->PSocio_1;
+        $postolium->PSocio_2 = $request->PSocio_2;
+        $postolium->PSocio_3 = $request->PSocio_3;
+        $postolium->PSocio_4 = $request->PSocio_4;
+        $postolium->PSocio_5 = $request->PSocio_5;
+        $postolium->PEstado_Aprob = $request->PEstado_Aprob;
+        $postolium->save();
+        //return $editar;
+        return response()->json($postolium);
     }
 
     /**

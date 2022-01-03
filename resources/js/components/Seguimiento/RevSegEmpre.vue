@@ -74,3 +74,72 @@
     </div>
     </div>
 </template>
+
+<script>
+export default {
+
+    name:"laempresa",
+    data(){
+        return {
+            laempresa: {
+             Nombre_Largo: "",
+             Correo_electronico: "",
+             Solvencia: "",
+             Constitucion: "",
+             Plan_Pago: "",
+             Carta: "",
+             Socio_1: "",
+             Socio_2: "",
+             Socio_3: "",
+             Socio_4: "",
+             Socio_5: "",
+             Estado_Aprob:"",
+            }
+            
+        }
+    },
+    mounted(){
+        this.mostrarEmp()
+    },
+    methods:{
+
+        async mostrarEmp(){
+            await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.laempresa).then(response=>{
+                
+                console.log(response.data)
+                this.laempresa.Nombre_Largo = response.data.Nombre_Largo
+                this.laempresa.Correo_electronico = response.data.Correo_electronico
+                this.laempresa.Plan_Pago = response.data.Plan_Pago 
+                this.laempresa.Constitucion = response.data.Constitucion
+                this.laempresa.Carta = response.data.Carta
+                this.laempresa.Solvencia = response.data.Solvencia
+                this.laempresa.Socio_1 = response.data.Socio_1
+                this.laempresa.Socio_2 = response.data.Socio_2
+                this.laempresa.Socio_3 = response.data.Socio_3
+                this.laempresa.Socio_4 = response.data.Socio_4
+                this.laempresa.Socio_5 = response.data.Socio_5
+                this.laempresa.Estado_Aprob = response.data.Estado_Aprob
+                
+                
+            }).catch(error=>{
+                console.log(error)
+            })
+            
+        },
+        
+        async actualizar(){
+          await this.axios.get(`/api/empresa/${this.$route.params.id}/approve/${this.laempresa.Estado_Aprob}`,this.laempresa).then(response=>{
+                
+                console.log(response.data)
+                
+                
+            }).catch(error=>{
+                console.log(error)
+            })
+            this.$router.push({name:"SegPostulante"}).catch(()=>{});
+        },
+
+
+    }
+}
+</script>

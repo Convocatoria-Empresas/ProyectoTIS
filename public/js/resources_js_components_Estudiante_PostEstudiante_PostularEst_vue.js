@@ -224,19 +224,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                console.log(_this.empresa);
+                _context.next = 3;
                 return axios.post('/api/postulacion', _this.empresa);
 
-              case 2:
+              case 3:
                 _this.notificacion.NTitulo = "Postulaci\xF3n a Convocatoria de ".concat(_this.empresa.PNombre_Largo);
                 _this.notificacion.Texto = "";
                 _this.notificacion.Emisor = _this.empresa.PCorreo_electronico;
                 _this.notificacion.Receptor = _this.$route.params.asesorCorr;
                 _this.notificacion.Leido = 0;
-                _context.next = 9;
+                console.log("Ya etá registrado la postulación");
+                _context.next = 11;
                 return axios.post('/api/notificacion', _this.notificacion);
 
-              case 9:
+              case 11:
               case "end":
                 return _context.stop();
             }

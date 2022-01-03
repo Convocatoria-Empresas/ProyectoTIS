@@ -18,10 +18,10 @@
                 <tbody>
                     <tr v-for="tablaSeg in tablasSeg" :key=" tablaSeg.id">
                         <th scope="row">{{ tablaSeg.id}}</th>
-                        <td>{{ tablaSeg.NIT}}</td>
-                        <td>{{ tablaSeg.Nombre_Largo}}</td>
-                        <td>{{ tablaSeg.Socio_1}}</td>
-                        <a v-if="tablaSeg.Estado_Aprob == 1">
+                        <td>{{ tablaSeg.PNIT}}</td>
+                        <td>{{ tablaSeg.PNombre_Largo}}</td>
+                        <td>{{ tablaSeg.PSocio_1}}</td>
+                        <a v-if="tablaSeg.PEstado_Aprob == 1">
                              <td>Aceptado</td>
                         </a>
                         <a v-else>
@@ -51,7 +51,7 @@ export default {
     },
     methods:{
         async mostrarSeg(){
-            await this.axios.get('/api/empresa').then(response=>{
+            await this.axios.get('/api/postulacion').then(response=>{
                 console.log(response.data)
                 this.tablasSeg = response.data
             }).catch(error=>{

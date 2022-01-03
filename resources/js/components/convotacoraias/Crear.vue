@@ -14,7 +14,7 @@
         <label for="content">Título</label>
         <input class="form-control" id="Titulo" type="text" v-model="convocatoria.Titulo">
         <label for="content">Código</label>
-        <input class="form-control" id="Codigo_Conv" type="text" v-model="convocatoria.Codigo_Conv">
+        <input maxlength="5" class="form-control" id="Codigo_Conv" type="text" v-model="convocatoria.Codigo_Conv">
         <label for="content">Gestión</label>
         <input class="form-control" id="Gestion" type="text" v-model="convocatoria.Gestion">
         <label for="content">Asesor</label>
@@ -93,6 +93,8 @@ export default {
             this.convocatoria.Informacion_A="";
             this.convocatoria.Informacion_B="";
             //console.log(this.response);
+
+            this.$router.push({name:"convocatoria"});
             
         },
         processFileInf1(event){

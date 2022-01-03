@@ -111,7 +111,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.convocatoria.Informacion_A = "";
                 _this.convocatoria.Informacion_B = ""; //console.log(this.response);
 
-              case 11:
+                _this.$router.push({
+                  name: "convocatoria"
+                });
+
+              case 12:
               case "end":
                 return _context.stop();
             }
@@ -291,7 +295,7 @@ var render = function () {
                   },
                 ],
                 staticClass: "form-control",
-                attrs: { id: "Codigo_Conv", type: "text" },
+                attrs: { maxlength: "5", id: "Codigo_Conv", type: "text" },
                 domProps: { value: _vm.convocatoria.Codigo_Conv },
                 on: {
                   input: function ($event) {

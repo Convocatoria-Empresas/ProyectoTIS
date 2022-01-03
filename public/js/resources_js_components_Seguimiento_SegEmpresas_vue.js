@@ -52,6 +52,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -72,7 +75,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get('/api/convocatoria').then(function (response) {
+                return _this.axios.get('/api/empresa').then(function (response) {
                   console.log(response.data);
                   _this.blogs = response.data;
                 })["catch"](function (error) {
@@ -202,31 +205,41 @@ var render = function () {
             "tbody",
             _vm._l(_vm.blogs, function (blog) {
               return _c("tr", { key: blog.id }, [
-                _c("td", [_vm._v(_vm._s(blog.id))]),
+                blog.Estado_Aprob == 1
+                  ? _c("td", [_vm._v(_vm._s(blog.id))])
+                  : _vm._e(),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Gestion))]),
+                blog.Estado_Aprob == 1
+                  ? _c("td", [_vm._v(_vm._s(blog.Gestion))])
+                  : _vm._e(),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.nomb_empre))]),
+                blog.Estado_Aprob == 1
+                  ? _c("td", [_vm._v(_vm._s(blog.Nombre_Largo))])
+                  : _vm._e(),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Asesor))]),
+                blog.Estado_Aprob == 1
+                  ? _c("td", [_vm._v(_vm._s(blog.Asesor))])
+                  : _vm._e(),
                 _vm._v(" "),
-                _c(
-                  "td",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-info",
-                        attrs: { to: "/RevSegEmpre" },
-                      },
+                blog.Estado_Aprob == 1
+                  ? _c(
+                      "td",
                       [
-                        _c("i", { staticClass: "fas fa-eye" }),
-                        _vm._v(" Revisar"),
-                      ]
-                    ),
-                  ],
-                  1
-                ),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "btn btn-info",
+                            attrs: { to: "/RevSegEmpre" },
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-eye" }),
+                            _vm._v(" Revisar"),
+                          ]
+                        ),
+                      ],
+                      1
+                    )
+                  : _vm._e(),
               ])
             }),
             0

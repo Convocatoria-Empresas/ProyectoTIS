@@ -203,7 +203,7 @@ export default {
      methods:{
 
         async submit(){
-
+            console.log(this.empresa);
             await axios.post('/api/postulacion', this.empresa);
 
 
@@ -213,6 +213,7 @@ export default {
             this.notificacion.Receptor=this.$route.params.asesorCorr;
             this.notificacion.Leido=0;
 
+            console.log("Ya etá registrado la postulación");
             await axios.post('/api/notificacion', this.notificacion);
 
         },
