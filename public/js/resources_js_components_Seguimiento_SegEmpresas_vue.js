@@ -210,7 +210,7 @@ var render = function () {
                   : _vm._e(),
                 _vm._v(" "),
                 blog.Estado_Aprob == 1
-                  ? _c("td", [_vm._v(_vm._s(blog.Gestion))])
+                  ? _c("td", [_vm._v(_vm._s(blog.GetiodeEmp))])
                   : _vm._e(),
                 _vm._v(" "),
                 blog.Estado_Aprob == 1
@@ -218,7 +218,7 @@ var render = function () {
                   : _vm._e(),
                 _vm._v(" "),
                 blog.Estado_Aprob == 1
-                  ? _c("td", [_vm._v(_vm._s(blog.Asesor))])
+                  ? _c("td", [_vm._v(_vm._s(blog.AsesordeEmp))])
                   : _vm._e(),
                 _vm._v(" "),
                 blog.Estado_Aprob == 1

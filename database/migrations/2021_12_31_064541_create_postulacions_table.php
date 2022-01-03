@@ -25,16 +25,18 @@ class CreatePostulacionsTable extends Migration
             $table->longText('PPlan_Pago');
             $table->longText('PCarta');
             $table->string('PSocio_1',9);
-            $table->foreign('PSocio_1')->references('Codigo')->on('Psocios');
+            $table->foreign('PSocio_1')->references('Codigo')->on('socios');
             $table->string('PSocio_2',9);
-            $table->foreign('PSocio_2')->references('Codigo')->on('sPocios');
+            $table->foreign('PSocio_2')->references('Codigo')->on('socios');
             $table->string('PSocio_3',9);
-            $table->foreign('PSocio_3')->references('Codigo')->on('soPcios');
+            $table->foreign('PSocio_3')->references('Codigo')->on('socios');
             $table->string('PSocio_4',9);
-            $table->foreign('PSocio_4')->references('Codigo')->on('socPios');
+            $table->foreign('PSocio_4')->references('Codigo')->on('socios');
             $table->string('PSocio_5',9);
-            $table->foreign('PSocio_5')->references('Codigo')->on('sociPos');
-            $table->boolean('PEstado_Aprob')->default(0);
+            $table->foreign('PSocio_5')->references('Codigo')->on('socios');
+            $table->string('PAsesordeEmp')->nullable();
+            $table->string('PGetiodeEmp')->nullable();
+            $table->boolean('PEstado_Aprob')->nullable();
             $table->timestamps();
         });
     }

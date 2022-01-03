@@ -186,6 +186,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -204,6 +207,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         PSocio_3: "",
         PSocio_4: "",
         PSocio_5: "",
+        PAsesordeEmp: "",
+        PGetiodeEmp: "",
         PEstado_Aprob: ""
       },
       notificacion: {
@@ -224,21 +229,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log(_this.empresa);
-                _context.next = 3;
+                _this.empresa.PAsesordeEmp = _this.$route.params.asesorCorr;
+                _this.empresa.PGetiodeEmp = _this.$route.params.convoGestio;
+                console.log("Se enviará ahora...");
+                _context.next = 5;
                 return axios.post('/api/postulacion', _this.empresa);
 
-              case 3:
+              case 5:
                 _this.notificacion.NTitulo = "Postulaci\xF3n a Convocatoria de ".concat(_this.empresa.PNombre_Largo);
                 _this.notificacion.Texto = "";
                 _this.notificacion.Emisor = _this.empresa.PCorreo_electronico;
                 _this.notificacion.Receptor = _this.$route.params.asesorCorr;
                 _this.notificacion.Leido = 0;
                 console.log("Ya etá registrado la postulación");
-                _context.next = 11;
+                _context.next = 13;
                 return axios.post('/api/notificacion', _this.notificacion);
 
-              case 11:
+              case 13:
+                //Ahora debería buscar el nombre de la Empresa para asignarle su nuevo asesor y gestión
+                //Se regresa todo a las convocatorias
+                _this.$router.push({
+                  name: "convocatoria"
+                });
+
+              case 14:
               case "end":
                 return _context.stop();
             }
@@ -516,9 +530,33 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.empresa.PNIT,
+                    expression: "empresa.PNIT",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: { placeholder: "Número NIT", id: "nit", type: "text" },
+                domProps: { value: _vm.empresa.PNIT },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.empresa, "PNIT", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
-              _vm._m(6),
+              _vm._m(7),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -531,7 +569,7 @@ var render = function () {
                 on: { change: _vm.processFileSolv },
               }),
               _vm._v(" "),
-              _vm._m(7),
+              _vm._m(8),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -544,7 +582,7 @@ var render = function () {
                 on: { change: _vm.processFileConst },
               }),
               _vm._v(" "),
-              _vm._m(8),
+              _vm._m(9),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -557,7 +595,7 @@ var render = function () {
                 on: { change: _vm.processFilePlan },
               }),
               _vm._v(" "),
-              _vm._m(9),
+              _vm._m(10),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -572,9 +610,9 @@ var render = function () {
               _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
-              _vm._m(10),
-              _vm._v(" "),
               _vm._m(11),
+              _vm._v(" "),
+              _vm._m(12),
               _vm._v(" "),
               _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 1")]),
               _vm._v(" "),
@@ -798,6 +836,15 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "content" } }, [
       _c("i", { staticClass: "fas fa-mobile-alt" }),
       _vm._v(" Telefono"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-address-card" }),
+      _vm._v(" NIT"),
     ])
   },
   function () {

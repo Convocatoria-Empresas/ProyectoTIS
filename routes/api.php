@@ -19,7 +19,11 @@ Route::get('empresa/{empresa_id}/approve/{aprob}', ['uses' =>'App\Http\Controlle
 
 Route::resource('empresa',App\Http\Controllers\EmpresaController::class);
 
+Route::put('postulacion/{postulacion}/edit/{editar}',['uses' =>'App\Http\Controllers\PostulacionController@edit']);
+Route::get('postulacion/{postulacion_id}/approve/{aprob}', ['uses' =>'App\Http\Controllers\PostulacionController@approve']);
 Route::resource('postulacion',App\Http\Controllers\PostulacionController::class);
+
+Route::resource('notificacion',App\Http\Controllers\NotificacionController::class);
 
 Route::resource('user',App\Http\Controllers\UserController::class);
 

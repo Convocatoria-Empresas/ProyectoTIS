@@ -15,7 +15,7 @@ class EmpresaController extends Controller
     public function index(Request $request)
     {
         $RegisEmpre = Empresa::all(['id','Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
-        'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5','Estado_Aprob']);
+        'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5','AsesordeEmp','GetiodeEmp','Estado_Aprob']);
         return response()->json($RegisEmpre);
     }
 
@@ -55,6 +55,8 @@ class EmpresaController extends Controller
         $empresium->Socio_3 = $request->Socio_3;
         $empresium->Socio_4 = $request->Socio_4;
         $empresium->Socio_5 = $request->Socio_5;
+        $empresium->AsesordeEmp = $request->AsesordeEmp;
+        $empresium->GetiodeEmp = $request->GetiodeEmp;
         $empresium->Estado_Aprob = $request->Estado_Aprob;
         $empresium->save();
         //return $editar;
@@ -85,6 +87,8 @@ class EmpresaController extends Controller
         $empresa->Socio_3 = $request->Socio_3;
         $empresa->Socio_4 = $request->Socio_4;
         $empresa->Socio_5 = $request->Socio_5;
+        $empresa->AsesordeEmp = $request->AsesordeEmp;
+        $empresa->GetiodeEmp = $request->GetiodeEmp;
         $empresa->Estado_Aprob = $request->Estado_Aprob;
         $empresa->save();
 
@@ -150,6 +154,8 @@ class EmpresaController extends Controller
         $LaEmp->Socio_3=$empresa->Socio_3;
         $LaEmp->Socio_4=$empresa->Socio_4;
         $LaEmp->Socio_5=$empresa->Socio_5;
+        $LaEmp->AsesordeEmp=$empresa->AsesordeEmp;
+        $LaEmp->GetiodeEmp=$empresa->GetiodeEmp;
         $LaEmp->Estado_Aprob=$empresa->Estado_Aprob;
       
         
@@ -174,7 +180,7 @@ class EmpresaController extends Controller
       $empresa->delete();
 
       $RegisEmpre = Empresa::all(['id','Nombre_Largo','Nombre_Corto','Correo_electronico', 'Telefono', 'NIT', 'Solvencia', 'Constitucion', 'Plan_Pago', 
-      'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5','Estado_Aprob']);
+      'Carta', 'Socio_1', 'Socio_2', 'Socio_3', 'Socio_4', 'Socio_5','AsesordeEmp','GetiodeEmp','Estado_Aprob']);
         return response()->json($RegisEmpre);
     }
 
@@ -187,7 +193,7 @@ class EmpresaController extends Controller
      */
     public function approve($empresium, $aprob )
     {
-        $empresa= Empresa::find($empresium);
+        $empresa= Empresa::where('Nombre_Largo', $empresium)->first();
         /*$LaEmp= [];
 
         $LaEmp['Nombre_Largo']=$request->get('Nombre_Largo');
@@ -205,14 +211,10 @@ class EmpresaController extends Controller
         $LaEmp['Socio_4']=$request->get('Socio_4');
         $LaEmp['Socio_5']=$request->get('Socio_5');
         $LaEmp['Estado_Aprob']=$request->get('Estado_Aprob');*/
-      
-        //$empresa->update($LaEmp);
+
          $empresa->Estado_Aprob=$aprob;
          $empresa->save();
-        /*if($empresa->Estado_Aprob != $request->Estado_Aprob){
-            
-       
-           }*/
+    
            return response()->json($empresa);
     }
 

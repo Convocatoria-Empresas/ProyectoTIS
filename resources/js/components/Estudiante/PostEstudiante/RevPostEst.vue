@@ -143,6 +143,8 @@ export default {
              Socio_3: "",
              Socio_4: "",
              Socio_5: "",
+             AsesordeEmp: "",
+             GetiodeEmp: "",
             }
 
         }
@@ -155,7 +157,7 @@ export default {
         async mostrarEmp(){
             await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.laempresa).then(response=>{
                 console.log(response.data)
-                 this.laempresa.Nombre_Largo = response.data.Nombre_Largo
+                this.laempresa.Nombre_Largo = response.data.Nombre_Largo
                 this.laempresa.Correo_electronico = response.data.Correo_electronico
                 this.laempresa.Plan_Pago = response.data.Plan_Pago
                 this.laempresa.Constitucion = response.data.Constitucion
@@ -166,6 +168,8 @@ export default {
                 this.laempresa.Socio_3 = response.data.Socio_3
                 this.laempresa.Socio_4 = response.data.Socio_4
                 this.laempresa.Socio_5 = response.data.Socio_5
+                this.laempresa.AsesordeEmp = response.data.AsesordeEmp
+                this.laempresa.GetiodeEmp = response.data.GetiodeEmp
                 //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
 
                 console.log(this.laempresa.Nombre_Largo)

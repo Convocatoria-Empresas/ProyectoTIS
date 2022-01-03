@@ -83,7 +83,7 @@ export default {
         async actualizar(){
             await this.axios.put(`/api/convocatoria/${this.$route.params.id}`,this.convocatoria).then(response=>{
                 console.log(response.data)
-                this.$router.push({name:"convocatoria"})
+                this.$router.push({name:"convocatoria"});
             }).catch(error=>{
                 console.log(error)
             })

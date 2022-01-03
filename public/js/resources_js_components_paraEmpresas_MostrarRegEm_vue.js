@@ -207,6 +207,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Socio_3: "",
         Socio_4: "",
         Socio_5: "",
+        AsesordeEmp: "",
+        GetiodeEmp: "",
         Estado_Aprob: ""
       }
     };
@@ -241,13 +243,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.empresa.Socio_3 = "";
                 _this.empresa.Socio_4 = "";
                 _this.empresa.Socio_5 = "";
+                _this.empresa.AsesordeEmp = "";
+                _this.empresa.GetiodeEmp = "";
                 _this.empresa.Estado_Aprob = 0; //onsole.log(this.response);
 
                 _this.$router.push({
                   name: "empresas"
                 });
 
-              case 21:
+              case 23:
               case "end":
                 return _context.stop();
             }

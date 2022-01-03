@@ -160,7 +160,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Socio_2: "",
         Socio_3: "",
         Socio_4: "",
-        Socio_5: ""
+        Socio_5: "",
+        AsesordeEmp: "",
+        GetiodeEmp: ""
       }
     };
   },
@@ -189,7 +191,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.laempresa.Socio_2 = response.data.Socio_2;
                   _this.laempresa.Socio_3 = response.data.Socio_3;
                   _this.laempresa.Socio_4 = response.data.Socio_4;
-                  _this.laempresa.Socio_5 = response.data.Socio_5; //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
+                  _this.laempresa.Socio_5 = response.data.Socio_5;
+                  _this.laempresa.AsesordeEmp = response.data.AsesordeEmp;
+                  _this.laempresa.GetiodeEmp = response.data.GetiodeEmp; //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
 
                   //this.laempresa.Estado_Aprob = response.data.Estado_Aprob
                   console.log(_this.laempresa.Nombre_Largo);

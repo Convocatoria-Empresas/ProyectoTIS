@@ -18,14 +18,17 @@
                 <tbody>
                     <tr v-for="tablaSeg in tablasSeg" :key=" tablaSeg.id">
                         <th scope="row">{{ tablaSeg.id}}</th>
-                        <td>{{ tablaSeg.PNIT}}</td>
+                        <td>{{ tablaSeg.PGetiodeEmp}}</td>
                         <td>{{ tablaSeg.PNombre_Largo}}</td>
                         <td>{{ tablaSeg.PSocio_1}}</td>
                         <a v-if="tablaSeg.PEstado_Aprob == 1">
                              <td>Aceptado</td>
                         </a>
-                        <a v-else>
+                        <a v-else-if="tablaSeg.PEstado_Aprob == 0">
                              <td>Rechazado</td>
+                        </a>
+                        <a v-else>
+                             <td>Pendiente</td>
                         </a>     
                         <td>
                             <!-- llamamos al componente para Editar     -->

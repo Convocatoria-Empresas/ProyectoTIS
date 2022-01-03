@@ -130,6 +130,9 @@
         <input class="form-control" placeholder="Correo de la empresa / representante legal" id="Correo_electronico" type="text" v-model="empresa.PCorreo_electronico">
         <label for="content"><i class="fas fa-mobile-alt"></i> Telefono</label>
         <input class="form-control" placeholder="Número de celular del representante legal" id="title" type="text" v-model="empresa.PTelefono">
+
+        <label for="content"><i class="fas fa-address-card"></i> NIT</label>
+        <input class="form-control" placeholder="Número NIT" id="nit" type="text" v-model="empresa.PNIT">
         <hr>
 
         <label for="content"><i class="fas fa-file-pdf"></i> Solvencia</label>
@@ -187,6 +190,8 @@ export default {
                 PSocio_3:"",
                 PSocio_4:"",
                 PSocio_5:"",
+                PAsesordeEmp:"",
+                PGetiodeEmp:"",
                 PEstado_Aprob:"",
             },
             notificacion:{
@@ -203,7 +208,10 @@ export default {
      methods:{
 
         async submit(){
-            console.log(this.empresa);
+
+            this.empresa.PAsesordeEmp=this.$route.params.asesorCorr;
+            this.empresa.PGetiodeEmp=this.$route.params.convoGestio;
+            console.log("Se enviará ahora...");
             await axios.post('/api/postulacion', this.empresa);
 
 
@@ -215,6 +223,14 @@ export default {
 
             console.log("Ya etá registrado la postulación");
             await axios.post('/api/notificacion', this.notificacion);
+
+            //Ahora debería buscar el nombre de la Empresa para asignarle su nuevo asesor y gestión
+
+
+
+
+            //Se regresa todo a las convocatorias
+            this.$router.push({name:"convocatoria"});
 
         },
         processFileSolv(event){

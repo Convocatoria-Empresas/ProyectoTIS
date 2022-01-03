@@ -15,14 +15,14 @@
                                 <div class="col-lg-4 offset-md-1" >
 
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Nombre_Largo" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PNombre_Largo" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socios (Codigo SIS)</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Socio_1" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PSocio_1" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -31,7 +31,7 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 2</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Socio_2" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PSocio_2" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -40,7 +40,7 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 3</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Socio_3" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PSocio_3" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -49,7 +49,7 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 4</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Socio_4" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PSocio_4" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -58,14 +58,14 @@
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socio 5</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Socio_5" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PSocio_5" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
 
                                  <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Correo de la Empresa</strong></label>
-                                <input class="form-control" type="text" :placeholder="this.laempresa.Correo_electronico" readonly>
+                                <input class="form-control" type="text" :placeholder="this.lapostulacion.PCorreo_electronico" readonly>
                                 <div class="valid-feedback">
                                  </div>
                                 </div>
@@ -75,19 +75,19 @@
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
                                 
-                              <a download=Solvencia :href="this.laempresa.Solvencia" title='Download pdf document' >Descargar</a>
+                              <a download=Solvencia :href="this.lapostulacion.PSolvencia" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Plan de Pago</strong></label>
-                                <a download=Plan_de_Pago :href="this.laempresa.Plan_Pago" title='Download pdf document' >Descargar</a>
+                                <a download=Plan_de_Pago :href="this.lapostulacion.PPlan_Pago" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Constitución de la Empresa</strong></label>
-                                <a download=Constitución :href="this.laempresa.Constitucion" title='Download pdf document' >Descargar</a>
+                                <a download=Constitución :href="this.lapostulacion.PConstitucion" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Carta de Presentación</strong></label>
-                                <a download=Carta :href="this.laempresa.Carta" title='Download pdf document' >Descargar</a>
+                                <a download=Carta :href="this.lapostulacion.PCarta" title='Download pdf document' >Descargar</a>
                                 </div>
                             </div>
                             <div class="row">
@@ -128,22 +128,24 @@
 <script>
 export default {
 
-    name:"laempresa",
+    name:"lapostulacion",
     data(){
         return {
-            laempresa: {
-             Nombre_Largo: "",
-             Correo_electronico: "",
-             Solvencia: "",
-             Constitucion: "",
-             Plan_Pago: "",
-             Carta: "",
-             Socio_1: "",
-             Socio_2: "",
-             Socio_3: "",
-             Socio_4: "",
-             Socio_5: "",
-             Estado_Aprob:"",
+            lapostulacion: {
+             PNombre_Largo: "",
+             PCorreo_electronico: "",
+             PSolvencia: "",
+             PConstitucion: "",
+             PPlan_Pago: "",
+             PCarta: "",
+             PSocio_1: "",
+             PSocio_2: "",
+             PSocio_3: "",
+             PSocio_4: "",
+             PSocio_5: "",
+             PGetiodeEmp: "",
+             PAsesordeEmp: "",
+             PEstado_Aprob:"",
             }
             
         }
@@ -154,21 +156,23 @@ export default {
     methods:{
 
         async mostrarEmp(){
-            await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.laempresa).then(response=>{
+            await this.axios.put(`/api/postulacion/${this.$route.params.id}`, this.lapostulacion).then(response=>{
                 
                 console.log(response.data)
-                this.laempresa.Nombre_Largo = response.data.Nombre_Largo
-                this.laempresa.Correo_electronico = response.data.Correo_electronico
-                this.laempresa.Plan_Pago = response.data.Plan_Pago 
-                this.laempresa.Constitucion = response.data.Constitucion
-                this.laempresa.Carta = response.data.Carta
-                this.laempresa.Solvencia = response.data.Solvencia
-                this.laempresa.Socio_1 = response.data.Socio_1
-                this.laempresa.Socio_2 = response.data.Socio_2
-                this.laempresa.Socio_3 = response.data.Socio_3
-                this.laempresa.Socio_4 = response.data.Socio_4
-                this.laempresa.Socio_5 = response.data.Socio_5
-                this.laempresa.Estado_Aprob = response.data.Estado_Aprob
+                this.lapostulacion.PNombre_Largo = response.data.PNombre_Largo
+                this.lapostulacion.PCorreo_electronico = response.data.PCorreo_electronico
+                this.lapostulacion.PPlan_Pago = response.data.PPlan_Pago 
+                this.lapostulacion.PConstitucion = response.data.PConstitucion
+                this.lapostulacion.PCarta = response.data.PCarta
+                this.lapostulacion.PSolvencia = response.data.PSolvencia
+                this.lapostulacion.PSocio_1 = response.data.PSocio_1
+                this.lapostulacion.PSocio_2 = response.data.PSocio_2
+                this.lapostulacion.PSocio_3 = response.data.PSocio_3
+                this.lapostulacion.PSocio_4 = response.data.PSocio_4
+                this.lapostulacion.PSocio_5 = response.data.PSocio_5
+                this.lapostulacion.PGetiodeEmp = response.data.PGetiodeEmp
+                this.lapostulacion.PAsesordeEmp = response.data.PAsesordeEmp
+                this.lapostulacion.PEstado_Aprob = response.data.PEstado_Aprob
                 
                 
             }).catch(error=>{
@@ -178,25 +182,30 @@ export default {
         },
          AcpeRe(e){
             if(e.target.value==1){
-                this.laempresa.Estado_Aprob = 1;
+                this.lapostulacion.Estado_Aprob = 1;
                 
             }
             else{
-                this.laempresa.Estado_Aprob = 0;
+                this.lapostulacion.Estado_Aprob = 0;
                 
             }
-            console.log(this.laempresa.Estado_Aprob);
+            console.log(this.lapostulacion.Estado_Aprob);
         },
         
         async actualizar(){
-          await this.axios.get(`/api/empresa/${this.$route.params.id}/approve/${this.laempresa.Estado_Aprob}`,this.laempresa).then(response=>{
-                
-                console.log(response.data)
-                
+          await this.axios.get(`/api/postulacion/${this.$route.params.id}/approve/${this.lapostulacion.Estado_Aprob}`,this.lapostulacion).then(response=>{        
                 
             }).catch(error=>{
                 console.log(error)
             })
+          await this.axios.get(`/api/empresa/${this.lapostulacion.PNombre_Largo}/approve/${this.lapostulacion.Estado_Aprob}`,this.lapostulacion).then(response=>{        
+                console.log("Debería ser capaz de encontrar por nombre")
+                console.log(response.data)
+            }).catch(error=>{
+                console.log(error)
+            })
+
+
             this.$router.push({name:"SegPostulante"}).catch(()=>{});
         },
 

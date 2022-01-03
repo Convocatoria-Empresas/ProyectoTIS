@@ -18,9 +18,9 @@
                         <tr v-for="blog in blogs" :key="blog.id" >
                           
                             <td v-if="blog.Estado_Aprob == 1">{{ blog.id }}</td>
-                            <td v-if="blog.Estado_Aprob == 1">{{ blog.Gestion }}</td>
+                            <td v-if="blog.Estado_Aprob == 1">{{ blog.GetiodeEmp }}</td>
                             <td v-if="blog.Estado_Aprob == 1">{{ blog.Nombre_Largo }}</td>
-                            <td v-if="blog.Estado_Aprob == 1">{{ blog.Asesor }}</td>
+                            <td v-if="blog.Estado_Aprob == 1">{{ blog.AsesordeEmp }}</td>
                            
                             <td v-if="blog.Estado_Aprob == 1">
                                 <!-- llamamos al componente para Editar     -->

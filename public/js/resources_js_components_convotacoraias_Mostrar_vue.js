@@ -310,6 +310,7 @@ var render = function () {
                             params: {
                               id: blog.id,
                               asesorCorr: blog.Correo_Ase,
+                              convoGestio: blog.Gestion,
                             },
                           },
                         },

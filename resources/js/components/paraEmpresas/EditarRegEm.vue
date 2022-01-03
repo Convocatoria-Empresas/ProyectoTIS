@@ -146,6 +146,8 @@ export default {
             Socio_3:"",
             Socio_4:"",
             Socio_5:"",
+            AsesordeEmp:"",
+            GetiodeEmp:"",
             Estado_Aprob:"",
             }
         }

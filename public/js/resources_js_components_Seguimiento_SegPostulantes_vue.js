@@ -59,6 +59,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "tablasSeg",
   data: function data() {
@@ -202,7 +205,7 @@ var render = function () {
                   _vm._v(_vm._s(tablaSeg.id)),
                 ]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.PNIT))]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.PGetiodeEmp))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(tablaSeg.PNombre_Largo))]),
                 _vm._v(" "),
@@ -210,7 +213,9 @@ var render = function () {
                 _vm._v(" "),
                 tablaSeg.PEstado_Aprob == 1
                   ? _c("a", [_c("td", [_vm._v("Aceptado")])])
-                  : _c("a", [_c("td", [_vm._v("Rechazado")])]),
+                  : tablaSeg.PEstado_Aprob == 0
+                  ? _c("a", [_c("td", [_vm._v("Rechazado")])])
+                  : _c("a", [_c("td", [_vm._v("Pendiente")])]),
                 _vm._v(" "),
                 _c(
                   "td",

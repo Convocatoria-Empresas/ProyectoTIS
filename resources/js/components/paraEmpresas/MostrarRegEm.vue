@@ -188,6 +188,8 @@ export default {
             Socio_3:"",
             Socio_4:"",
             Socio_5:"",
+            AsesordeEmp:"",
+            GetiodeEmp:"",
             Estado_Aprob:"",
             }
         }
@@ -215,6 +217,8 @@ export default {
             this.empresa.Socio_3 = "";
             this.empresa.Socio_4 = "";
             this.empresa.Socio_5 = "";
+            this.empresa.AsesordeEmp = "";
+            this.empresa.GetiodeEmp = "";
             this.empresa.Estado_Aprob= 0;
             //onsole.log(this.response);
 
