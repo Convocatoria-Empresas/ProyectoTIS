@@ -208,7 +208,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.nomb_empre))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.asesor))]),
+                _c("td", [_vm._v(_vm._s(blog.Asesor))]),
                 _vm._v(" "),
                 _c(
                   "td",

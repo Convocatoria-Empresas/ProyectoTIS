@@ -14,6 +14,7 @@ class Convocatoria extends Model
         'Descripcion',
         'Fecha',
         'Asesor',
+        'Correo_Ase',
         'Informacion_A',
         'Informacion_B',
         'Gestion',

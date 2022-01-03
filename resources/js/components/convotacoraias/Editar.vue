@@ -20,6 +20,8 @@
                                 <input class="form-control" id="Gestion" type="text" :placeholder="this.convocatoria.Gestion" v-model="convocatoria.Gestion">
                                 <label for="floatingTextarea2">Asesor</label>
                                 <input class="form-control" id="Asesor" type="text" :placeholder="this.convocatoria.Asesor" v-model="convocatoria.Asesor">
+                                <label for="floatingTextarea2">Correo Asesor</label>
+                                <input class="form-control" id="Asesor_corr" type="text" :placeholder="this.convocatoria.Correo_Ase" v-model="convocatoria.Correo_Ase">
                                 <label for="floatingTextarea2">Fecha</label>
                                 <input class="form-control" id="Fecha" type="date" :placeholder="this.convocatoria.Fecha" v-model="convocatoria.Fecha">
                                 <label for="content">Descripción</label>
@@ -68,6 +70,7 @@ export default {
                 this.convocatoria.Titulo= response.data.Titulo
                 this.convocatoria.Descripcion= response.data.Descripcion
                 this.convocatoria.Asesor= response.data.Asesor
+                this.convocatoria.Correo_Ase= response.data.Correo_Ase
                 this.convocatoria.Fecha= response.data.Fecha
                 this.convocatoria.Informacion_A= response.data.Informacion_A
                 this.convocatoria.Informacion_B= response.data.Informacion_B

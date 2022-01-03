@@ -62,6 +62,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-blog",
   data: function data() {
@@ -95,6 +97,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.convocatoria.Titulo = response.data.Titulo;
                   _this.convocatoria.Descripcion = response.data.Descripcion;
                   _this.convocatoria.Asesor = response.data.Asesor;
+                  _this.convocatoria.Correo_Ase = response.data.Correo_Ase;
                   _this.convocatoria.Fecha = response.data.Fecha;
                   _this.convocatoria.Informacion_A = response.data.Informacion_A;
                   _this.convocatoria.Informacion_B = response.data.Informacion_B;
@@ -365,6 +368,40 @@ var render = function () {
                           _vm.$set(
                             _vm.convocatoria,
                             "Asesor",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("label", { attrs: { for: "floatingTextarea2" } }, [
+                      _vm._v("Correo Asesor"),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.convocatoria.Correo_Ase,
+                          expression: "convocatoria.Correo_Ase",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        id: "Asesor_corr",
+                        type: "text",
+                        placeholder: this.convocatoria.Correo_Ase,
+                      },
+                      domProps: { value: _vm.convocatoria.Correo_Ase },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.convocatoria,
+                            "Correo_Ase",
                             $event.target.value
                           )
                         },

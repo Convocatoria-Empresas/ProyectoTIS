@@ -19,7 +19,7 @@
                             <td>{{ blog.id }}</td>
                             <td>{{ blog.Gestion }}</td>
                             <td>{{ blog.nomb_empre }}</td>
-                            <td>{{ blog.asesor }}</td>
+                            <td>{{ blog.Asesor }}</td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link to='/RevSegEmpre' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>

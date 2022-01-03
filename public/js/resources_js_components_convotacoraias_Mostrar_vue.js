@@ -65,6 +65,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -249,6 +252,8 @@ var render = function () {
               return _c("tr", { key: blog.id }, [
                 _c("td", [_vm._v(_vm._s(blog.Gestion))]),
                 _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(blog.Asesor))]),
+                _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Titulo))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Descripcion))]),
@@ -296,6 +301,23 @@ var render = function () {
                     ),
                     _vm._v(" "),
                     _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-warning",
+                        attrs: {
+                          to: {
+                            name: "PostularEst",
+                            params: {
+                              id: blog.id,
+                              asesorCorr: blog.Correo_Ase,
+                            },
+                          },
+                        },
+                      },
+                      [_c("i", { staticClass: "fas fa-medal" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
                       "a",
                       {
                         staticClass: "btn btn-danger",
@@ -340,6 +362,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Gestión")]),
         _vm._v(" "),
         _c("th", [_vm._v("Título")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Asesor")]),
         _vm._v(" "),
         _c("th", [_vm._v("Descripción")]),
         _vm._v(" "),

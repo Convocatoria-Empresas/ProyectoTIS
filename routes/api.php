@@ -19,6 +19,8 @@ Route::get('empresa/{empresa_id}/approve/{aprob}', ['uses' =>'App\Http\Controlle
 
 Route::resource('empresa',App\Http\Controllers\EmpresaController::class);
 
+Route::resource('postulacion',App\Http\Controllers\PostulacionController::class);
+
 Route::resource('user',App\Http\Controllers\UserController::class);
 
 //Route::resource('convocatorias', ConvocatoriaEmpresaController::class);

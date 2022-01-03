@@ -21,7 +21,12 @@
                         <td>{{ tablaSeg.NIT}}</td>
                         <td>{{ tablaSeg.Nombre_Largo}}</td>
                         <td>{{ tablaSeg.Socio_1}}</td>
-                        <td>{{ tablaSeg.Estado}}</td>
+                        <a v-if="tablaSeg.Estado_Aprob == 1">
+                             <td>Aceptado</td>
+                        </a>
+                        <a v-else>
+                             <td>Rechazado</td>
+                        </a>     
                         <td>
                             <!-- llamamos al componente para Editar     -->
                             <router-link :to='{name:"RevSegPost",params: {id:tablaSeg.id}}' class="btn btn-info"><i class="fas fa-eye"></i></router-link>

@@ -15,6 +15,7 @@
                         <tr>
                             <th>Gestión</th>
                             <th>Título</th>
+                            <th>Asesor</th>
                             <th>Descripción</th>
                             <th>Documentos</th>
                             <th>Acciones</th>
@@ -24,6 +25,7 @@
                         <tr v-for="blog in blogs" :key="blog.id">
 
                             <td>{{ blog.Gestion }}</td>
+                            <td>{{ blog.Asesor }}</td>
                             <td>{{ blog.Titulo }}</td>
                             <td>{{ blog.Descripcion }}</td>
                             <td>
@@ -34,6 +36,7 @@
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"editarConvo",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
+                                <router-link :to='{name:"PostularEst",params:{id:blog.id,asesorCorr:blog.Correo_Ase,}}' class="btn btn-warning"><i class="fas fa-medal"></i></router-link>
                                 <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>

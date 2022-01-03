@@ -188,7 +188,7 @@ export default {
                 console.log("Aquelo que devuelve es")
                 console.log(response.data)
                 
-                this.$router.push({name:"empresa"})
+                this.$router.push({name:"empresas"})
             }).catch(error=>{
                 console.log(error)
             })

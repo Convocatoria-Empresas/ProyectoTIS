@@ -54,6 +54,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "tablasSeg",
   data: function data() {
@@ -203,7 +208,9 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(tablaSeg.Socio_1))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.Estado))]),
+                tablaSeg.Estado_Aprob == 1
+                  ? _c("a", [_c("td", [_vm._v("Aceptado")])])
+                  : _c("a", [_c("td", [_vm._v("Rechazado")])]),
                 _vm._v(" "),
                 _c(
                   "td",
