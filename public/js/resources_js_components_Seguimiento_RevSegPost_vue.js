@@ -211,12 +211,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     AcpeRe: function AcpeRe(e) {
       if (e.target.value == 1) {
-        this.lapostulacion.Estado_Aprob = 1;
+        this.lapostulacion.PEstado_Aprob = 1;
       } else {
-        this.lapostulacion.Estado_Aprob = 0;
+        this.lapostulacion.PEstado_Aprob = 0;
       }
 
-      console.log(this.lapostulacion.Estado_Aprob);
+      console.log(this.lapostulacion.PEstado_Aprob);
     },
     actualizar: function actualizar() {
       var _this2 = this;
@@ -227,25 +227,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _this2.axios.get("/api/postulacion/".concat(_this2.$route.params.id, "/approve/").concat(_this2.lapostulacion.Estado_Aprob), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
+                return _this2.axios.get("/api/postulacion/".concat(_this2.$route.params.id, "/approve/").concat(_this2.lapostulacion.PEstado_Aprob), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
                   console.log(error);
                 });
 
               case 2:
                 _context2.next = 4;
-                return _this2.axios.get("/api/empresa/".concat(_this2.lapostulacion.PNombre_Largo, "/approve/").concat(_this2.lapostulacion.Estado_Aprob), _this2.lapostulacion).then(function (response) {
-                  console.log("Debería ser capaz de encontrar por nombre");
-                  console.log(response.data);
-                })["catch"](function (error) {
+                return _this2.axios.get("/api/empresa/".concat(_this2.lapostulacion.PNombre_Largo, "/approve/").concat(_this2.lapostulacion.PEstado_Aprob), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
                   console.log(error);
                 });
 
               case 4:
+                if (!(_this2.lapostulacion.PEstado_Aprob == 1)) {
+                  _context2.next = 7;
+                  break;
+                }
+
+                _context2.next = 7;
+                return _this2.axios.put("/api/empresa/".concat(_this2.lapostulacion.PNombre_Largo, "/addAseGes"), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 7:
                 _this2.$router.push({
                   name: "SegPostulante"
                 })["catch"](function () {});
 
-              case 5:
+              case 8:
               case "end":
                 return _context2.stop();
             }

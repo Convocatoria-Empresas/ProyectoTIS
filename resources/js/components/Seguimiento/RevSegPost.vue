@@ -182,28 +182,35 @@ export default {
         },
          AcpeRe(e){
             if(e.target.value==1){
-                this.lapostulacion.Estado_Aprob = 1;
+                this.lapostulacion.PEstado_Aprob = 1;
                 
             }
             else{
-                this.lapostulacion.Estado_Aprob = 0;
+                this.lapostulacion.PEstado_Aprob = 0;
                 
             }
-            console.log(this.lapostulacion.Estado_Aprob);
+            console.log(this.lapostulacion.PEstado_Aprob);
         },
         
         async actualizar(){
-          await this.axios.get(`/api/postulacion/${this.$route.params.id}/approve/${this.lapostulacion.Estado_Aprob}`,this.lapostulacion).then(response=>{        
+          await this.axios.get(`/api/postulacion/${this.$route.params.id}/approve/${this.lapostulacion.PEstado_Aprob}`,this.lapostulacion).then(response=>{        
                 
             }).catch(error=>{
                 console.log(error)
             })
-          await this.axios.get(`/api/empresa/${this.lapostulacion.PNombre_Largo}/approve/${this.lapostulacion.Estado_Aprob}`,this.lapostulacion).then(response=>{        
-                console.log("Debería ser capaz de encontrar por nombre")
-                console.log(response.data)
+          await this.axios.get(`/api/empresa/${this.lapostulacion.PNombre_Largo}/approve/${this.lapostulacion.PEstado_Aprob}`,this.lapostulacion).then(response=>{        
+            
             }).catch(error=>{
                 console.log(error)
             })
+
+            if(this.lapostulacion.PEstado_Aprob == 1){
+                 await this.axios.put(`/api/empresa/${this.lapostulacion.PNombre_Largo}/addAseGes`,this.lapostulacion).then(response=>{        
+            
+            }).catch(error=>{
+                console.log(error)
+            })   
+            }
 
 
             this.$router.push({name:"SegPostulante"}).catch(()=>{});

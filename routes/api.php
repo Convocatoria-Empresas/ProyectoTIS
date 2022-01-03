@@ -16,6 +16,7 @@ Route::resource('convocatoria',App\Http\Controllers\ConvocatoriaController::clas
 
 Route::put('empresa/{empresa}/edit/{editar}',['uses' =>'App\Http\Controllers\EmpresaController@edit']);
 Route::get('empresa/{empresa_id}/approve/{aprob}', ['uses' =>'App\Http\Controllers\EmpresaController@approve']);
+Route::put('empresa/{empresa_name}/addAseGes', ['uses' =>'App\Http\Controllers\EmpresaController@addAsesoGes']);
 
 Route::resource('empresa',App\Http\Controllers\EmpresaController::class);
 

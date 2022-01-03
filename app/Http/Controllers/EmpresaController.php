@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Empresa;
+use App\Models\Postulacion;
 use Illuminate\Http\Request;
 
 class EmpresaController extends Controller
@@ -216,6 +217,13 @@ class EmpresaController extends Controller
          $empresa->save();
     
            return response()->json($empresa);
+    }
+    public function addAsesoGes($empresa_name, Request $request ){
+        $empresa= Empresa::where('Nombre_Largo', $empresa_name)->first();
+
+        $empresa->AsesordeEmp=$request->PAsesordeEmp;
+        $empresa->GetiodeEmp=$request->PGetiodeEmp;
+        $empresa->save();
     }
 
 }
