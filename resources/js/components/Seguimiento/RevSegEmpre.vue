@@ -20,42 +20,43 @@
                             </div>
                             <div class="form-group">
                                 <label for="disabledTextInput"><i class="fas fa-signature"></i> Nombre</label>
-                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Nombre de la Grupo Empresa">
+                                <input type="text" id="disabledTextInput" class="form-control" :placeholder="this.laempresa.Nombre_Largo" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="disabledTextInput"><i class="fas fa-envelope-open-text"></i> Correo Electrónico</label>
-                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Correo de la Empresa">
+                                <input type="text" id="disabledTextInput" class="form-control" :placeholder="this.laempresa.Correo_electronico" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="disabledTextInput"><i class="fas fa-envelope-open-text"></i> Correo Electrónico</label>
-                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Correo de la Empresa">
+                                <label for="disabledTextInput"><i class="fas fa-phone"></i> Teléfono</label>
+                                <input type="text" id="disabledTextInput" class="form-control" :placeholder="this.laempresa.Telefono" readonly>
                                 <hr>
                             </div>
                             <div class="form-group">
-                                <label for="disabledTextInput"><i class="fas fa-file-pdf"></i> Boleta de garantia</label>
+                                <label for="disabledTextInput"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend">PDF</span>
+                                    <span class="input-group-text" download=Plan_Pago :href="laempresa.Plan_Pago" id="inputGroupPrepend">PDF</span>
+                
                                 </div>
                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Documento.pdf" aria-describedby="inputGroupPrepend" required>
                             </div>
                             <div class="form-group">
                                 <label for="disabledTextInput"><i class="fas fa-file-pdf"></i> Carta de Presentación</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend">PDF</span>
+                                    <span class="input-group-text" download=Carta :href="laempresa.Carta" id="inputGroupPrepend">PDF</span>
                                 </div>
                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Documento.pdf" aria-describedby="inputGroupPrepend" required>
                             </div>
                             <div class="form-group">
                                 <label for="disabledTextInput"><i class="fas fa-file-pdf"></i> Constitución de la Empresa</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend">PDF</span>
+                                    <span class="input-group-text" download=Constitucion :href="laempresa.Constitucion" id="inputGroupPrepend">PDF</span>
                                 </div>
                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Documento.pdf" aria-describedby="inputGroupPrepend" required>
                             </div>
                             <div class="form-group">
                                 <label for="disabledTextInput"><i class="fas fa-file-pdf"></i> Solvencia Técnica</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroupPrepend">PDF</span>
+                                    <span class="input-group-text" download=Solvencia :href="laempresa.Solvencia" id="inputGroupPrepend">PDF</span>
                                 </div>
                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Documento.pdf" aria-describedby="inputGroupPrepend" required>
                             </div>
@@ -120,6 +121,8 @@ export default {
                 this.laempresa.Socio_3 = response.data.Socio_3
                 this.laempresa.Socio_4 = response.data.Socio_4
                 this.laempresa.Socio_5 = response.data.Socio_5
+                this.laempresa.AsesordeEmp = response.data.AsesordeEmp
+                this.laempresa.GetiodeEmp = response.data.GetiodeEmp
                 this.laempresa.Estado_Aprob = response.data.Estado_Aprob
                 
                 

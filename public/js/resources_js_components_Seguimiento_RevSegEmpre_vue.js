@@ -96,6 +96,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "laempresa",
   data: function data() {
@@ -144,6 +145,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.laempresa.Socio_3 = response.data.Socio_3;
                   _this.laempresa.Socio_4 = response.data.Socio_4;
                   _this.laempresa.Socio_5 = response.data.Socio_5;
+                  _this.laempresa.AsesordeEmp = response.data.AsesordeEmp;
+                  _this.laempresa.GetiodeEmp = response.data.GetiodeEmp;
                   _this.laempresa.Estado_Aprob = response.data.Estado_Aprob;
                 })["catch"](function (error) {
                   console.log(error);
@@ -290,7 +293,195 @@ var render = function () {
               },
             },
           },
-          [_vm._m(1)]
+          [
+            _c("div", { staticClass: "col-lg-5 offset-md-4" }, [
+              _c("form", [
+                _c("fieldset", { attrs: { disabled: "" } }, [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "disabledTextInput",
+                        placeholder: this.laempresa.Nombre_Largo,
+                        readonly: "",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "disabledTextInput",
+                        placeholder: this.laempresa.Correo_electronico,
+                        readonly: "",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "disabledTextInput",
+                        placeholder: this.laempresa.Telefono,
+                        readonly: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("hr"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(6),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group-prepend" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "input-group-text",
+                          attrs: {
+                            download: "Plan_Pago",
+                            href: _vm.laempresa.Plan_Pago,
+                            id: "inputGroupPrepend",
+                          },
+                        },
+                        [_vm._v("PDF")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "validationCustomUsername",
+                        placeholder: "Documento.pdf",
+                        "aria-describedby": "inputGroupPrepend",
+                        required: "",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(7),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group-prepend" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "input-group-text",
+                          attrs: {
+                            download: "Carta",
+                            href: _vm.laempresa.Carta,
+                            id: "inputGroupPrepend",
+                          },
+                        },
+                        [_vm._v("PDF")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "validationCustomUsername",
+                        placeholder: "Documento.pdf",
+                        "aria-describedby": "inputGroupPrepend",
+                        required: "",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(8),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group-prepend" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "input-group-text",
+                          attrs: {
+                            download: "Constitucion",
+                            href: _vm.laempresa.Constitucion,
+                            id: "inputGroupPrepend",
+                          },
+                        },
+                        [_vm._v("PDF")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "validationCustomUsername",
+                        placeholder: "Documento.pdf",
+                        "aria-describedby": "inputGroupPrepend",
+                        required: "",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group-prepend" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "input-group-text",
+                          attrs: {
+                            download: "Solvencia",
+                            href: _vm.laempresa.Solvencia,
+                            id: "inputGroupPrepend",
+                          },
+                        },
+                        [_vm._v("PDF")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "validationCustomUsername",
+                        placeholder: "Documento.pdf",
+                        "aria-describedby": "inputGroupPrepend",
+                        required: "",
+                      },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _vm._m(10),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  { staticClass: "btn btn-success", attrs: { type: "submit" } },
+                  [_vm._v("Enviar")]
+                ),
+                _vm._v(" "),
+                _c("button", { staticClass: "btn btn-warning" }, [
+                  _vm._v("Volver"),
+                ]),
+              ]),
+            ]),
+          ]
         ),
       ]),
     ]),
@@ -311,230 +502,119 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-5 offset-md-4" }, [
-      _c("form", [
-        _c("fieldset", { attrs: { disabled: "" } }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-calendar-week" }),
-              _vm._v(" Gestión"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "disabledTextInput",
-                placeholder: "Gestión",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "far fa-user" }),
-              _vm._v(" Asesor"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "disabledTextInput",
-                placeholder: "Nombre del Asesor",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-signature" }),
-              _vm._v(" Nombre"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "disabledTextInput",
-                placeholder: "Nombre de la Grupo Empresa",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-envelope-open-text" }),
-              _vm._v(" Correo Electrónico"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "disabledTextInput",
-                placeholder: "Correo de la Empresa",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-envelope-open-text" }),
-              _vm._v(" Correo Electrónico"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "disabledTextInput",
-                placeholder: "Correo de la Empresa",
-              },
-            }),
-            _vm._v(" "),
-            _c("hr"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-file-pdf" }),
-              _vm._v(" Boleta de garantia"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "input-group-prepend" }, [
-              _c(
-                "span",
-                {
-                  staticClass: "input-group-text",
-                  attrs: { id: "inputGroupPrepend" },
-                },
-                [_vm._v("PDF")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "validationCustomUsername",
-                placeholder: "Documento.pdf",
-                "aria-describedby": "inputGroupPrepend",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-file-pdf" }),
-              _vm._v(" Carta de Presentación"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "input-group-prepend" }, [
-              _c(
-                "span",
-                {
-                  staticClass: "input-group-text",
-                  attrs: { id: "inputGroupPrepend" },
-                },
-                [_vm._v("PDF")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "validationCustomUsername",
-                placeholder: "Documento.pdf",
-                "aria-describedby": "inputGroupPrepend",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-file-pdf" }),
-              _vm._v(" Constitución de la Empresa"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "input-group-prepend" }, [
-              _c(
-                "span",
-                {
-                  staticClass: "input-group-text",
-                  attrs: { id: "inputGroupPrepend" },
-                },
-                [_vm._v("PDF")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "validationCustomUsername",
-                placeholder: "Documento.pdf",
-                "aria-describedby": "inputGroupPrepend",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "disabledTextInput" } }, [
-              _c("i", { staticClass: "fas fa-file-pdf" }),
-              _vm._v(" Solvencia Técnica"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "input-group-prepend" }, [
-              _c(
-                "span",
-                {
-                  staticClass: "input-group-text",
-                  attrs: { id: "inputGroupPrepend" },
-                },
-                [_vm._v("PDF")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "validationCustomUsername",
-                placeholder: "Documento.pdf",
-                "aria-describedby": "inputGroupPrepend",
-                required: "",
-              },
-            }),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "exampleFormControlTextarea1" } }, [
-            _c("i", { staticClass: "fas fa-comments" }),
-            _vm._v(" Escribir las observaciones"),
-          ]),
-          _vm._v(" "),
-          _c("textarea", {
-            staticClass: "form-control",
-            attrs: { id: "exampleFormControlTextarea1", rows: "3" },
-          }),
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-success", attrs: { type: "submit" } },
-          [_vm._v("Enviar")]
-        ),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-warning" }, [_vm._v("Volver")]),
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "disabledTextInput" } }, [
+        _c("i", { staticClass: "fas fa-calendar-week" }),
+        _vm._v(" Gestión"),
       ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "text",
+          id: "disabledTextInput",
+          placeholder: "Gestión",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "disabledTextInput" } }, [
+        _c("i", { staticClass: "far fa-user" }),
+        _vm._v(" Asesor"),
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "text",
+          id: "disabledTextInput",
+          placeholder: "Nombre del Asesor",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-signature" }),
+      _vm._v(" Nombre"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-envelope-open-text" }),
+      _vm._v(" Correo Electrónico"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-phone" }),
+      _vm._v(" Teléfono"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Plan de Pago"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Carta de Presentación"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Constitución de la Empresa"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Solvencia Técnica"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "exampleFormControlTextarea1" } }, [
+        _c("i", { staticClass: "fas fa-comments" }),
+        _vm._v(" Escribir las observaciones"),
+      ]),
+      _vm._v(" "),
+      _c("textarea", {
+        staticClass: "form-control",
+        attrs: { id: "exampleFormControlTextarea1", rows: "3" },
+      }),
     ])
   },
 ]

@@ -229,7 +229,12 @@ var render = function () {
                           "router-link",
                           {
                             staticClass: "btn btn-info",
-                            attrs: { to: "/RevSegEmpre" },
+                            attrs: {
+                              to: {
+                                name: "RevSegEmpre",
+                                params: { id: blog.id },
+                              },
+                            },
                           },
                           [
                             _c("i", { staticClass: "fas fa-eye" }),
