@@ -32,7 +32,6 @@ window.Vue = vue;
 
 //Componente importante
 import App from './components/App.vue';
-import AppEst from './components/Estudiante/AppEst.vue';
 
 //importamos Axios
 import VueAxios from 'vue-axios';
