@@ -125,6 +125,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -137,7 +145,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Telf: "",
         Carnet: "",
         Contrasena_usu: "",
-        Rol_usu: "Estudiante"
+        Rol_usu: ""
       }
     };
   },
@@ -177,6 +185,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    SelecTipoUsuar: function SelecTipoUsuar(e) {
+      if (e.target.value == 1) {
+        this.users.Rol_usu = "Asesor";
+      } else {
+        this.users.Rol_usu = "Estudiante";
+      }
     }
   }
 });
@@ -629,6 +644,48 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _vm._m(10),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "form-label",
+                            attrs: { for: "inlineFormCustomSelect" },
+                          },
+                          [_vm._v("¿A quién registra?")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass: "custom-select mr-sm-2",
+                            attrs: {
+                              id: "inlineFormCustomSelect",
+                              required: "",
+                            },
+                            on: {
+                              change: function ($event) {
+                                return _vm.SelecTipoUsuar($event)
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "option",
+                              { attrs: { disabled: "", selected: "" } },
+                              [_vm._v("Seleccione")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Asesor"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "0" } }, [
+                              _vm._v("Estudiante"),
+                            ]),
+                          ]
+                        ),
+                      ]),
                     ]
                   ),
                   _vm._v(" "),

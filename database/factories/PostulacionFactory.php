@@ -28,6 +28,8 @@ class PostulacionFactory extends Factory
             'PSocio_3'=> $this->faker->ean8,
             'PSocio_4'=> $this->faker->ean8,
             'PSocio_5'=> $this->faker->ean8,
+            'PAsesordeEmp'=> $this->faker->name,
+            'PGetiodeEmp'=> $this->faker->century,
             'PEstado_Aprob'=> $this->faker->boolean,
         ];
     }

@@ -192,7 +192,7 @@ var render = function () {
                   _vm._v(_vm._s(tablaSeg.id)),
                 ]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(tablaSeg.NIT))]),
+                _c("td", [_vm._v(_vm._s(tablaSeg.GetiodeEmp))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(tablaSeg.Nombre_Largo))]),
                 _vm._v(" "),

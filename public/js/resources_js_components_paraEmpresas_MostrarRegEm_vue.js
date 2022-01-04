@@ -207,6 +207,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Socio_3: "",
         Socio_4: "",
         Socio_5: "",
+        AsesordeEmp: "",
+        GetiodeEmp: "",
         Estado_Aprob: ""
       }
     };
@@ -221,10 +223,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 console.log("Todo bien aquí");
-                _context.next = 3;
+                _this.empresa.Estado_Aprob = 0;
+                _context.next = 4;
                 return axios.post('/api/empresa', _this.empresa);
 
-              case 3:
+              case 4:
                 console.log("El problema es aquí");
                 _this.empresa.Nombre_Largo = "";
                 _this.empresa.Nombre_Corto = "";
@@ -240,9 +243,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.empresa.Socio_3 = "";
                 _this.empresa.Socio_4 = "";
                 _this.empresa.Socio_5 = "";
+                _this.empresa.AsesordeEmp = "";
+                _this.empresa.GetiodeEmp = "";
                 _this.empresa.Estado_Aprob = 0; //onsole.log(this.response);
 
-              case 19:
+                _this.$router.push({
+                  name: "empresas"
+                });
+
+              case 23:
               case "end":
                 return _context.stop();
             }

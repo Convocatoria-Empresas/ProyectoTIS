@@ -15,15 +15,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="blog in blogs" :key="blog.id">
-                            <td>{{ blog.id }}</td>
-                            <td>{{ blog.Gestion }}</td>
-                            <td>{{ blog.nomb_empre }}</td>
-                            <td>{{ blog.asesor }}</td>
-                            <td>
+                        <tr v-for="blog in blogs" :key="blog.id" >
+                          
+                            <td v-if="blog.Estado_Aprob == 1">{{ blog.id }}</td>
+                            <td v-if="blog.Estado_Aprob == 1">{{ blog.GetiodeEmp }}</td>
+                            <td v-if="blog.Estado_Aprob == 1">{{ blog.Nombre_Largo }}</td>
+                            <td v-if="blog.Estado_Aprob == 1">{{ blog.AsesordeEmp }}</td>
+                           
+                            <td v-if="blog.Estado_Aprob == 1">
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link to='/RevSegEmpre' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>
+                                <router-link :to='{name:"RevSegEmpre",params: {id:blog.id}}' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>
                             </td>
+                             
                         </tr>
                     </tbody>
                 </table>
@@ -44,7 +47,7 @@ export default {
     },
     methods:{
         async mostrarBlogs(){
-            await this.axios.get('/api/convocatoria').then(response=>{
+            await this.axios.get('/api/empresa').then(response=>{
                 console.log(response.data)
                 this.blogs = response.data
             }).catch(error=>{

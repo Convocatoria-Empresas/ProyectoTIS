@@ -186,25 +186,37 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       empresa: {
-        Nombre_Largo: "",
-        Nombre_Corto: "",
-        Correo_electronico: "",
-        Telefono: "",
-        NIT: "",
-        Solvencia: "",
-        Constitucion: "",
-        Plan_Pago: "",
-        Carta: "",
-        Socio_1: "",
-        Socio_2: "",
-        Socio_3: "",
-        Socio_4: "",
-        Socio_5: "",
-        Estado_Aprob: ""
+        PNombre_Largo: "",
+        PNombre_Corto: "",
+        PCorreo_electronico: "",
+        PTelefono: "",
+        PNIT: "",
+        PSolvencia: "",
+        PConstitucion: "",
+        PPlan_Pago: "",
+        PCarta: "",
+        PSocio_1: "",
+        PSocio_2: "",
+        PSocio_3: "",
+        PSocio_4: "",
+        PSocio_5: "",
+        PAsesordeEmp: "",
+        PGetiodeEmp: "",
+        PEstado_Aprob: ""
+      },
+      notificacion: {
+        NTitulo: "",
+        Texto: "",
+        Emisor: "",
+        Receptor: "",
+        Leido: ""
       }
     };
   },
@@ -213,34 +225,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return axios.post('/api/empresa', _this.empresa);
+                _this.empresa.PAsesordeEmp = _this.$route.params.asesorCorr;
+                _this.empresa.PGetiodeEmp = _this.$route.params.convoGestio;
+                console.log("Se enviará ahora...");
+                _context.next = 5;
+                return axios.post('/api/postulacion', _this.empresa);
 
-              case 2:
-                response = _context.sent;
-                _this.empresa.Nombre_Largo = "";
-                _this.empresa.Nombre_Corto = "";
-                _this.empresa.Correo_electronico = "";
-                _this.empresa.Telefono = "";
-                _this.empresa.NIT = "";
-                _this.empresa.Solvencia = "";
-                _this.empresa.Constitucion = "";
-                _this.empresa.Plan_Pago = "";
-                _this.empresa.Carta = "";
-                _this.empresa.Socio_1 = "";
-                _this.empresa.Socio_2 = "";
-                _this.empresa.Socio_3 = "";
-                _this.empresa.Socio_4 = "";
-                _this.empresa.Socio_5 = "";
-                _this.empresa.Estado_Aprob = 0;
-                console.log(_this.response);
+              case 5:
+                _this.notificacion.NTitulo = "Postulaci\xF3n a Convocatoria de ".concat(_this.empresa.PNombre_Largo);
+                _this.notificacion.Texto = "";
+                _this.notificacion.Emisor = _this.empresa.PCorreo_electronico;
+                _this.notificacion.Receptor = _this.$route.params.asesorCorr;
+                _this.notificacion.Leido = 0;
+                console.log("Ya etá registrado la postulación");
+                _context.next = 13;
+                return axios.post('/api/notificacion', _this.notificacion);
 
-              case 19:
+              case 13:
+                //Ahora debería buscar el nombre de la Empresa para asignarle su nuevo asesor y gestión
+                //Se regresa todo a las convocatorias
+                _this.$router.push({
+                  name: "convocatoria"
+                });
+
+              case 14:
               case "end":
                 return _context.stop();
             }
@@ -254,7 +266,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var reader = new FileReader();
 
       reader.onload = function (evt) {
-        self.empresa.Solvencia = reader.result;
+        self.empresa.PSolvencia = reader.result;
       };
 
       reader.readAsDataURL(Solv);
@@ -265,7 +277,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var reader = new FileReader();
 
       reader.onload = function (evt) {
-        self.empresa.Constitucion = reader.result;
+        self.empresa.PConstitucion = reader.result;
       };
 
       reader.readAsDataURL(Consti);
@@ -276,7 +288,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var reader = new FileReader();
 
       reader.onload = function (evt) {
-        self.empresa.Plan_Pago = reader.result;
+        self.empresa.PPlan_Pago = reader.result;
       };
 
       reader.readAsDataURL(Plande);
@@ -287,7 +299,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var reader = new FileReader();
 
       reader.onload = function (evt) {
-        self.empresa.Carta = reader.result;
+        self.empresa.PCarta = reader.result;
       };
 
       reader.readAsDataURL(Car);
@@ -408,8 +420,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Nombre_Largo,
-                    expression: "empresa.Nombre_Largo",
+                    value: _vm.empresa.PNombre_Largo,
+                    expression: "empresa.PNombre_Largo",
                   },
                 ],
                 staticClass: "form-control",
@@ -419,13 +431,13 @@ var render = function () {
                   id: "Nombre_Largo",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Nombre_Largo },
+                domProps: { value: _vm.empresa.PNombre_Largo },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Nombre_Largo", $event.target.value)
+                    _vm.$set(_vm.empresa, "PNombre_Largo", $event.target.value)
                   },
                 },
               }),
@@ -437,8 +449,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Nombre_Corto,
-                    expression: "empresa.Nombre_Corto",
+                    value: _vm.empresa.PNombre_Corto,
+                    expression: "empresa.PNombre_Corto",
                   },
                 ],
                 staticClass: "form-control",
@@ -447,13 +459,13 @@ var render = function () {
                   id: "Nombre_Corto",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Nombre_Corto },
+                domProps: { value: _vm.empresa.PNombre_Corto },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Nombre_Corto", $event.target.value)
+                    _vm.$set(_vm.empresa, "PNombre_Corto", $event.target.value)
                   },
                 },
               }),
@@ -465,8 +477,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Correo_electronico,
-                    expression: "empresa.Correo_electronico",
+                    value: _vm.empresa.PCorreo_electronico,
+                    expression: "empresa.PCorreo_electronico",
                   },
                 ],
                 staticClass: "form-control",
@@ -475,7 +487,7 @@ var render = function () {
                   id: "Correo_electronico",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Correo_electronico },
+                domProps: { value: _vm.empresa.PCorreo_electronico },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
@@ -483,7 +495,7 @@ var render = function () {
                     }
                     _vm.$set(
                       _vm.empresa,
-                      "Correo_electronico",
+                      "PCorreo_electronico",
                       $event.target.value
                     )
                   },
@@ -497,8 +509,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Telefono,
-                    expression: "empresa.Telefono",
+                    value: _vm.empresa.PTelefono,
+                    expression: "empresa.PTelefono",
                   },
                 ],
                 staticClass: "form-control",
@@ -507,20 +519,44 @@ var render = function () {
                   id: "title",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Telefono },
+                domProps: { value: _vm.empresa.PTelefono },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Telefono", $event.target.value)
+                    _vm.$set(_vm.empresa, "PTelefono", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.empresa.PNIT,
+                    expression: "empresa.PNIT",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: { placeholder: "Número NIT", id: "nit", type: "text" },
+                domProps: { value: _vm.empresa.PNIT },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.empresa, "PNIT", $event.target.value)
                   },
                 },
               }),
               _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
-              _vm._m(6),
+              _vm._m(7),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -533,7 +569,7 @@ var render = function () {
                 on: { change: _vm.processFileSolv },
               }),
               _vm._v(" "),
-              _vm._m(7),
+              _vm._m(8),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -546,7 +582,7 @@ var render = function () {
                 on: { change: _vm.processFileConst },
               }),
               _vm._v(" "),
-              _vm._m(8),
+              _vm._m(9),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -559,7 +595,7 @@ var render = function () {
                 on: { change: _vm.processFilePlan },
               }),
               _vm._v(" "),
-              _vm._m(9),
+              _vm._m(10),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -574,9 +610,9 @@ var render = function () {
               _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
-              _vm._m(10),
-              _vm._v(" "),
               _vm._m(11),
+              _vm._v(" "),
+              _vm._m(12),
               _vm._v(" "),
               _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 1")]),
               _vm._v(" "),
@@ -585,8 +621,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Socio_1,
-                    expression: "empresa.Socio_1",
+                    value: _vm.empresa.PSocio_1,
+                    expression: "empresa.PSocio_1",
                   },
                 ],
                 staticClass: "form-control",
@@ -595,13 +631,13 @@ var render = function () {
                   id: "Socio_1",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Socio_1 },
+                domProps: { value: _vm.empresa.PSocio_1 },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Socio_1", $event.target.value)
+                    _vm.$set(_vm.empresa, "PSocio_1", $event.target.value)
                   },
                 },
               }),
@@ -613,8 +649,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Socio_2,
-                    expression: "empresa.Socio_2",
+                    value: _vm.empresa.PSocio_2,
+                    expression: "empresa.PSocio_2",
                   },
                 ],
                 staticClass: "form-control",
@@ -623,13 +659,13 @@ var render = function () {
                   id: "Socio_2",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Socio_2 },
+                domProps: { value: _vm.empresa.PSocio_2 },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Socio_2", $event.target.value)
+                    _vm.$set(_vm.empresa, "PSocio_2", $event.target.value)
                   },
                 },
               }),
@@ -641,8 +677,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Socio_3,
-                    expression: "empresa.Socio_3",
+                    value: _vm.empresa.PSocio_3,
+                    expression: "empresa.PSocio_3",
                   },
                 ],
                 staticClass: "form-control",
@@ -651,13 +687,13 @@ var render = function () {
                   id: "Socio_3",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Socio_3 },
+                domProps: { value: _vm.empresa.PSocio_3 },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Socio_3", $event.target.value)
+                    _vm.$set(_vm.empresa, "PSocio_3", $event.target.value)
                   },
                 },
               }),
@@ -669,8 +705,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Socio_4,
-                    expression: "empresa.Socio_4",
+                    value: _vm.empresa.PSocio_4,
+                    expression: "empresa.PSocio_4",
                   },
                 ],
                 staticClass: "form-control",
@@ -679,13 +715,13 @@ var render = function () {
                   id: "Socio_4",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Socio_4 },
+                domProps: { value: _vm.empresa.PSocio_4 },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Socio_4", $event.target.value)
+                    _vm.$set(_vm.empresa, "PSocio_4", $event.target.value)
                   },
                 },
               }),
@@ -697,8 +733,8 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.empresa.Socio_5,
-                    expression: "empresa.Socio_5",
+                    value: _vm.empresa.PSocio_5,
+                    expression: "empresa.PSocio_5",
                   },
                 ],
                 staticClass: "form-control",
@@ -707,13 +743,13 @@ var render = function () {
                   id: "Socio_5",
                   type: "text",
                 },
-                domProps: { value: _vm.empresa.Socio_5 },
+                domProps: { value: _vm.empresa.PSocio_5 },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.empresa, "Socio_5", $event.target.value)
+                    _vm.$set(_vm.empresa, "PSocio_5", $event.target.value)
                   },
                 },
               }),
@@ -800,6 +836,15 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "content" } }, [
       _c("i", { staticClass: "fas fa-mobile-alt" }),
       _vm._v(" Telefono"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-address-card" }),
+      _vm._v(" NIT"),
     ])
   },
   function () {

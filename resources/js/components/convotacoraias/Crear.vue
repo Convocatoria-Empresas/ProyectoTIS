@@ -14,11 +14,13 @@
         <label for="content">Título</label>
         <input class="form-control" id="Titulo" type="text" v-model="convocatoria.Titulo">
         <label for="content">Código</label>
-        <input class="form-control" id="Codigo_Conv" type="text" v-model="convocatoria.Codigo_Conv">
+        <input maxlength="5" class="form-control" id="Codigo_Conv" type="text" v-model="convocatoria.Codigo_Conv">
         <label for="content">Gestión</label>
         <input class="form-control" id="Gestion" type="text" v-model="convocatoria.Gestion">
         <label for="content">Asesor</label>
         <input class="form-control" id="Asesor" type="text" v-model="convocatoria.Asesor">
+        <label for="content">Correo Asesor</label>
+        <input class="form-control" id="Asesor_corr" type="text" v-model="convocatoria.Correo_Ase">
         <label for="content">Fecha</label>
         <input class="form-control" id="Fecha" type="date" v-model="convocatoria.Fecha">
         <label for="content">Descripción</label>
@@ -60,6 +62,7 @@ export default {
             Codigo_Conv:"",
             Gestion:"",
             Asesor:"",
+            Correo_Ase:"",
             Fecha:"",
 	        Descripcion:"",
             Informacion_A:"",
@@ -84,11 +87,14 @@ export default {
             this.convocatoria.Codigo_Conv="";
             this.convocatoria.Gestion="";
             this.convocatoria.Asesor="";
+            this.convocatoria.Correo_Ase="";
             this.convocatoria.Fecha="";
 	        this.convocatoria.Descripcion="";
             this.convocatoria.Informacion_A="";
             this.convocatoria.Informacion_B="";
             //console.log(this.response);
+
+            this.$router.push({name:"convocatoria"});
             
         },
         processFileInf1(event){

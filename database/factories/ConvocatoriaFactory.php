@@ -18,6 +18,7 @@ class ConvocatoriaFactory extends Factory
             'Titulo'=> $this->faker->city,
             'Descripcion'=> $this->faker->realText($maxNbChars = 50, $indexSize = 2),
             'Asesor'=> $this->faker->name,
+            'Correo_Ase'=> $this->faker->email,
             'Fecha'=> $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'Informacion_A'=> $this->faker->numberBetween($min = 1000, $max = 9000),
             'Informacion_B'=> $this->faker->numberBetween($min = 1000, $max = 9000),

@@ -14,7 +14,7 @@ class ConvocatoriaController extends Controller
      */
     public function index()
     {
-        $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
+        $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Asesor','Correo_Ase','Informacion_A', 'Informacion_B', 'Gestion']);
         return response()->json($RegisConv);
     }
 
@@ -41,6 +41,7 @@ class ConvocatoriaController extends Controller
         $convocatoria->Codigo_Conv = $request->Codigo_Conv;
         $convocatoria->Descripcion = $request->Descripcion;
         $convocatoria->Asesor = $request->Asesor;
+        $convocatoria->Correo_Ase = $request->Correo_Ase;
         $convocatoria->Fecha = $request->Fecha;
         $convocatoria->Informacion_A = $request->Informacion_A;
         $convocatoria->Informacion_B = $request->Informacion_B;
@@ -49,6 +50,25 @@ class ConvocatoriaController extends Controller
         $convocatoria->save();
 
         //return $convocatoria;
+    }
+    public function mostrar($convocatoria, Request $request){
+        $convocatorium= Convocatoria::find($convocatoria);
+        $LaConv= new Convocatoria();
+        
+      
+        $LaConv->Codigo_Conv=$convocatorium->Codigo_Conv;
+        $LaConv->Titulo=$convocatorium->Titulo;
+        $LaConv->Descripcion=$convocatorium->Descripcion;
+        $LaConv->Asesor=$convocatorium->Asesor;
+        $LaConv->Correo_Ase=$convocatorium->Correo_Ase;
+        $LaConv->Fecha=$convocatorium->Fecha;
+        $LaConv->Informacion_A=$convocatorium->Informacion_A;
+        $LaConv->Informacion_B=$convocatorium->Informacion_B;
+        $LaConv->Gestion=$convocatorium->Gestion;
+        
+         
+       
+        return response()->json($LaConv);
     }
 
     /**
@@ -83,6 +103,7 @@ class ConvocatoriaController extends Controller
         $nuevaConv['Gestion']=$request->get('Gestion');
         $nuevaConv['Descripcion']=$request->get('Descripcion');
         $nuevaConv['Asesor']=$request->get('Asesor');
+        $nuevaConv['Correo_Ase']=$request->get('Correo_Ase');
         $nuevaConv['Fecha']=$request->get('Fecha');
         $nuevaConv['Informacion_A']=$request->get('Informacion_A');
         $nuevaConv['Informacion_B']=$request->get('Informacion_B');
@@ -103,7 +124,7 @@ class ConvocatoriaController extends Controller
        $convo= Convocatoria::find($convocatorium);
       $convo->delete();
 
-      $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
+      $RegisConv = Convocatoria::all(['id','Codigo_Conv','Titulo','Descripcion', 'Asesor', 'Correo_Ase', 'Fecha', 'Informacion_A', 'Informacion_B', 'Gestion']);
         return response()->json($RegisConv);
     }
 }

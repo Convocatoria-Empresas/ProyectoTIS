@@ -28,6 +28,8 @@ class EmpresaFactory extends Factory
             'Socio_3'=> $this->faker->ean8,
             'Socio_4'=> $this->faker->ean8,
             'Socio_5'=> $this->faker->ean8,
+            'AsesordeEmp'=> $this->faker->name,
+            'GetiodeEmp'=> $this->faker->century,
             'Estado_Aprob'=> $this->faker->boolean,
         ];
     }

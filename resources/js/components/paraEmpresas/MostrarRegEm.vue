@@ -188,6 +188,8 @@ export default {
             Socio_3:"",
             Socio_4:"",
             Socio_5:"",
+            AsesordeEmp:"",
+            GetiodeEmp:"",
             Estado_Aprob:"",
             }
         }
@@ -198,6 +200,7 @@ export default {
         
         async submit(){
             console.log("Todo bien aquí");
+            this.empresa.Estado_Aprob= 0;
            await axios.post('/api/empresa', this.empresa);
            console.log("El problema es aquí");
             this.empresa.Nombre_Largo = "";
@@ -214,8 +217,12 @@ export default {
             this.empresa.Socio_3 = "";
             this.empresa.Socio_4 = "";
             this.empresa.Socio_5 = "";
+            this.empresa.AsesordeEmp = "";
+            this.empresa.GetiodeEmp = "";
             this.empresa.Estado_Aprob= 0;
             //onsole.log(this.response);
+
+            this.$router.push({name:"empresas"});
             
         },
         processFileSolv(event){

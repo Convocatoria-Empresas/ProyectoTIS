@@ -29,6 +29,8 @@ class PostulacionController extends Controller
         'PSocio_3',
         'PSocio_4',
         'PSocio_5',
+        'PAsesordeEmp',
+        'PGetiodeEmp',
         'PEstado_Aprob']);
         return response()->json($RegisPostulacion);
     }
@@ -56,12 +58,40 @@ class PostulacionController extends Controller
         $postulacion->PSocio_3 = $request->PSocio_3;
         $postulacion->PSocio_4 = $request->PSocio_4;
         $postulacion->PSocio_5 = $request->PSocio_5;
+        $postulacion->PAsesordeEmp = $request->PAsesordeEmp;
+        $postulacion->PGetiodeEmp = $request->PGetiodeEmp;
+        $postulacion->PEstado_Aprob = $request->PEstado_Aprob;
         $postulacion->save();
     }
 
-    public function edit(Blog $blog)
+    public function edit($postulacion, $editar, Request $request)
     {
-        //
+        $postolium= Postulacion::find($postulacion);
+      
+        
+        
+        $nuevaPost=[];
+        
+        $postolium->PNombre_Largo = $request->PNombre_Largo;
+        $postolium->PNombre_Corto = $request->PNombre_Corto;
+        $postolium->PCorreo_electronico = $request->PCorreo_electronico;
+        $postolium->PTelefono = $request->PTelefono;
+        $postolium->PNIT = $request->PNIT;
+        $postolium->PSolvencia = $request->PSolvencia;
+        $postolium->PConstitucion = $request->PConstitucion;
+        $postolium->PPlan_Pago = $request->PPlan_Pago;
+        $postolium->PCarta = $request->PCarta;
+        $postolium->PSocio_1 = $request->PSocio_1;
+        $postolium->PSocio_2 = $request->PSocio_2;
+        $postolium->PSocio_3 = $request->PSocio_3;
+        $postolium->PSocio_4 = $request->PSocio_4;
+        $postolium->PSocio_5 = $request->PSocio_5;
+        $postolium->PAsesordeEmp = $request->PAsesordeEmp;
+        $postolium->PGetiodeEmp = $request->PGetiodeEmp;
+        $postolium->PEstado_Aprob = $request->PEstado_Aprob;
+        $postolium->save();
+        //return $editar;
+        return response()->json($postolium);
     }
 
     /**
@@ -84,9 +114,9 @@ class PostulacionController extends Controller
      * @param  \App\Models\Postulacion  $postulacion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Postulacion $postulacion)
+    public function update($postulacium, Request $request)
     {
-        $postulacion= Postulacion::find($empresium);
+        $postulacion= Postulacion::find($postulacium);
         
         
         $LaPostu= new Postulacion();
@@ -107,6 +137,8 @@ class PostulacionController extends Controller
         $LaPostu->PSocio_3=$postulacion->PSocio_3;
         $LaPostu->PSocio_4=$postulacion->PSocio_4;
         $LaPostu->PSocio_5=$postulacion->PSocio_5;
+        $LaPostu->PAsesordeEmp=$postulacion->PAsesordeEmp;
+        $LaPostu->PGetiodeEmp=$postulacion->PGetiodeEmp;
         $LaPostu->PEstado_Aprob=$postulacion->PEstado_Aprob;
 
        /* $LaPostu['Nombre_Largo']=$request->get('Nombre_Largo');
@@ -125,8 +157,6 @@ class PostulacionController extends Controller
         $LaPostu['Socio_5']=$request->get('Socio_5');
         $LaPostu['Estado_Aprob']=$request->get('Estado_Aprob');*/
 
-       // $empresap->update($LaPostu);
-      //  return $convocatoria;
         return response()->json($LaPostu);
     }
 
@@ -139,5 +169,20 @@ class PostulacionController extends Controller
     public function destroy(Postulacion $postulacion)
     {
         //
+    }
+
+    public function approve($postulacionum, $aprob )
+    {
+        $postulacion= Postulacion::find($postulacionum);
+        
+      
+        //$postulacion->update($LaEmp);
+         $postulacion->PEstado_Aprob=$aprob;
+         $postulacion->save();
+        /*if($postulacion->Estado_Aprob != $request->Estado_Aprob){
+            
+       
+           }*/
+           return response()->json($postulacion);
     }
 }

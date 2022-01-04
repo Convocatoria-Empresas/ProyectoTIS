@@ -19,6 +19,7 @@ class CreateConvocatoriasTable extends Migration
             $table->string('Titulo');
             $table->text('Descripcion');
             $table->string('Asesor');
+            $table->string('Correo_Ase');
             $table->date('Fecha');
             $table->longText('Informacion_A');
             $table->longText('Informacion_B');

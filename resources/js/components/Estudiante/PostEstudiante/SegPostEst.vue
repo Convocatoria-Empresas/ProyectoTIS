@@ -17,7 +17,7 @@
                 <tbody>
                     <tr v-for="tablaSeg in tablasSeg" :key=" tablaSeg.id">
                         <th scope="row">{{ tablaSeg.id}}</th>
-                        <td>{{ tablaSeg.NIT}}</td>
+                        <td>{{ tablaSeg.GetiodeEmp}}</td>
                         <td>{{ tablaSeg.Nombre_Largo}}</td>
                         <td>{{ tablaSeg.Socio_1}}</td>
                         <td>{{ tablaSeg.Estado}}</td>

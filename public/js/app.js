@@ -2288,9 +2288,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -2326,17 +2323,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
-    }
-    /*borrarBlog(id){
-        if(confirm("¿Confirma eliminar el registro?")){
-                this.axios.delete(`/api/blog/${id}`).then(response=>{
-                this.mostrarBlogs()
-            }).catch(error=>{
-                console.log(error)
-            })
-        }
-    }*/
+    },
+    borrarBlog: function borrarBlog(id) {
+      var _this2 = this;
 
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // if(confirm("¿Confirma eliminar el registro?")){
+                console.log(id);
+                _context2.next = 3;
+                return _this2.axios["delete"]('/api/empresa/' + id).then(function (response) {
+                  console.log(response.data);
+                  _this2.blogs = response.data;
+                })["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 3:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
   }
 });
 
@@ -2645,6 +2658,10 @@ var Editar = function Editar() {
 
 var RegEmpresa = function RegEmpresa() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_paraEmpresas_MostrarRegEm_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/paraEmpresas/MostrarRegEm.vue */ "./resources/js/components/paraEmpresas/MostrarRegEm.vue"));
+};
+
+var EditarEmpre = function EditarEmpre() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_paraEmpresas_EditarRegEm_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/paraEmpresas/EditarRegEm.vue */ "./resources/js/components/paraEmpresas/EditarRegEm.vue"));
 }; //importamos para el seguimiento y revision para empresas
 
 
@@ -2731,6 +2748,10 @@ var routes = [{
   name: 'regEmpresa',
   path: '/RegEmpresa',
   component: RegEmpresa
+}, {
+  name: 'editarEmpre',
+  path: '/EditarRegEm/:id',
+  component: EditarEmpre
 }, {
   name: 'SegEmpresa',
   path: '/SegEmpresa',
@@ -39568,14 +39589,6 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.NIT))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Solvencia))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Constitucion))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Plan_Pago))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Carta))]),
-                _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_1))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_2))]),
@@ -39585,6 +39598,37 @@ var render = function () {
                 _c("td", [_vm._v(_vm._s(blog.Socio_4))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_5))]),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-info",
+                        attrs: {
+                          to: { name: "editarEmpre", params: { id: blog.id } },
+                        },
+                      },
+                      [_c("i", { staticClass: "fas fa-edit" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "button" },
+                        on: {
+                          click: function ($event) {
+                            return _vm.borrarBlog(blog.id)
+                          },
+                        },
+                      },
+                      [_c("i", { staticClass: "fas fa-trash" })]
+                    ),
+                  ],
+                  1
+                ),
               ])
             }),
             0
@@ -39638,14 +39682,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("NIT")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Solvencia")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Constitución")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Plan de Pago")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Carta")]),
-        _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Socio 1")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Socio 2")]),
@@ -39655,6 +39691,8 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Socio 4")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Socio 5")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Acciones")]),
       ]),
     ])
   },
@@ -55443,7 +55481,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\wamp64\\\\www\\\\P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_Registrarse_vue":1,"resources_js_components_Estudiante_HomeEst_vue":1,"resources_js_components_Estudiante_EmpresaEst_vue":1,"resources_js_components_Estudiante_ConvoEst_vue":1,"resources_js_components_Estudiante_EmpEstudiante_SegEmpEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_SegPostEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_PostularEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_RevPostEst_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Seguimiento_vue":1,"resources_js_components_convotacoraias_Mostrar_vue":1,"resources_js_components_convotacoraias_Crear_vue":1,"resources_js_components_convotacoraias_Editar_vue":1,"resources_js_components_paraEmpresas_MostrarRegEm_vue":1,"resources_js_components_paraEmpresas_EditarRegEm_vue":1,"resources_js_components_Seguimiento_SegEmpresas_vue":1,"resources_js_components_Seguimiento_RevSegEmpre_vue":1,"resources_js_components_Seguimiento_SegPostulantes_vue":1,"resources_js_components_Seguimiento_RevSegPost_vue":1,"resources_js_components_Login_vue":1,"resources_js_components_Registrarse_vue":1,"resources_js_components_Estudiante_HomeEst_vue":1,"resources_js_components_Estudiante_EmpresaEst_vue":1,"resources_js_components_Estudiante_ConvoEst_vue":1,"resources_js_components_Estudiante_EmpEstudiante_SegEmpEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_SegPostEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_PostularEst_vue":1,"resources_js_components_Estudiante_PostEstudiante_RevPostEst_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

@@ -24,6 +24,8 @@ class Postulacion extends Model
         'PSocio_3',
         'PSocio_4',
         'PSocio_5',
+        'PAsesordeEmp',
+        'PGetiodeEmp',
         'PEstado_Aprob',
         
 ];

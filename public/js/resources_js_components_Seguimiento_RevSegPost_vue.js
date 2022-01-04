@@ -147,22 +147,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "laempresa",
+  name: "lapostulacion",
   data: function data() {
     return {
-      laempresa: {
-        Nombre_Largo: "",
-        Correo_electronico: "",
-        Solvencia: "",
-        Constitucion: "",
-        Plan_Pago: "",
-        Carta: "",
-        Socio_1: "",
-        Socio_2: "",
-        Socio_3: "",
-        Socio_4: "",
-        Socio_5: "",
-        Estado_Aprob: ""
+      lapostulacion: {
+        PNombre_Largo: "",
+        PCorreo_electronico: "",
+        PSolvencia: "",
+        PConstitucion: "",
+        PPlan_Pago: "",
+        PCarta: "",
+        PSocio_1: "",
+        PSocio_2: "",
+        PSocio_3: "",
+        PSocio_4: "",
+        PSocio_5: "",
+        PGetiodeEmp: "",
+        PAsesordeEmp: "",
+        PEstado_Aprob: ""
       }
     };
   },
@@ -179,20 +181,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.put("/api/empresa/".concat(_this.$route.params.id), _this.laempresa).then(function (response) {
+                return _this.axios.put("/api/postulacion/".concat(_this.$route.params.id), _this.lapostulacion).then(function (response) {
                   console.log(response.data);
-                  _this.laempresa.Nombre_Largo = response.data.Nombre_Largo;
-                  _this.laempresa.Correo_electronico = response.data.Correo_electronico;
-                  _this.laempresa.Plan_Pago = response.data.Plan_Pago;
-                  _this.laempresa.Constitucion = response.data.Constitucion;
-                  _this.laempresa.Carta = response.data.Carta;
-                  _this.laempresa.Solvencia = response.data.Solvencia;
-                  _this.laempresa.Socio_1 = response.data.Socio_1;
-                  _this.laempresa.Socio_2 = response.data.Socio_2;
-                  _this.laempresa.Socio_3 = response.data.Socio_3;
-                  _this.laempresa.Socio_4 = response.data.Socio_4;
-                  _this.laempresa.Socio_5 = response.data.Socio_5;
-                  _this.laempresa.Estado_Aprob = response.data.Estado_Aprob;
+                  _this.lapostulacion.PNombre_Largo = response.data.PNombre_Largo;
+                  _this.lapostulacion.PCorreo_electronico = response.data.PCorreo_electronico;
+                  _this.lapostulacion.PPlan_Pago = response.data.PPlan_Pago;
+                  _this.lapostulacion.PConstitucion = response.data.PConstitucion;
+                  _this.lapostulacion.PCarta = response.data.PCarta;
+                  _this.lapostulacion.PSolvencia = response.data.PSolvencia;
+                  _this.lapostulacion.PSocio_1 = response.data.PSocio_1;
+                  _this.lapostulacion.PSocio_2 = response.data.PSocio_2;
+                  _this.lapostulacion.PSocio_3 = response.data.PSocio_3;
+                  _this.lapostulacion.PSocio_4 = response.data.PSocio_4;
+                  _this.lapostulacion.PSocio_5 = response.data.PSocio_5;
+                  _this.lapostulacion.PGetiodeEmp = response.data.PGetiodeEmp;
+                  _this.lapostulacion.PAsesordeEmp = response.data.PAsesordeEmp;
+                  _this.lapostulacion.PEstado_Aprob = response.data.PEstado_Aprob;
                 })["catch"](function (error) {
                   console.log(error);
                 });
@@ -207,12 +211,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     AcpeRe: function AcpeRe(e) {
       if (e.target.value == 1) {
-        this.laempresa.Estado_Aprob = 1;
+        this.lapostulacion.PEstado_Aprob = 1;
       } else {
-        this.laempresa.Estado_Aprob = 0;
+        this.lapostulacion.PEstado_Aprob = 0;
       }
 
-      console.log(this.laempresa.Estado_Aprob);
+      console.log(this.lapostulacion.PEstado_Aprob);
     },
     actualizar: function actualizar() {
       var _this2 = this;
@@ -223,18 +227,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _this2.axios.get("/api/empresa/".concat(_this2.$route.params.id, "/approve/").concat(_this2.laempresa.Estado_Aprob), _this2.laempresa).then(function (response) {
-                  console.log(response.data);
-                })["catch"](function (error) {
+                return _this2.axios.get("/api/postulacion/".concat(_this2.$route.params.id, "/approve/").concat(_this2.lapostulacion.PEstado_Aprob), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
                   console.log(error);
                 });
 
               case 2:
+                _context2.next = 4;
+                return _this2.axios.get("/api/empresa/".concat(_this2.lapostulacion.PNombre_Largo, "/approve/").concat(_this2.lapostulacion.PEstado_Aprob), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 4:
+                if (!(_this2.lapostulacion.PEstado_Aprob == 1)) {
+                  _context2.next = 7;
+                  break;
+                }
+
+                _context2.next = 7;
+                return _this2.axios.put("/api/empresa/".concat(_this2.lapostulacion.PNombre_Largo, "/addAseGes"), _this2.lapostulacion).then(function (response) {})["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 7:
                 _this2.$router.push({
                   name: "SegPostulante"
                 })["catch"](function () {});
 
-              case 3:
+              case 8:
               case "end":
                 return _context2.stop();
             }
@@ -367,7 +386,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Nombre_Largo,
+                          placeholder: this.lapostulacion.PNombre_Largo,
                           readonly: "",
                         },
                       }),
@@ -382,7 +401,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Socio_1,
+                          placeholder: this.lapostulacion.PSocio_1,
                           readonly: "",
                         },
                       }),
@@ -397,7 +416,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Socio_2,
+                          placeholder: this.lapostulacion.PSocio_2,
                           readonly: "",
                         },
                       }),
@@ -412,7 +431,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Socio_3,
+                          placeholder: this.lapostulacion.PSocio_3,
                           readonly: "",
                         },
                       }),
@@ -427,7 +446,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Socio_4,
+                          placeholder: this.lapostulacion.PSocio_4,
                           readonly: "",
                         },
                       }),
@@ -442,7 +461,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Socio_5,
+                          placeholder: this.lapostulacion.PSocio_5,
                           readonly: "",
                         },
                       }),
@@ -457,7 +476,7 @@ var render = function () {
                         staticClass: "form-control",
                         attrs: {
                           type: "text",
-                          placeholder: this.laempresa.Correo_electronico,
+                          placeholder: this.lapostulacion.PCorreo_electronico,
                           readonly: "",
                         },
                       }),
@@ -476,7 +495,7 @@ var render = function () {
                       {
                         attrs: {
                           download: "Solvencia",
-                          href: this.laempresa.Solvencia,
+                          href: this.lapostulacion.PSolvencia,
                           title: "Download pdf document",
                         },
                       },
@@ -492,7 +511,7 @@ var render = function () {
                       {
                         attrs: {
                           download: "Plan_de_Pago",
-                          href: this.laempresa.Plan_Pago,
+                          href: this.lapostulacion.PPlan_Pago,
                           title: "Download pdf document",
                         },
                       },
@@ -508,7 +527,7 @@ var render = function () {
                       {
                         attrs: {
                           download: "Constitución",
-                          href: this.laempresa.Constitucion,
+                          href: this.lapostulacion.PConstitucion,
                           title: "Download pdf document",
                         },
                       },
@@ -524,7 +543,7 @@ var render = function () {
                       {
                         attrs: {
                           download: "Carta",
-                          href: this.laempresa.Carta,
+                          href: this.lapostulacion.PCarta,
                           title: "Download pdf document",
                         },
                       },
