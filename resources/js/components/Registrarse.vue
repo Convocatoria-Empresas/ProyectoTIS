@@ -88,7 +88,7 @@
                                          </select>
                                        </div>
 
-                            </div>
+                                </div>
                             <div class="row">
                                 <div class="text-center">
                                     <label for="validationCustom01" class="form-label"></label>
@@ -114,13 +114,13 @@
 
 <script>
 export default {
-    
-    
-    
+
+
+
     data() {
         return{
             users:{
-            
+
             Nombre_usu:"",
             Apellido_Pat:"",
             Apellido_Mat:"",
@@ -132,15 +132,15 @@ export default {
             Rol_usu:"",
             }
         }
-        
+
     },
-    
+
      methods:{
-        
+
         async submit(){
-            
+
            const response = await axios.post('/api/user', this.users);
-           
+
 
             this.users.Nombre_usu="";
             this.users.Apellido_Pat="";
@@ -154,21 +154,21 @@ export default {
 
             this.$router.push({name:"home"});
 
-            
+
         },
 
         SelecTipoUsuar(e){
             if(e.target.value==1){
                 this.users.Rol_usu="Asesor";
-                
+
             }
             else{
                 this.users.Rol_usu="Estudiante";
-                
+
             }
-            
+
         }
-        
+
     },
 }
 </script>

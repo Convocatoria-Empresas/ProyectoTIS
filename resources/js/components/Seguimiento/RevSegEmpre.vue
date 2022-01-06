@@ -35,7 +35,7 @@
                                 <label for="disabledTextInput"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" download=Plan_Pago :href="laempresa.Plan_Pago" id="inputGroupPrepend">PDF</span>
-                
+
                                 </div>
                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Documento.pdf" aria-describedby="inputGroupPrepend" required>
                             </div>
@@ -98,7 +98,7 @@ export default {
              GetiodeEmp: "",
              Estado_Aprob:"",
             }
-            
+
         }
     },
     mounted(){
@@ -108,11 +108,11 @@ export default {
 
         async mostrarEmp(){
             await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.laempresa).then(response=>{
-                
+
                 console.log(response.data)
                 this.laempresa.Nombre_Largo = response.data.Nombre_Largo
                 this.laempresa.Correo_electronico = response.data.Correo_electronico
-                this.laempresa.Plan_Pago = response.data.Plan_Pago 
+                this.laempresa.Plan_Pago = response.data.Plan_Pago
                 this.laempresa.Constitucion = response.data.Constitucion
                 this.laempresa.Carta = response.data.Carta
                 this.laempresa.Solvencia = response.data.Solvencia
@@ -124,20 +124,20 @@ export default {
                 this.laempresa.AsesordeEmp = response.data.AsesordeEmp
                 this.laempresa.GetiodeEmp = response.data.GetiodeEmp
                 this.laempresa.Estado_Aprob = response.data.Estado_Aprob
-                
-                
+
+
             }).catch(error=>{
                 console.log(error)
             })
-            
+
         },
-        
+
         async actualizar(){
           await this.axios.get(`/api/empresa/${this.$route.params.id}/approve/${this.laempresa.Estado_Aprob}`,this.laempresa).then(response=>{
-                
+
                 console.log(response.data)
-                
-                
+
+
             }).catch(error=>{
                 console.log(error)
             })

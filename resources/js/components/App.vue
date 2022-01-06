@@ -45,7 +45,7 @@
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                <router-link class="dropdown-item active btn-warning btn" type="button" exact-active-class="" to="/SegEmpresa"><i class="fas fa-user-tie"></i> Empresas</router-link>
+                                <router-link class="dropdown-item active btn-warning btn" type="button" exact-active-class="" to="/SegEmpresa"><i class="fas fa-user-tie"></i> Grupo-Empresas</router-link>
                             </div>
                             <div class="card-body">
                                 <router-link class="dropdown-item active btn-warning btn" exact-active-class="" to="/SegPostulante"><i class="fas fa-users"></i> Postulantes</router-link>
@@ -56,7 +56,18 @@
                     </li>
                 </ul>
 
-                <div class="dropdown text-end">
+
+
+                <div class="text-end">
+                    <fieldset disabled>
+
+                            <div class="col-lg-9 offset-md-0">
+                                <input type="text" id="disabledTextInput" >
+                            </div>
+
+                    </fieldset>
+                </div>
+                <div class="dropdown">
                     <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">1</a>
@@ -67,7 +78,6 @@
                 </div>
 
                 <div class="text-end">
-
                     <router-link :to='{name:"Login"}' class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                     </router-link>
                     <router-link :to='{name:"Registrarse"}' class="btn btn-primary">
