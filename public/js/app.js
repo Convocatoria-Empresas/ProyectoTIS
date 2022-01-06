@@ -2616,7 +2616,7 @@ var routes = [{
   component: SegEmpresa
 }, {
   name: 'RevSegEmpre',
-  path: '/RevSegEmpre',
+  path: '/RevSegEmpre:id',
   component: RevSegEmpre
 }, {
   name: 'SegPostulante',

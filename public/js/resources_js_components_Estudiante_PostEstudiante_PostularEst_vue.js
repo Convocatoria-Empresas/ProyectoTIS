@@ -246,7 +246,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return axios.post('/api/notificacion', _this.notificacion);
 
               case 13:
-                //Ahora debería buscar el nombre de la Empresa para asignarle su nuevo asesor y gestión
                 //Se regresa todo a las convocatorias
                 _this.$router.push({
                   name: "convocatoria"

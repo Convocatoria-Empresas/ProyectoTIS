@@ -98,12 +98,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "laempresa",
   data: function data() {
     return {
       laempresa: {
         Nombre_Largo: "",
         Correo_electronico: "",
+        Telefono: "",
         Solvencia: "",
         Constitucion: "",
         Plan_Pago: "",
@@ -116,6 +116,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         AsesordeEmp: "",
         GetiodeEmp: "",
         Estado_Aprob: ""
+      },
+      notificacion: {
+        NTitulo: "",
+        Texto: "",
+        Emisor: "",
+        Receptor: "",
+        Leido: ""
       }
     };
   },
@@ -136,6 +143,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   console.log(response.data);
                   _this.laempresa.Nombre_Largo = response.data.Nombre_Largo;
                   _this.laempresa.Correo_electronico = response.data.Correo_electronico;
+                  _this.laempresa.Telefono = response.data.Telefono;
                   _this.laempresa.Plan_Pago = response.data.Plan_Pago;
                   _this.laempresa.Constitucion = response.data.Constitucion;
                   _this.laempresa.Carta = response.data.Carta;
@@ -160,7 +168,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    actualizar: function actualizar() {
+    RevSegEmpre: function RevSegEmpre() {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
@@ -168,19 +176,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
-                return _this2.axios.get("/api/empresa/".concat(_this2.$route.params.id, "/approve/").concat(_this2.laempresa.Estado_Aprob), _this2.laempresa).then(function (response) {
-                  console.log(response.data);
-                })["catch"](function (error) {
-                  console.log(error);
-                });
+                //console.log(this.notificacion.Texto);
+                _this2.notificacion.NTitulo = "Comunicado de la gesti\xF3n ".concat(_this2.laempresa.GetiodeEmp); //this.notificacion.Texto="";
 
-              case 2:
+                _this2.notificacion.Emisor = _this2.$route.params.asesorCorr;
+                _this2.notificacion.Receptor = _this2.laempresa.Correo_electronico;
+                _this2.notificacion.Leido = 0; // console.log("Llegas aquí");
+
+                _context2.next = 6;
+                return axios.post('/api/notificacion', _this2.notificacion);
+
+              case 6:
+                console.log("Hora de irse");
+
                 _this2.$router.push({
-                  name: "SegPostulante"
+                  name: "SegEmpresa"
                 })["catch"](function () {});
+                /*await this.axios.get(`/api/empresa/${this.$route.params.id}/approve/${this.laempresa.Estado_Aprob}`,this.laempresa).then(response=>{
+                        
+                        console.log(response.data)
+                        
+                        
+                    }).catch(error=>{
+                        console.log(error)
+                    })
+                    this.$router.push({name:"SegPostulante"}).catch(()=>{});*/
 
-              case 3:
+
+              case 8:
               case "end":
                 return _context2.stop();
             }
@@ -282,24 +305,46 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "card-body" }, [
-        _c(
-          "form",
-          {
-            attrs: { action: "" },
-            on: {
-              submit: function ($event) {
-                $event.preventDefault()
-                return _vm.RevSegEmpre.apply(null, arguments)
+        _c("form", [
+          _c("div", { staticClass: "col-lg-5 offset-md-4" }, [
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function ($event) {
+                    $event.preventDefault()
+                    return _vm.RevSegEmpre.apply(null, arguments)
+                  },
+                },
               },
-            },
-          },
-          [
-            _c("div", { staticClass: "col-lg-5 offset-md-4" }, [
-              _c("form", [
+              [
                 _c("fieldset", { attrs: { disabled: "" } }, [
-                  _vm._m(1),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "gestion",
+                        placeholder: this.laempresa.GetiodeEmp,
+                        readonly: "",
+                      },
+                    }),
+                  ]),
                   _vm._v(" "),
-                  _vm._m(2),
+                  _c("div", { staticClass: "form-group" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "disabledTextInput1",
+                        placeholder: this.laempresa.AsesordeEmp,
+                      },
+                    }),
+                  ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [
                     _vm._m(3),
@@ -308,7 +353,7 @@ var render = function () {
                       staticClass: "form-control",
                       attrs: {
                         type: "text",
-                        id: "disabledTextInput",
+                        id: "disabledTextInput2",
                         placeholder: this.laempresa.Nombre_Largo,
                         readonly: "",
                       },
@@ -322,7 +367,7 @@ var render = function () {
                       staticClass: "form-control",
                       attrs: {
                         type: "text",
-                        id: "disabledTextInput",
+                        id: "disabledTextInput3",
                         placeholder: this.laempresa.Correo_electronico,
                         readonly: "",
                       },
@@ -336,7 +381,7 @@ var render = function () {
                       staticClass: "form-control",
                       attrs: {
                         type: "text",
-                        id: "disabledTextInput",
+                        id: "disabledTextInput4",
                         placeholder: this.laempresa.Telefono,
                         readonly: "",
                       },
@@ -350,9 +395,8 @@ var render = function () {
                     _vm._v(" "),
                     _c("div", { staticClass: "input-group-prepend" }, [
                       _c(
-                        "span",
+                        "a",
                         {
-                          staticClass: "input-group-text",
                           attrs: {
                             download: "Plan_Pago",
                             href: _vm.laempresa.Plan_Pago,
@@ -362,17 +406,6 @@ var render = function () {
                         [_vm._v("PDF")]
                       ),
                     ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "text",
-                        id: "validationCustomUsername",
-                        placeholder: "Documento.pdf",
-                        "aria-describedby": "inputGroupPrepend",
-                        required: "",
-                      },
-                    }),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [
@@ -380,9 +413,8 @@ var render = function () {
                     _vm._v(" "),
                     _c("div", { staticClass: "input-group-prepend" }, [
                       _c(
-                        "span",
+                        "a",
                         {
-                          staticClass: "input-group-text",
                           attrs: {
                             download: "Carta",
                             href: _vm.laempresa.Carta,
@@ -392,17 +424,6 @@ var render = function () {
                         [_vm._v("PDF")]
                       ),
                     ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "text",
-                        id: "validationCustomUsername",
-                        placeholder: "Documento.pdf",
-                        "aria-describedby": "inputGroupPrepend",
-                        required: "",
-                      },
-                    }),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [
@@ -410,29 +431,17 @@ var render = function () {
                     _vm._v(" "),
                     _c("div", { staticClass: "input-group-prepend" }, [
                       _c(
-                        "span",
+                        "a",
                         {
-                          staticClass: "input-group-text",
                           attrs: {
                             download: "Constitucion",
                             href: _vm.laempresa.Constitucion,
-                            id: "inputGroupPrepend",
+                            id: "inputGroupPrepend2",
                           },
                         },
                         [_vm._v("PDF")]
                       ),
                     ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "text",
-                        id: "validationCustomUsername",
-                        placeholder: "Documento.pdf",
-                        "aria-describedby": "inputGroupPrepend",
-                        required: "",
-                      },
-                    }),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [
@@ -440,35 +449,47 @@ var render = function () {
                     _vm._v(" "),
                     _c("div", { staticClass: "input-group-prepend" }, [
                       _c(
-                        "span",
+                        "a",
                         {
-                          staticClass: "input-group-text",
                           attrs: {
                             download: "Solvencia",
                             href: _vm.laempresa.Solvencia,
-                            id: "inputGroupPrepend",
+                            id: "inputGroupPrepend3",
                           },
                         },
                         [_vm._v("PDF")]
                       ),
                     ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "text",
-                        id: "validationCustomUsername",
-                        placeholder: "Documento.pdf",
-                        "aria-describedby": "inputGroupPrepend",
-                        required: "",
-                      },
-                    }),
                   ]),
                 ]),
                 _vm._v(" "),
                 _c("hr"),
                 _vm._v(" "),
-                _vm._m(10),
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(10),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.notificacion.Texto,
+                        expression: "notificacion.Texto",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    attrs: { id: "exampleFormControlTextarea1", rows: "3" },
+                    domProps: { value: _vm.notificacion.Texto },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.notificacion, "Texto", $event.target.value)
+                      },
+                    },
+                  }),
+                ]),
                 _vm._v(" "),
                 _c(
                   "button",
@@ -479,10 +500,10 @@ var render = function () {
                 _c("button", { staticClass: "btn btn-warning" }, [
                   _vm._v("Volver"),
                 ]),
-              ]),
-            ]),
-          ]
-        ),
+              ]
+            ),
+          ]),
+        ]),
       ]),
     ]),
   ])
@@ -502,40 +523,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "disabledTextInput" } }, [
-        _c("i", { staticClass: "fas fa-calendar-week" }),
-        _vm._v(" Gestión"),
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "text",
-          id: "disabledTextInput",
-          placeholder: "Gestión",
-        },
-      }),
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "fas fa-calendar-week" }),
+      _vm._v(" Gestión"),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "disabledTextInput" } }, [
-        _c("i", { staticClass: "far fa-user" }),
-        _vm._v(" Asesor"),
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "text",
-          id: "disabledTextInput",
-          placeholder: "Nombre del Asesor",
-        },
-      }),
+    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+      _c("i", { staticClass: "far fa-user" }),
+      _vm._v(" Asesor"),
     ])
   },
   function () {
@@ -596,7 +595,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "disabledTextInput" } }, [
+    return _c("label", { attrs: { for: "disabledTextInput5" } }, [
       _c("i", { staticClass: "fas fa-file-pdf" }),
       _vm._v(" Solvencia Técnica"),
     ])
@@ -605,16 +604,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleFormControlTextarea1" } }, [
-        _c("i", { staticClass: "fas fa-comments" }),
-        _vm._v(" Escribir las observaciones"),
-      ]),
-      _vm._v(" "),
-      _c("textarea", {
-        staticClass: "form-control",
-        attrs: { id: "exampleFormControlTextarea1", rows: "3" },
-      }),
+    return _c("label", { attrs: { for: "exampleFormControlTextarea1" } }, [
+      _c("i", { staticClass: "fas fa-comments" }),
+      _vm._v(" Escribir las observaciones"),
     ])
   },
 ]

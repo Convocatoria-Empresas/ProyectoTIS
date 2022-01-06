@@ -51,6 +51,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "usuarios",
   data: function data() {
@@ -58,11 +65,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       ellogin: {
         usuarios: [],
         correo: "",
-        contra: ""
+        contra: "",
+        NoexisteEmail: 0,
+        contraCorrecta: 0
       }
     };
   },
   mounted: function mounted() {
+    this.ellogin.NoexisteEmail = 0;
+    this.ellogin.contraCorrecta = 0;
     this.conseguirUsers();
   },
   methods: {
@@ -96,6 +107,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var corr = this.ellogin.correo;
       var contuar = this.ellogin.contra;
       var self = this;
+
+      if (this.ellogin.correo == null) {
+        this.ellogin.NoexisteEmail = 1;
+      }
+
       this.ellogin.usuarios.forEach(function (usuario) {
         //console.log("VAS bIEN VAS BIEN");
         if (usuario.Correo_usu == corr) {
@@ -260,6 +276,9 @@ var render = function () {
                   id: "exampleInputEmail1",
                   "aria-describedby": "emailHelp",
                   placeholder: "Introduzca su correo institucional",
+                  required: "",
+                  oninvalid:
+                    "setCustomValidity('Porfavor debe llenar un correo institucional')",
                 },
                 domProps: { value: _vm.ellogin.correo },
                 on: {
@@ -299,6 +318,9 @@ var render = function () {
                   type: "password",
                   id: "exampleInputPassword1",
                   placeholder: "Introduzca su contraseña",
+                  required: "",
+                  oninvalid:
+                    "setCustomValidity('Porfavor debe llenar la contraseña')",
                 },
                 domProps: { value: _vm.ellogin.contra },
                 on: {

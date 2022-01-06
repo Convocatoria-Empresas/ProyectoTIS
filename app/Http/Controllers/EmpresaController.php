@@ -134,13 +134,7 @@ class EmpresaController extends Controller
     {
         $empresa= Empresa::find($empresium);
         $LaEmp= new Empresa();
-        
-    
-       /* if($empresa->Estado_Aprob != $request->Estado_Aprob){
-         $empresa->Estado_Aprob=$request->Estado_Aprob;
-         $empresa->save();
-        }*/
-      
+  
         $LaEmp->Nombre_Largo=$empresa->Nombre_Largo;
         $LaEmp->Nombre_Corto=$empresa->Nombre_Corto;
         $LaEmp->Correo_electronico=$empresa->Correo_electronico;

@@ -77,7 +77,7 @@ export const routes = [
     },
     {
         name: 'RevSegEmpre',
-        path: '/RevSegEmpre',
+        path: '/RevSegEmpre:id',
         component: RevSegEmpre
     },
     {
