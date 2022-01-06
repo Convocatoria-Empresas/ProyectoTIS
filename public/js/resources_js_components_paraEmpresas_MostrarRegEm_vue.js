@@ -223,11 +223,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 console.log("Todo bien aquí");
-                _this.empresa.Estado_Aprob = 0;
-                _context.next = 4;
+                _context.next = 3;
                 return axios.post('/api/empresa', _this.empresa);
 
-              case 4:
+              case 3:
                 console.log("El problema es aquí");
                 _this.empresa.Nombre_Largo = "";
                 _this.empresa.Nombre_Corto = "";
@@ -251,7 +250,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   name: "empresas"
                 });
 
-              case 23:
+              case 22:
               case "end":
                 return _context.stop();
             }

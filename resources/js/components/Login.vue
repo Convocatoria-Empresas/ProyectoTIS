@@ -11,14 +11,21 @@
 		<div id="login_panel_header"></div>
 		<b>Inicio de Sesión</b>
         <form @submit.prevent="Searchmail">
-            <div class="form-group">
+            <div class="form-group" >
                 <label for="exampleInputEmail1"><i class="far fa-envelope"></i> Correo Institucional</label>
-                <input type="email" v-model="ellogin.correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su correo institucional">
+                <input type="email" v-model="ellogin.correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su correo institucional"  required
+                oninvalid="setCustomValidity('Porfavor debe llenar un correo institucional')">
                 <small id="emailHelp" class="form-text text-muted">No comparta su correo electrónico con nadie más.</small>
             </div>
+             <!--   <div class="form-group" >
+                    <label for="exampleInputEmail1"><i class="far fa-envelope"></i> Correo Institucional</label>
+                    <input type="email" v-model="ellogin.correo" class="form-control is-invalid" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su correo institucional">
+                    <div class="invalid-feedback">El correo no puede estar vacío</div>
+                </div>-->
             <div class="form-group">
                 <label for="exampleInputPassword1"><i class="fas fa-unlock-alt"></i> Contraseña</label>
-                <input type="password" v-model="ellogin.contra"  class="form-control" id="exampleInputPassword1" placeholder="Introduzca su contraseña">
+                <input type="password" v-model="ellogin.contra"  class="form-control" id="exampleInputPassword1" placeholder="Introduzca su contraseña" required
+                oninvalid="setCustomValidity('Porfavor debe llenar la contraseña')">
             </div>
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -40,11 +47,15 @@
                 usuarios:[],
                 correo:"",
                 contra:"",
+                NoexisteEmail:0,
+                contraCorrecta:0,
             }
 
         }
     },
     mounted(){
+       this.ellogin.NoexisteEmail=0;
+       this.ellogin.contraCorrecta=0;
         this.conseguirUsers()
     },
     methods:{
@@ -63,6 +74,12 @@
             var corr= this.ellogin.correo;
             var contuar= this.ellogin.contra;
             let self = this;
+
+            if(this.ellogin.correo == null){
+                this.ellogin.NoexisteEmail=1;
+            }
+
+
             this.ellogin.usuarios.forEach(function(usuario){
                 //console.log("VAS bIEN VAS BIEN");
                 if(usuario.Correo_usu==corr){

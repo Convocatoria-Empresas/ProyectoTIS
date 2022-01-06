@@ -232,7 +232,10 @@ var render = function () {
                             attrs: {
                               to: {
                                 name: "RevSegEmpre",
-                                params: { id: blog.id },
+                                params: {
+                                  id: blog.id,
+                                  asesorCorr: blog.AsesordeEmp,
+                                },
                               },
                             },
                           },

@@ -24,7 +24,7 @@
                            
                             <td v-if="blog.Estado_Aprob == 1">
                                 <!-- llamamos al componente para Editar     -->
-                                <router-link :to='{name:"RevSegEmpre",params: {id:blog.id}}' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>
+                                <router-link :to='{name:"RevSegEmpre",params: {id:blog.id,asesorCorr:blog.AsesordeEmp} }' class="btn btn-info"><i class="fas fa-eye"></i> Revisar</router-link>
                             </td>
                              
                         </tr>

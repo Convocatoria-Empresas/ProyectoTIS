@@ -224,10 +224,6 @@ export default {
             console.log("Ya etá registrado la postulación");
             await axios.post('/api/notificacion', this.notificacion);
 
-            //Ahora debería buscar el nombre de la Empresa para asignarle su nuevo asesor y gestión
-
-
-
 
             //Se regresa todo a las convocatorias
             this.$router.push({name:"convocatoria"});
