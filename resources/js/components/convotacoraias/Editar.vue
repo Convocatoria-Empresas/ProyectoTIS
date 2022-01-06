@@ -8,7 +8,7 @@
                          <div class="row">
                             <div class="mb-2 col-12">
                                 <div class="form-group">
-                        
+
                                     <label for="content">Título</label>
                                     <input class="form-control" id="Titulo" type="text" v-model="convocatoria.Titulo">
                                 </div>
@@ -16,7 +16,7 @@
                             <div class="mb-2 col-12">
 
                                 <div>
-                                <label for="content">Gestión</label>    
+                                <label for="content">Gestión</label>
                                 <input class="form-control" id="Gestion" type="text" :placeholder="this.convocatoria.Gestion" v-model="convocatoria.Gestion">
                                 <label for="floatingTextarea2">Asesor</label>
                                 <input class="form-control" id="Asesor" type="text" :placeholder="this.convocatoria.Asesor" v-model="convocatoria.Asesor">
@@ -32,8 +32,13 @@
                                 <input class="form-control" id="Informacion_2" type="file" @change="processFileInf2">
                                 </div>
                             </div>
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-success mt-3">Guardar Cambios</button>
+                                <router-link :to='{name:"convocatoria"}' class="btn btn-danger mt-3"><i class="far fa-ballot-check"></i> Cancelar
+                                </router-link>
+                            </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-success">Guardar Cambios</button>
+
                             </div>
                         </div>
                     </form>
@@ -64,7 +69,7 @@ export default {
     },
     methods:{
         async mostrarBlog(){
-            await this.axios.put(`/api/convocatoria/mostrar/${this.$route.params.id}`, this.convocatoria).then(response=>{              
+            await this.axios.put(`/api/convocatoria/mostrar/${this.$route.params.id}`, this.convocatoria).then(response=>{
 
                 this.convocatoria.Codigo_Conv= response.data.Codigo_Conv
                 this.convocatoria.Titulo= response.data.Titulo
@@ -96,18 +101,18 @@ export default {
             self.convocatoria.Informacion_A=reader.result;
             };
             reader.readAsDataURL(In1file);
-         
+
         },
-        
+
          processFileInf2(event){
              const self= this;
             var In2file= event.target.files[0];
             const reader = new FileReader();
-             reader.onload = function(evt) {  
+             reader.onload = function(evt) {
             self.convocatoria.Informacion_B=reader.result;
             };
             reader.readAsDataURL(In2file);
-           
+
         },
     }
 }

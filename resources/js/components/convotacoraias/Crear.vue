@@ -33,10 +33,15 @@
         <!--<embed :src="algo" type="application/pdf" width="100%" height="600px" /> -->
         <label for="content">Información sobre B</label>
         <input class="form-control" id="Informacion_2" type="file" @change="processFileInf2">
-        
-        <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
+
+        <div class="col-lg-4">
+            <button type="submit" class="btn btn-primary mt-3">Crear Convocatoria</button>
+            <router-link :to='{name:"convocatoria"}' class="btn btn-danger mt-3"><i class="far fa-ballot-check"></i> Cancelar
+            </router-link>
+        </div>
+
         <!--{{ convocatoria }} -->
-        
+
 
     </form>
                 </div>
@@ -47,13 +52,13 @@
 
 <script>
 export default {
-    
+
     /*async mounted(){
         const response = await axios.get("/create");
         const data= response.data;
         console.log(data);
     },*/
-    
+
     data() {
         return{
         convocatoria:{
@@ -71,18 +76,18 @@ export default {
             algo: ''
 
         }
-        
-        
+
+
     },
-    
+
     methods:{
-        
+
         async submit(){
-            
+
             await axios.post('/api/convocatoria', this.convocatoria);
-           
-    
-            
+
+
+
             this.convocatoria.Titulo="";
             this.convocatoria.Codigo_Conv="";
             this.convocatoria.Gestion="";
@@ -95,7 +100,7 @@ export default {
             //console.log(this.response);
 
             this.$router.push({name:"convocatoria"});
-            
+
         },
         processFileInf1(event){
             const self= this;
@@ -103,25 +108,25 @@ export default {
              const reader = new FileReader();
              reader.onload = function(evt) {
             //console.log(evt.target.result);
-            
+
             self.convocatoria.Informacion_A=reader.result;
             //console.log(self.algo);
             };
             reader.readAsDataURL(In1file);
-         
+
         },
-        
+
          processFileInf2(event){
              const self= this;
             var In2file= event.target.files[0];
             const reader = new FileReader();
-             reader.onload = function(evt) {  
+             reader.onload = function(evt) {
             self.convocatoria.Informacion_B=reader.result;
             };
             reader.readAsDataURL(In2file);
-           
+
         },
-        
+
     },
 }
 </script>

@@ -64,6 +64,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-blog",
   data: function data() {
@@ -498,7 +503,35 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(1),
+                _c(
+                  "div",
+                  { staticClass: "col-lg-4" },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success mt-3",
+                        attrs: { type: "submit" },
+                      },
+                      [_vm._v("Guardar Cambios")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-danger mt-3",
+                        attrs: { to: { name: "convocatoria" } },
+                      },
+                      [
+                        _c("i", { staticClass: "far fa-ballot-check" }),
+                        _vm._v(" Cancelar\n                            "),
+                      ]
+                    ),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12" }),
               ]),
             ]
           ),
@@ -514,18 +547,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h4", [_vm._v("Editar Convocatoria")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-success", attrs: { type: "submit" } },
-        [_vm._v("Guardar Cambios")]
-      ),
     ])
   },
 ]

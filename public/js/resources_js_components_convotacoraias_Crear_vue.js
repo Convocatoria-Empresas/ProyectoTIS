@@ -66,6 +66,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   /*async mounted(){
       const response = await axios.get("/create");
@@ -464,12 +469,31 @@ var render = function () {
               }),
               _vm._v(" "),
               _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary mt-3",
-                  attrs: { type: "submit" },
-                },
-                [_vm._v("Ingresar")]
+                "div",
+                { staticClass: "col-lg-4" },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary mt-3",
+                      attrs: { type: "submit" },
+                    },
+                    [_vm._v("Crear Convocatoria")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-danger mt-3",
+                      attrs: { to: { name: "convocatoria" } },
+                    },
+                    [
+                      _c("i", { staticClass: "far fa-ballot-check" }),
+                      _vm._v(" Cancelar\n        "),
+                    ]
+                  ),
+                ],
+                1
               ),
             ]
           ),
