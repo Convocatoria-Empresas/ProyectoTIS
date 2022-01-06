@@ -1,7 +1,5 @@
 const Home = () => import('./components/Home.vue');
-
 const Empresas = () => import('./components/Empresas.vue');
-
 const Seguimiento = () => import('./components/Seguimiento.vue');
 
 //importamos los componentes para el convocatorias
@@ -11,7 +9,6 @@ const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
 const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue');
 const EditarEmpre = () => import('./components/paraEmpresas/EditarRegEm.vue');
-
 //importamos para el seguimiento y revision para empresas
 const SegEmpresa = () => import('./components/Seguimiento/SegEmpresas.vue');
 const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
@@ -21,7 +18,6 @@ const RevSegPost = () => import('./components/Seguimiento/RevSegPost.vue');
 //agregamos el login y el registro
 const Login =() => import('./components/Login.vue');
 const Registrarse = () => import('./components/Registrarse.vue');
-
 
 //Todo para los ESTUDIANTES
 const HomeEst = () => import ('./components/Estudiante/HomeEst.vue');
