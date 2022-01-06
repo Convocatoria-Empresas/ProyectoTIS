@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4> <strong>Registrar Empresa</strong></h4>
+                    <h4> <strong>Revisión de la Grupo-Empresa</strong></h4>
                 </div>
                 <div class="card-body">
                     <form @submit.prevent="actualizar">
@@ -90,9 +90,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-5 offset-md-1">
-                                <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link text-info">Mas información</a></li>
-                                </div>
+
                                     <div class="col-lg-6">
                                     <label for="validationCustom01" class="form-label"></label>
                                     <div class="row">

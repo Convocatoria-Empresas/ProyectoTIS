@@ -189,6 +189,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -416,9 +421,7 @@ var render = function () {
             [
               _c("hr"),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [
-                _vm._v("Nombre Largo"),
-              ]),
+              _vm._m(2),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -442,9 +445,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [
-                _vm._v("Nombre corto"),
-              ]),
+              _vm._m(3),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -468,7 +469,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Correo")]),
+              _vm._m(4),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -496,7 +497,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Telefono")]),
+              _vm._m(5),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -520,7 +521,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("NIT")]),
+              _vm._m(6),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -544,7 +545,9 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Solvencia")]),
+              _c("hr"),
+              _vm._v(" "),
+              _vm._m(7),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -552,9 +555,7 @@ var render = function () {
                 on: { change: _vm.processFileSolv },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [
-                _vm._v("Constitución"),
-              ]),
+              _vm._m(8),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -562,9 +563,7 @@ var render = function () {
                 on: { change: _vm.processFileConst },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [
-                _vm._v("Plan de Pago"),
-              ]),
+              _vm._m(9),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -572,7 +571,7 @@ var render = function () {
                 on: { change: _vm.processFilePlan },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Carta")]),
+              _vm._m(10),
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
@@ -580,7 +579,9 @@ var render = function () {
                 on: { change: _vm.processFileCarta },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 1")]),
+              _c("hr"),
+              _vm._v(" "),
+              _vm._m(11),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -604,7 +605,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 2")]),
+              _vm._m(12),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -628,7 +629,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 3")]),
+              _vm._m(13),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -652,7 +653,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 4")]),
+              _vm._m(14),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -676,7 +677,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("label", { attrs: { for: "content" } }, [_vm._v("Socio 5")]),
+              _vm._m(15),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -701,12 +702,31 @@ var render = function () {
               }),
               _vm._v(" "),
               _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary mt-3",
-                  attrs: { type: "submit" },
-                },
-                [_vm._v("Ingresar")]
+                "div",
+                { staticClass: "col-lg-4" },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary mt-3",
+                      attrs: { type: "submit" },
+                    },
+                    [_vm._v("Registrar")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-danger mt-3",
+                      attrs: { to: { name: "empresas" } },
+                    },
+                    [
+                      _c("i", { staticClass: "far fa-ballot-check" }),
+                      _vm._v(" Cancelar\n        "),
+                    ]
+                  ),
+                ],
+                1
               ),
             ]
           ),
@@ -731,6 +751,132 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h4", [_c("strong", [_vm._v("Registrar Empresa")])]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "far fa-building" }),
+      _vm._v(" Nombre Largo"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-file-signature" }),
+      _vm._v(" Nombre corto"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-at" }),
+      _vm._v(" Correo electrónico"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-phone-volume" }),
+      _vm._v(" Telefono"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fab fa-digg" }),
+      _vm._v(" NIT"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Solvencia"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Constitución"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Plan de Pago"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-file-pdf" }),
+      _vm._v(" Carta"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-user-tie" }),
+      _vm._v(" Socio 1"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-user-tie" }),
+      _vm._v(" Socio 2"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "fas fa-user-tie" }),
+      _vm._v(" Socio 3"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "far fa-user" }),
+      _vm._v(" Socio 4"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "content" } }, [
+      _c("i", { staticClass: "far fa-user" }),
+      _vm._v(" Socio 5"),
     ])
   },
 ]

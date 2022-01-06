@@ -13,7 +13,7 @@
                             <div  class="row needs-validation" novalidate>
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo" v-model="empresa.Nombre_Largo" required pattern="[a-zA-Z- -\.]+"  
+                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo" v-model="empresa.Nombre_Largo" required pattern="[a-zA-Z- -\.]+"
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
@@ -80,7 +80,7 @@
                                 oninvalid="setCustomValidity('Revise el codigo SIS  ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
@@ -120,44 +120,49 @@
                         </div>
                     </form>-->
                     <form class="form-group" @submit.prevent="submit">
-        
+
         <hr>
-        <label for="content">Nombre Largo</label>
+        <label for="content"><i class="far fa-building"></i> Nombre Largo</label>
         <input class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
-        <label for="content">Nombre corto</label>
+        <label for="content"><i class="fas fa-file-signature"></i> Nombre corto</label>
         <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
-        <label for="content">Correo</label>
+        <label for="content"><i class="fas fa-at"></i> Correo electrónico</label>
         <input class="form-control" id="Correo_electronico" type="text" v-model="empresa.Correo_electronico">
-        <label for="content">Telefono</label>
+        <label for="content"><i class="fas fa-phone-volume"></i> Telefono</label>
         <input class="form-control" id="title" type="text" v-model="empresa.Telefono">
-        <label for="content">NIT</label>
+        <label for="content"><i class="fab fa-digg"></i> NIT</label>
         <input class="form-control" id="NIT" type="text" v-model="empresa.NIT">
+        <hr>
 
-
-        <label for="content">Solvencia</label>
+        <label for="content"><i class="fas fa-file-pdf"></i> Solvencia</label>
         <input class="form-control"  id="Solvencia" type="file" @change="processFileSolv" >
-        
-        <label for="content">Constitución</label>
+
+        <label for="content"><i class="fas fa-file-pdf"></i> Constitución</label>
         <input class="form-control"  id="Constitucion" type="file" @change="processFileConst" >
-        <label for="content">Plan de Pago</label>  
+        <label for="content"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
         <input class="form-control" id="Plan_Pago" type="file" @change="processFilePlan">
-        <label for="content">Carta</label>
+        <label for="content"><i class="fas fa-file-pdf"></i> Carta</label>
         <input class="form-control" id="Carta" type="file" @change="processFileCarta">
 
-
-        <label for="content">Socio 1</label>
+        <hr>
+        <label for="content"><i class="fas fa-user-tie"></i> Socio 1</label>
         <input class="form-control" id="Socio_1" type="text" v-model="empresa.Socio_1">
-        <label for="content">Socio 2</label>
+        <label for="content"><i class="fas fa-user-tie"></i> Socio 2</label>
         <input class="form-control" id="Socio_2" type="text" v-model="empresa.Socio_2">
-        <label for="content">Socio 3</label>
+        <label for="content"><i class="fas fa-user-tie"></i> Socio 3</label>
         <input class="form-control" id="Socio_3" type="text" v-model="empresa.Socio_3">
-        <label for="content">Socio 4</label>
+        <label for="content"><i class="far fa-user"></i> Socio 4</label>
         <input class="form-control" id="Socio_4" type="text" v-model="empresa.Socio_4">
-        <label for="content">Socio 5</label>
+        <label for="content"><i class="far fa-user"></i> Socio 5</label>
         <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
-        <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
-        
-        
+
+        <div class="col-lg-4">
+            <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+            <router-link :to='{name:"empresas"}' class="btn btn-danger mt-3"><i class="far fa-ballot-check"></i> Cancelar
+            </router-link>
+        </div>
+
+
 
     </form>
                 </div>
@@ -168,9 +173,9 @@
 
 <script>
 export default {
-    
-    
-    
+
+
+
     data() {
         return{
             empresa:{
@@ -193,11 +198,11 @@ export default {
             Estado_Aprob:"",
             }
         }
-        
+
     },
-    
+
      methods:{
-        
+
         async submit(){
             console.log("Todo bien aquí");
             this.empresa.Estado_Aprob= 0;
@@ -223,14 +228,14 @@ export default {
             //onsole.log(this.response);
 
             this.$router.push({name:"empresas"});
-            
+
         },
         processFileSolv(event){
              const self= this;
              var Solv= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Solvencia=reader.result;
             };
             reader.readAsDataURL(Solv);
@@ -240,13 +245,13 @@ export default {
             console.log(typeof reader.result);
 
         },
-        
+
          processFileConst(event){
             const self= this;
              var Consti= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Constitucion=reader.result;
             };
             reader.readAsDataURL(Consti);
@@ -256,7 +261,7 @@ export default {
              var Plande= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Plan_Pago=reader.result;
             };
             reader.readAsDataURL(Plande);
@@ -266,7 +271,7 @@ export default {
              var Car= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Carta=reader.result;
             };
             reader.readAsDataURL(Car);

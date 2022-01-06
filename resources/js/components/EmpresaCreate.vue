@@ -14,7 +14,7 @@
                             <div  class="row needs-validation" novalidate>
                                 <div class="col-lg-5 offset-md-1" >
                                 <label for="validationCustom01" class="form-label"><strong>Nombre Largo</strong></label>
-                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo" v-model="empresa.Nombre_Largo" required pattern="[a-zA-Z- -\.]+"  
+                                <input maxlength="30" type="text" placeholder="Nombre Largo Empresa" name="Nombre_Largo" class="form-control" id="Nombre_Largo" v-model="empresa.Nombre_Largo" required pattern="[a-zA-Z- -\.]+"
                                 oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
@@ -81,7 +81,7 @@
                                 oninvalid="setCustomValidity('Revise el codigo SIS  ')" onchange="try{setCustomValidity('')}catch(e){}" />
                                 <div class="valid-feedback">
                                  </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
@@ -137,10 +137,10 @@
 
         <label for="content">Doc1</label>
         <input  id="Solvencia" type="file" @change="processFileSolv">
-        
+
         <label for="content">Doc2</label>
         <!--<input  id="Constitucion" type="file" @change="processFileConst" >-->
-        <label for="content">Doc3</label>  
+        <label for="content">Doc3</label>
         <!--<input id="Plan_Pago" type="file" @change="processFilePlan">-->
         <label for="content">Doc4</label>
         <!--<input id="Carta" type="file" @change="processFileCarta">-->
@@ -156,27 +156,27 @@
         <input class="form-control" id="Socio_4" type="text" v-model="empresa.Socio_4">
         <label for="content">Socio 5</label>
         <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
-        <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
+        <button type="submit" class="btn btn-primary mt-3">Registrar</button>
         {{ empresa }}
-        
+
 
     </form>
                 </div>
             </div>
         </div>
     </div>
-  </div>  
+  </div>
 </template>
 
 <!--<script>
 export default {
-    
+
     /*async mounted(){
         const response = await axios.get("/create");
         const data= response.data;
         console.log(data);
     },*/
-    
+
     data() {
         return{
             empresa:{
@@ -196,15 +196,15 @@ export default {
             Socio_5:""
             }
         }
-        
+
     },
-    
+
     methods:{
-        
+
         async submit(){
-            
+
            const response = await axios.post('/empresa', this.empresa);
-           
+
             this.empresa.Nombre_Largo = "";
             this.empresa.Nombre_Corto = "";
             this.empresa.Correo_electronico = "";
@@ -220,14 +220,14 @@ export default {
             this.empresa.Socio_4 = "";
             this.empresa.Socio_5 = "";
             console.log(this.response);
-            
+
         },
         processFileSolv(event){
              var Solvfile= event.target.files[0];
             this.empresa.Solvencia = Solvfile;
             console.log(event.target.files[0]);
         },
-        
+
          processFileConst(event){
             var Constfile= event.target.files[0];
             this.empresa.Constitucion = Constfile;
@@ -281,5 +281,5 @@ export default {
         <input class="form-control" id="title" type="text" v-model="empresa.Socio_5">
         <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
         {{ empresa }}
-        
+
     </form>-->

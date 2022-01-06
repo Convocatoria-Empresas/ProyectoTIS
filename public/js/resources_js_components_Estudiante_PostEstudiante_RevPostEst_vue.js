@@ -143,8 +143,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "laempresa",
   data: function data() {
@@ -472,8 +470,6 @@ var render = function () {
                 _vm._m(8),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
-                  _vm._m(9),
-                  _vm._v(" "),
                   _c("div", { staticClass: "col-lg-6" }, [
                     _c("label", {
                       staticClass: "form-label",
@@ -525,7 +521,7 @@ var render = function () {
                         ]),
                       ]),
                       _vm._v(" "),
-                      _vm._m(10),
+                      _vm._m(9),
                     ]),
                   ]),
                 ]),
@@ -543,7 +539,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_c("strong", [_vm._v("Registrar Empresa")])]),
+      _c("h4", [_c("strong", [_vm._v("Revisión de la Grupo-Empresa")])]),
     ])
   },
   function () {
@@ -659,26 +655,6 @@ var staticRenderFns = [
         _c("button", { staticClass: "btn btn-primary mb-2" }, [
           _vm._v("Descargar"),
         ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-      _c("li", [
-        _c(
-          "a",
-          {
-            staticClass: "nav-link text-info",
-            attrs: {
-              href: "https://www.facebook.com/lacocoyodotcom/",
-              target: "_blank",
-            },
-          },
-          [_vm._v("Mas información")]
-        ),
       ]),
     ])
   },

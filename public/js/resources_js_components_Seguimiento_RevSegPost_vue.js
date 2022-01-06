@@ -624,7 +624,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h4", [_c("strong", [_vm._v("Registrar Empresa")])]),
+      _c("h4", [
+        _c("strong", [_vm._v("Revisión de entrega de la Grupo-Empresa")]),
+      ]),
     ])
   },
   function () {
@@ -742,19 +744,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
-      _c("li", [
-        _c(
-          "a",
-          {
-            staticClass: "nav-link text-info",
-            attrs: {
-              href: "https://www.facebook.com/lacocoyodotcom/",
-              target: "_blank",
-            },
-          },
-          [_vm._v("Mas información")]
-        ),
-      ]),
+      _c("li", [_c("a", { attrs: { href: "", target: "_blank" } })]),
     ])
   },
   function () {

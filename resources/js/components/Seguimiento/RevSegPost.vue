@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4> <strong>Registrar Empresa</strong></h4>
+                    <h4> <strong>Revisión de entrega de la Grupo-Empresa</strong></h4>
                 </div>
                 <div class="card-body">
                     <form @submit.prevent="actualizar">
@@ -45,7 +45,7 @@
                                  </div>
                                 </div>
 
-                                
+
 
                                 <div class="col-lg-4 offset-md-1">
                                 <label for="validationCustom01" class="form-label"><strong>Socio 4</strong></label>
@@ -54,7 +54,7 @@
                                  </div>
                                 </div>
 
-                                
+
 
                                 <div class="col-lg-4 offset-md-1">
                                  <label for="validationCustom01" class="form-label"><strong>Socio 5</strong></label>
@@ -74,7 +74,7 @@
                             <div class="row">
                                <div class="col-lg-4 offset-md-1">
                                 <label for="formFile" class="form-label"><strong>Solvencia Tecnica</strong></label>
-                                
+
                               <a download=Solvencia :href="this.lapostulacion.PSolvencia" title='Download pdf document' >Descargar</a>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
@@ -92,14 +92,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-5 offset-md-1">
-                                <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link text-info">Mas información</a></li>
+                                <li> <a href="" target="_blank"></a></li>
                                 </div>
                                     <div class="col-lg-6">
                                     <label for="validationCustom01" class="form-label"></label>
                                     <div class="row">
-                                   
+
                                     <div class="form-group col-md-4">
-                                    
+
                                     <div class="col-auto my-1">
                                          <label class="mr-sm-2" for="inlineFormCustomSelect">Estado</label>
                                          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect"  @change="AcpeRe($event)" required>
@@ -121,8 +121,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 </template>
 
 <script>
@@ -147,7 +147,7 @@ export default {
              PAsesordeEmp: "",
              PEstado_Aprob:"",
             }
-            
+
         }
     },
     mounted(){
@@ -157,11 +157,11 @@ export default {
 
         async mostrarEmp(){
             await this.axios.put(`/api/postulacion/${this.$route.params.id}`, this.lapostulacion).then(response=>{
-                
+
                 console.log(response.data)
                 this.lapostulacion.PNombre_Largo = response.data.PNombre_Largo
                 this.lapostulacion.PCorreo_electronico = response.data.PCorreo_electronico
-                this.lapostulacion.PPlan_Pago = response.data.PPlan_Pago 
+                this.lapostulacion.PPlan_Pago = response.data.PPlan_Pago
                 this.lapostulacion.PConstitucion = response.data.PConstitucion
                 this.lapostulacion.PCarta = response.data.PCarta
                 this.lapostulacion.PSolvencia = response.data.PSolvencia
@@ -173,43 +173,43 @@ export default {
                 this.lapostulacion.PGetiodeEmp = response.data.PGetiodeEmp
                 this.lapostulacion.PAsesordeEmp = response.data.PAsesordeEmp
                 this.lapostulacion.PEstado_Aprob = response.data.PEstado_Aprob
-                
-                
+
+
             }).catch(error=>{
                 console.log(error)
             })
-            
+
         },
          AcpeRe(e){
             if(e.target.value==1){
                 this.lapostulacion.PEstado_Aprob = 1;
-                
+
             }
             else{
                 this.lapostulacion.PEstado_Aprob = 0;
-                
+
             }
             console.log(this.lapostulacion.PEstado_Aprob);
         },
-        
+
         async actualizar(){
-          await this.axios.get(`/api/postulacion/${this.$route.params.id}/approve/${this.lapostulacion.PEstado_Aprob}`,this.lapostulacion).then(response=>{        
-                
+          await this.axios.get(`/api/postulacion/${this.$route.params.id}/approve/${this.lapostulacion.PEstado_Aprob}`,this.lapostulacion).then(response=>{
+
             }).catch(error=>{
                 console.log(error)
             })
-          await this.axios.get(`/api/empresa/${this.lapostulacion.PNombre_Largo}/approve/${this.lapostulacion.PEstado_Aprob}`,this.lapostulacion).then(response=>{        
-            
+          await this.axios.get(`/api/empresa/${this.lapostulacion.PNombre_Largo}/approve/${this.lapostulacion.PEstado_Aprob}`,this.lapostulacion).then(response=>{
+
             }).catch(error=>{
                 console.log(error)
             })
 
             if(this.lapostulacion.PEstado_Aprob == 1){
-                 await this.axios.put(`/api/empresa/${this.lapostulacion.PNombre_Largo}/addAseGes`,this.lapostulacion).then(response=>{        
-            
+                 await this.axios.put(`/api/empresa/${this.lapostulacion.PNombre_Largo}/addAseGes`,this.lapostulacion).then(response=>{
+
             }).catch(error=>{
                 console.log(error)
-            })   
+            })
             }
 
 
