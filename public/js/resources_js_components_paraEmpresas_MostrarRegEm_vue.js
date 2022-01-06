@@ -191,9 +191,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -418,8 +415,6 @@ var render = function () {
               },
             },
             [
-              _c("hr"),
-              _vm._v(" "),
               _vm._m(2),
               _vm._v(" "),
               _c("input", {
@@ -432,7 +427,12 @@ var render = function () {
                   },
                 ],
                 staticClass: "form-control",
-                attrs: { id: "Nombre_Largo", type: "text" },
+                attrs: {
+                  maxlength: "30",
+                  placeholder: "Nombre largo de la Empresa",
+                  id: "Nombre_Largo",
+                  type: "text",
+                },
                 domProps: { value: _vm.empresa.Nombre_Largo },
                 on: {
                   input: function ($event) {
@@ -550,7 +550,7 @@ var render = function () {
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
-                attrs: { id: "Solvencia", type: "file" },
+                attrs: { id: "Solvencia", accept: ".pdf", type: "file" },
                 on: { change: _vm.processFileSolv },
               }),
               _vm._v(" "),
@@ -558,7 +558,7 @@ var render = function () {
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
-                attrs: { id: "Constitucion", type: "file" },
+                attrs: { accept: ".pdf", id: "Constitucion", type: "file" },
                 on: { change: _vm.processFileConst },
               }),
               _vm._v(" "),
@@ -566,7 +566,7 @@ var render = function () {
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
-                attrs: { id: "Plan_Pago", type: "file" },
+                attrs: { id: "Plan_Pago", type: "file", accept: ".pdf" },
                 on: { change: _vm.processFilePlan },
               }),
               _vm._v(" "),
@@ -574,7 +574,7 @@ var render = function () {
               _vm._v(" "),
               _c("input", {
                 staticClass: "form-control",
-                attrs: { id: "Carta", type: "file" },
+                attrs: { accept: ".pdf", type: "file", id: "Carta" },
                 on: { change: _vm.processFileCarta },
               }),
               _vm._v(" "),
@@ -710,7 +710,7 @@ var render = function () {
                       staticClass: "btn btn-primary mt-3",
                       attrs: { type: "submit" },
                     },
-                    [_vm._v("Registrar")]
+                    [_vm._v("Registrar Empresa")]
                   ),
                   _vm._v(" "),
                   _c(

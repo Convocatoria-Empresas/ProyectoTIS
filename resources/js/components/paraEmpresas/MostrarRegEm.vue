@@ -120,10 +120,8 @@
                         </div>
                     </form>-->
                     <form class="form-group" @submit.prevent="submit">
-
-        <hr>
         <label for="content"><i class="far fa-building"></i> Nombre Largo</label>
-        <input class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
+        <input  maxlength="30" placeholder="Nombre largo de la Empresa" class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
         <label for="content"><i class="fas fa-file-signature"></i> Nombre corto</label>
         <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
         <label for="content"><i class="fas fa-at"></i> Correo electrónico</label>
@@ -135,14 +133,13 @@
         <hr>
 
         <label for="content"><i class="fas fa-file-pdf"></i> Solvencia</label>
-        <input class="form-control"  id="Solvencia" type="file" @change="processFileSolv" >
-
+        <input class="form-control"  id="Solvencia" accept=".pdf" type="file" @change="processFileSolv" >
         <label for="content"><i class="fas fa-file-pdf"></i> Constitución</label>
-        <input class="form-control"  id="Constitucion" type="file" @change="processFileConst" >
+        <input class="form-control" accept=".pdf" id="Constitucion" type="file" @change="processFileConst" >
         <label for="content"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
-        <input class="form-control" id="Plan_Pago" type="file" @change="processFilePlan">
+        <input class="form-control" id="Plan_Pago" type="file" accept=".pdf" @change="processFilePlan">
         <label for="content"><i class="fas fa-file-pdf"></i> Carta</label>
-        <input class="form-control" id="Carta" type="file" @change="processFileCarta">
+        <input class="form-control" accept=".pdf" type="file" id="Carta" @change="processFileCarta">
 
         <hr>
         <label for="content"><i class="fas fa-user-tie"></i> Socio 1</label>
@@ -157,7 +154,7 @@
         <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
 
         <div class="col-lg-4">
-            <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+            <button type="submit" class="btn btn-primary mt-3">Registrar Empresa</button>
             <router-link :to='{name:"empresas"}' class="btn btn-danger mt-3"><i class="far fa-ballot-check"></i> Cancelar
             </router-link>
         </div>
@@ -205,7 +202,7 @@ export default {
 
         async submit(){
             console.log("Todo bien aquí");
- 
+
            await axios.post('/api/empresa', this.empresa);
            console.log("El problema es aquí");
             this.empresa.Nombre_Largo = "";

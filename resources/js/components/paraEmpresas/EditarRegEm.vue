@@ -102,17 +102,17 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-5 offset-md-1">
+                                <div class="col-lg-4 offset-md-1">
                                 <li> <a href="https://www.facebook.com/lacocoyodotcom/" target="_blank" class="nav-link text-info">Mas información</a></li>
                                 </div>
                                     <div class="col-lg-6">
                                     <label for="validationCustom01" class="form-label"></label>
                                     <div class="row">
                                     <div class="col-lg-6 offset-md-2">
-                                    <button type="submit" class="btn btn-lg btn-danger">Cancelar</button>
+                                    <button type="submit" class="btn btn-danger">Cancelar</button>
                                     </div>
                                     <div class="col-lg-4">
-                                    <button type="submit" class="btn btn-lg btn-success">Registrar</button>
+                                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
                                     </div>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@ export default {
     methods:{
         async mostrarEmp(){
             await this.axios.put(`/api/empresa/${this.$route.params.id}`, this.empresa).then(response=>{
-                
+
 
                 console.log(response.data)
                 this.empresa.Nombre_Largo = response.data.Nombre_Largo
@@ -166,7 +166,7 @@ export default {
                 this.empresa.Telefono = response.data.Telefono
                 this.empresa.NIT = response.data.NIT
                 this.empresa.Correo_electronico = response.data.Correo_electronico
-                this.empresa.Plan_Pago = response.data.Plan_Pago 
+                this.empresa.Plan_Pago = response.data.Plan_Pago
                 this.empresa.Constitucion = response.data.Constitucion
                 this.empresa.Carta = response.data.Carta
                 this.empresa.Solvencia = response.data.Solvencia
@@ -176,12 +176,12 @@ export default {
                 this.empresa.Socio_4 = response.data.Socio_4
                 this.empresa.Socio_5 = response.data.Socio_5
                 this.empresa.Estado_Aprob = response.data.Estado_Aprob
-                
-                
+
+
             }).catch(error=>{
                 console.log(error)
             })
-            
+
         },
         async editar(){
 
@@ -189,7 +189,7 @@ export default {
             await this.axios.put(`/api/empresa/${this.$route.params.id}/edit/${this.empresa}`, this.empresa).then(response=>{
                 console.log("Aquelo que devuelve es")
                 console.log(response.data)
-                
+
                 this.$router.push({name:"empresas"})
             }).catch(error=>{
                 console.log(error)
@@ -200,19 +200,19 @@ export default {
              var Solv= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Solvencia=reader.result;
             };
             reader.readAsDataURL(Solv);
 
         },
-        
+
          processFileConst(event){
             const self= this;
              var Consti= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Constitucion=reader.result;
             };
             reader.readAsDataURL(Consti);
@@ -222,7 +222,7 @@ export default {
              var Plande= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Plan_Pago=reader.result;
             };
             reader.readAsDataURL(Plande);
@@ -232,7 +232,7 @@ export default {
              var Car= event.target.files[0];
              const reader = new FileReader();
              reader.onload = function(evt) {
-            
+
             self.empresa.Carta=reader.result;
             };
             reader.readAsDataURL(Car);

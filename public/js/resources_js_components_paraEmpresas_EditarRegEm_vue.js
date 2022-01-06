@@ -993,7 +993,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+      _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
         _c("li", [
           _c(
             "a",
@@ -1019,10 +1019,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-lg-6 offset-md-2" }, [
             _c(
               "button",
-              {
-                staticClass: "btn btn-lg btn-danger",
-                attrs: { type: "submit" },
-              },
+              { staticClass: "btn btn-danger", attrs: { type: "submit" } },
               [_vm._v("Cancelar")]
             ),
           ]),
@@ -1030,11 +1027,8 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-lg-4" }, [
             _c(
               "button",
-              {
-                staticClass: "btn btn-lg btn-success",
-                attrs: { type: "submit" },
-              },
-              [_vm._v("Registrar")]
+              { staticClass: "btn btn-success", attrs: { type: "submit" } },
+              [_vm._v("Guardar Cambios")]
             ),
           ]),
         ]),
