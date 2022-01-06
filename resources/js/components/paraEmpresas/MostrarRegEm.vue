@@ -119,9 +119,11 @@
                             </div>
                         </div>
                     </form>-->
+                    
                     <div class="row needs-validation" novalidate>
                         <form class="form-group" @submit.prevent="submit">
-                            <label for="content"><i class="far fa-building"></i> Nombre Largo</label>
+                            <label for="validationCustom01" class="form-label"><i class="far fa-building"></i><strong> Nombre Largo</strong></label>
+                            <div class="valid-feedback"></div>
                             <input  maxlength="30" placeholder="Nombre largo de la Empresa" class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
                             <label for="content"><i class="fas fa-file-signature"></i> Nombre corto</label>
                             <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">

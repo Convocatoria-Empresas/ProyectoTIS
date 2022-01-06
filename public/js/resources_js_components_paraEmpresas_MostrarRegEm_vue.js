@@ -191,6 +191,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -420,6 +422,8 @@ var render = function () {
                 },
                 [
                   _vm._m(2),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "valid-feedback" }),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -770,10 +774,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "far fa-building" }),
-      _vm._v(" Nombre Largo"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [
+        _c("i", { staticClass: "far fa-building" }),
+        _c("strong", [_vm._v(" Nombre Largo")]),
+      ]
+    )
   },
   function () {
     var _vm = this
