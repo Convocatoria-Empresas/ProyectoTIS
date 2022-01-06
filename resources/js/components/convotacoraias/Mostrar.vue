@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="text-center col">
-            <h1>Convocatorias de empresas</h1>
+            <h1>Convocatoria para Empresas</h1>
             <hr>
         </div>
         <div class="mb-2 col-12">
@@ -32,7 +32,7 @@
                                 <a download=Informacion_A :href="blog.Informacion_A" title='Download pdf document' >Información A</a>
                                 <p class="vs"></p>
                                 <a download=Informacion_B :href="blog.Informacion_B" title='Download pdf document' >Información B</a>
-                            </td>   
+                            </td>
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"editarConvo",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>

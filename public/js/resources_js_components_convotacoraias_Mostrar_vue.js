@@ -349,7 +349,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center col" }, [
-      _c("h1", [_vm._v("Convocatorias de empresas")]),
+      _c("h1", [_vm._v("Convocatoria para Empresas")]),
       _vm._v(" "),
       _c("hr"),
     ])
