@@ -119,49 +119,49 @@
                             </div>
                         </div>
                     </form>-->
-                    <form class="form-group" @submit.prevent="submit">
-        <label for="content"><i class="far fa-building"></i> Nombre Largo</label>
-        <input  maxlength="30" placeholder="Nombre largo de la Empresa" class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
-        <label for="content"><i class="fas fa-file-signature"></i> Nombre corto</label>
-        <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
-        <label for="content"><i class="fas fa-at"></i> Correo electrónico</label>
-        <input class="form-control" id="Correo_electronico" type="text" v-model="empresa.Correo_electronico">
-        <label for="content"><i class="fas fa-phone-volume"></i> Telefono</label>
-        <input class="form-control" id="title" type="text" v-model="empresa.Telefono">
-        <label for="content"><i class="fab fa-digg"></i> NIT</label>
-        <input class="form-control" id="NIT" type="text" v-model="empresa.NIT">
-        <hr>
+                    <div class="row needs-validation" novalidate>
+                        <form class="form-group" @submit.prevent="submit">
+                            <label for="content"><i class="far fa-building"></i> Nombre Largo</label>
+                            <input  maxlength="30" placeholder="Nombre largo de la Empresa" class="form-control" id="Nombre_Largo" type="text" v-model="empresa.Nombre_Largo">
+                            <label for="content"><i class="fas fa-file-signature"></i> Nombre corto</label>
+                            <input class="form-control" id="Nombre_Corto" type="text" v-model="empresa.Nombre_Corto">
+                            <label for="content"><i class="fas fa-at"></i> Correo electrónico</label>
+                            <input class="form-control" id="Correo_electronico" type="text" v-model="empresa.Correo_electronico">
+                            <label for="content"><i class="fas fa-phone-volume"></i> Telefono</label>
+                            <input class="form-control" id="title" type="text" v-model="empresa.Telefono">
+                            <label for="content"><i class="fab fa-digg"></i> NIT</label>
+                            <input class="form-control" id="NIT" type="text" v-model="empresa.NIT">
+                            <hr>
 
-        <label for="content"><i class="fas fa-file-pdf"></i> Solvencia</label>
-        <input class="form-control"  id="Solvencia" accept=".pdf" type="file" @change="processFileSolv" >
-        <label for="content"><i class="fas fa-file-pdf"></i> Constitución</label>
-        <input class="form-control" accept=".pdf" id="Constitucion" type="file" @change="processFileConst" >
-        <label for="content"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
-        <input class="form-control" id="Plan_Pago" type="file" accept=".pdf" @change="processFilePlan">
-        <label for="content"><i class="fas fa-file-pdf"></i> Carta</label>
-        <input class="form-control" accept=".pdf" type="file" id="Carta" @change="processFileCarta">
+                            <label for="content"><i class="fas fa-file-pdf"></i> Solvencia</label>
+                            <input class="form-control"  id="Solvencia" accept=".pdf" type="file" @change="processFileSolv" >
+                            <label for="content"><i class="fas fa-file-pdf"></i> Constitución</label>
+                            <input class="form-control" accept=".pdf" id="Constitucion" type="file" @change="processFileConst" >
+                            <label for="content"><i class="fas fa-file-pdf"></i> Plan de Pago</label>
+                            <input class="form-control" id="Plan_Pago" type="file" accept=".pdf" @change="processFilePlan">
+                            <label for="content"><i class="fas fa-file-pdf"></i> Carta</label>
+                            <input class="form-control" accept=".pdf" type="file" id="Carta" @change="processFileCarta">
 
-        <hr>
-        <label for="content"><i class="fas fa-user-tie"></i> Socio 1</label>
-        <input class="form-control" id="Socio_1" type="text" v-model="empresa.Socio_1">
-        <label for="content"><i class="fas fa-user-tie"></i> Socio 2</label>
-        <input class="form-control" id="Socio_2" type="text" v-model="empresa.Socio_2">
-        <label for="content"><i class="fas fa-user-tie"></i> Socio 3</label>
-        <input class="form-control" id="Socio_3" type="text" v-model="empresa.Socio_3">
-        <label for="content"><i class="far fa-user"></i> Socio 4</label>
-        <input class="form-control" id="Socio_4" type="text" v-model="empresa.Socio_4">
-        <label for="content"><i class="far fa-user"></i> Socio 5</label>
-        <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
+                            <hr>
+                            <label for="content"><i class="fas fa-user-tie"></i> Socio 1</label>
+                            <input class="form-control" id="Socio_1" type="text" v-model="empresa.Socio_1">
+                            <label for="content"><i class="fas fa-user-tie"></i> Socio 2</label>
+                            <input class="form-control" id="Socio_2" type="text" v-model="empresa.Socio_2">
+                            <label for="content"><i class="fas fa-user-tie"></i> Socio 3</label>
+                            <input class="form-control" id="Socio_3" type="text" v-model="empresa.Socio_3">
+                            <label for="content"><i class="far fa-user"></i> Socio 4</label>
+                            <input class="form-control" id="Socio_4" type="text" v-model="empresa.Socio_4">
+                            <label for="content"><i class="far fa-user"></i> Socio 5</label>
+                            <input class="form-control" id="Socio_5" type="text" v-model="empresa.Socio_5">
 
-        <div class="col-lg-4">
-            <button type="submit" class="btn btn-primary mt-3">Registrar Empresa</button>
-            <router-link :to='{name:"empresas"}' class="btn btn-danger mt-3"><i class="far fa-ballot-check"></i> Cancelar
-            </router-link>
-        </div>
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-primary mt-3">Registrar Empresa</button>
+                                <router-link :to='{name:"empresas"}' class="btn btn-danger mt-3"><i class="far fa-ballot-check"></i> Cancelar
+                                </router-link>
+                            </div>
+                        </form>
+                    </div>
 
-
-
-    </form>
                 </div>
             </div>
         </div>
