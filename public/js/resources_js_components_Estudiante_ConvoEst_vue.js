@@ -54,6 +54,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -219,9 +227,39 @@ var render = function () {
               return _c("tr", { key: blog.id }, [
                 _c("td", [_vm._v(_vm._s(blog.Gestion))]),
                 _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(blog.Asesor))]),
+                _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Titulo))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Descripcion))]),
+                _vm._v(" "),
+                _c("td", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        download: "Informacion_A",
+                        href: blog.Informacion_A,
+                        title: "Download pdf document",
+                      },
+                    },
+                    [_vm._v("Información A")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "vs" }),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        download: "Informacion_B",
+                        href: blog.Informacion_B,
+                        title: "Download pdf document",
+                      },
+                    },
+                    [_vm._v("Información B")]
+                  ),
+                ]),
                 _vm._v(" "),
                 _c(
                   "td",
@@ -270,9 +308,13 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("Gestión")]),
         _vm._v(" "),
+        _c("th", [_vm._v("Asesor")]),
+        _vm._v(" "),
         _c("th", [_vm._v("Título")]),
         _vm._v(" "),
         _c("th", [_vm._v("Descripción")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Documentos")]),
         _vm._v(" "),
         _c("th", [_vm._v("Acciones")]),
       ]),

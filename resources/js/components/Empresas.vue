@@ -105,6 +105,8 @@ export default {
         this.mostrarEmp()
     },
     methods:{
+
+        
         async mostrarEmp(){
             await this.axios.get('/api/empresa').then(response=>{
                 console.log(response.data)
@@ -113,6 +115,8 @@ export default {
                 console.log(error)
                 this.blogs = []
             })
+            
+ 
         },
         async  borrarBlog(id){
            // if(confirm("¿Confirma eliminar el registro?")){

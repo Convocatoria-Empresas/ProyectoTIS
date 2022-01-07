@@ -306,7 +306,7 @@ var render = function () {
                         staticClass: "btn btn-warning",
                         attrs: {
                           to: {
-                            name: "PostularEst",
+                            name: "postular",
                             params: {
                               id: blog.id,
                               asesorCorr: blog.Correo_Ase,

@@ -10,8 +10,10 @@
                     <thead class="text-white bg-dark">
                         <tr>
                             <th>Gestión</th>
+                            <th>Asesor</th>
                             <th>Título</th>
                             <th>Descripción</th>
+                            <th>Documentos</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -19,8 +21,14 @@
                         <tr v-for="blog in blogs" :key="blog.id">
 
                             <td>{{ blog.Gestion }}</td>
+                            <td>{{ blog.Asesor }}</td>
                             <td>{{ blog.Titulo }}</td>
                             <td>{{ blog.Descripcion }}</td>
+                             <td>
+                                <a download=Informacion_A :href="blog.Informacion_A" title='Download pdf document' >Información A</a>
+                                <p class="vs"></p>
+                                <a download=Informacion_B :href="blog.Informacion_B" title='Download pdf document' >Información B</a>
+                            </td>  
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"PostularEst",params:{id:blog.id}}' class="btn btn-warning"><i class="fas fa-user-edit"></i> Postular</router-link>
