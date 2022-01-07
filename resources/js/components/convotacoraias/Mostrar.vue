@@ -36,7 +36,7 @@
                             <td>
                                 <!-- llamamos al componente para Editar     -->
                                 <router-link :to='{name:"editarConvo",params:{id:blog.id}}' class="btn btn-info"><i class="fas fa-edit"></i></router-link>
-                                <router-link :to='{name:"PostularEst",params:{id:blog.id,asesorCorr:blog.Correo_Ase,convoGestio:blog.Gestion}}' class="btn btn-warning"><i class="fas fa-medal"></i></router-link>
+                                <router-link :to='{name:"postular",params:{id:blog.id,asesorCorr:blog.Correo_Ase,convoGestio:blog.Gestion}}' class="btn btn-warning"><i class="fas fa-medal"></i></router-link>
                                 <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>

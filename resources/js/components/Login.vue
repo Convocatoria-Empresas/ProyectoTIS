@@ -78,6 +78,8 @@
             if(this.ellogin.correo == null){
                 this.ellogin.NoexisteEmail=1;
             }
+            //Se carga el correo en el localstorage
+            localStorage.correo = this.ellogin.correo;
 
 
             this.ellogin.usuarios.forEach(function(usuario){
@@ -105,7 +107,9 @@
                                 break;
                         }
 
-                        self.$router.push({name:"home"});
+                        
+
+                        self.$router.push({name:"home",params:{corr:usuario.Correo_usu}});
                     }
                     else{
                         console.log("Verifique contraseña");

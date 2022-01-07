@@ -1,6 +1,7 @@
 const Home = () => import('./components/Home.vue');
 const Empresas = () => import('./components/Empresas.vue');
 const Seguimiento = () => import('./components/Seguimiento.vue');
+const Postular = () => import('./components/Postular.vue');
 
 //importamos los componentes para el convocatorias
 const MostrarConv = () => import('./components/convotacoraias/Mostrar.vue');
@@ -9,7 +10,7 @@ const Editar = () => import('./components/convotacoraias/Editar.vue');
 //importar form empresa
 const RegEmpresa = () => import('./components/paraEmpresas/MostrarRegEm.vue');
 const EditarEmpre = () => import('./components/paraEmpresas/EditarRegEm.vue');
-//importamos para el seguimiento y revision para empresas
+//importamos para el Postular y revision para empresas
 const SegEmpresa = () => import('./components/Seguimiento/SegEmpresas.vue');
 const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
 //importamos para el seguimiento y revision para postulantes
@@ -22,11 +23,13 @@ const Registrarse = () => import('./components/Registrarse.vue');
 //Todo para los ESTUDIANTES
 const HomeEst = () => import ('./components/Estudiante/HomeEst.vue');
 const EmpresaEst = () => import('./components/Estudiante/EmpresaEst.vue');
+const RegEmpEst = () => import('./components/Estudiante/RegEmpEst.vue');
 const ConvoEst = () => import ('./components/Estudiante/ConvoEst.vue');
 const SegEmpEst = () => import ('./components/Estudiante/EmpEstudiante/SegEmpEst.vue');
 const SegPostEst = () => import ('./components/Estudiante/PostEstudiante/SegPostEst.vue');
 const PostularEst = () => import ('./components/Estudiante/PostEstudiante/PostularEst.vue');
 const RevPostEst =() => import('./components/Estudiante/PostEstudiante/RevPostEst.vue');
+
 
 
 export const routes = [
@@ -39,6 +42,11 @@ export const routes = [
         name: 'convocatoria',
         path: '/convocatoria',
         component: MostrarConv,
+    },
+    {
+        name: 'postular',
+        path: '/postular',
+        component: Postular,
     },
     {
         name: 'crearBlog',
@@ -104,6 +112,11 @@ export const routes = [
         name:'AppEst',
         path:'/HomeEst',
         component: HomeEst
+    },
+    {
+        name:'RegEmpEst',
+        path:'/RegEmpEst',
+        component: RegEmpEst
     },
     {
         name:'EmpresaEst',

@@ -62,7 +62,7 @@
                     <fieldset disabled>
 
                             <div class="col-lg-9 offset-md-0">
-                                <input type="text" id="disabledTextInput" >
+                                <input type="text" :placeholder="this.elcorreousu" id="disabledTextInput" >
                             </div>
 
                     </fieldset>
@@ -103,5 +103,26 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        data(){
+            return{
+               elcorreousu: '',
+            }
+        },
+        mounted(){
+              
+              this.elcorreousu = localStorage.getItem('correo');
+
+           /* if(localStorage.elcorreousu){
+                this.elcorreousu = localStorage.elcorreousu;
+            }*/
+
+         
+        
+        },
+        methods:{
+          
+        }
+
+    }
 </script>

@@ -110,8 +110,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       if (this.ellogin.correo == null) {
         this.ellogin.NoexisteEmail = 1;
-      }
+      } //Se carga el correo en el localstorage
 
+
+      localStorage.correo = this.ellogin.correo;
       this.ellogin.usuarios.forEach(function (usuario) {
         //console.log("VAS bIEN VAS BIEN");
         if (usuario.Correo_usu == corr) {
@@ -137,7 +139,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             }
 
             self.$router.push({
-              name: "home"
+              name: "home",
+              params: {
+                corr: usuario.Correo_usu
+              }
             });
           } else {
             console.log("Verifique contraseña");

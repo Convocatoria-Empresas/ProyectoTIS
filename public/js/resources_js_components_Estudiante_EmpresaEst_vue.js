@@ -111,13 +111,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "blogs",
   data: function data() {
@@ -153,17 +146,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
-    }
-    /*borrarBlog(id){
-        if(confirm("¿Confirma eliminar el registro?")){
-                this.axios.delete(`/api/blog/${id}`).then(response=>{
-                this.mostrarBlogs()
-            }).catch(error=>{
-                console.log(error)
-            })
-        }
-    }*/
+    },
+    borrarBlog: function borrarBlog(id) {
+      var _this2 = this;
 
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // if(confirm("¿Confirma eliminar el registro?")){
+                console.log(id);
+                _context2.next = 3;
+                return _this2.axios["delete"]('/api/empresa/' + id).then(function (response) {
+                  console.log(response.data);
+                  _this2.blogs = response.data;
+                })["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 3:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
   }
 });
 
@@ -253,13 +262,48 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main", [
-    _c("div", { staticClass: "container mt-4" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "text-center" }, [
+  return _c("div", { staticClass: "container mt-4" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "mb-5 text-center col" }, [
+        _c("h1", [_vm._v("Historial de Empresas Registradas")]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mb-5 input-group" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-success",
+                attrs: { to: { name: "RegEmpEst" } },
+              },
+              [
+                _c("i", { staticClass: "fas fa-user-plus" }),
+                _vm._v(" Registrar Empresa\n            "),
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder: "Buscar el nombre de la empresa registrada",
+                "aria-label": "Burcar el nombre de la empresa registrada",
+                "aria-describedby": "basic-addon2",
+              },
+            }),
+            _vm._v(" "),
+            _vm._m(1),
+          ],
+          1
+        ),
+        _vm._v(" "),
         _c("table", { staticClass: "table" }, [
-          _vm._m(1),
+          _vm._m(2),
           _vm._v(" "),
           _c(
             "tbody",
@@ -279,14 +323,6 @@ var render = function () {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.NIT))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Solvencia))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Constitucion))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Plan_Pago))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(blog.Carta))]),
-                _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_1))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_2))]),
@@ -296,6 +332,8 @@ var render = function () {
                 _c("td", [_vm._v(_vm._s(blog.Socio_4))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(blog.Socio_5))]),
+                _vm._v(" "),
+                _c("td"),
               ])
             }),
             0
@@ -310,41 +348,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "mb-4 text-center col" }, [
-        _c("h1", [_vm._v("Historial de Empresas Registradas")]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "mb-4 input-group" }, [
-          _c(
-            "span",
-            { staticClass: "input-group-text", attrs: { id: "basic-addon1" } },
-            [
-              _c("i", { staticClass: "fad fa-file-signature" }),
-              _vm._v("  Nombre de la empresa ->"),
-            ]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              placeholder: "Buscar el nombre de la empresa registrada",
-              "aria-label": "Burcar el nombre de la empresa registrada",
-              "aria-describedby": "basic-addon2",
-            },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-group-append" }, [
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", attrs: { type: "button" } },
-              [_c("i", { staticClass: "fas fa-search" }), _vm._v(" Buscar")]
-            ),
-          ]),
-        ]),
-      ]),
+    return _c(
+      "span",
+      { staticClass: "input-group-text", attrs: { id: "basic-addon1" } },
+      [
+        _c("i", { staticClass: "fad fa-file-signature" }),
+        _vm._v("  Nombre de la empresa ->"),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-append" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        [_c("i", { staticClass: "fas fa-search" }), _vm._v(" Buscar")]
+      ),
     ])
   },
   function () {
@@ -364,14 +386,6 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Teléfono")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("NIT")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Solvencia")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Constitución")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Plan de Pago")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Carta")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Socio 1")]),
         _vm._v(" "),
