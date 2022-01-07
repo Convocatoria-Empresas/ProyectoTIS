@@ -2076,6 +2076,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2183,6 +2191,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      lasnoti: [],
       elcorreousu: ''
     };
   },
@@ -2191,8 +2200,47 @@ __webpack_require__.r(__webpack_exports__);
     /* if(localStorage.elcorreousu){
          this.elcorreousu = localStorage.elcorreousu;
      }*/
+
+    this.GettheNotif();
   },
-  methods: {}
+  methods: {
+    GettheNotif: function GettheNotif() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.axios.get('/api/notificacion').then(function (response) {
+                  console.log(response.data);
+                  _this.lasnoti = response.data;
+                })["catch"](function (error) {
+                  console.log(error);
+                  _this.lasnoti = [];
+                });
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    Searchnotif: function Searchnotif() {
+      console.log("¿vives?");
+      var corrremit = this.elcorreousu;
+      this.lasnoti.forEach(function (notif) {
+        if (notif.Receptor == corrremit) {
+          console.log("Hay notificaciones para tí");
+        } else {
+          console.log("Me temo que nada para tí");
+        }
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -38943,233 +38991,250 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main", [
-    _c("nav", { staticClass: "navbar bg-danger" }),
-    _vm._v(" "),
-    _c("nav", { staticClass: "navbar bg-primary" }),
-    _vm._v(" "),
-    _c("nav", { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "collapse navbar-collapse",
-            attrs: { id: "navbarSupportedContent" },
-          },
-          [
-            _c("ul", { staticClass: "mb-2 navbar-nav me-auto mb-lg-0" }, [
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "span",
-                  { staticClass: "mb-0 navbar-brand h1" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link ",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/",
-                          "aria-current": "page",
-                        },
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-home" }),
-                        _vm._v(" Inicio"),
-                      ]
-                    ),
-                  ],
-                  1
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "span",
-                  { staticClass: "mb-0 navbar-brand h1" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/empresas",
-                        },
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-building" }),
-                        _vm._v(" Empresas"),
-                      ]
-                    ),
-                  ],
-                  1
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "span",
-                  { staticClass: "mb-0 navbar-brand h1" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "exact-active-class": "active",
-                          to: "/convocatoria",
-                        },
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-bullhorn" }),
-                        _vm._v(" Convocatorias"),
-                      ]
-                    ),
-                  ],
-                  1
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "accordion",
-                    attrs: { id: "accordionExample" },
-                  },
-                  [
-                    _c("div", { staticClass: "card" }, [
-                      _vm._m(2),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse show",
-                          attrs: {
-                            id: "collapseOne",
-                            "aria-labelledby": "headingOne",
-                            "data-parent": "#accordionExample",
-                          },
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "card-body" },
-                            [
-                              _c(
-                                "router-link",
-                                {
-                                  staticClass:
-                                    "dropdown-item active btn-warning btn",
-                                  attrs: {
-                                    type: "button",
-                                    "exact-active-class": "",
-                                    to: "/SegEmpresa",
-                                  },
-                                },
-                                [
-                                  _c("i", { staticClass: "fas fa-user-tie" }),
-                                  _vm._v(" Grupo-Empresas"),
-                                ]
-                              ),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "card-body" },
-                            [
-                              _c(
-                                "router-link",
-                                {
-                                  staticClass:
-                                    "dropdown-item active btn-warning btn",
-                                  attrs: {
-                                    "exact-active-class": "",
-                                    to: "/SegPostulante",
-                                  },
-                                },
-                                [
-                                  _c("i", { staticClass: "fas fa-users" }),
-                                  _vm._v(" Postulantes"),
-                                ]
-                              ),
-                            ],
-                            1
-                          ),
-                        ]
-                      ),
-                    ]),
-                  ]
-                ),
-              ]),
-            ]),
+  return _c(
+    "main",
+    {
+      on: {
+        submit: function ($event) {
+          $event.preventDefault()
+          return _vm.Searchnotif.apply(null, arguments)
+        },
+      },
+    },
+    [
+      _c("nav", { staticClass: "navbar bg-danger" }),
+      _vm._v(" "),
+      _c("nav", { staticClass: "navbar bg-primary" }),
+      _vm._v(" "),
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" },
+        [
+          _c("div", { staticClass: "container-fluid" }, [
+            _vm._m(0),
             _vm._v(" "),
-            _c("div", { staticClass: "text-end" }, [
-              _c("fieldset", { attrs: { disabled: "" } }, [
-                _c("div", { staticClass: "col-lg-9 offset-md-0" }, [
-                  _c("input", {
-                    attrs: {
-                      type: "text",
-                      placeholder: this.elcorreousu,
-                      id: "disabledTextInput",
-                    },
-                  }),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _vm._m(3),
+            _vm._m(1),
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "text-end" },
+              {
+                staticClass: "collapse navbar-collapse",
+                attrs: { id: "navbarSupportedContent" },
+              },
               [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "btn btn-primary",
-                    attrs: { to: { name: "Login" } },
-                  },
-                  [
-                    _c("i", { staticClass: "fas fa-sign-in-alt" }),
-                    _vm._v(" Iniciar Sesión\n                "),
-                  ]
-                ),
+                _c("ul", { staticClass: "mb-2 navbar-nav me-auto mb-lg-0" }, [
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "span",
+                      { staticClass: "mb-0 navbar-brand h1" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link ",
+                            attrs: {
+                              "exact-active-class": "active",
+                              to: "/",
+                              "aria-current": "page",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-home" }),
+                            _vm._v(" Inicio"),
+                          ]
+                        ),
+                      ],
+                      1
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "span",
+                      { staticClass: "mb-0 navbar-brand h1" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "exact-active-class": "active",
+                              to: "/empresas",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-building" }),
+                            _vm._v(" Empresas"),
+                          ]
+                        ),
+                      ],
+                      1
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "span",
+                      { staticClass: "mb-0 navbar-brand h1" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "exact-active-class": "active",
+                              to: "/convocatoria",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-bullhorn" }),
+                            _vm._v(" Convocatorias"),
+                          ]
+                        ),
+                      ],
+                      1
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "accordion",
+                        attrs: { id: "accordionExample" },
+                      },
+                      [
+                        _c("div", { staticClass: "card" }, [
+                          _vm._m(2),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "collapse show",
+                              attrs: {
+                                id: "collapseOne",
+                                "aria-labelledby": "headingOne",
+                                "data-parent": "#accordionExample",
+                              },
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card-body" },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass:
+                                        "dropdown-item active btn-warning btn",
+                                      attrs: {
+                                        type: "button",
+                                        "exact-active-class": "",
+                                        to: "/SegEmpresa",
+                                      },
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fas fa-user-tie",
+                                      }),
+                                      _vm._v(" Grupo-Empresas"),
+                                    ]
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "card-body" },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass:
+                                        "dropdown-item active btn-warning btn",
+                                      attrs: {
+                                        "exact-active-class": "",
+                                        to: "/SegPostulante",
+                                      },
+                                    },
+                                    [
+                                      _c("i", { staticClass: "fas fa-users" }),
+                                      _vm._v(" Postulantes"),
+                                    ]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-end" }, [
+                  _c("fieldset", { attrs: { disabled: "" } }, [
+                    _c("div", { staticClass: "col-lg-9 offset-md-0" }, [
+                      _c("input", {
+                        attrs: {
+                          type: "text",
+                          placeholder: this.elcorreousu,
+                          id: "disabledTextInput",
+                        },
+                      }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _vm._m(3),
                 _vm._v(" "),
                 _c(
-                  "router-link",
-                  {
-                    staticClass: "btn btn-primary",
-                    attrs: { to: { name: "Registrarse" } },
-                  },
+                  "div",
+                  { staticClass: "text-end" },
                   [
-                    _c("i", { staticClass: "fas fa-user" }),
-                    _vm._v(" Registrarse\n                "),
-                  ]
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { to: { name: "Login" } },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-sign-in-alt" }),
+                        _vm._v(" Iniciar Sesión\n                "),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { to: { name: "Registrarse" } },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-user" }),
+                        _vm._v(" Registrarse\n                "),
+                      ]
+                    ),
+                  ],
+                  1
                 ),
-              ],
-              1
+                _vm._v(" "),
+                _vm._m(4),
+              ]
             ),
-            _vm._v(" "),
-            _vm._m(4),
-          ]
-        ),
-      ]),
-    ]),
-    _vm._v(" "),
-    _c("nav", { staticClass: "navbar bg-primary" }),
-    _vm._v(" "),
-    _c("nav", { staticClass: "navbar bg-danger" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1),
-  ])
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c("nav", { staticClass: "navbar bg-primary" }),
+      _vm._v(" "),
+      _c("nav", { staticClass: "navbar bg-danger" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
@@ -39249,7 +39314,7 @@ var staticRenderFns = [
         {
           staticClass: "btn btn-warning dropdown-toggle",
           attrs: {
-            type: "button",
+            type: "submit",
             id: "dropdownMenuButton",
             "data-toggle": "dropdown",
             "aria-expanded": "false",

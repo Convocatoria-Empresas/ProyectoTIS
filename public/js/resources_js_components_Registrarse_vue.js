@@ -620,7 +620,7 @@ var render = function () {
                             name: "Contrasena",
                             id: "Contrasena",
                             required: "",
-                            pattern: "[a-zA-Z- -\\.]+",
+                            pattern: "[a-zA-Z- -\\.]+[0-9]+",
                             oninvalid:
                               "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
                             onchange: "try{setCustomValidity('')}catch(e){}",
