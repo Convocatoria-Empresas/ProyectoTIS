@@ -1,9 +1,9 @@
 <template>
-    <main>
+    <main @submit.prevent="Searchnotif">
         <nav class="navbar bg-danger"></nav>
         <nav class="navbar bg-primary"></nav>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+            <div class="container-fluid" >
                 <a class="navbar-brand" href="#">
                     <img src="http://m.exam-10.com/pars_docs/refs/13/12262/12262_html_32a82c9a.png" alt="" width="53" height="68">
                 </a>
@@ -68,7 +68,7 @@
                     </fieldset>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span></button>
+                    <button class="btn btn-warning dropdown-toggle"  type="submit" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">1</a>
                         <a class="dropdown-item" href="#">2</a>
@@ -87,7 +87,7 @@
 
                 <ul class="px-3 navbar-nav">
                     <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    <a class="nav-link" href="#"><i  class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                     </li>
                 </ul>
                 </div>
@@ -106,6 +106,7 @@
     export default {
         data(){
             return{
+               lasnoti:[], 
                elcorreousu: '',
             }
         },
@@ -116,12 +117,37 @@
            /* if(localStorage.elcorreousu){
                 this.elcorreousu = localStorage.elcorreousu;
             }*/
-
-         
+            this.GettheNotif();
+            
         
         },
         methods:{
-          
+            
+           async GettheNotif(){
+                await this.axios.get('/api/notificacion').then(response=>{
+                console.log(response.data)
+                this.lasnoti = response.data
+            }).catch(error=>{
+                console.log(error)
+                this.lasnoti = []
+            })
+            
+
+            },
+
+            Searchnotif(){
+                console.log("¿vives?")
+                var corrremit = this.elcorreousu;
+                this.lasnoti.forEach(function(notif){
+                    
+                    if(notif.Receptor==corrremit){
+                        console.log("Hay notificaciones para tí")
+                    }
+                    else{
+                        console.log("Me temo que nada para tí")
+                    }
+                })
+            }
         }
 
     }

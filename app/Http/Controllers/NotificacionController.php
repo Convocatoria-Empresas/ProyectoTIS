@@ -48,7 +48,9 @@ class NotificacionController extends Controller
      */
     public function show(Notificacion $notificacion)
     {
-        //
+        $notificacion = Notificacion::create($notificacion->post());
+        return response()->json([
+            'notificacion'=>$notificacion]);
     }
 
     /**
