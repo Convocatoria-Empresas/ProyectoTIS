@@ -20,6 +20,7 @@ const RevSegPost = () => import('./components/Seguimiento/RevSegPost.vue');
 const Login =() => import('./components/Login.vue');
 const Registrarse = () => import('./components/Registrarse.vue');
 
+
 //Todo para los ESTUDIANTES
 const HomeEst = () => import ('./components/Estudiante/HomeEst.vue');
 const EmpresaEst = () => import('./components/Estudiante/EmpresaEst.vue');
