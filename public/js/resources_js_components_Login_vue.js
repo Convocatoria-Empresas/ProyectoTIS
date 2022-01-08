@@ -66,8 +66,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         usuarios: [],
         correo: "",
         contra: "",
+        tipoUsuario: "",
         NoexisteEmail: 0,
-        contraCorrecta: 0
+        contraCorrecta: 0,
+        sesionIniciada: false
       }
     };
   },
@@ -111,9 +113,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       if (this.ellogin.correo == null) {
         this.ellogin.NoexisteEmail = 1;
       } //Se carga el correo en el localstorage
+      //localStorage.correo = this.ellogin.correo;
 
 
-      localStorage.correo = this.ellogin.correo;
+      localStorage.setItem('correo', JSON.stringify(this.ellogin.correo));
       this.ellogin.usuarios.forEach(function (usuario) {
         //console.log("VAS bIEN VAS BIEN");
         if (usuario.Correo_usu == corr) {
@@ -125,16 +128,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
            console.log(contuar);*/
 
           if (usuario.Contrasena_usu == contuar) {
-            console.log("Bienvenido");
+            console.log("Bienvenido"); //localStorage.sesionIniciada = true;
+
+            localStorage.setItem('sesionIniciada', JSON.stringify(true));
 
             switch (usuario.Rol_usu) {
               case "Estudiante":
+                localStorage.tipoUsuario = "Estudiante";
                 break;
 
               case "Asesor":
+                localStorage.tipoUsuario = "Asesor";
                 break;
 
               case "Administrador":
+                localStorage.tipoUsuario = "Administrador";
                 break;
             }
 
@@ -144,6 +152,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 corr: usuario.Correo_usu
               }
             });
+            window.location.reload();
           } else {
             console.log("Verifique contraseña");
           }

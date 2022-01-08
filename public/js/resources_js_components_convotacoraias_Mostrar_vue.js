@@ -362,9 +362,9 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("Gestión")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Título")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Asesor")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Título")]),
         _vm._v(" "),
         _c("th", [_vm._v("Descripción")]),
         _vm._v(" "),

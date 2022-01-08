@@ -2192,11 +2192,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       lasnoti: [],
-      elcorreousu: ''
+      elcorreousu: '',
+      tipoUsuario: '',
+      sesionIniciada: false
     };
   },
   mounted: function mounted() {
+    this.elcorreousu = '';
+    this.tipoUsuario = '';
+    this.sesionIniciada = false;
     this.elcorreousu = localStorage.getItem('correo');
+    this.sesionIniciada = localStorage.getItem('sesionIniciada'); //Refrescar la página
+    //vm.$forceUpdate();
+
     /* if(localStorage.elcorreousu){
          this.elcorreousu = localStorage.elcorreousu;
      }*/
@@ -2230,7 +2238,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     Searchnotif: function Searchnotif() {
-      console.log("¿vives?");
       var corrremit = this.elcorreousu;
       this.lasnoti.forEach(function (notif) {
         if (notif.Receptor == corrremit) {
@@ -2239,6 +2246,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           console.log("Me temo que nada para tí");
         }
       });
+    },
+    SalirdeSesion: function SalirdeSesion() {
+      /*console.log(`Antes de salir el correo es ${this.elcorreousu}`)
+      console.log(`Y la sesión es  ${localStorage.getItem('sesionIniciada')}`)*/
+      this.elcorreousu = '';
+      this.sesionIniciada = false;
+      this.elcorreousu = '';
+      this.tipoUsuario = '';
+      localStorage.setItem('sesionIniciada', JSON.stringify(this.sesionIniciada));
+      localStorage.setItem('tipoUsuario', JSON.stringify(this.tipoUsuario));
+      /*console.log(`Ahora el correo es ${this.elcorreousu}`)
+      console.log(`Y la sesión ahora es  ${this.sesionIniciada}`)*/
+      // localStorage.sesionIniciada = false;
+      // localStorage.tipoUsuario = '';
+      // window.location.reload();
     }
   }
 });
@@ -39048,130 +39070,138 @@ var render = function () {
                     ),
                   ]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "nav-item" }, [
-                    _c(
-                      "span",
-                      { staticClass: "mb-0 navbar-brand h1" },
-                      [
+                  this.sesionIniciada
+                    ? _c("li", { staticClass: "nav-item" }, [
                         _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            attrs: {
-                              "exact-active-class": "active",
-                              to: "/empresas",
-                            },
-                          },
+                          "span",
+                          { staticClass: "mb-0 navbar-brand h1" },
                           [
-                            _c("i", { staticClass: "fas fa-building" }),
-                            _vm._v(" Empresas"),
-                          ]
-                        ),
-                      ],
-                      1
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", { staticClass: "nav-item" }, [
-                    _c(
-                      "span",
-                      { staticClass: "mb-0 navbar-brand h1" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            attrs: {
-                              "exact-active-class": "active",
-                              to: "/convocatoria",
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-bullhorn" }),
-                            _vm._v(" Convocatorias"),
-                          ]
-                        ),
-                      ],
-                      1
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", { staticClass: "nav-item" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "accordion",
-                        attrs: { id: "accordionExample" },
-                      },
-                      [
-                        _c("div", { staticClass: "card" }, [
-                          _vm._m(2),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "collapse show",
-                              attrs: {
-                                id: "collapseOne",
-                                "aria-labelledby": "headingOne",
-                                "data-parent": "#accordionExample",
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "nav-link",
+                                attrs: {
+                                  "exact-active-class": "active",
+                                  to: "/empresas",
+                                },
                               },
-                            },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card-body" },
-                                [
-                                  _c(
-                                    "router-link",
-                                    {
-                                      staticClass:
-                                        "dropdown-item active btn-warning btn",
-                                      attrs: {
-                                        type: "button",
-                                        "exact-active-class": "",
-                                        to: "/SegEmpresa",
-                                      },
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fas fa-user-tie",
-                                      }),
-                                      _vm._v(" Grupo-Empresas"),
-                                    ]
-                                  ),
-                                ],
-                                1
-                              ),
+                              [
+                                _c("i", { staticClass: "fas fa-building" }),
+                                _vm._v(" Empresas"),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  this.sesionIniciada
+                    ? _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "span",
+                          { staticClass: "mb-0 navbar-brand h1" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "nav-link",
+                                attrs: {
+                                  "exact-active-class": "active",
+                                  to: "/convocatoria",
+                                },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-bullhorn" }),
+                                _vm._v(" Convocatorias"),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  this.sesionIniciada
+                    ? _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "accordion",
+                            attrs: { id: "accordionExample" },
+                          },
+                          [
+                            _c("div", { staticClass: "card" }, [
+                              _vm._m(2),
                               _vm._v(" "),
                               _c(
                                 "div",
-                                { staticClass: "card-body" },
+                                {
+                                  staticClass: "collapse show",
+                                  attrs: {
+                                    id: "collapseOne",
+                                    "aria-labelledby": "headingOne",
+                                    "data-parent": "#accordionExample",
+                                  },
+                                },
                                 [
                                   _c(
-                                    "router-link",
-                                    {
-                                      staticClass:
-                                        "dropdown-item active btn-warning btn",
-                                      attrs: {
-                                        "exact-active-class": "",
-                                        to: "/SegPostulante",
-                                      },
-                                    },
+                                    "div",
+                                    { staticClass: "card-body" },
                                     [
-                                      _c("i", { staticClass: "fas fa-users" }),
-                                      _vm._v(" Postulantes"),
-                                    ]
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass:
+                                            "dropdown-item active btn-warning btn",
+                                          attrs: {
+                                            type: "button",
+                                            "exact-active-class": "",
+                                            to: "/SegEmpresa",
+                                          },
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fas fa-user-tie",
+                                          }),
+                                          _vm._v(" Grupo-Empresas"),
+                                        ]
+                                      ),
+                                    ],
+                                    1
                                   ),
-                                ],
-                                1
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "card-body" },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass:
+                                            "dropdown-item active btn-warning btn",
+                                          attrs: {
+                                            "exact-active-class": "",
+                                            to: "/SegPostulante",
+                                          },
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fas fa-users",
+                                          }),
+                                          _vm._v(" Postulantes"),
+                                        ]
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ]
                               ),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]),
+                            ]),
+                          ]
+                        ),
+                      ])
+                    : _vm._e(),
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "text-end" }, [
@@ -39194,34 +39224,53 @@ var render = function () {
                   "div",
                   { staticClass: "text-end" },
                   [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-primary",
-                        attrs: { to: { name: "Login" } },
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-sign-in-alt" }),
-                        _vm._v(" Iniciar Sesión\n                "),
-                      ]
-                    ),
+                    !this.sesionIniciada
+                      ? _c(
+                          "router-link",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: { to: { name: "Login" } },
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-sign-in-alt" }),
+                            _vm._v(" Iniciar Sesión\n                "),
+                          ]
+                        )
+                      : _vm._e(),
                     _vm._v(" "),
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-primary",
-                        attrs: { to: { name: "Registrarse" } },
-                      },
-                      [
-                        _c("i", { staticClass: "fas fa-user" }),
-                        _vm._v(" Registrarse\n                "),
-                      ]
-                    ),
+                    !this.sesionIniciada
+                      ? _c(
+                          "router-link",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: { to: { name: "Registrarse" } },
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-user" }),
+                            _vm._v(" Registrarse\n                "),
+                          ]
+                        )
+                      : _vm._e(),
                   ],
                   1
                 ),
                 _vm._v(" "),
-                _vm._m(4),
+                _c("ul", { staticClass: "px-3 navbar-nav" }, [
+                  _c("li", { staticClass: "nav-item text-nowrap" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link",
+                        attrs: { href: "#" },
+                        on: { click: _vm.SalirdeSesion },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-sign-out-alt" }),
+                        _vm._v(" Cerrar Sesión"),
+                      ]
+                    ),
+                  ]),
+                ]),
               ]
             ),
           ]),
@@ -39350,19 +39399,6 @@ var staticRenderFns = [
           ]),
         ]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "px-3 navbar-nav" }, [
-      _c("li", { staticClass: "nav-item text-nowrap" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-          _c("i", { staticClass: "fas fa-sign-out-alt" }),
-          _vm._v(" Cerrar Sesión"),
-        ]),
-      ]),
     ])
   },
 ]
