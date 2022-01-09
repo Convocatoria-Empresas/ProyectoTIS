@@ -14,8 +14,8 @@
                     <thead class="text-white bg-dark">
                         <tr>
                             <th>Gestión</th>
-                            <th>Título</th>
                             <th>Asesor</th>
+                            <th>Título</th>
                             <th>Descripción</th>
                             <th>Documentos</th>
                             <th>Acciones</th>

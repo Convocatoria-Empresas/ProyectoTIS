@@ -20,19 +20,19 @@
                         </span>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" v-if="this.sesionIniciada">
                         <span class="mb-0 navbar-brand h1">
                             <router-link exact-active-class="active" to="/empresas" class="nav-link"><i class="fas fa-building"></i> Empresas</router-link>
                         </span>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" v-if="this.sesionIniciada">
                         <span class="mb-0 navbar-brand h1">
                             <router-link exact-active-class="active" to="/convocatoria" class="nav-link"><i class="fas fa-bullhorn"></i> Convocatorias</router-link>
                         </span>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" v-if="this.sesionIniciada">
                         <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header dark" id="headingOne">
@@ -44,10 +44,10 @@
                             </div>
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <router-link class="dropdown-item active btn-warning btn" type="button" exact-active-class="" to="/SegEmpresa"><i class="fas fa-user-tie"></i> Grupo-Empresas</router-link>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <router-link class="dropdown-item active btn-warning btn" exact-active-class="" to="/SegPostulante"><i class="fas fa-users"></i> Postulantes</router-link>
                             </div>
                             </div>
@@ -78,16 +78,16 @@
                 </div>
 
                 <div class="text-end">
-                    <router-link :to='{name:"Login"}' class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                    <router-link :to='{name:"Login"}' class="btn btn-primary" v-if="!this.sesionIniciada"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                     </router-link>
-                    <router-link :to='{name:"Registrarse"}' class="btn btn-primary">
+                    <router-link :to='{name:"Registrarse"}' class="btn btn-primary" v-if="!this.sesionIniciada">
                         <i class="fas fa-user"></i> Registrarse
                     </router-link>
                 </div>
 
                 <ul class="px-3 navbar-nav">
                     <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="#"><i  class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    <a class="nav-link" href="#" v-on:click="SalirdeSesion"><i  class="fas fa-sign-out-alt" ></i> Cerrar Sesión</a>
                     </li>
                 </ul>
                 </div>
@@ -108,11 +108,21 @@
             return{
                lasnoti:[], 
                elcorreousu: '',
+               tipoUsuario:'',
+               sesionIniciada:false,
             }
         },
         mounted(){
-              
+              this.elcorreousu='';
+              this.tipoUsuario='';
+              this.sesionIniciada=false;
+
+
               this.elcorreousu = localStorage.getItem('correo');
+
+              this.sesionIniciada = localStorage.getItem('sesionIniciada');
+                //Refrescar la página
+              //vm.$forceUpdate();
 
            /* if(localStorage.elcorreousu){
                 this.elcorreousu = localStorage.elcorreousu;
@@ -136,7 +146,7 @@
             },
 
             Searchnotif(){
-                console.log("¿vives?")
+
                 var corrremit = this.elcorreousu;
                 this.lasnoti.forEach(function(notif){
                     
@@ -147,6 +157,25 @@
                         console.log("Me temo que nada para tí")
                     }
                 })
+            },
+
+            SalirdeSesion(){
+                /*console.log(`Antes de salir el correo es ${this.elcorreousu}`)
+                console.log(`Y la sesión es  ${localStorage.getItem('sesionIniciada')}`)*/
+                this.elcorreousu = '';
+                this.sesionIniciada=false;
+                this.elcorreousu='';
+                this.tipoUsuario='';
+                localStorage.setItem('sesionIniciada', JSON.stringify(this.sesionIniciada));
+                localStorage.setItem('tipoUsuario', JSON.stringify(this.tipoUsuario));
+
+                /*console.log(`Ahora el correo es ${this.elcorreousu}`)
+                console.log(`Y la sesión ahora es  ${this.sesionIniciada}`)*/
+
+               // localStorage.sesionIniciada = false;
+               // localStorage.tipoUsuario = '';
+
+               // window.location.reload();
             }
         }
 
