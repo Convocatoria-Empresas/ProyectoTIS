@@ -2254,8 +2254,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.sesionIniciada = false;
       this.elcorreousu = '';
       this.tipoUsuario = '';
-      localStorage.setItem('sesionIniciada', JSON.stringify(this.sesionIniciada));
-      localStorage.setItem('tipoUsuario', JSON.stringify(this.tipoUsuario));
+      localStorage.removeItem('sesionIniciada');
+      localStorage.removeItem('tipoUsuario');
+      localStorage.removeItem('correo');
       /*console.log(`Ahora el correo es ${this.elcorreousu}`)
       console.log(`Y la sesión ahora es  ${this.sesionIniciada}`)*/
       // localStorage.sesionIniciada = false;
