@@ -1,0 +1,1 @@
+todas las mejoras deben hacerse las consultas antes de hacer un merge
