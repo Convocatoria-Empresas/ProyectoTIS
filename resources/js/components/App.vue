@@ -22,18 +22,20 @@
 
                     <li class="nav-item" v-if="this.sesionIniciada">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/empresas" class="nav-link"><i class="fas fa-building"></i> Empresas</router-link>
+                            <router-link v-if="this.tipoUsuario == 'Estudiante'" exact-active-class="active" to="/EmpresaEst" class="nav-link"><i class="fas fa-building"></i> Empresas</router-link>
+                            <router-link v-else exact-active-class="active" to="/empresas" class="nav-link"><i class="fas fa-building"></i> Empresas</router-link>
                         </span>
                     </li>
 
                     <li class="nav-item" v-if="this.sesionIniciada">
                         <span class="mb-0 navbar-brand h1">
-                            <router-link exact-active-class="active" to="/convocatoria" class="nav-link"><i class="fas fa-bullhorn"></i> Convocatorias</router-link>
+                            <router-link v-if="this.tipoUsuario == 'Estudiante'" exact-active-class="active" to="/ConvoEst" class="nav-link"><i class="fas fa-bullhorn"></i> Convocatorias</router-link>
+                            <router-link v-else exact-active-class="active" to="/convocatoria" class="nav-link"><i class="fas fa-bullhorn"></i> Convocatorias</router-link>
                         </span>
                     </li>
 
                     <li class="nav-item" v-if="this.sesionIniciada">
-                        <div class="accordion" id="accordionExample">
+                        <div class="accordion" v-if="this.tipoUsuario != 'Estudiante'" id="accordionExample">
                         <div class="card">
                             <div class="card-header dark" id="headingOne">
                             <h2 class="mb-0">
@@ -68,7 +70,7 @@
                     </fieldset>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-warning dropdown-toggle"  type="submit" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i><span class="badge badge-light"> 4</span></button>
+                    <button class="btn btn-warning dropdown-toggle"  type="submit" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i><span class="badge badge-light"> </span></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">1</a>
                         <a class="dropdown-item" href="#">2</a>
@@ -121,6 +123,8 @@
               this.elcorreousu = localStorage.getItem('correo');
 
               this.sesionIniciada = localStorage.getItem('sesionIniciada');
+
+              this.tipoUsuario = localStorage.getItem('tipoUsuario');
                 //Refrescar la página
               //vm.$forceUpdate();
 
@@ -160,15 +164,20 @@
             },
 
             SalirdeSesion(){
+
+                self.$router.push({name:"home"});
+                let self = this;
                 /*console.log(`Antes de salir el correo es ${this.elcorreousu}`)
                 console.log(`Y la sesión es  ${localStorage.getItem('sesionIniciada')}`)*/
                 this.elcorreousu = '';
                 this.sesionIniciada=false;
                 this.elcorreousu='';
                 this.tipoUsuario='';
-                localStorage.setItem('sesionIniciada', JSON.stringify(this.sesionIniciada));
-                localStorage.setItem('tipoUsuario', JSON.stringify(this.tipoUsuario));
+                localStorage.removeItem('sesionIniciada');
+                localStorage.removeItem('tipoUsuario');
+                localStorage.removeItem('correo');
 
+                
                 /*console.log(`Ahora el correo es ${this.elcorreousu}`)
                 console.log(`Y la sesión ahora es  ${this.sesionIniciada}`)*/
 
