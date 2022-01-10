@@ -192,8 +192,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -409,7 +407,6 @@ var render = function () {
           _c(
             "form",
             {
-              staticClass: "form-group",
               on: {
                 submit: function ($event) {
                   $event.preventDefault()
@@ -418,315 +415,553 @@ var render = function () {
               },
             },
             [
-              _c("hr"),
-              _vm._v(" "),
-              _vm._m(2),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
                   {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Nombre_Largo,
-                    expression: "empresa.Nombre_Largo",
+                    staticClass: "row needs-validation",
+                    attrs: { novalidate: "" },
                   },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Nombre_Largo", type: "text" },
-                domProps: { value: _vm.empresa.Nombre_Largo },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Nombre_Largo", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Nombre_Corto,
-                    expression: "empresa.Nombre_Corto",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Nombre_Corto", type: "text" },
-                domProps: { value: _vm.empresa.Nombre_Corto },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Nombre_Corto", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(4),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Correo_electronico,
-                    expression: "empresa.Correo_electronico",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Correo_electronico", type: "text" },
-                domProps: { value: _vm.empresa.Correo_electronico },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(
-                      _vm.empresa,
-                      "Correo_electronico",
-                      $event.target.value
-                    )
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(5),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Telefono,
-                    expression: "empresa.Telefono",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "title", type: "text" },
-                domProps: { value: _vm.empresa.Telefono },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Telefono", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(6),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.NIT,
-                    expression: "empresa.NIT",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "NIT", type: "text" },
-                domProps: { value: _vm.empresa.NIT },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "NIT", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _vm._m(7),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { id: "Solvencia", type: "file" },
-                on: { change: _vm.processFileSolv },
-              }),
-              _vm._v(" "),
-              _vm._m(8),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { id: "Constitucion", type: "file" },
-                on: { change: _vm.processFileConst },
-              }),
-              _vm._v(" "),
-              _vm._m(9),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { id: "Plan_Pago", type: "file" },
-                on: { change: _vm.processFilePlan },
-              }),
-              _vm._v(" "),
-              _vm._m(10),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { id: "Carta", type: "file" },
-                on: { change: _vm.processFileCarta },
-              }),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _vm._m(11),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Socio_1,
-                    expression: "empresa.Socio_1",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Socio_1", type: "text" },
-                domProps: { value: _vm.empresa.Socio_1 },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Socio_1", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(12),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Socio_2,
-                    expression: "empresa.Socio_2",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Socio_2", type: "text" },
-                domProps: { value: _vm.empresa.Socio_2 },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Socio_2", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(13),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Socio_3,
-                    expression: "empresa.Socio_3",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Socio_3", type: "text" },
-                domProps: { value: _vm.empresa.Socio_3 },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Socio_3", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(14),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Socio_4,
-                    expression: "empresa.Socio_4",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Socio_4", type: "text" },
-                domProps: { value: _vm.empresa.Socio_4 },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Socio_4", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _vm._m(15),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.empresa.Socio_5,
-                    expression: "empresa.Socio_5",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "Socio_5", type: "text" },
-                domProps: { value: _vm.empresa.Socio_5 },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.empresa, "Socio_5", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "col-lg-4" },
-                [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary mt-3",
-                      attrs: { type: "submit" },
-                    },
-                    [_vm._v("Registrar")]
-                  ),
+                  [
+                    _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Nombre_Largo,
+                            expression: "empresa.Nombre_Largo",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "30",
+                          type: "text",
+                          placeholder: "Nombre Largo Empresa",
+                          name: "Nombre_Largo",
+                          id: "Nombre_Largo",
+                          required: "",
+                          pattern: "[a-zA-Z- -\\.]+",
+                          oninvalid:
+                            "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Nombre_Largo },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Nombre_Largo",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Socio_1,
+                            expression: "empresa.Socio_1",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "9",
+                          minlength: "9",
+                          type: "text",
+                          placeholder: "Representante Legal",
+                          name: "Socio_1",
+                          id: "Socio_1",
+                          required: "",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Revise el codigo SIS deben ser 9 números')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Socio_1 },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Socio_1",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Nombre_Corto,
+                            expression: "empresa.Nombre_Corto",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "10",
+                          type: "text",
+                          placeholder: "Nombre Corto Empresa",
+                          name: "Nombre_Corto",
+                          id: "Nombre_Corto",
+                          required: "",
+                          pattern: "[a-zA-Z- -\\.]+",
+                          oninvalid:
+                            "setCustomValidity('Porfavor llena el nombre corto con caracteres de la A-Z ,máximo 10 char')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Nombre_Corto },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Nombre_Corto",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _c("label", {
+                        staticClass: "form-label",
+                        attrs: { for: "validationCustom01" },
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Socio_2,
+                            expression: "empresa.Socio_2",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "9",
+                          minlength: "9",
+                          type: "text",
+                          placeholder: "Integrante",
+                          name: "Socio_2",
+                          id: "Socio_2",
+                          required: "",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Revise el codigo SIS deben ser 9 números')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Socio_2 },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Socio_2",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-5 offset-md-1" }, [
+                      _vm._m(5),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Correo_electronico,
+                            expression: "empresa.Correo_electronico",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "email",
+                          placeholder: "Correo Empresa",
+                          name: "email",
+                          id: "Correo_electronico",
+                          required: "",
+                          pattern:
+                            "[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}",
+                          oninvalid:
+                            "setCustomValidity('Por favor ingresa una dirección de correo valida ')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Correo_electronico },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Correo_electronico",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _c("label", {
+                        staticClass: "form-label",
+                        attrs: { for: "validationCustom01" },
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Socio_3,
+                            expression: "empresa.Socio_3",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "9",
+                          minlength: "9",
+                          type: "text",
+                          placeholder: "Integrante",
+                          name: "Socio_3",
+                          id: "Socio_3",
+                          required: "",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Revise el codigo SIS deben ser 9 números')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Socio_3 },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Socio_3",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(6),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Telefono,
+                            expression: "empresa.Telefono",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "8",
+                          minlength: "7",
+                          type: "text",
+                          placeholder: "Telefono Empresa",
+                          name: "Telefono",
+                          id: "Telefono",
+                          required: "",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Porfavor llene el Telefono, solo se aceptan numeros y el minumo son 7 digitos')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Telefono },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Telefono",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+                      _c("label", {
+                        staticClass: "form-label",
+                        attrs: { for: "validationCustom01" },
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Socio_4,
+                            expression: "empresa.Socio_4",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "9",
+                          minlength: "9",
+                          type: "text",
+                          placeholder: "Integrante",
+                          name: "Socio_4",
+                          id: "Socio_4",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Revise el codigo SIS deben ser 9 números')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Socio_4 },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Socio_4",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                      _vm._m(7),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.NIT,
+                            expression: "empresa.NIT",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "7",
+                          minlength: "7",
+                          type: "text",
+                          placeholder: "NIT Empresa",
+                          name: "NIT",
+                          id: "NIT",
+                          required: "",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Porfavor llene el NIT de la Empresa, solo se aceptan numeros y deben ser 7 ')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.NIT },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.empresa, "NIT", $event.target.value)
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+                      _c("label", {
+                        staticClass: "form-label",
+                        attrs: { for: "validationCustom01" },
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.empresa.Socio_5,
+                            expression: "empresa.Socio_5",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          maxlength: "9",
+                          minlength: "9",
+                          type: "text",
+                          placeholder: "Integrante",
+                          name: "Socio_5",
+                          id: "Socio_5",
+                          pattern: "[0-9]+",
+                          oninvalid:
+                            "setCustomValidity('Revise el codigo SIS deben ser 9 números')",
+                          onchange: "try{setCustomValidity('')}catch(e){}",
+                        },
+                        domProps: { value: _vm.empresa.Socio_5 },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.empresa,
+                              "Socio_5",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "valid-feedback" }),
+                    ]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                    _vm._m(8),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        accept: ".pdf",
+                        type: "file",
+                        id: "Solvencia",
+                        required: "",
+                      },
+                      on: { change: _vm.processFileSolv },
+                    }),
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-danger mt-3",
-                      attrs: { to: { name: "EmpresaEst" } },
-                    },
-                    [
-                      _c("i", { staticClass: "far fa-ballot-check" }),
-                      _vm._v(" Cancelar\n        "),
-                    ]
-                  ),
-                ],
-                1
-              ),
+                  _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        accept: ".pdf",
+                        type: "file",
+                        id: "Plan_Pago",
+                        required: "",
+                      },
+                      on: { change: _vm.processFilePlan },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-4 offset-md-1" }, [
+                    _vm._m(10),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        accept: ".pdf",
+                        type: "file",
+                        id: "Constitucion",
+                        required: "",
+                      },
+                      on: { change: _vm.processFileConst },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-4 offset-md-2" }, [
+                    _vm._m(11),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        accept: ".pdf",
+                        type: "file",
+                        id: "Carta",
+                        required: "",
+                      },
+                      on: { change: _vm.processFileCarta },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6" }, [
+                    _c("label", {
+                      staticClass: "form-label",
+                      attrs: { for: "validationCustom01" },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-6 offset-md-2" },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-danger mt-3",
+                              attrs: { to: { name: "empresas" } },
+                            },
+                            [
+                              _c("i", { staticClass: "far fa-ballot-check" }),
+                              _vm._v(" Cancelar\n        "),
+                            ]
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm._m(12),
+                    ]),
+                  ]),
+                ]),
+              ]),
             ]
           ),
         ]),
@@ -756,126 +991,112 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "far fa-building" }),
-      _vm._v(" Nombre Largo"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Nombre Largo")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-file-signature" }),
-      _vm._v(" Nombre corto"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Socios (Codigo SIS)")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-at" }),
-      _vm._v(" Correo electrónico"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Nombre Corto")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-phone-volume" }),
-      _vm._v(" Telefono"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Correo de la Empresa")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fab fa-digg" }),
-      _vm._v(" NIT"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("Telefono")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-file-pdf" }),
-      _vm._v(" Solvencia"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "validationCustom01" } },
+      [_c("strong", [_vm._v("NIT")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-file-pdf" }),
-      _vm._v(" Constitución"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Solvencia Tecnica")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-file-pdf" }),
-      _vm._v(" Plan de Pago"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Plan de Pago")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-file-pdf" }),
-      _vm._v(" Carta"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Constitución de la Empresa")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-user-tie" }),
-      _vm._v(" Socio 1"),
-    ])
+    return _c(
+      "label",
+      { staticClass: "form-label", attrs: { for: "formFile" } },
+      [_c("strong", [_vm._v("Carta de Presentación")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-user-tie" }),
-      _vm._v(" Socio 2"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "fas fa-user-tie" }),
-      _vm._v(" Socio 3"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "far fa-user" }),
-      _vm._v(" Socio 4"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "content" } }, [
-      _c("i", { staticClass: "far fa-user" }),
-      _vm._v(" Socio 5"),
+    return _c("div", { staticClass: "col-lg-4" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-lg btn-success", attrs: { type: "submit" } },
+        [_vm._v("Registrar")]
+      ),
     ])
   },
 ]
