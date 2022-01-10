@@ -69,14 +69,14 @@
                                 <div class="col-lg-4 offset-md-1" >
                                     <label for="validationCustom01" class="form-label"><strong>Contraseña</strong></label>
                                     <input maxlength="30" type="text" v-model="users.Contrasena_usu" placeholder="No debe ser muy fácil" name="Contrasena" class="form-control" id="Contrasena"  required pattern="[a-zA-Z- -\.]+[0-9]+"
-                                oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
+                                oninvalid="setCustomValidity('Porfavor llena la contraseña con letras y números')" onchange="try{setCustomValidity('')}catch(e){}" />
                                     <div class="valid-feedback"></div>
                                 </div>
 
                                 <div class="col-lg-4 offset-md-1" >
                                     <label for="validationCustom01" class="form-label"><strong>Confirmar Contraseña</strong></label>
-                                    <input maxlength="30" type="text" placeholder="Escriba la misma contraseña" name="ContrasenaConf" class="form-control" id="ContrasenaConf"  required pattern="[a-zA-Z- -\.]+"
-                                oninvalid="setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')" onchange="try{setCustomValidity('')}catch(e){}" />
+                                    <input maxlength="30" type="text" placeholder="Escriba la misma contraseña" name="ContrasenaConf" class="form-control" id="ContrasenaConf"  required pattern="[a-zA-Z- -\.]+[0-9]+"
+                                oninvalid="setCustomValidity('Porfavor llena la contraseña con letras y números')" onchange="try{setCustomValidity('')}catch(e){}" />
                                     <div class="valid-feedback"></div>
                                 </div>
                                 <div class="col-lg-4 offset-md-1">
@@ -152,7 +152,7 @@ export default {
             this.users.Contrasena_usu="";
             this.users.Rol_usu="";
 
-            this.$router.push({name:"home"});
+            this.$router.push({name:"Login"});
 
 
         },

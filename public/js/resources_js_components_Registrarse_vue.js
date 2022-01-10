@@ -175,7 +175,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.users.Rol_usu = "";
 
                 _this.$router.push({
-                  name: "home"
+                  name: "Login"
                 });
 
               case 13:
@@ -622,7 +622,7 @@ var render = function () {
                             required: "",
                             pattern: "[a-zA-Z- -\\.]+[0-9]+",
                             oninvalid:
-                              "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+                              "setCustomValidity('Porfavor llena la contraseña con letras y números')",
                             onchange: "try{setCustomValidity('')}catch(e){}",
                           },
                           domProps: { value: _vm.users.Contrasena_usu },
@@ -857,9 +857,9 @@ var staticRenderFns = [
           name: "ContrasenaConf",
           id: "ContrasenaConf",
           required: "",
-          pattern: "[a-zA-Z- -\\.]+",
+          pattern: "[a-zA-Z- -\\.]+[0-9]+",
           oninvalid:
-            "setCustomValidity('Porfavor llena el nombre, solo se aceptan caracteres de la A-Z ')",
+            "setCustomValidity('Porfavor llena la contraseña con letras y números')",
           onchange: "try{setCustomValidity('')}catch(e){}",
         },
       }),
