@@ -1,9 +1,9 @@
-const Home = () => import('./components/Home.vue');
+const Home = () => import('./components/Home/Home.vue');
 const Empresas = () => import('./components/Empresas.vue');
 const Seguimiento = () => import('./components/Seguimiento.vue');
 const Postular = () => import('./components/Postular.vue');
 
-//importamos los componentes para el convocatorias
+//importamos los componentes para convocatorias
 const MostrarConv = () => import('./components/convotacoraias/Mostrar.vue');
 const Crear = () => import('./components/convotacoraias/Crear.vue');
 const Editar = () => import('./components/convotacoraias/Editar.vue');
@@ -17,8 +17,8 @@ const RevSegEmpre = () => import ('./components/Seguimiento/RevSegEmpre.vue')
 const SegPostulante = () => import('./components/Seguimiento/SegPostulantes.vue');
 const RevSegPost = () => import('./components/Seguimiento/RevSegPost.vue');
 //agregamos el login y el registro
-const Login =() => import('./components/Login.vue');
-const Registrarse = () => import('./components/Registrarse.vue');
+const Login =() => import('./components/Login/Login.vue');
+const Registrarse = () => import('./components/Sign_up/Registrarse.vue');
 
 //Todo para los ESTUDIANTES
 const HomeEst = () => import ('./components/Estudiante/HomeEst.vue');

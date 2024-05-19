@@ -2,7 +2,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="text-center col">
-                <h1>Tabla de Seguimiento para las Empresas</h1>
+                <h1>Tabla de Seguimiento para las Emp</h1>
                 <hr>
                 <table class="table">
                 <thead class="text-white bg-dark">

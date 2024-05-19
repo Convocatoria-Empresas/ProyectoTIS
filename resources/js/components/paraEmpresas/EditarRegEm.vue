@@ -187,7 +187,7 @@ export default {
 
 
             await this.axios.put(`/api/empresa/${this.$route.params.id}/edit/${this.empresa}`, this.empresa).then(response=>{
-                console.log("Aquelo que devuelve es")
+                console.log("Aquello que devuelve es")
                 console.log(response.data)
                 
                 this.$router.push({name:"empresas"})

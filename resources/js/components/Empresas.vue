@@ -9,7 +9,7 @@
                     <i class="fas fa-user-plus"></i> Registrar Empresa
                 </router-link>
                 <span class="input-group-text" id="basic-addon1"><i class="fad fa-file-signature"></i>  Nombre de la empresa -></span>
-                <input type="text" class="form-control" placeholder="Buscar el nombre de la empresa registrada" aria-label="Burcar el nombre de la empresa registrada" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Buscar el nombre de la empresa registrada" aria-label="Buscar el nombre de la empresa registrada" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button type="button" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
                 </div>

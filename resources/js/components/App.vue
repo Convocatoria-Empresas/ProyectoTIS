@@ -64,7 +64,7 @@
                     <fieldset disabled>
 
                             <div class="col-lg-9 offset-md-0">
-                                <input type="text" :placeholder="this.elcorreousu" id="disabledTextInput" >
+                                <label for="" color= #22b24b>{{this.elcorreousu}}</label>
                             </div>
 
                     </fieldset>
@@ -87,7 +87,7 @@
                     </router-link>
                 </div>
 
-                <ul class="px-3 navbar-nav">
+                <ul v-if="this.sesionIniciada" class="px-3 navbar-nav">
                     <li class="nav-item text-nowrap">
                     <a class="nav-link" href="#" v-on:click="SalirdeSesion"><i  class="fas fa-sign-out-alt" ></i> Cerrar Sesión</a>
                     </li>
@@ -112,6 +112,9 @@
                elcorreousu: '',
                tipoUsuario:'',
                sesionIniciada:false,
+
+               color: '#111000' 
+
             }
         },
         mounted(){
@@ -164,11 +167,15 @@
             },
 
             SalirdeSesion(){
-
-                self.$router.push({name:"home"});
+          
+                console.log("El deploy se actualiza")
                 let self = this;
+                self.$router.push({name:"home"}).catch(()=>{});
+                //self.$router.push('');
+                
                 /*console.log(`Antes de salir el correo es ${this.elcorreousu}`)
                 console.log(`Y la sesión es  ${localStorage.getItem('sesionIniciada')}`)*/
+                
                 this.elcorreousu = '';
                 this.sesionIniciada=false;
                 this.elcorreousu='';
@@ -178,8 +185,10 @@
                 localStorage.removeItem('correo');
 
                 
-                /*console.log(`Ahora el correo es ${this.elcorreousu}`)
-                console.log(`Y la sesión ahora es  ${this.sesionIniciada}`)*/
+
+                
+                //console.log(`Ahora el correo es ${this.elcorreousu}`)
+                //console.log(`Y la sesión ahora es  ${this.sesionIniciada}`)
 
                // localStorage.sesionIniciada = false;
                // localStorage.tipoUsuario = '';
@@ -190,3 +199,7 @@
 
     }
 </script>
+
+<style scoped src="C:\wamp64\www\ProyectoTIS\resources\css\app.css">
+
+</style>

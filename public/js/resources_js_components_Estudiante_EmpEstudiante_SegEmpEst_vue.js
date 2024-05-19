@@ -186,7 +186,7 @@ var render = function () {
   return _c("div", { staticClass: "container mt-4" }, [
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "text-center col" }, [
-        _c("h1", [_vm._v("Tabla de Seguimiento para las Empresas")]),
+        _c("h1", [_vm._v("Tabla de Seguimiento para las Emp")]),
         _vm._v(" "),
         _c("hr"),
         _vm._v(" "),

@@ -223,7 +223,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.next = 2;
                 return _this2.axios.put("/api/empresa/".concat(_this2.$route.params.id, "/edit/").concat(_this2.empresa), _this2.empresa).then(function (response) {
-                  console.log("Aquelo que devuelve es");
+                  console.log("Aquello que devuelve es");
                   console.log(response.data);
 
                   _this2.$router.push({
